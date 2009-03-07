@@ -248,7 +248,7 @@ label zwei_laura_stalk_entscheid:
 
 label zwei_email_erinnerung:
     "Die E-Mail!"
-    "Sofort stürze ich an meinem Rechner und öffne die Mail."
+    "Sofort stürze ich an meinen Rechner und öffne die Mail."
     scene bg desktop_hilfe
     with dissolve
     "Die ist von vor drei Tagen."

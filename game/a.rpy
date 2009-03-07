@@ -1,3 +1,191 @@
+#Inhaltsverzeichnis:
+#label laura_anja_mail = Wechsel von Laura-Route auf Anja-Route
+#label anja_anfang = direkte Anja-Route
+#label bernd_anja_besprechung = menu "Soll ich zu Anja gehen? J/N"
+#label anja_besprechung = Bernd geht zu Anja, Milch, Erwähnung des Tests
+#label bernd_kapzwei_grillen = Bernd stirbt an Hautkrebs
+
+label laura_anja_mail
+
+    "Aber was schreibe ich denn rein?"
+    "Ich sollte meine neuen Mails nochmal abrufen."
+    
+    scene bg desktop_email
+    with fade
+    #Bild existiert noch nicht/neues Bild bitte mit verändertem Spam
+    #muss auch noch registriert werden
+    #ganz oben muss nochmal eine Mail von Anja stehen (schnuffel90@googlemail.com)
+    
+    "Neuer Spam."
+    "Oh."
+    "Bernd schrieb mir gestern Abend noch eine Mail."
+    "Mal schauen, was dadrin steht."
+    
+    scene bg desktop_hilfe
+    with fade
+    #Bild existiert noch nicht/neues Bild bitte mit neuem Text
+    
+    "gestern..."
+    "heute..."
+    "nicht geantwortet..."
+    "bei dir vorbeikommen..."
+    "Bernd"
+    
+    "Moment."
+    "Bernd will vorbeikommen?"
+    "In MEINEN Keller?"
+    
+    $ berndNameUpper = berndName.upper()
+    ma "%(berndNameUpper)s!"
+    "..."
+    ma "%(berndNameUpper)s!"
+    
+    scene bg keller
+    with fade
+    
+    "Was ist denn nun schon wieder?"
+    "Kann ich nicht einmal meine Ruhe haben?"
+    b "WAS IST DENN?"
+    ma "KOMM SCHNELL!"
+    "Aussagekräftige Beschreibung ist aussagekräftig."
+    b "ICH KOMME JA SCHON."
+    "Ich stehe auf und gehe nach oben."
+    #Gefällt mir so nicht.
+    
+    "Ich öffne die Tür."
+    
+    scene bg kellertreppe
+    with fade
+    
+    "Ich schaue die Kellertreppe nach oben."
+    
+    show blond neutral_g
+    with dissolve    
+    #Bild existiert noch nicht
+    
+    "Mädchen" "Oh, hai."
+    b "wat"
+    "Mädchen" "Kann ich runterkommen?"
+    b "..."
+    "Ich gehe einfach wieder in meinen Keller zurück."
+    
+    scene bg keller
+    with fade
+    
+    "Ich schließe die Tür hinter mir."
+    "Wie immer."
+    "Was macht das Mädchen hier?"
+    "Ist es wegen des Unfalls damals?"
+    "Habe ich irgendwas Schlimmes getan?"
+    "Ich setze mich wieder in meinen Stuhl."
+    "Die Türe geht auf."
+    
+    show blond mad
+    with dissolve
+    #Bild existiert noch nicht
+    
+    "Mädchen" "Was ist los mit dir?"
+    b "..."
+    "Mädchen" "Du ignorierst mich einfach."
+    b "..."
+    "Mädchen" "Dabei habe ich dir doch noch eine Mail geschrieben, dass ich vorbeikomme."
+    b "wat"
+    "Mädchen" "Hast du die nicht gelesen?"
+    b "D-D-Du bist ein Bernd?"
+    "Mädchen" "Ja."
+    "Mädchen" "Willkommen in der Wirklichkeit."
+    b "Ein Mädchen? Ein Bernd?"
+    "Mädchen" "Ja."
+    b "lolwas"
+    "Mädchen" "Nenn mich aber nicht immer Bernd."
+    "Mädchen" "Ich hab auch einen Namen."
+    "Mädchen" Ich heiße %(wBerndName)s."
+    b "Aha."
+    bw "Ja."
+    "Komm endlich zur Sache."
+    bw "Wir müssen Krautchan retten."
+    b "Und wie soll ich dir dabei helfen?"
+    bw "Weiss ich noch nicht."
+    b "Auch: Was ist denn mit Krautchan passiert?"
+    bw "Der Server wurde beschlagnahmt."
+    "Server beschlagnahmt."
+    b "Soso."
+    bw "Ja."
+    bw "Von der Polizei."
+    bw "Die genauen Einzelheiten kenne ich auch nicht."
+    bw "Ich weiß nur, dass der Server eines Morgens von der Polizei beschlagnahmt wurde."
+    bw "Deshalb brauch ich deine Hilfe."
+    b "Und wie sollen wir da was machen?"
+    bw "Weiß ich nicht."
+    b "Und warum bist du dann hier?"
+    bw "Weil du nicht geantwortet hast."
+    b "Und woher willst du das alles wissen?"
+    bw "..."
+    bw "Du vertraust mir nicht?"
+    "Wieso sollte ich?"
+    b "Bernd, das ist lächerlich!"
+    b "..."
+    bw "Denk drüber nach."
+    bw "Und komm morgen zu mir."
+    b "Wohin?"
+    bw "Zu mir."
+    "Intelligent Antwort."
+    b "Und wo wohnst du?"
+    bw "Weißt du das nicht?"
+    bw "Ich wohne im Stockwerk über dir."
+    "Was zum?"
+    "Bernds? In MEINER Stadt?"
+    "Das lässt sich wohl in Berlin nicht vermeiden."
+    bw "Ich muss dann jetzt auch wieder weg."
+    bw "Bis morgen, %(berndName)s."
+    b "..."
+    
+    hide blond mad
+    with dissolve
+    
+    "Sie war genauso schnell weg wie sie kam."
+    "Ich 
+    "Hmm..."
+    "Krautchans Server wurde also beschlagnahmt."
+    "Von der Polizei."
+    "Grund: unbekannt."
+    "Woher weiß sie eigentlich davon?"
+    "Sie scheint mehr zu wissen, als sie mir eigentlich weiß machen will."
+    "Ich sollte morgen zu ihr gehen."
+    "Aber jetzt gehe ich erstmal schlafen."
+    "Ich habe in den letzten Nächten kaum geschlafen."
+    
+    scene black
+    with fade
+    
+    "Am nächsten Tag..."
+    
+    scene bg keller_aus_blur
+    with fade
+    
+    "Langsam werde ich wach."
+    "Ich schaue auf die Uhr."
+    "Es ist 13:19 Uhr."
+    
+    scene black
+    with fade
+    
+    "Lasst mich noch schlafen."
+    
+    scene bg keller_aus
+    
+    "WAS?!"
+    "Wir haben 13 Uhr schon durch?"
+    "Ich habe wirklich lange geschlafen."
+    "Ich sollte mich beeilen, wenn ich noch zu %(wBerndName)s will."
+    "Andererseits sollte ich mich nicht so hetzen."
+    "Der Tag hat ja schließlich noch ein paar Stunden."
+    "Und sie wohnt nur ein Stockwerk weiter oben."
+    
+    jump anja_besprechung
+    
+#---------------------------------------------------------------------------------------
+
 label anja_anfang
 
     scene bg keller
@@ -895,13 +1083,15 @@ label bernd_anja_besprechung
     "Ja."
     "Ich werde sie ausnutzen."
     "Aber nicht jetzt."
-    "Erst..."
-
+    jump anja_besprechung
+    
+label anja_besprechung
+   "Erst..."
+    
     menu:
         " "
         
         "Erst schaue ich Animu."
-            $ wBerndLove -= 5
             scene bg desktop_none
             with fade
         
@@ -1080,8 +1270,6 @@ label bernd_anja_besprechung
     "Geniale Antwort ist genial."
     "NICHT."
     Pause(1)
-    bw "Du warst wegen einer Kleinigkeit beleidigt."
-    "lolwas"
     bw "Dabei dachte ich, dass jeder Bernd auch an die schlimmsten Sachen gewöhnt wäre."
     bw "Deswegen werde ich dich testen."
     b "Aha."
@@ -1114,7 +1302,7 @@ label bernd_anja_besprechung
     b "Eine Rei ist auch fein."
     bw "Ja."
     b "Ja."
-    Pause(2)
+    Pause(1,5)
     "Oh wow. Ein QUALITÄTSGESPRÄCH!"
     bw "Deine Milch."
     b "Was ist damit?"
@@ -1151,7 +1339,7 @@ label bernd_anja_besprechung
     
     bw "Hier."
     bw "Genieße deine Milch."
-    b "Ich bekomme noch ein Glas randvoll gefüllt mit Milch in die Hand gedrückt."
+    "Ich bekomme noch ein Glas randvoll gefüllt mit Milch in die Hand gedrückt."
     "Ich stelle es erstmal auf den Tisch ab."
     "Dann trinke ich einen Schluck ab, damit nichts beim Hochheben verschüttet."
     "Doch ich trinke einfach weiter."
