@@ -235,7 +235,7 @@ label zwei_laura_stalk_entscheid:
         "Ich warte einfach ab.":
             "Frustriert werfe ich mich auf die Matratze und starre die Decke an."
             "Ist Krautchan wirklich untergegangen?"
-            "Dann hatte der Bernd, der mir die Mail geschickt hat recht."
+            "Dann hatte der Bernd, der mir die Mail geschickt hat, recht."
             "..."
             jump zwei_email_erinnerung
 
@@ -258,7 +258,7 @@ label zwei_email_erinnerung:
     menu:
         ""
         "Ich sollte eine Antwort schreiben.":
-            #übergang zur anja route ohne weg zurück
+            jump laura_anja_mail
             pass
         "Ich werde sie einfach ignorieren.":
             jump zwei_weiter_entscheid
