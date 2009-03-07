@@ -687,15 +687,19 @@ label anja_anfang
     b "..."
     bw "Du ignorierst mich einfach."
     b "..."
+    "Du nervst."
     bw "Was habe ich dir getan?"
     b "..."
+    "Sei ruhig."
     bw "Was ist jetzt?"
     b "..."
+    "Geh weg."
     bw "Weswegen kamst du heute zu mir?"
     b "..."
+    "Geh einfach."
     bw "Sprechenden Leuten kann man helfen, %(berndName)s."
     b "..."
-    #Evtl. Bernds Gedanken noch reinbringen, also andauernd noch ein "Geh sterben".
+    "Geh sterben."
     
     show blond really mad
     with dissolve
@@ -709,6 +713,7 @@ label anja_anfang
     b "Wer?"
     bw "AHA!"
     bw "Du hast etwas gesagt."
+    "Verdammt."
     
     show blond mad
     with dissolve
@@ -771,9 +776,8 @@ label anja_anfang
     "Sie macht die Tür hinter sich zu."
     "Etwas, das meine Mutter nie macht, wenn sie aus dem Keller rausgeht."
     "Ich höre sie noch die Kellertreppe hochstapfen."
-    #alternativ: hochlaufen
     
-    "Ich drehe mich wieder dem Bildschirm zu."
+    "Ich wende mich wieder dem Bildschirm zu."
     "Endlich."
     "Endlich kann ich Animu schauen."
     
