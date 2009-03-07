@@ -3143,7 +3143,7 @@ label eins_sisAbholenZuerst:
     scene bg zuhause_hausflur
     with fade
     
-    scene bg zuhause_draussen
+    scene bg zuhause_draussen_dunkel
     with fade
     
     "In der Dunkelheit kann ich kaum was erkennen..."

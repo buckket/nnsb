@@ -52,6 +52,7 @@ init:
     #prolog
     image splash prolog = "images/bg/splash_prolog.png"
     image bg zuhause_draussen = "images/bg/strasse.jpg"
+    image bg zuhause_draussen_dunkel = "images/bg/strasse_dunkel.jpg"
     image bg zuhause_hausflur = "images/bg/hausflur.jpg"
     image bg zuhause_drinnen = "images/bg/wohnung_innen.jpg"
     image bg badezimmer = "images/bg/badezimmer.jpg"
