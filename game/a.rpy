@@ -1,6 +1,4 @@
-label anja_anfang:
-
-    #Bernd weiß Anjas Adresse, weil er sofort zugesagt hat und sie ihm auch vertraut.
+label anja_anfang
 
     scene bg keller
     with fade
@@ -35,9 +33,10 @@ label anja_anfang:
     b "Du weißt, dass ich kein Interesse an einer Freundin habe."
     ma "Ich weiß."
     ma "Du sitzt den ganzen Tag im Zimmer und schaust deine Männekes."
+    #erbitte definitiven Einbau des obigen Satzes, weil meine Mutter den regelmäßig bringt
     ma "Und sie wäre wirklich nichts für dich?"
     ma "Wie hieß sie noch gleich?"
-    ma "%(wBerndName)s oder so?"
+    ma "%(berndwName)s oder so?
     b "Was willst du eigentlich?"
     b "Du hast sie noch nicht einmal gesehen."
     ma "Also eher nicht."
@@ -75,9 +74,9 @@ label anja_anfang:
     "Hmmm..."
     "Was könnte wohl der Grund sein?"
     "Hmmm..."
-    "Vielleicht weiß %(wBerndName)s mehr als sie mir bisher weiß gemacht hat."
+    "Vielleicht weiß %(berndwName)s mehr als sie mir bisher weiß gemacht hat."
     "Ich glaub, ich geh morgen mal zu ihr."
-    "%(wBerndName)s wird mir ihre Adresse ja bestimmt nicht umsonst gegeben haben."
+    "%(berndwName)s wird mir ihre Adresse ja bestimmt nicht umsonst gegeben haben."
     "Ob sie wohl auf mich wartet?"
     "Ach Quatsch."
     "Warum sollte sie?"
@@ -87,7 +86,7 @@ label anja_anfang:
     "Aber wie sieht ein typisches Mädchenzimmer aus?"
     "Ich war ja noch nie bei einem Mädchen im Zimmer."
     "Gute Frage."
-    "Wie sieht ein typisches Mädchenzimmer aus?"
+    "Wie sieht ein typisches Mädchenzimmer aus?
     "Helle Tapeten?"
     "Ja."
     "Die Tapeten werden wahrscheinlich eine helle Farbe haben."
@@ -100,22 +99,23 @@ label anja_anfang:
     "Hmmmmmmmmmmmm..."
     "Ein plötzliches Gefühl riss mich aus dem Schwärmen."
     "Ich kam."
+    #Mir ist hier auf Anhieb nix Besseres eingefallen.
     "Hach..."
-    "%(wBerndName)s..."
+    "%(berndwName)s..."
 
-    scene black
+    scene bg black
     with fade
     
     #Bernd wacht auf
 
-    scene bg keller_aus_blur
+    scene bg keller_blur
     with fade
 
     "Ich gähne."
     #Sieht dumm aus, aber wie soll man das sonst darstellen?
     "Ich bin noch so müde."
     "Ich würde am liebsten noch ein bisschen weiterschlafen."
-    "Aber ich wollte heute ja %(wBerndName)s besuchen."
+    "Aber ich wollte heute ja %(berndwName)s besuchen."
     "Ich gähne nochmal und strecke mich dabei."
     #Wie stellt man ein Recken und Strecken dar?
     "Ich reibe mir durch die Augen"
@@ -138,24 +138,24 @@ label anja_anfang:
     "Doch da ist nichts."
     "Ich schaue nach links."
     "Wieder nichts."
-    sis "HIIIIILLLLLLLFFFFFFFEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!"
+    Stimme "HIIIIILLLLLLLFFFFFFFEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!"
     "..."
     "Das klang nach %(sisName)s."
     "Ich sprinte in ihr Zimmer."
 
     scene bg lauraszimmer
     with fade
-    #Bild existiert noch nicht
+    
 
     "Ich sehe Laura auf einem Stuhl stehen."
 
-    show kotono #show sis scared
+    show sis scared
     with dissolve
     #Bild fehlt noch
 
     b "Was ist los, %(sisName)s?"
     $ berndNameUpper = berndName.upper()
-    sis "%(berndNameUpper)s, HILFE!"
+    sis "%(berndNameUpper)s!, HILFE!"
     sis "DA."
     b "Was ist da?"
     sis "EINE...EINE...EINE...EINE SPINNE!"
@@ -188,8 +188,7 @@ label anja_anfang:
 
     scene bg lauraszimmer
     with fade
-    #Bild existiert nicht
-
+    
     b "Bin schon wieder zurück."
     sis "SCHNELL. Sie krabbelt davon."
     b "Nicht bewegen, %(sisName)s."
@@ -198,7 +197,7 @@ label anja_anfang:
     "Ich hole weit aus."
     sis "Das kann ich mir nicht mit ansehen."
 
-    show kotono #show sis with closed eyes
+    show sis with closed eyes
     with dissolve
     #Bild existiert nicht
     #Vielleicht die Hände vor die Augen halten
@@ -228,7 +227,7 @@ label anja_anfang:
     "Verdammt."
     "Schon wieder zugenommen."
     "Und alles nur FETT."
-    "Ob %(wBerndName)s wohl auch Leute mit meinem Aussehen mag?"
+    "Ob %(wberndName)s wohl auch Leute mit meinem Aussehen mag?"
     "Eher nicht."
     "Wahrscheinlich steht sie mehr auf Muskeln."
     "Sie ist halt auch nur ein Mädchen."
@@ -243,24 +242,22 @@ label anja_anfang:
     "So."
     "Noch eben die Türe abschließen."
     "Damit nicht wieder das Gleiche wie letztens passiert."
-    
-    "Ach, %(wBerndName)s."
+    "Ach, %(wberndName)s."
     "Nein."
-    "Ich kann nicht schon wieder auf %(wBerndName)s fappieren."
+    "Ich kann nicht schon wieder auf %(wberndName)s fappieren."
     "Nicht schon wieder."
     "Ich darf einfach nicht."
     "Obwohl..."
-    
     menu:
         " "
         
-        "Ich fappiere auf sie.":
+        "Ich fappiere auf sie."
             "Ich schließe meine Augen."
             "Ich stelle mir vor, wie ich meine Arme um sie lege."
             "Ich drücke sie ganz nah an mich dran."
             "Die Welt um uns herum verschwindet."
             "Es gibt nur noch uns beide."
-            "Ich flüstere ihr \"Ich liebe dich\" ins Ohr."
+            "Ich flüstere ihr "Ich liebe dich" ins Ohr."
             "Sie haucht mir leise ins Ohr zurück."
             $ berndNameUpper = berndName.upper()
             sis "%(berndNameUpper)s, ICH MUSS AUF KLO!"
@@ -294,11 +291,11 @@ label anja_anfang:
             "Ich trockne mich ab und ziehe mich dann an."
             
         
-        "Nein, sie ist zu rein.":
+        "Nein, sie ist zu rein."
             "Ich stelle das Wasser der Dusche kälter ein."
             "Ich muss mich davon ablenken."
         
-            scene black
+            scene bg black
             with dissolve
         
             scene bg keller_aus
@@ -310,7 +307,7 @@ label anja_anfang:
     "So."
     "Damit wäre ich eigentlich fertig."
     
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
 
     "Ich gehe nochmal alles durch."
@@ -327,7 +324,7 @@ label anja_anfang:
     scene black
     with fade
     
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
     
     "So, angezogen bin ich nun auch."
@@ -372,11 +369,7 @@ label anja_anfang:
     "Scheiße."
     "Was mache ich jetzt?"
 
-    scene white #scene bg offenetuere
-    with fade
-    #Bild existiert noch nicht
-
-    show kotono at left #show yandere surprise at left
+    show yandere surprise at left
     with dissolve
     #Bild existiert noch nicht
 
@@ -393,13 +386,13 @@ label anja_anfang:
     bw "Hallo, %(berndName)s."
     b "Hi."
 
-    show kotono at left #show yandere neutral at left
+    show yandere neutral at left
     with dissolve
     #Bild existiert noch nicht
 
-    yan "Wer ist das, %(wBerndName)s?"
+    yan "Wer ist das, %(wberndName)s?"
     bw "Das ist nur %(berndName)s."
-    "Was soll hier \"nur\" heißen?"
+    "Was soll hier "nur" heißen?"
     bw "Er ist nur ein Nachbarsjunge."
     "Nachbarsjunge?"
     "Will die mich verarschen?"
@@ -407,7 +400,7 @@ label anja_anfang:
     "Sie braucht mich also nur für Krautchan."
     "Hätte ich mir ja gleich denken können."
 
-    show kotono at left #show yandere embarassed at left
+    show yandere embarassed at left
     with dissolve
     #Bild existiert noch nicht
 
@@ -420,16 +413,16 @@ label anja_anfang:
     bw "Oh ja, %(berndName)s ist sehr schüchtern."
     "Ich bin immer noch nicht in der Lage zu sprechen."
     yan "Na dann, ich muss jetzt los."
-    yan "Tschau, %(wBerndName)s."
+    yan "Tschau, %(wberndName)s."
     bw "Tschüss, %(yanName)s."
     yan "Tschau, %(berndName)s."
     b "Tsch-Tschüss."
 
-    scene black #scene bg treppenhaus
+    scene bg treppenhaus
     with fade
     #Bild existiert noch nicht
 
-    show kotono #showyandere from behind
+    show yandere from behind
     with dissolve
     #Bild existiert noch nicht
 
@@ -438,7 +431,7 @@ label anja_anfang:
     bw "%(berndName)s."
     "Ich drehe mich wieder um."
 
-    scene white #scene bg offenetuere
+    scene bg tuere
     with fade
     #Bild fehlt noch
 
@@ -451,7 +444,7 @@ label anja_anfang:
     bw "Naja, komm' erstmal rein."
     "Ich drehe mich zur Treppe hin."
 
-    scene black #scene bg treppenhaus
+    scene bg treppenhaus
     with fade
     #Bild fehlt noch
 
@@ -463,7 +456,6 @@ label anja_anfang:
     "Einfach nur weiterlaufen."
     "Ich bin die Treppe schon zur Hälfte runtergelaufen."
     bw "Dann halt nicht."
-    "Ich höre, wie die Türe zugemacht wird."
     "Ich bleibe kurz stehen."
     "Dann laufe ich einfach weiter."
     "Ich stehe nun vor der Wohnungstüre."
@@ -482,7 +474,7 @@ label anja_anfang:
     "Nein."
     "Ich öffne die Türe."
 
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
 
     "Ich ziehe meine Schuhe aus."
@@ -503,7 +495,7 @@ label anja_anfang:
     "Ich werfe erstmal meinen Computer an."
 
     scene bg keller
-    #with fade
+    with fade
 
     "Ich will mich auf andere Gedanken bringen."
     "Wie immer öffne ich als erstes meinen Browser und öffne Krautchan."
@@ -514,18 +506,17 @@ label anja_anfang:
     "zum Beispiel..."
     "Öhm..."
     "Ohne Krautchan hat mein Leben einfach keinen Sinn."
-    #Hier könnte man ein Bild von KC bringen, wie es nicht erreichbar ist.
+    #Hier könnte man ein Bild von KC bringen, wie es nicht erreichbar ist. KÖNNTE.
 
     "Ich schau einen Anime."
     "Aber welchen?"
     "Ich öffne meine Animepartition."
     "Nein."
+    "Nein."
     "Der nicht."
-    "Der auch nicht."
-    "Und den auch nicht."
     "Nicht dieser."
     "Der schon wieder? Lieber nicht."
-    #Hier könnte man ein Bild von einer Animepartition bringen.
+    #Hier könnte man ein Bild von einer Animepartition bringen. KÖNNTE.
 
     "Hmm..."
     "Ach, ich kann mich einfach nicht auf andere Gedanken bringen."
@@ -535,7 +526,7 @@ label anja_anfang:
     "Ob es vorhin richtig war, einfach so zu gehen?"
     "Ja."
     "Sie ist ja Schuld."
-    "Dass ein Mädchen mich abweist."
+    "Das ein Mädchen mich abweist."
     "Wie immer."
     "Ich kenne es nicht anders."
     "Aber das selbst eine Bernadette einen Bernd abweist."
@@ -543,16 +534,17 @@ label anja_anfang:
     "Liegt wohl doch an mir und nicht am Berndsein."
     #den oberen Abschnitt nochmal durchgehen wegen PC-Bildern
 
-    scene black
+    scene bg black
     with fade
 
-    sis "He, %(berndName)s."
+    Stimme "He, %(berndName)s.
 
-    scene bg keller_blur #keller_aus_blur
+    scene bg keller_blur
     with fade
  
-    sis "Aufstehen."
+    Stimme "Aufstehen."
     b "Jaja."
+    #Hier kann man Bernd blinzeln lassen, ist aber optional.
     "Dann reibe ich mir einmal durch die Augen."
 
     scene bg keller
@@ -564,12 +556,8 @@ label anja_anfang:
     sis "Das Abendessen ist fertig."
     b "Ist ja gut."
     sis "Ich geh schon mal vor."
-    
-    hide sis neutral
-    with dissolve
-    
     "Ich setze mich aufrecht hin."
-    "Ich lasse mir die Sache mit %(wBerndName)s nochmal durch den Kopf gehen."
+    "Ich lasse mir die Sache mit %(wberndName)s nochmal durch den Kopf gehen."
     "Ich wollte sie besuchen."
     "Sie kommt mit ihrer Freundin raus."
     "Die Freundin..."
@@ -577,13 +565,12 @@ label anja_anfang:
     menu:
         " "
        
-        "...ist irgendwie süß.":
+        "...ist irgendwie süß."
             jump von_anja_zu_yasmin
        
        
-        "...ist irgendwie süß. NICHT!":
-            $ yanLove -=5
-            "bla"
+        "ist irgendwie süß. NICHT!"
+            $ yanlove -=5
             #Anspruchsvoller Bernd ist anspruchsvoll und ihr Aussehen gefällt ihm nicht. Nettigkeit? HUARGH
     
     "Ich sollte erstmal das Essen holen gehen."
@@ -592,7 +579,7 @@ label anja_anfang:
     with fade
    
     ma "Oh, %(berndName)s."
-    ma "Wie war es bei %(wBerndName)s?"
+    ma "Wie war es bei %(wberndName)s?"
     b "Nicht das schon wieder."
     b "Sie ist nicht das, was du dir wünschst."
     ma "Also lief es nicht so gut?"
@@ -602,8 +589,8 @@ label anja_anfang:
     menu:
         " "
         
-        "Ich erzähle es ihr.":
-            $ maLove +=5
+        "Ich erzähle es ihr."
+            $ malove +=5
             b "Also gut."
             b "Ich erzähle es dir."
             b "Ich wollte zu ihr."
@@ -624,10 +611,10 @@ label anja_anfang:
             "Ohne ein weiteres Wort zu sagen gehe ich wieder zurück in meinen Keller."
         
         
-        "Lass mich in Ruhe.":
-            $ maLove -=5
+        "Lass mich in Ruhe."
+            $ malove -=5
             b "Kannst du mich nicht einmal damit in Ruhe lassen?"
-            ma "Jetzt sei doch nicht so, %(berndName)s."
+            ma "Jetzt sei doch nicht so, %(berndName)s.
             "Ich nehme mir mein Essen und gehe wieder zurück in meinen Keller."
     
     scene bg keller
@@ -647,7 +634,7 @@ label anja_anfang:
     "Oh, schon die elfte Folge."
     "Bald ist der Anime vorbei."
     
-    scene black
+    scene bg black
     with fade
     
     $ berndNameUpper = berndName.upper()
@@ -674,7 +661,7 @@ label anja_anfang:
     
     "Ich schaue die Kellertreppe nach oben."
     
-    show kotono #show blond neutral_g
+    show blond neutral_g
     with dissolve    
     #Bild existiert noch nicht
     
@@ -692,7 +679,7 @@ label anja_anfang:
     "Ich setze mich wieder in meinen Stuhl."
     "Die Türe geht auf."
     
-    show salih #show blond mad
+    show blond mad
     with dissolve
     #Bild existiert noch nicht
     
@@ -710,8 +697,7 @@ label anja_anfang:
     b "..."
     #Evtl. Bernds Gedanken noch reinbringen, also andauernd noch ein "Geh sterben".
     
-    hide salih
-    show kotono #show blond really mad
+    show blond really mad
     with dissolve
     #Bild existiert noch nicht
     
@@ -722,11 +708,9 @@ label anja_anfang:
     bw "Ist es wegen %(yanName)s?"
     b "Wer?"
     bw "AHA!"
-    "Oh Schei-"
     bw "Du hast etwas gesagt."
     
-    hide kotono
-    show salih #show blond mad
+    show blond mad
     with dissolve
     #Bild existiert noch nicht
     
@@ -747,8 +731,9 @@ label anja_anfang:
     bw "Was machte ich falsch?"
     bw "Sag es mir."
     b "Du..."
+    b "Du..."
     bw "Was?"
-    b "Du sagtest, dass..."
+    b "Du sagtest, das..."
     bw "Ich sagte was?"
     bw "OH, WARTE."
     bw "Ich sagte, du seist nur ein Nachbarsjunge."
@@ -792,7 +777,7 @@ label anja_anfang:
     "Endlich."
     "Endlich kann ich Animu schauen."
     
-    scene black
+    scene bg black
     with fade
     
     scene bg keller
@@ -809,32 +794,34 @@ label anja_anfang:
     "So langweilig."
     "Ich geh schlafen."
     
-    scene black
+    scene bg black
     with fade
     
     "Am nächsten Tag."
     
-    scene bg keller_aus_blur
+    scene bg keller_blur
     with fade
     
     "Hmm..."
     "Hmmmm....."
-    "Anya."
-    "Hmmmmm......"
-    "Ai shitemasu."
-    "Ich mache meine Augen auf."
+    "Name"
+    #hier den Namen einer 2D-Frau aus einem der Anime, die Bernd schaut, einfügen
+    #dann ein Hentaibild dieser Person kurz aufblinken lassen
+    "Hmmmmm...."
+    "Ich kam."
+    #Zwei Optionen: A: Etwas länger machen, B: weglassen
     
     scene bg keller_aus
     with fade
     
-    "Hach, das war nur mein Dakimakura."
+    "Hach, das war so gut."
     "Wenn ich das doch nur wirklich erleben dürfte."
     "Ich bin so ronery."
     "Ich kenne keine Mädche-"
     "Oh, warte."
     "Vergiss das."
     "Andererseits..."
-    "Soll ich %(wBerndName)s wirklich glauben?"
+    "Soll ich %(wberndName)s wirklich glauben?"
     "Soll ich wirklich zu ihr gehen?"
     "Sie könnte auch ein guter Troll sein."
     "Krautchan geht bestimmt auch wieder."
@@ -843,10 +830,10 @@ label anja_anfang:
     
     "Dann kann ich jetzt erstmal auf Badezimmer gehen."
     
-    scene black
+    scene bg black
     with fade
     
-    $ Pause(1)
+    #kurz warten (3-5 Sekunden)
     
     "Ich gehe wieder zurück in meinen Keller."
     
@@ -861,7 +848,7 @@ label anja_anfang:
     "Naja, egal."
     "Für Internet und Anime reicht der noch."
     "Ich öffne meinen Internetbrowser."
-    "Wie immer drücke ich automatisch Strg + L und tippe dann \"kr\" ein."
+    "Wie immer drücke ich automatisch Strg + L und tippe dann "kr" ein."
     "Dann drücke ich mit der Pfeiltaste einen runter und drücke Enter."
     "Es lädt nor-"
     "404."
@@ -877,14 +864,14 @@ label anja_anfang:
     menu:
         " "
         
-        "doch zu %(wBerndName)s gehen.":
+        "doch zu %(wberndName)s gehen."
             jump bernd_anja_besprechung
         
 
-        "mir einen Job suchen.":
+        "mir einen Job suchen."
             jump bernd_kapzwei_grillen
 
-label bernd_anja_besprechung:
+label bernd_anja_besprechung
 
     "Ja."
     "Ich sollte zu ihr gehen."
@@ -909,7 +896,7 @@ label bernd_anja_besprechung:
     menu:
         " "
         
-        "Erst schaue ich Animu.":
+        "Erst schaue ich Animu."
             $ wBerndLove -= 5
             scene bg desktop_none
             with fade
@@ -932,7 +919,7 @@ label bernd_anja_besprechung:
             "Ich hab nichts mehr zum Schauen."
         
                 
-        "Ich hab gerade eh nichts Besseres zu tun.":
+        "Ich hab gerade eh nichts Besseres zu tun."
             $ wBerndLove += 5
     
     "Ich geh mal auf Krautchan."
@@ -946,7 +933,7 @@ label bernd_anja_besprechung:
     scene black
     with fade
     
-    scene white #scene bg tuere
+    scene bg tuere
     with fade
     #Bild existiert noch nicht
     
@@ -960,30 +947,27 @@ label bernd_anja_besprechung:
     "Wir wollen Krautchan retten."
     "Mehr gibt es da nicht."
     "Ich klopfe an die Türe."
-    bw "Ich komme gleich."
+    Stimme "Ich komme gleich."
     "..."
-    $ Pause(1,5)
+    Pause(3)
     "..."
-    $ Pause(1,5)
+    Pause(3)
     "..."
-    $ Pause(1,5)
+    Pause(3)
     "..."
     "Ich klopfe nochmals."
-    bw "JAAAAA, ich komme gleich."
+    Stimme "JAAAAA, ich komme gleich."
     "..."
-    $ Pause(0,5)
+    Pause(2)
     "Ich klopfe nochmal."
     "Ich klopfe immer fester gegen die Türe."
     "Ich klopfe ununterbrochen gegen die Türe."
-    bw "JAAAAHAAAAA!"
-    bw "Ich komme doch."
+    Stimme "JAAAAHAAAAA!"
+    Stimme "Ich komme doch."
     "..."
     "Ich höre jemanden rennen."
     "Jemand drückt die Türklinke runter."
     "Die Tür öffnet sich."
-    
-    scene black #scene bg offenetuere
-    with fade
     
     show blond neutral_g
     with dissolve
@@ -996,7 +980,7 @@ label bernd_anja_besprechung:
     bw "Komm doch rein."
     "Ich trete ein."
     
-    scene white #scene bg anjas_wohnung
+    scene bg anjas_wohnung
     with fade
     #Bild existiert noch nicht
     
@@ -1010,7 +994,7 @@ label bernd_anja_besprechung:
     "Ich folge ihr kommentarlos."
     "Wozu sollte ich auch dafür etwas sagen?"
     
-    scene black #scene bg anjas_zimmer
+    scene bg anjas_zimmer
     with fade
     #Bild existiert noch nicht
     
@@ -1069,9 +1053,9 @@ label bernd_anja_besprechung:
     show blond happy_g
     with dissolve
     
-    $ Pause(1)
+    Pause(1)
     "Stille."
-    $ Pause(1)
+    Pause(1)
     "Stille."
     "Wie in einem Anime, in dem gerade ein schlechter Witz gemacht wurde."
     "Nur, dass es diesmal in der Wirklichkeit so ist."
@@ -1091,7 +1075,7 @@ label bernd_anja_besprechung:
     bw "Komisch."
     "Geniale Antwort ist genial."
     "NICHT."
-    $ Pause(1)
+    Pause(1)
     bw "Du warst wegen einer Kleinigkeit beleidigt."
     "lolwas"
     bw "Dabei dachte ich, dass jeder Bernd auch an die schlimmsten Sachen gewöhnt wäre."
@@ -1126,7 +1110,7 @@ label bernd_anja_besprechung:
     b "Eine Rei ist auch fein."
     bw "Ja."
     b "Ja."
-    $ Pause(2)
+    Pause(2)
     "Oh wow. Ein QUALITÄTSGESPRÄCH!"
     bw "Deine Milch."
     b "Was ist damit?"
@@ -1179,6 +1163,7 @@ label bernd_anja_besprechung:
     
     play sound "sound/telefon.wav"
     #da muss ein besserer Sound rein
+    
     "Plötzlich geht das Telefon."    
     "Ich werde aus meinen Träumen gerissen."
     "%(wBerndName)s läuft zum Telefon und schaut auf das Display."
@@ -1194,7 +1179,7 @@ label bernd_anja_besprechung:
     bw "OK."
     bw "Bis nachher."
     "Sie legt den Hörer wieder auf."
-    bw "Sorry, %(berndName)s."
+    bw "Sorry, %(berndName)s.
     bw "Ich muss jetzt einkaufen gehen."
     bw "Lass uns morgen nochmal reden."
     "Ich könnte ihr ja anbieten, dass ich ihr hel-"
@@ -1205,7 +1190,7 @@ label bernd_anja_besprechung:
     "Wieso zu mir?"
     b "OK."
     "Und wieso stimme ich einfach so zu?"
-    bw "Ich werde mir bis morgen auch was für den Test einfallen."
+    bw Ich werde mir bis morgen auch was für den Test einfallen."
     "Wir gehen in den Flur."
     
     scene bg anjas_wohnung
@@ -1239,22 +1224,22 @@ label bernd_anja_besprechung:
     "FICK JA!"
     "QUALITÄTSNASEN!"
     
-    #jump kapitel 3
+    jump kapitel 3
 
-label bernd_kapzwei_grillen:
+label bernd_kapzwei_grillen
 
     "Hahaha oh wow."
     "Arbeit? In meinem Leben?"
     "Ich vergesse das lieber mal direkt wieder."
-    "Aber ich könnte echt mal was in meinem Leben verändern."
+    "Aber ich könnte echt mal was in meinem Leben verändern
     
-    scene black
+    scene bg black
     with fade
     
     "Einige Monate später."
     
-    sis "Oh, seine Augen."
-    sis "Er bewegt seine Augen."
+    "Stimme" "Oh, seine Augen."
+    "Stimme" "Er bewegt seine Augen."
     
     "Diese Stimme."
     $ sisNameKurz = stringShorten(sisName,3)
@@ -1273,26 +1258,26 @@ label bernd_kapzwei_grillen:
     show sis sadsmile at left
     with dissolve
     
-    show kotono at right #show doc at right
+    show doc at right
     with dissolve
     #Bild existiert noch nicht
     
     ma "Wie geht es ihm, Herr Doktor?"
-    doc "Wir können leider nicht mehr allzu viel für ihn tun."
-    #doc muss noch als Person registriert werden
+    "Arzt" "Wir können leider nicht mehr allzu viel für ihn tun."
+    #Step sagte, ich solle ihm glaube, dass "Arzt" reicht
         
     show sis sad at left
     with dissolve
     
     ma "Was heißt das?"
-    doc "Der Krebs ist schon zu weit fortgeschritten."
-    doc "Wir können es nur noch verlangsamen."
+    "Arzt" "Der Krebs ist schon zu weit fortgeschritten."
+    "Arzt" "Wir können es nur noch verlangsamen."
     ma "Wie konnte es nur soweit kommen?"
-    doc "Er hat empfindliche Haut."
-    doc "Und hat sich zu lange der Sonne ausgesetzt."
+    "Arzt" "Er hat empfindliche Haut."
+    "Arzt" "Und hat sich zu lange der Sonne ausgesetzt."
     sis "Heißt das, dass %(berndName)s sterben wird?"
     ma "..."
-    doc "Es tut mir leid."
+    "Arzt" "Es tut mir leid."
     sis "Ich will nicht, dass er stirbt."       
  
     show sis crying at left
@@ -1326,13 +1311,11 @@ label bernd_kapzwei_grillen:
     sis "Ich..."
     "Ich gebe meiner Mutter und dem Arzt eine Handbewegung, dass sie rausgehen sollen."
      
-    hide kotono #hide doc
+    hide doc
     with dissolve
        
-    show sis crying
-    with move
-        
-    #play sound "sound/door1.wav"
+    move sis crying
+    with dissolve
             
     if sislove >= 75: 
         #muss eventuell angepasst werden
@@ -1374,10 +1357,10 @@ label bernd_kapzwei_grillen:
         b "Kein aber, %(sisName)s."
         sis "OK."
         sis "Ich versuch's."
-        
+                
     scene owari
-    with dissolve
-    
+    with fade
+    #
     #
     #
     #
