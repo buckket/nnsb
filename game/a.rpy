@@ -75,9 +75,9 @@ label anja_anfang:
     "Hmmm..."
     "Was könnte wohl der Grund sein?"
     "Hmmm..."
-    "Vielleicht weiß Anja mehr als sie mir bisher weiß gemacht hat."
+    "Vielleicht weiß %(wBerndName)s mehr als sie mir bisher weiß gemacht hat."
     "Ich glaub, ich geh morgen mal zu ihr."
-    "Anja wird mir ihre Adresse ja bestimmt nicht umsonst gegeben haben."
+    "%(wBerndName)s wird mir ihre Adresse ja bestimmt nicht umsonst gegeben haben."
     "Ob sie wohl auf mich wartet?"
     "Ach Quatsch."
     "Warum sollte sie?"
@@ -101,7 +101,7 @@ label anja_anfang:
     "Ein plötzliches Gefühl riss mich aus dem Schwärmen."
     "Ich kam."
     "Hach..."
-    "Anja..."
+    "%(wBerndName)s..."
 
     scene black
     with fade
@@ -115,7 +115,7 @@ label anja_anfang:
     #Sieht dumm aus, aber wie soll man das sonst darstellen?
     "Ich bin noch so müde."
     "Ich würde am liebsten noch ein bisschen weiterschlafen."
-    "Aber ich wollte heute ja Anja besuchen."
+    "Aber ich wollte heute ja %(wBerndName)s besuchen."
     "Ich gähne nochmal und strecke mich dabei."
     #Wie stellt man ein Recken und Strecken dar?
     "Ich reibe mir durch die Augen"
