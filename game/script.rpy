@@ -9,12 +9,12 @@ init python:
     #wenn max nicht definiert oder 0 ist, auf die hälfte der länge
     def stringShorten(s,max=0):
         if(max==0):
-             max = len(s)/2
+            max = len(s)/2
         return s[0:max]
         
     def stringEnde(s,last=0):
         if(last==0):
-             last = len(s)/2
+            last = len(s)/2
         return s[len(s)-last:len(s)]
 
 init:
@@ -91,6 +91,15 @@ init:
     image gameover_vierkanal = "images/bg/gameover_vierkanal.jpg"
     image bg lieferwagen = "images/bg/lieferwagen.jpg"
     image bg lauraszimmer = "images/bg/lauras_zimmer.jpg"
+    image bg keller_aus_blur = "images/bg/berndszimmer_aus_blur.jpg"
+    
+    image bg krankenzimmer = "images/bg/krankenzimmer.jpg"
+    #Filter fehlt noch
+    image bg anja_kueche = "image/bg/anja_kueche.jpg"
+    #Filter fehlt noch
+    image bg treppenhaus = "image/bg/treppenhaus.jpg"
+    #Filter fehlt noch
+    image bg anja_zimmer = "image/bg/anja_zimmer.jpg"
     
     #charakter bilder
     #prolog
@@ -117,12 +126,18 @@ init:
 
     image salih = "images/char/salih.png"
 
+    image yandere neutral = "images/char/kotono_traurig.png"
+    #ÄNDERN ÄNDERN ÄNDERN
+    
+    #image doc = "images/char/doc.png"
+
     # charaktere
     $ b = DynamicCharacter("berndName", color="#dddddd")
     $ ma = DynamicCharacter("maName", color="#c8ffc8")
     $ sis = DynamicCharacter("sisName", color="#ff5555")
     $ bw = DynamicCharacter("wBerndName", color="#00dd00")
-    
+    $ yan = DynamicCharacter("yanName", color="#ff00ff")
+        
     #musik
     #draussen, keller = 1.ogg
     #wohnung = 2.mp3
@@ -138,11 +153,13 @@ init:
     $ sisName = "Laura"
     $ maName = "Dorothea"
     $ wBerndName = "Anja"
+    $ yanName = "Yasmin"
     
     #beziehungen
     $ maLove = 20
     $ sisLove = 40
     $ friendLove = 0
+    $ yanLove = 0
     
     #flags
     $ anjaRoute = 0
@@ -195,6 +212,12 @@ label namenGeben:
     $ wBerndName = renpy.input("Zuletzt noch dieses Mädchen hier.") or "Anja"
     hide blond neutral_g
     with dissolve
+    show yandere neutral
+    with dissolve
+    $ yanName = renpy.input("Oh, ich habe dieses Mädchen hier noch vergessen.") or "Yasmin"
+    hide yandere neutral
+    with dissolve
+    
     "OK, das war schon alles."
     "Viel Spaß, %(berndName)s!"
     
