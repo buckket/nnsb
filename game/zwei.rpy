@@ -91,7 +91,7 @@ label zwei_laura_stalk_entscheid:
     "Stimme" "Scheint, als wärest du endlich wach."
     "Erschrocken blicke ich auf."
     
-    show sis_neutral
+    show sis neutral
     with dissolve
     
     sis "Hallo %(berndName)s."
