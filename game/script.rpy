@@ -138,11 +138,21 @@ init:
     $ bw = DynamicCharacter("wBerndName", color="#00dd00")
     $ yan = DynamicCharacter("yanName", color="#ff00ff")
         
-    #musik
-    #draussen, keller = 1.ogg
-    #wohnung = 2.mp3
-    #schwester = schwester.ogg
-    #supermarkt = 3.mp3
+    #Musik
+    #Draußen, Keller = 1.ogg
+    #Wohnung, Treppenhaus = 2.mp3
+    #Schwester = schwester.ogg
+    #Supermarkt = 3.mp3
+    #Anjas Theme und ihr Zimmer = bernd_anja_theme.mp3
+    #Psychosachen = psycho.mp3
+    #Anjas Wohnung, bis auf ihr eigenes Zimmer = anjas_wohnung.mp3
+    #Traurige Stellen = sad_ronery.mp3
+    #Dates usw. = date.mp3
+    #Spannung usw. = exciting.mp3
+    #wegrennen, hinterherrennen, usw. = run_fast.mp3
+    #Theme für Stalkerbernd = ???
+    #Theme für Yasmin = ???
+    
     
     #sounds
     #tür = door_1.wav
