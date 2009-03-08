@@ -786,3 +786,4 @@ label zwei_weiter_entscheid:
             "Ich bekomme keine Luft mehr."
             "Nicht in der Lage, den Reflex weiter zu unterdrücken, platzt es aus mir heraus."
             "Tränen schießen mir in die Augen, während ich hustend nach Luft schnappe."
+            "_"
