@@ -1,4 +1,4 @@
-﻿#Inhaltsverzeichnis:
+#Inhaltsverzeichnis:
 #label laura_anja_mail = Wechsel von Laura-Route auf Anja-Route
 #label anja_anfang = direkte Anja-Route
 #label bernd_anja_besprechung = menu "Soll ich zu Anja gehen? J/N"
@@ -346,7 +346,7 @@ label anja_anfang:
     sis "EINE...EINE...EINE...EINE SPINNE!"
     b "Ich laufe langsam zu meiner Schwester hin."
     b "Nun stell dich mal wegen einer Spinne nicht so an."
-    b "Ich greife nach meinem Schuh."
+    "Ich greife nach meinem Schuh."
     b "Hö?"
     b "Wo ist mein Schuh?"
     "Ich laufe immer noch barfuß durch die Gegend."
@@ -412,7 +412,7 @@ label anja_anfang:
     "Verdammt."
     "Schon wieder zugenommen."
     "Und alles nur FETT."
-    "Ob %(wberndName)s wohl auch Leute mit meinem Aussehen mag?"
+    "Ob %(wBerndName)s wohl auch Leute mit meinem Aussehen mag?"
     "Eher nicht."
     "Wahrscheinlich steht sie mehr auf Muskeln."
     "Sie ist halt auch nur ein Mädchen."
@@ -427,9 +427,9 @@ label anja_anfang:
     "So."
     "Noch eben die Türe abschließen."
     "Damit nicht wieder das Gleiche wie letztens passiert."
-    "Ach, %(wberndName)s."
+    "Ach, %(wBerndName)s."
     "Nein."
-    "Ich kann nicht schon wieder auf %(wberndName)s fappieren."
+    "Ich kann nicht schon wieder auf %(wBerndName)s fappieren."
     "Nicht schon wieder."
     "Ich darf einfach nicht."
     "Obwohl..."

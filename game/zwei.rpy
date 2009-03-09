@@ -226,7 +226,15 @@ label zwei_laura_stalk_entscheid:
             "...habe ich es eigentlich immer nur zum Download von Pornos und illegalen Spielen und Filmen benutzt."
             "Naja... was solls."
             "Google hat mich noch nie im Stich gelassen."
-            
+            "Nur was gebe ich ein?"
+            "..."
+            "\"Krautchan offline\""
+            "..."
+            "Das war nichts."
+            "Dafür bietet mir Google einen kostenlosen E-Mail-Zugang an."
+            "Wer hat schon seine E-Mail bei Google?"
+            "Ich überlege mir, was ich als nächstes suchen soll, und lösche nebenbei ein wenig Spam aus meinem Postfach."
+            "..."
             #BUTTERGOTT
             #bernd erinnert sich an die email nachdem er auf google irgendwas gefunden hat
             
@@ -268,9 +276,7 @@ label zwei_email_erinnerung:
 #--------------------------------------------------------------------------#
 #Dieser Abschnitt beinhaltet den Teil von Kapitel 2, bei dem sich Bernd für#
 #Laura oder Yasmin entscheiden muss, und tritt auf, wenn man nicht auf die-#
-#E-Mail eingeht. Es wird drei Punkte geben, an denen er sich für oder gegen#
-#eine von beiden entscheiden kann. Bei zwei von dreien wird diese Route----#
-#eingeschlagen.------------------------------------------------------------#
+#E-Mail eingeht.-----------------------------------------------------------#
 #--------------------------------------------------------------------------#
 
 label zwei_weiter_entscheid:
@@ -763,7 +769,24 @@ label zwei_weiter_entscheid:
     
     menu:
         "Ich sollte eingreifen!":
-            pass
+            "Ich sollte nicht unüberlegt handeln, aber ich muss etwas tun."
+            "Was macht der dort?"
+            "Er holt einen kleinen Kasten unter dem Mantel hervor."
+            "Eine externe Festplatte, die er per USB anschließt."
+            "Er will ein Backup machen."
+            "Diesen Moment muss ich nutzen."
+            "Jetzt ist er abgelenkt."
+            "Wenn ich noch etwas zögere, verpasse ich meine Chance."
+            "Ich spanne jede einzelne Muskelfaser meines Körpers an."
+            "Obwohl ich damals in Sport immer beim Bodenturnen versagt habe, gelingt mir die nahezu perfekte Hechtrolle."
+            "Ich werfe den erschrockenen Stalkerbernd zu Boden."
+            "Mit einer fließenden Bewegung greife ich ihn an beiden Handgelenken und drücke die Arme auf den Boden."
+            b "Hab ich dich!"
+            #BUTTERGOTT:
+            #hier wäre ein großes CG cool!
+            "Er starrt mich schweigend an."
+            b "Jetzt bist du fällig, Stalkerbernd!"
+            jump yasmin_anfang
         "Nein, ich warte nur noch ein bisschen...":
             "Ich sollte wirklich nicht unüberlegt handeln."
             "Vielleicht sollte ich doch versuchen, mich ein wenig zu bewegen?"
@@ -786,4 +809,27 @@ label zwei_weiter_entscheid:
             "Ich bekomme keine Luft mehr."
             "Nicht in der Lage, den Reflex weiter zu unterdrücken, platzt es aus mir heraus."
             "Tränen schießen mir in die Augen, während ich hustend nach Luft schnappe."
-            "_"
+            scene black
+            with dissolve
+            "Jetzt ist alles zu spät."
+            "Er hat mich bemerkt und wird mich umbringen oder sowas."
+            "Er darf ja keine Spuren hinterlassen."
+            "Ich warte auf seine Reaktion."
+            "Ich warte, aber es passiert nichts."
+            "Warum passiert nichts?"
+            "Will er mich nicht irgendwie loswerden oder so?"
+            scene bg keller_blur
+            with dissolve
+            "Ich kann nichts erkennen."
+            "Mit der Hand wische ich mir die Tränen aus den Augen."
+            scene bg keller
+            with wooshTrans
+            "..."
+            "Er ist weg."
+            "Einfach verschwunden."
+            "Die Fehlermeldung auf dem Bildschirm lässt mich wissen, dass das externe Gerät unerwartet entfernt wurde, und dass das Backup nicht fertiggestellt werden konnte."
+            "Ein Glück."
+            "Zu schwach, heute Abend noch irgendetwas zu tun, lasse ich mich ins Bett fallen und schlafe ein."
+            scene black
+            with fade
+            jump laura_anfang

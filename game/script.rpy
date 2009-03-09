@@ -181,7 +181,7 @@ init:
     $ supermarkt = ""
     $ mitbringen = "nichts"
     
-    $ show_editor_button = False
+    $ show_editor_button = True
 
 # Neues Spiel startet hier
 label start:
