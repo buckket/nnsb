@@ -49,6 +49,8 @@ init:
     $ spotTrans = ImageDissolve("images/bg/spots_trans.png", 1.0, 8)
     $ fastMove = MoveTransition(0.2)
     $ slowDissolve = Dissolve(1.0)
+    
+    
     #prolog
     image splash prolog = "images/bg/splash_prolog.png"
     image bg zuhause_draussen = "images/bg/strasse.jpg"
@@ -95,12 +97,12 @@ init:
     
     image bg krankenzimmer = "images/bg/krankenzimmer.jpg"
     #Filter fehlt noch
-    image bg anja_kueche = "image/bg/anja_kueche.jpg"
+    image bg anja_kueche = "images/bg/anja_kueche.jpg"
     #Filter fehlt noch
-    image bg treppenhaus = "image/bg/treppenhaus.jpg"
+    image bg treppenhaus = "images/bg/treppenhaus.jpg"
     #Filter fehlt noch
-    image bg anja_zimmer = "image/bg/anja_zimmer.jpg"
-    
+    image bg anja_zimmer = "images/bg/anja_zimmer.jpg"
+        
     #charakter bilder
     #prolog
     image sis neutral = "images/char/schwester_neutral.png"

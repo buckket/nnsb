@@ -638,7 +638,7 @@ label anja_anfang:
     with fade
     #Bild fehlt noch
 
-    show berndw glasses neutral
+    show blond neutral_g
     with dissolve
 
     b "..."
@@ -677,7 +677,7 @@ label anja_anfang:
     "Nein."
     "Ich öffne die Türe."
 
-    scene bg wohnung_innen
+    scene bg zuhause_drinnen
     with fade
 
     "Ich ziehe meine Schuhe aus."
@@ -698,7 +698,7 @@ label anja_anfang:
     "Ich werfe erstmal meinen Computer an."
 
     scene bg keller
-    with fade
+    with dissolve
 
     "Ich will mich auf andere Gedanken bringen."
     "Wie immer öffne ich als erstes meinen Browser und öffne Krautchan."
@@ -737,8 +737,10 @@ label anja_anfang:
     "Liegt wohl doch an mir und nicht am Berndsein."
     #den oberen Abschnitt nochmal durchgehen wegen PC-Bildern
 
-    scene bg black
+    scene black
     with fade
+    
+    $ renpy.pause(1)
 
     "Stimme" "He, %(berndName)s."
 
@@ -750,7 +752,7 @@ label anja_anfang:
     "Ich reibe mir einmal durch die Augen."
 
     scene bg keller
-    with fade
+    with wooshTrans
 
     show sis neutral
     with dissolve
@@ -759,7 +761,7 @@ label anja_anfang:
     b "Ist ja gut."
     sis "Ich geh schon mal vor."
     "Ich setze mich aufrecht hin."
-    "Ich lasse mir die Sache mit %(wberndName)s nochmal durch den Kopf gehen."
+    "Ich lasse mir die Sache mit %(wBerndName)s nochmal durch den Kopf gehen."
     "Ich wollte sie besuchen."
     "Sie kommt mit ihrer Freundin raus."
     "Die Freundin..."
@@ -772,7 +774,7 @@ label anja_anfang:
        
        
         "ist irgendwie süß. NICHT!":
-            $ yanlove -=5
+            $ yanLove -=5
             #Anspruchsvoller Bernd ist anspruchsvoll und ihr Aussehen gefällt ihm nicht. Nettigkeit? HUARGH
     
     "Ich sollte erstmal das Essen holen gehen."
@@ -781,7 +783,7 @@ label anja_anfang:
     with fade
    
     ma "Oh, %(berndName)s."
-    ma "Wie war es bei %(wberndName)s?"
+    ma "Wie war es bei %(wBerndName)s?"
     b "Nicht das schon wieder."
     b "Sie ist nicht das, was du dir wünschst."
     ma "Also lief es nicht so gut?"
@@ -792,7 +794,7 @@ label anja_anfang:
         " "
         
         "Ich erzähle es ihr.":
-            $ malove +=5
+            $ maLove +=5
             b "Also gut."
             b "Ich erzähle es dir."
             b "Ich wollte zu ihr."
@@ -836,7 +838,7 @@ label anja_anfang:
     "Oh, schon die elfte Folge."
     "Bald ist der Anime vorbei."
     
-    scene bg black
+    scene black
     with fade
     
     $ berndNameUpper = berndName.upper()
@@ -883,9 +885,9 @@ label anja_anfang:
     "Ich setze mich wieder in meinen Stuhl."
     "Die Türe geht auf."
     
-    show blond mad
+    #show blond mad <-- gibts noch nicht
+    show blond neutral_g
     with dissolve
-    #Bild existiert noch nicht
     
     bw "Was ist los mit dir?"
     b "..."
@@ -905,7 +907,8 @@ label anja_anfang:
     b "..."
     "Geh sterben."
     
-    show blond really mad
+    #show blond really mad
+    show blond neutral_g
     with dissolve
     #Bild existiert noch nicht
     
@@ -919,7 +922,8 @@ label anja_anfang:
     bw "Du hast etwas gesagt."
     "Verdammt."
     
-    show blond mad
+    #show blond mad
+    show blond neutral_g
     with dissolve
     #Bild existiert noch nicht
     
@@ -951,7 +955,8 @@ label anja_anfang:
     bw "Ich hab Recht."
     bw "Ach, %(berndName)s."
     
-    show blond doppelpunkt_drei
+    #show blond doppelpunkt_drei
+    show blond neutral_g
     with dissolve
     
     bw "Was soll ich nur mit dir machen?"
@@ -985,7 +990,7 @@ label anja_anfang:
     "Endlich."
     "Endlich kann ich Animu schauen."
     
-    scene bg black
+    scene black
     with fade
     
     scene bg keller
@@ -1002,7 +1007,7 @@ label anja_anfang:
     "So langweilig."
     "Ich geh schlafen."
     
-    scene bg black
+    scene black
     with fade
     
     "Am nächsten Tag."
@@ -1032,7 +1037,7 @@ label anja_anfang:
     "Ich liebe dich."
  
     scene bg keller_aus
-    with fade
+    with dissolve
     
     "Hach, das war so gut."
     "Wenn ich das doch nur wirklich erleben dürfte."
@@ -1041,7 +1046,7 @@ label anja_anfang:
     "Oh, warte."
     "Vergiss das."
     "Andererseits..."
-    "Soll ich %(wberndName)s wirklich glauben?"
+    "Soll ich %(wBerndName)s wirklich glauben?"
     "Soll ich wirklich zu ihr gehen?"
     "Sie könnte auch ein guter Troll sein."
     "Krautchan geht bestimmt auch wieder."
@@ -1050,7 +1055,7 @@ label anja_anfang:
     
     "Dann kann ich jetzt erstmal auf Badezimmer gehen."
     
-    scene bg black
+    scene black
     with fade
     
     $ renpy.pause(2)
@@ -1084,7 +1089,7 @@ label anja_anfang:
     menu:
         " "
         
-        "doch zu %(wberndName)s gehen.":
+        "doch zu %(wBerndName)s gehen.":
             jump bernd_anja_besprechung
         
 
@@ -1141,7 +1146,7 @@ label anja_besprechung:
         
                 
         "Ich hab gerade eh nichts Besseres zu tun.":
-            $ wBerndLove += 5
+            $ friendLove += 5
     
     "Ich geh mal auf Krautchan."
     "404."
@@ -1452,7 +1457,7 @@ label bernd_kapzwei_grillen:
     "Ich vergesse das lieber mal direkt wieder."
     "Aber ich könnte echt mal was in meinem Leben verändern."
     
-    scene bg black
+    scene black
     with fade
     
     "Einige Monate später."
@@ -1536,7 +1541,7 @@ label bernd_kapzwei_grillen:
     show sis crying
     with dissolve
             
-    if sislove >= 75: 
+    if sisLove >= 75: 
         #muss eventuell angepasst werden
         
         "Ich richte mich einigermaßen auf, sodass ich nun auf dem Bett sitze."
@@ -1564,7 +1569,7 @@ label bernd_kapzwei_grillen:
         b "Ich möchte nicht, dass du wegen mir weinst."
         sis "OK."
     
-    if sislove < 75:
+    if sisLove < 75:
         #muss eventuell angepasst werden
         
         b "Also hör auf zu weinen."
