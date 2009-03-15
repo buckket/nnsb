@@ -226,6 +226,8 @@ label laura_anja_mail:
     with fade
     
     #BUTTERGOTT
+    #"sinnloses" Gespräch erwünscht
+    #vielleicht ein Chat mit einem alten Freund aus der alten Stadt
     
     
     
@@ -263,9 +265,10 @@ label laura_anja_mail:
 
 label anja_anfang:
 
-    scene bg keller
+    scene bg desktop_404
     with fade
-    #Bild existiert nicht --> besseres Bild mit Errorpage erwünscht
+    #Bild existiert nicht
+    
     "Bitte wie?"
     "Liegt wohl an meiner Verbindung."
     "F5."
@@ -525,8 +528,7 @@ label anja_anfang:
     
     "Ich schmeiße das Taschentuch in die Toilette."
     
-    #play sound "sound/toilette.wav"
-    #Sound existiert noch nicht
+    play sound "sound/toilet.wav"
     
     "Ich gehe wieder zurück zu Laura."
     
@@ -705,6 +707,7 @@ label anja_anfang:
         
             "Einmal kalt duschen und man möchte nicht mehr."
             "Genau nach keikaku."
+            #Bild
             #Hier würde ich gerne oben im Bild einen Kommentar einbauen "Bemerkung: keikaku heißt Plan."
             #Wie machte ich das?
 
@@ -794,8 +797,7 @@ label anja_anfang:
     "Ich höre immer noch jemanden reden, aber niemand macht auf." 
     "Ich drehe mich um und laufe los."
         
-    play sound "sound/door_open.wav"
-    #Sound
+    play sound "sound/anja_dooropen.wav"
     
     "Die Tür geht auf."
     "Plötzlich kehrt die Angst zurück."
@@ -819,7 +821,7 @@ label anja_anfang:
     with dissolve
 
     bw "Hallo, %(berndName)s."
-    b "Hi."
+    b "..."
 
     show yandere neutral at left
     with dissolve
@@ -857,8 +859,7 @@ label anja_anfang:
 
     scene bg treppenhaus
     with fade
-    #Bild existiert noch nicht
-
+    
     show yandere from_behind
     with dissolve
     #Bild existiert noch nicht
@@ -883,7 +884,7 @@ label anja_anfang:
 
     scene bg treppenhaus
     with fade
-    #Bild fehlt noch
+    
 
     bw "Was ist los?"
     "Ich gehe einfach."
@@ -936,6 +937,11 @@ label anja_anfang:
 
     "Ich will mich auf andere Gedanken bringen."
     "Wie immer öffne ich als erstes meinen Browser und öffne Krautchan."
+   
+    scene bg desktop_404
+    with fade
+    #Bild existiert noch nicht
+    
     "404..."
     "Achja..."
     "Was mach ich denn jetzt?"
@@ -945,12 +951,17 @@ label anja_anfang:
     "Öhm..."
     "Verdammt."
     "Ohne Krautchan hat mein Leben einfach keinen Sinn."
-    #Hier bitte ein Bild von einer 404-Seite bringen.
 
     "Ich schau einen Anime."
     "Aber welchen?"
-    #Hier bitte ein Bild von einer Animepartition bringen.
-    #Nach Einbau des Bildes schau ich nochmal drüber, ob man den Part erweitern kan
+    "Ich öffne meine Animepartition."
+    
+    scene bg desktop_anime
+    with fade
+    #Bild existiert noch nicht
+    
+    #Nach Einbau des Bildes schau ich nochmal drüber, ob man den Part erweitern kann
+    #im Sinne von "Saint October? Nicht schon wieder. Gundam? Langweilig." usw.
     "Nein."
     "Der nicht."
     "Den auch nicht."
@@ -986,22 +997,66 @@ label anja_anfang:
     show lynette_essen
     with dissolve
     
-    "Lynette" "%(berndName)s-sama."
+    "Lynette" "...%(berndName)s-sama."
     b "Hmm?"
-    "Lynette" "%(berndName)s-sama."
+    "Lynette" "Ohayou gozaimasu, %(berndName)s-sama."
+    b "Ohayou."
     b "Ja, Lynette?"
-    "Lynette" "Ich hab dir was zu essen gemacht."
-    b "Es gab doch erst vor kurzem Mittagessen."
+    "Lynette" "Ich hab dir Frühstück gemacht."
+    b "Wir sind doch noch gar nicht umgezogen."
+    b "Und es ist erst 7 Uhr."
     "Lynette" "Aber ich..."
     "Lynette" "...ich..."
-    "Lynette" "...ich koche doch so gerne."
-    "Lynette" "Besonders für dich, %(berndName)s-sama."
+    "Lynette" "...ich koche doch so gerne für dich, %(berndName)s-sama."
     b "Ach, Lynette."
     b "Was soll ich nur mit dir machen."
     b "Da bleibt mir wohl nichts Anderes übrig."
-    b "Ich werde es wohl essen müssen."
-    b "Komm her."
-    #QUALITÄT in großen Mengen, nochmal das Gespräch von Bernd - Lynette durchschauen
+    b "Ich werde es wohl erst essen müssen."
+    b "Nachher wäre es kalt."
+    "Lynette" "Douzo."
+    b "Arigatou, Lynette-chan."
+    "Ich nehme das Tablett und setze mich damit an den Tisch."
+    #Bild von Lynette ohne Tablett
+    b "Itadakimasu."
+    "Lynette" "%(berndName)s-sama."
+    b "Ja?"
+    "Lynette" "Ich muss gleich noch einkaufen gehen, aber ich habe kein Geld."
+    b "Kein Problem."
+    "Ich greife in meiner Anzugsjacke nach meinem Portemonnaie und hole zwei 200-Euroscheine heraus."
+    b "Hier."
+    "Lynette" "Aber %(berndName)s-sama."
+    "Lynette" "Das ist so viel Geld."
+    "Lynette" "Ist das denn wirklich in Ordnung?"
+    b "Hai, hai."
+    b "Da gab es doch diese Halskette, die du unbedingt haben wolltest."
+    b "Wie teuer war die noch gleich?"
+    b "300 Euro?"
+    "Ich hole noch einen weiteren 200-Euroschein aus dem Portemonnaie."
+    b "Hier."
+    "Lynette" "Woher weißt du davon?"
+    b "Ich wäre nicht mit dir zusammen, wenn ich sowas nicht wüsste."
+    #Bild mit blush von Lynette für maximalen Gewinn
+    "Stimme" "%(berndName)s-sama."
+    "Diese Stimme..."
+    "Das ist..."
+    
+    #Lynette nach rechts
+    show erica_normal at left
+    with dissolve
+    
+    "Erica" "%(berndName)s-sama."
+    b "Ohayou, Erica-chan."
+    "Erica" "Ohayou."
+    "Erica" "Wie befohlen bin ich nun geduscht, %(berndName)s-sama."
+    b "Fein."
+    #BUTTERGOTT
+    
+    
+    
+    
+    #Ich habe nur ein Bild von Lynette gefunden => keine verschiedenen Gesichtszüge
+    #Gleiches gilt für Erica
+    #auch: Ich hab die beiden Bilder in GIMP bearbeitet und zwar schlecht. Es sollte nur erstmal für die interne Demo reichen.
     
     
     scene black
@@ -1141,8 +1196,8 @@ label anja_weiter:
     "Hmm..."
     "Mal schauen, ob schon die neue Folge Strike with Cheese fertig heruntergeladen ist."
     
-    #scene bg torrentprogramm
-    #with fade
+    scene bg desktop_torrent
+    with fade
     #Bild existiert noch nicht
     
     "Sehr gut."
@@ -1180,8 +1235,7 @@ label anja_weiter:
     "Ich schaue die Kellertreppe nach oben."
     
     show blond neutral_g
-    with dissolve    
-    #Bild existiert noch nicht
+    with dissolve
     
     bw "Oh, hai."
     b "wat"
@@ -1239,8 +1293,7 @@ label anja_weiter:
     
     show blond neutral_g
     with dissolve
-    #Bild existiert noch nicht
-    
+        
     bw "Jetzt will ich nur noch wissen, warum du mich ignorierst."
     b "..."
     bw "Ich hab schon nachgedacht."
@@ -1539,8 +1592,7 @@ label anja_besprechung:
     "Ich höre jemanden rennen."
     "Jemand drückt die Türklinke runter."
     
-    play sound "sound/door_open.wav"
-    #Sound
+    play sound "sound/anja_dooropen.wav"
     
     show blond neutral_g
     with dissolve
@@ -1688,8 +1740,8 @@ label anja_besprechung:
     bw "Deine Milch."
     b "Was ist damit?"
     bw "Du hast sie noch nicht getrunken."
+    "Erst jetzt bemerke ich, dass sie ihr Glas schon ausgetrunken hat."
     "Sie trank ihr Glas während des Gesprächs aus."
-    "Ich setze das Glas Milch vor mein Gesicht."
     "Ich schaue auf das weiße Getränk."
     "Dann nehme ich einen großen Schluck von der Milch."
     "Es ist köstliche Milch."
@@ -1697,20 +1749,18 @@ label anja_besprechung:
     "Deliziös."
     bw "Die Milch ist übrigens nicht FETTreduziert."
     "Ich setze das Glas kurz ab."
-    b "FICK JA."
     b "FETT."
     b "Lecker."
     "Ich trinke weiter."
     "Das Glas ist leer."
-    b "MEER!"
     b "MEER MILCH!"
     bw "Du scheinst Milch zu lieben."
     b "Milch ist die Butter der Getränke."
     b "Beweise mich falsch."
     bw "Komm mit in die Küche."
-    bw "Du brauchst keine Angst zu haben."
+    b "..."
     bw "Ich bin gerade sowieso alleine hier."
-    b "OK."
+    b "..."
     "Ich laufe ihr hinterher."
     
     scene bg anjas_kueche
@@ -1718,12 +1768,13 @@ label anja_besprechung:
     
     show blond happy_g
     with dissolve
+    #Bild existiert noch nicht
     
     bw "Hier."
     bw "Genieße deine Milch."
-    "Ich bekomme noch ein Glas randvoll gefüllt mit Milch in die Hand gedrückt."
-    "Ich stelle es erstmal auf den Tisch ab."
-    "Dann trinke ich einen Schluck ab, damit nichts beim Hochheben verschüttet."
+    "Sie schenkt mir neue Milch ein."
+    "Ich nehme das Glas wieder in meine Hand und trinke einfach."
+    "Normalerweise trinke ich nichts auf ex."
     "Doch ich trinke einfach weiter."
     "Ich kann nicht mehr aufhören."
     "Dieses Gefühl."
@@ -1895,8 +1946,7 @@ label bernd_kapzwei_grillen:
     show sis crying
     with dissolve
             
-    if sisLove >= 75: 
-        #muss eventuell angepasst werden
+    if sisLove >= 60:
         
         "Ich richte mich einigermaßen auf, sodass ich nun auf dem Bett sitze."
         b "%(sisName)s."
@@ -1923,16 +1973,15 @@ label bernd_kapzwei_grillen:
         b "Ich möchte nicht, dass du wegen mir weinst."
         sis "OK."
     
-    if sisLove < 75:
-        #muss eventuell angepasst werden
+    if sisLove < 60:
         
         b "Also hör auf zu weinen."
         b "Das kann ich nicht mit ansehen."
-        b "Erbärmlich."
+        b "Das ist ja erbärmlich."
         b "Und du sagst, dass du ein großes Mädchen wärst?"
         b "Dann hör auf zu weinen."
         sis "Aber..."
-        b "Kein aber, %(sisName)s."
+        b "Kein \"Aber\"."
         sis "OK."
         sis "Ich versuch's."
                 
@@ -1952,5 +2001,13 @@ label von_anja_zu_yasmin:
 
     $ yanLove += 5
     "Aber ich werde sie wahrscheinlich nie wieder sehen."
-    #auf das Aussehen eingehen
-    "blablubb"
+    "Ihre schwarzen Haare."
+    "Ich steh' auf schwarze Haare."
+    "Sie hat zwar Tränensäcke, aber sie ist natürlich."
+    "Ich liebe natürliche Frauen."
+    "Schminke ist der Krebs, der die Frauen zerfrisst."
+    #hier müsste man nun einen gemeinsamen Übergang finden
+    #solange erst einmal:
+    
+    scene owari
+    with fade
