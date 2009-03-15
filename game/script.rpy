@@ -95,12 +95,10 @@ init:
     image bg lauraszimmer = "images/bg/lauras_zimmer.jpg"
     image bg keller_aus_blur = "images/bg/berndszimmer_aus_blur.jpg"
     
+    image bg traumkueche = "images/bg/traumkueche.jpg"
     image bg krankenzimmer = "images/bg/krankenzimmer.jpg"
-    #Filter fehlt noch
     image bg anja_kueche = "images/bg/anja_kueche.jpg"
-    #Filter fehlt noch
     image bg treppenhaus = "images/bg/treppenhaus.jpg"
-    #Filter fehlt noch
     image bg anja_zimmer = "images/bg/anja_zimmer.jpg"
         
     #charakter bilder
@@ -132,6 +130,8 @@ init:
     #ÄNDERN ÄNDERN ÄNDERN
     
     #image doc = "images/char/doc.png"
+    image lynette_essen = "images/char/lynette_essen.png"
+    image erica_normal = "images/char/erica_normal.png"
 
     # charaktere
     $ b = DynamicCharacter("berndName", color="#dddddd")
