@@ -1683,6 +1683,8 @@ label anja_besprechung:
     b "Ja."
     $ renpy.pause(1.0)
     "Oh wow. Ein QUALITÄTSGESPRÄCH!"
+    
+    #---------------------------------------------------
     bw "Deine Milch."
     b "Was ist damit?"
     bw "Du hast sie noch nicht getrunken."
@@ -1732,6 +1734,7 @@ label anja_besprechung:
     "Ich liebe das Leben."
     "Ich vergesse alles um mich herum."
     "Mir ist gerade alles egal."
+    #------------------------------------------------
     
     play sound "sound/telefon.wav"
     
@@ -1780,7 +1783,8 @@ label anja_besprechung:
     scene bg treppenhaus
     with fade
     
-    "Sie schließt die Wohnung ab."
+    play sound "sound/doorlock.wav"
+    
     bw "Bis morgen, %(berndName)s."
     b "..."
     "Sie rennt die Treppe runter."
@@ -1793,7 +1797,9 @@ label anja_besprechung:
     scene bg keller_aus
     with fade
     
-    "Ich schau erstmal einen Anime."
+    "Ich schau erstmal einen Animu."
+    "Die ersten paar Folgen von Akagi sind fertig."
+    "Keikaku doori."
     "AKAGI!"
     "QUALITÄTSNASEN!"
     
@@ -1837,8 +1843,7 @@ label bernd_kapzwei_grillen:
     
     ma "Wie geht es ihm, Herr Doktor?"
     "Arzt" "Wir können leider nicht mehr allzu viel für ihn tun."
-    #Step sagte, ich solle ihm glaube, dass "Arzt" reicht
-        
+
     show sis sad at left
     with dissolve
     
