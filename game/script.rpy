@@ -1,4 +1,3 @@
-# Netto no Shishou: Bernd
 # Script
 
 init python:
