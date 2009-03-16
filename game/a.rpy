@@ -310,7 +310,7 @@ label anja_anfang:
     b "Ach, nicht das schon wieder."
     ma "Aber es ist nur normal für eine Mutter sich Sorgen zu machen."
     b "Du weißt, dass ich kein Interesse an einer Freundin habe, oder?"
-    ma "Ich weiß., %(berndName)s."
+    ma "Ich weiß, %(berndName)s."
     ma "Das sagst du immer."
     ma "Aber ich kann dir nicht glauben, dass du keinerlei Interesse hast."
     b "Es ist aber so."
@@ -320,7 +320,8 @@ label anja_anfang:
     ma "Wie hieß sie noch gleich?"
     ma "%(wBerndName)s oder so?"
     b "Nein."
-    b "Außerdem...was willst du eigentlich?"
+    b "Außerdem..."
+    b "Was willst du eigentlich?"
     b "Du hast sie noch nicht einmal gesehen."
     ma "Also eher nicht."
     b "Ach, lass mich doch in Ruhe."
@@ -332,7 +333,7 @@ label anja_anfang:
     with fade
 
     "Was soll ich jetzt nur tun?"
-    "Ob sie wohl recht hatte?"
+    "Ob sie wohl Recht hatte?"
     "Ob Krautchan wirklich übernommen worden ist?"
     "Dass Tsaryu nach Japan ausgewandert ist, ist gut möglich."
     "Aber Shaky?"
