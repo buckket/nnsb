@@ -1986,8 +1986,7 @@ label bernd_kapzwei_grillen:
         sis "OK."
         sis "Ich versuch's."
                 
-    scene owari
-    with fade
+    jump ende
     #
     #
     #
@@ -2010,5 +2009,4 @@ label von_anja_zu_yasmin:
     #hier müsste man nun einen gemeinsamen Übergang finden
     #solange erst einmal:
     
-    scene owari
-    with fade
+    jump ende
