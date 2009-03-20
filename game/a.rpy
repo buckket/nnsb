@@ -1072,13 +1072,13 @@ label anja_anfang:
     "Das ist..."
     
     #Lynette nach rechts
-    show erica_normal at left
+    show erika_normal at left
     with dissolve
     
-    "Erica" "%(berndName)s-sama."
-    b "Ohayou, Erica-chan."
-    "Erica" "Ohayou."
-    "Erica" "Wie befohlen bin ich nun geduscht, %(berndName)s-sama."
+    "Erika" "%(berndName)s-sama."
+    b "Ohayou, Erika-chan."
+    "Erika" "Ohayou."
+    "Erika" "Wie befohlen bin ich nun geduscht, %(berndName)s-sama."
     b "Fein."
     #BUTTERGOTT
 
