@@ -130,7 +130,7 @@ init:
     
     #image doc = "images/char/doc.png"
     image lynette_essen = "images/char/lynette_essen.png"
-    image erica_normal = "images/char/erica_normal.png"
+    image erica_normal = "images/char/erika_normal.png"
 
     # charaktere
     $ b = DynamicCharacter("berndName", color="#dddddd")

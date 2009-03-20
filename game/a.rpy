@@ -1051,14 +1051,7 @@ label anja_anfang:
     "Erica" "Wie befohlen bin ich nun geduscht, %(berndName)s-sama."
     b "Fein."
     #BUTTERGOTT
-    
-    
-    
-    
-    #Ich habe nur ein Bild von Lynette gefunden => keine verschiedenen Gesichtszüge
-    #Gleiches gilt für Erica
-    #auch: Ich hab die beiden Bilder in GIMP bearbeitet und zwar schlecht. Es sollte nur erstmal für die interne Demo reichen.
-    
+
     
     scene black
     with fade
@@ -1069,7 +1062,7 @@ label anja_anfang:
 
     "Stimme" "He, %(berndName)s."
 
-    scene bg keller_os_blur
+    scene bg keller_blur
     with fade
     #Bild existiert noch nicht
     
