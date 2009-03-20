@@ -214,16 +214,46 @@ label laura_anja_mail:
     "Sie wohnt ja direkt über mir."
     "Was?"
     "Irgendwie komme ich mir immer noch dumm vor."
-    "Ich sollte versuchen jetzt ein bisschen Schlaf zu bekommen."
+    "Aber sie scheint es locker zu nehmen."
+    "In einer Großstadt lässt es sich nicht vermeiden, dass es mehrere Bernds gibt."
+    "Besonders in Berlin nicht."
+    "Das war mir vorher schon klar."
+    "Vor allem, wenn sich ein Bernd schon berlinbernd nennt."
+    "Aber..."
+    "Bernds? In MEINEM Mehrfamilienhaus?"
+    "Ich muss das verarbeiten."
+    "Ich muss mich ablenken."
+    "Ich muss Wieherbuhvideos schauen."
+    "Soll ich auf nicovideo oder auf youtube gehen?"
+    menu:
+        " "
+        "Ich gehe auf nicovideo.":
+            pass
+        
+        
+        "Ich gehe auf youtube.":
+            "Die Ladezeiten bei nicovideo sind unerträglich."
+            "Da geh ich lieber auf youtube."
+            "Es ist zwar nicht tagesaktuell, aber es gibt noch so viele neue Videos zum Schauen."
+            "Und es gibt Videos, die ich immer wieder sehe."
+            #Pettan, pettan, tsurupettan
+            "Außerdem gibt 
+    
+    
+    #WIEHERBUH
+    #BUTTERGOTT
     
     scene black
     with fade
     
     
-    "Vier Stunden später..."
+    
     
     scene bg keller_os_blur
     with fade
+    
+    
+    
     
     #BUTTERGOTT
     #"sinnloses" Gespräch erwünscht
