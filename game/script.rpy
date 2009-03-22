@@ -1,6 +1,8 @@
 # Script
 
 init python:
+    config.font_replacement_map["DejaVuSans.ttf", False, True] = ("DejaVuSans-Oblique.ttf", False, False)
+    
     #diverse funktionen
 
     #string kürzen
@@ -15,9 +17,20 @@ init python:
         if(last==0):
             last = len(s)/2
         return s[len(s)-last:len(s)]
+        
+    if persistent.wieherbuhSprache is None:
+        persistent.wieherbuhSprache = 2
+        
+    config.preferences['prefs_left'].append(
+        _Preference(
+            "Japanisch",
+            "wieherbuhSprache",
+            [ ("Aus", 0, "True"),
+              ("Romaji", 1, "True"),
+              ("Kanji", 2, "True") ],
+            base=persistent))
 
 init:
-
     #Wichtige Storyflags:
     #anjaTreffen - Mit Anja getroffen? (1.1)
     #lauraRoute - Laura Abgeholt? (1.1)
@@ -98,7 +111,7 @@ init:
     image bg krankenzimmer = "images/bg/krankenzimmer.jpg"
     image bg anja_kueche = "images/bg/anja_kueche.jpg"
     image bg treppenhaus = "images/bg/treppenhaus.jpg"
-    image bg anja_zimmer = "images/bg/anja_zimmer.jpg"
+    image bg anjas_zimmer = "images/bg/anja_zimmer.jpg"
         
     #charakter bilder
     #prolog
@@ -119,7 +132,12 @@ init:
     image blond surprised_g = "images/char/blondBernd_surprised_glasses.png"
     image blond weird = "images/char/blondBernd_weird.png"
     image blond neutral = "images/char/blondBernd.png"
-    image blond shy = "images/char/blondBernd_shy_glasses.png"
+    image blond shy = "images/char/blondBernd_shy.png"
+    image blond shy_g = "images/char/blondBernd_shy_glasses.png"
+    image blond angry = "images/char/blondBernd_angry_glasses.png"
+    image blond happy_g = "images/char/blondBernd_smiling_glasses.png"
+    image blond think = "images/char/blondBernd_thinking_glasses.png"
+     
     
     image yasmin stalker = "images/char/stalker_bernd.png"
 
