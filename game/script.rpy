@@ -2,6 +2,10 @@
 
 init python:
     config.font_replacement_map["DejaVuSans.ttf", False, True] = ("DejaVuSans-Oblique.ttf", False, False)
+    style.jp = Style(style.say_thought)
+    style.jp.font = "mikachan.ttf"
+    style.jp.italic = False
+    
     
     #diverse funktionen
 

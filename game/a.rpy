@@ -436,8 +436,12 @@ label anja_anfang:
     "Das Zimmer wird auf jeden Fall nicht so duster wie mein Keller sein."
     "Und sie wird bestimmt auch irgendwo Kuscheltiere rumstehen haben."
     "Sie hat bestimmt eine Plüschfigur von Hello, Kitty."
-    "Kawaii desu, ne?"
-    #Kanji = かわいいですね。
+    if persistent.wieherbuhSprache is 0:
+        "Wie süß!"
+    if persistent.wieherbuhSprache is 1:
+        "Kawaii desu, ne?"
+    if persistent.wieherbuhSprache is 2:
+        "{=jp}かわいいですね。{/=jp}"
     "Hat nicht jedes Mädchen heutzutage eine Figur von Hello, Kitty?"
     "Und die Figur wird nach %(wBerndName)s riechen."
     "Das Zimmer wird nach ihr riechen."    
@@ -1051,9 +1055,13 @@ label anja_anfang:
     "Lynette" "...%(berndName)s-sama."
     b "Hmm?"
     "Lynette" "Ohayou gozaimasu, %(berndName)s-sama."
-    #Kanji = お早うございます。
-    b "Ohayou."
-    #Kanji = お早う。
+    #Kanji = お早うございます、　ベルンド様。
+    if persistent.wieherbuhSprache is 0:
+        b "Guten Morgen."
+    if persistent.wieherbuhSprache is 1:
+        b "Ohayou."
+    if persistent.wieherbuhSprache is 2:
+        b "{=jp}お早う。{/=jp}"
     b "Ja, Lynette?"
     "Lynette" "Ich hab dir Frühstück gemacht."
     b "Wir sind doch noch gar nicht umgezogen."
