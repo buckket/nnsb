@@ -67,7 +67,7 @@ label laura_anja_mail:
     b "JAJA!."
     "Ich stehe auf und ."    
     
-    play sound "sound/metaldooropen.wav"
+    play sound "sounds/metaldooropen.wav"
         
     scene bg kellertreppe
     with fade
@@ -89,7 +89,7 @@ label laura_anja_mail:
     
     "Ich schließe die Tür hinter mir."
     
-    play sound "sound/metaldooropen.wav"
+    play sound "sounds/metaldooropen.wav"
     
     "Wie immer."
     "Was macht ein Mädchen hier?"
@@ -99,7 +99,7 @@ label laura_anja_mail:
     "Habe ich irgendwas Schlimmes getan?"
     "Ich setze mich wieder in meinen Stuhl."
     
-    play sound "sound/metaldooropen.wav"
+    play sound "sounds/metaldooropen.wav"
     
     show blond mad
     with dissolve
@@ -223,7 +223,10 @@ label laura_anja_mail:
     "Bernds? In MEINEM Mehrfamilienhaus?"
     "Ich muss das verarbeiten."
     "Ich muss mich ablenken."
+    
+    scene bg desktop_none
     "Ich muss Wieherbuhvideos schauen."
+    
     "Soll ich auf nicovideo oder auf youtube gehen?"
     menu:
         " "
@@ -234,11 +237,26 @@ label laura_anja_mail:
         "Ich gehe auf youtube.":
             "Die Ladezeiten bei nicovideo sind unerträglich."
             "Da geh ich lieber auf youtube."
-            "Es ist zwar nicht tagesaktuell, aber es gibt noch so viele neue Videos zum Schauen."
+            "Es ist zwar nicht so aktuell wie nicovideo, aber es gibt noch genügend Videos zum Schauen."
             "Und es gibt Videos, die ich immer wieder sehe."
-            #Pettan, pettan, tsurupettan
-            "Außerdem gibt 
-    
+            
+            scene bg desktop_youtube
+            with fade
+            
+            "Mal sehen."
+            "Ich hätte jetzt *wirklich* Lust auf Tsurupettan."
+            "Ich lass es erstmal fertig laden."
+            "UN Owen was her ist auch fein."
+            "\"U.N. OWEN WAS WINDOWS XP\"."
+            "lol Windows."
+            "U.N. OWEN..."
+            "Hmm..."
+            "Da gibt es bestimmt schon neuere Lieder."
+            "Die werde ich aber gleich beim Brausen finden."
+            
+            play sound "sounds/bernd_singt_tsurupettan.mp3"
+            
+                
     
     #WIEHERBUH
     #BUTTERGOTT
@@ -419,6 +437,7 @@ label anja_anfang:
     "Und sie wird bestimmt auch irgendwo Kuscheltiere rumstehen haben."
     "Sie hat bestimmt eine Plüschfigur von Hello, Kitty."
     "Kawaii desu, ne?"
+    #Kanji = かわいいですね。
     "Hat nicht jedes Mädchen heutzutage eine Figur von Hello, Kitty?"
     "Und die Figur wird nach %(wBerndName)s riechen."
     "Das Zimmer wird nach ihr riechen."    
@@ -463,6 +482,7 @@ label anja_anfang:
 
     play sound "sounds/hit_1.wav"
     #Sound noch nicht vorhanden
+    #an diese Szene angepasster Soundeffekt fehlt
 
     "Uhhhh, das hört sich nicht gut an."
     "Aber was war das?"
@@ -477,7 +497,6 @@ label anja_anfang:
 
     scene bg lauraszimmer
     with fade
-    
 
     "Ich sehe Laura auf einem Stuhl stehen."
 
@@ -559,7 +578,7 @@ label anja_anfang:
     
     "Ich schmeiße das Taschentuch in die Toilette."
     
-    play sound "sound/toilet.wav"
+    play sound "sounds/toilet.wav"
     
     "Ich gehe wieder zurück zu Laura."
     
@@ -641,7 +660,7 @@ label anja_anfang:
     "Ich sollte die Türe abschließen."
     "Sonst passiert das Gleiche wie letztens."
     
-    play sound "sound/doorlock.wav"
+    play sound "sounds/doorlock.wav"
     
     "So."
     "Jetzt kann %(sisName)s hier nicht einfach reinplatzen."
@@ -669,7 +688,7 @@ label anja_anfang:
             "Nach ein paar Sekunden kommt sie wieder näher."
             "Sie geht mit ihrem Mund zu meinem Ohr..."
             
-            play sound "sound/knock.wav"
+            play sound "sounds/knock.wav"
             
             "Mein Herz fängt an zu klopfen."
             "Sie haucht mir etwas ins Ohr..."
@@ -678,19 +697,19 @@ label anja_anfang:
             "Was?"
             "Verdammt."
             
-            play sound "sound/knock2.wav"
+            play sound "sounds/knock2.wav"
             
             sis "JETZT MACH ENDLICH DIE TÜR AUF!"
             "%(sisName)s hämmert gegen die Türe."
             "Und ich war so kurz davor."
             
-            play sound "sound/knock2.wav"
+            play sound "sounds/knock2.wav"
             
             sis "MACH DIE TÜR AUF!"
             sis "ICH WILL MIR NICHT IN DIE HOSEN MACHEN!"
             "Ich lege mir schnell ein Handtuch um und mache die Tür auf."
             
-            play sound "sound/doorlock.wav"
+            play sound "sounds/doorlock.wav"
         
             show sis angry_talk
             with dissolve
@@ -704,7 +723,7 @@ label anja_anfang:
             scene bg zuhause_drinnen 
             with fade
             
-            play sound "sound/door_1.wav"
+            play sound "sounds/door_1.wav"
             
             "Na toll."
             "Das habe ich nun anscheinend davon, dass ich ihr vorhin half."
@@ -738,6 +757,7 @@ label anja_anfang:
         
             "Einmal kalt duschen und man möchte nicht mehr."
             "Genau nach keikaku."
+            #Kanji = 計画
             #Bild
             #Hier würde ich gerne oben im Bild einen Kommentar einbauen "Bemerkung: keikaku heißt Plan."
             #Wie machte ich das?
@@ -798,7 +818,7 @@ label anja_anfang:
     "Warum traust du dich nicht mehr weiter?"
     "Ich hole einmal tief Luft und nehme meinen ganzen Mut zusammen."
     
-    play sound "sound/knock.wav"
+    play sound "sounds/knock.wav"
     
     "Ich warte."
     "Nichts passiert."
@@ -823,12 +843,12 @@ label anja_anfang:
     "Ich darf einfach nicht."
     "Ich klopfe nochmals."
     
-    play sound "sound/knock.wav"
+    play sound "sounds/knock.wav"
     
     "Ich höre immer noch jemanden reden, aber niemand macht auf." 
     "Ich drehe mich um und laufe los."
         
-    play sound "sound/anja_dooropen.wav"
+    play sound "sounds/anja_dooropen.wav"
     
     "Die Tür geht auf."
     "Plötzlich kehrt die Angst zurück."
@@ -1031,7 +1051,9 @@ label anja_anfang:
     "Lynette" "...%(berndName)s-sama."
     b "Hmm?"
     "Lynette" "Ohayou gozaimasu, %(berndName)s-sama."
+    #Kanji = お早うございます。
     b "Ohayou."
+    #Kanji = お早う。
     b "Ja, Lynette?"
     "Lynette" "Ich hab dir Frühstück gemacht."
     b "Wir sind doch noch gar nicht umgezogen."
@@ -1045,10 +1067,12 @@ label anja_anfang:
     b "Ich werde es wohl erst essen müssen."
     b "Nachher wäre es kalt."
     "Lynette" "Douzo."
+    #Kanji = どうぞ。
     b "Arigatou, Lynette-chan."
     "Ich nehme das Tablett und setze mich damit an den Tisch."
     #Bild von Lynette ohne Tablett
     b "Itadakimasu."
+    #Kanji = いただきます。
     "Lynette" "%(berndName)s-sama."
     b "Ja?"
     "Lynette" "Ich muss gleich noch einkaufen gehen, aber ich habe kein Geld."
@@ -1067,6 +1091,7 @@ label anja_anfang:
     "Lynette" "Woher weißt du davon?"
     b "Ich wäre nicht mit dir zusammen, wenn ich sowas nicht wüsste."
     #Bild mit blush von Lynette für maximalen Gewinn
+    "Lynette" "Sonna..."
     "Stimme" "%(berndName)s-sama."
     "Diese Stimme..."
     "Das ist..."
@@ -1077,10 +1102,44 @@ label anja_anfang:
     
     "Erika" "%(berndName)s-sama."
     b "Ohayou, Erika-chan."
+    #Kanji = お早う
     "Erika" "Ohayou."
+    #Kanji = お早う。
     "Erika" "Wie befohlen bin ich nun geduscht, %(berndName)s-sama."
     b "Fein."
+    "Erika" "Kimitachi..."
+    #Kanji = 君たち...
+    "Erika" "Mou."
+    #Kanji = もう。
+    "Erika" "Iyashii."
+    #Kanji = 卑しい
+    b "Nani?"
+    #Kanji = 何
+    "Lynette" "Für dich habe ich doch auch Frühstück gemacht, Erika."
+    "Erika" "Ihr esst aber schon."
+    "Erika" "Ihr habt ohne mich angefangen."
+    b "Gomen, Erika-chan."
+    #Kanji = ごめん
+    "Erika" "Dafür musst du nachher was mit mir unternehmen, %(berndName)s-sama."
+    b "Worauf hast du denn Lust?"
+    "Erika" "Am liebsten würde ich noch eine Runde schlafen."
+    b "Ich soll also mit dir schlafen?"
+    "Erika" "Ja."
+    b "Sicher?"
+    "Erika" "Ja."
+    "Lynette" "Nein! Nicht so!"
+    "Erika" "Was ist denn los, Lynette?"
+    "Lynette" "Das ist einfach..."
+    "Lynette" "%(berndName)s-sama!"
+    "Lynette" "Sag doch auch mal was!"
+    b "Sie versteht es nicht, Lynette-chan."
+    "Erika" "Was denn?"
+    b "Mach dir mal keine Sorgen."
+    
+    
+    
     #BUTTERGOTT
+    #if EXPERTENPROGRAMMIERER at work
 
     
     scene black
@@ -1251,7 +1310,7 @@ label anja_weiter:
     b "ICH KOMME JA SCHON!"
     "Ich stehe auf und gehe nach oben."
     
-    play sound "sound/metaldooropen.wav"
+    play sound "sounds/metaldooropen.wav"
         
     scene bg kellertreppe
     with fade
@@ -1270,13 +1329,13 @@ label anja_weiter:
     scene bg keller
     with fade
     
-    play sound "sound/metaldooropen.wav"
+    play sound "sounds/metaldooropen.wav"
     
     "Ich schließe die Tür hinter mir."
     "Wie immer."
     "Ich setze mich wieder vor meinen Rechner."
     
-    play sound "sound/metaldooropen.wav"
+    play sound "sounds/metaldooropen.wav"
     
     show blond mad
     with dissolve
@@ -1373,7 +1432,7 @@ label anja_weiter:
     b "..."
     "Sie dreht sich um und geht aus dem Keller raus."
     
-    play sound "sound/metaldooropen.wav"
+    play sound "sounds/metaldooropen.wav"
     
     "Sie macht die Tür hinter sich zu."
     "Etwas, das meine Mutter nie macht, wenn sie aus dem Keller rausgeht."    
@@ -1589,7 +1648,7 @@ label anja_besprechung:
     "Wir wollen Krautchan retten."
     "Mehr gibt es da nicht."
     
-    play sound "sound/knock.wav"
+    play sound "sounds/knock.wav"
     
     "Stimme" "Ich komme gleich."
     "..."
@@ -1598,17 +1657,17 @@ label anja_besprechung:
     $ renpy.pause(1.5)
     "..."
    
-    play sound "sound/knock.wav"
+    play sound "sounds/knock.wav"
     
     "Stimme" "JAAAAA, ich komme gleich."
     "..."
     $ renpy.pause(0.5)
     
-    play sound "sound/knock.wav"
+    play sound "sounds/knock.wav"
     
     "Dieses Mal gibt es gar keine Reaktion."
     
-    play sound "sound/knock2.wav"
+    play sound "sounds/knock2.wav"
       
     "Stimme" "JAAAAHAAAAA!"
     "Stimme" "Ich komme doch."
@@ -1616,7 +1675,7 @@ label anja_besprechung:
     "Ich höre jemanden rennen."
     "Jemand drückt die Türklinke runter."
     
-    play sound "sound/anja_dooropen.wav"
+    play sound "sounds/anja_dooropen.wav"
     
     show blond neutral_g
     with dissolve
@@ -1811,13 +1870,13 @@ label anja_besprechung:
     "Mir ist gerade alles egal."
     #------------------------------------------------
     
-    play sound "sound/telefon.wav"
+    play sound "sounds/telefon.wav"
     
     "Plötzlich geht das Telefon."    
     "Ich werde aus meinen Träumen gerissen."
     "%(wBerndName)s läuft zum Telefon und schaut auf das Display."
     
-    play sound "sound/telefon.wav"
+    play sound "sounds/telefon.wav"
     
     bw "Oh, es ist nur meine Mutter."
     "Dann nimmt sie den Hörer ab."
@@ -1858,7 +1917,7 @@ label anja_besprechung:
     scene bg treppenhaus
     with fade
     
-    play sound "sound/doorlock.wav"
+    play sound "sounds/doorlock.wav"
     
     bw "Bis morgen, %(berndName)s."
     b "..."
@@ -1875,6 +1934,7 @@ label anja_besprechung:
     "Ich schau erstmal einen Animu."
     "Die ersten paar Folgen von Akagi sind fertig."
     "Keikaku doori."
+    #Kanji = 計画	通り。
     "AKAGI!"
     "QUALITÄTSNASEN!"
     
