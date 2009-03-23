@@ -106,6 +106,7 @@ init:
     image bg desktop_b = "images/bg/desktop_b.jpg"
     
     #kapitel 2
+    image bg knastkeller = "images/bg/knastkeller.jpg"
     image gameover_vierkanal = "images/bg/gameover_vierkanal.jpg"
     image bg lieferwagen = "images/bg/lieferwagen.jpg"
     image bg lauraszimmer = "images/bg/lauras_zimmer.jpg"

@@ -769,11 +769,11 @@ label anja_anfang:
         
             "Einmal kalt duschen und man möchte nicht mehr."
             if persistent.wieherbuhSprache is 0:
-            "Genau nach Plan."
+                "Genau nach Plan."
             if persistent.wieherbuhSprache is 1:
-            "Genau nach keikaku."
+                "Genau nach keikaku."
             if persistent.wieherbuhSprache is 2:
-            "{=jp}Genau nach 計画。{/=jp}"
+                "{=jp}Genau nach 計画。{/=jp}"
             "Genau nach keikaku."
             #Bild
             #Hier würde ich gerne oben im Bild einen Kommentar einbauen "Bemerkung: keikaku heißt Plan."

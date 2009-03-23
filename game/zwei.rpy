@@ -43,12 +43,12 @@ label zwei_laura_stalk_entscheid:
     "Aber heute nicht."
     "Merkwürdig."
     "Vielleicht bilde ich mir das auch nur ein."
-    #sound abspielen
+    play sound "sounds/schraube.wav"
     "!!!"
     "Was war das?"
     "Ich habe ein Geräusch gehört."
     "Es war nur sehr leise, aber man konnte es deutlich hören."
-    #nochmal
+    play sound "sounds/schraube.wav"
     "Da war es wieder."
     "Woher kommt das?"
     "Soll ich aufstehen und nachsehen?"
@@ -57,7 +57,7 @@ label zwei_laura_stalk_entscheid:
     "Ein Zweig?"
     "Unsinn."
     "Der nächste Baum ist gute 10 Meter vom Haus entfernt."
-    #nochmal
+    play sound "sounds/schraube.wav"
     "Was zum...?"
     "Es kommt von meinem Fenster."
     "Irgendetwas ist dort."
@@ -65,7 +65,7 @@ label zwei_laura_stalk_entscheid:
     "...wenn es wieder Stalkerbernd ist?"
     "Was würde ich dann tun?"
     "Ich sollte versuchen, es zu ignorieren."
-    #nochmal
+    play sound "sounds/schraube.wav"
     "Da war es wieder..."
     "Was macht er da?"
     "Ich ziehe mir mein Kissen über den Kopf und das Geräusch verstummt."
@@ -79,6 +79,10 @@ label zwei_laura_stalk_entscheid:
     "Stimme" "%(berndName)s."
     "Stimme" "Wach auf!"
     "Ich öffne die Augen, in der Erwartung %(sisName)s oder meine Mutter zu sehen aber..."
+    
+    scene bg knastkeller
+    with fade
+    
     "Ich bin nicht in meinem Zimmer."
     "Der Raum in dem ich mich befinde sieht eher aus wie eine Art Zelle."
     "Nicht, dass ich das nicht aus meinem Keller schon kennen würde, aber irgendwas ist trotzdem anders."
@@ -121,6 +125,7 @@ label zwei_laura_stalk_entscheid:
     menu:
         ""
         "In Ordnung. Ich höre zu.":
+            #BUTTERGOTT
             #braucht noch dialog
             pass
         "Nein! Mach mich los!":
@@ -129,6 +134,7 @@ label zwei_laura_stalk_entscheid:
             sis "Schade."
             sis "Dann habe ich wohl keine andere Wahl."
             sis "Es tut mir Leid, %(berndName)s."
+            #BUTTERGOTT
             #BILD von Laura mit Messer
     scene bg keller_aus
     with flash
@@ -140,9 +146,12 @@ label zwei_laura_stalk_entscheid:
     "Wieso hat mich denn niemand geweckt?"
     "Sicher ist es schon Mittag."
     "Ich setze mich auf die Bettkante und schalte den PC ein."
-    #boot sound
+    
+    play sound "sounds/boot.wav"
+    
     scene bg keller
     with dissolve
+    
     "Der Boden unter meinen Füßen ist kalt."
     "Komisch."
     "Ich kann mich gar nicht daran erinnern, meine Socken ausgezogen zu haben."
@@ -167,7 +176,7 @@ label zwei_laura_stalk_entscheid:
     "Zumindest kann ich mich an nichts erinnern."
     "Es steht auch nichts drauf."
     "Sehr merkwürdig."
-    #error sound
+    play sound "sounds/error.wav"
     "Oh."
     "Eine Fehlermeldung?"
     "Achso, nur eine E-Mail."
@@ -203,7 +212,6 @@ label zwei_laura_stalk_entscheid:
     "Neue E-Mails habe ich keine."
     "Und Krautchan ist auch offline."
     "Was nun?"
-    #4kanal, INTERNET oder abwarten
     menu:
 
         "Ich gehe auf 4chan.":
@@ -235,8 +243,6 @@ label zwei_laura_stalk_entscheid:
             "Wer hat schon seine E-Mail bei Google?"
             "Ich überlege mir, was ich als nächstes suchen soll, und lösche nebenbei ein wenig Spam aus meinem Postfach."
             "..."
-            #BUTTERGOTT
-            #bernd erinnert sich an die email nachdem er auf google irgendwas gefunden hat
             
             jump zwei_email_erinnerung
             
@@ -642,25 +648,25 @@ label zwei_weiter_entscheid:
     "Vielleicht finde ich dort auch Freunde oder zumindest Bekannte."
     "Einfach Menschen, mit denen ich sprechen kann."
     "Immer nur alleine im Keller zu hocken ist auch irgendwie langweilig."
-    #geräusch
+    play sound "sounds/schraube.wav"
     "...!"
     "Da ist es wieder."
     "Das gleiche Geräusch wie gestern Abend."
-    #geräusch
+    play sound "sounds/schraube.wav"
     "Das Geräusch, von dem ich nicht wusste, woher es kommt."
-    #geräusch
+    play sound "sounds/schraube.wav"
     "Jetzt weiss ich es."
-    #geräusch
+    play sound "sounds/schraube.wav"
     "Jemand sitzt bei mir am Kellerfenster und öffnet das Gitter."
-    #geräusch
+    play sound "sounds/schraube.wav"
     "Ich habe total vergessen, die Schraube wieder einzudrehen."
-    #geräusch
+    play sound "sounds/schraube.wav"
     "Was soll ich machen?"
-    #geräusch
+    play sound "sounds/schraube.wav"
     "Aufspringen und ihn erschrecken?"
-    #geräusch
+    play sound "sounds/schraube.wav"
     "Nein, das traue ich mich nicht."
-    #geräusch
+    play sound "sounds/schraube.wav"
     "Ich werde einfach die Augen zu machen und so tun, als würde ich schlafen."
     scene black
     with fade

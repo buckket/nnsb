@@ -119,4 +119,74 @@ label yasmin_anfang:
     b "Dein Name ist also %(yanName)s?"
     "Sie nickt."
     "Das ist doch schon mal ein Anfang."
+    "...aber..."
     
+    #hier folgt nun ein dialog, bei dem verschiedene fragen gestellt werden können,
+    #wobei jede Frage den Spieler weiterbringen kann, aber nicht muss
+    #für die erste frage erst mal zwei variablen:
+    $ y_bef_11 = 0
+    $ y_bef_12 = 0
+    #diese symbolisieren die 2 ersten fragen, die dritte wird immer angezeigt
+    
+label yasmin_befragung_eins:
+    menu:
+        "Wie soll ich jetzt weiter Fragen?"
+        
+        "Was willst du hier?" if y_bef_11 == 0:
+            $ y_bef_11 = 1
+            b "Was willst du hier?"
+            yan "..."
+            "Keine Antwort..."
+            jump yasmin_befragung_eins
+        "Warum verfolgst du mich?" if y_bef_12 == 0:
+            $ y_bef_12 = 1
+            b "Warum verfolgst du mich?"
+            yan "Ich..."
+            b "Ja?"
+            yan "..."
+            "Keine Antwort..."
+            jump yasmin_befragung_eins
+        "Willst du vielleicht erst mal was trinken?": #wird immer angezeigt
+            b "Willst du vielleicht was trinken?"
+            "Sie nickt."
+            "...aber kann ich sie hier einfach alleine lassen?"
+            "Eigentlich nicht..."
+            yan "Ich..."
+            yan "Ich lauf nicht weg!"
+            yan "Ganz bestimmt!"
+            yan "Ich kann auch mitkommen!"
+            yan "Aber ich laufe bestimmt nicht weg!"
+            "Sieh an."
+            "Plötzlich redet sie."
+            "Sie mit nach oben zu nehmen ist keine gute Idee."
+            "Nachher sieht sie noch jemand."
+            "Ich werde mich einfach beeilen, dann kann sie nicht entkommen."
+            b "Warte hier, ich bin gleich wieder da."
+            yan "...ok."
+            b "Was möchtest du denn trinken?"
+            yan "..."
+            "Sie sagt wieder nichts."
+            b "Na gut dann bringe ich d-"
+            yan "Traubensaft."
+            "Traubensaft."
+            b "Ich weiß nicht, ob wir welchen hier haben."
+            yan "..."
+            yan "Im Kühlschrank."
+            yan "Dritte Flasche von hinten."
+            b "..."
+            "Ich sag lieber nichts."
+            b "Bin gleich wieder da."
+            #scene küche
+            "Tatsächlich."
+            "Wir haben Traubensaft."
+            "Genau da, wo sie gesagt hat."
+            "Ich fülle zwei Gläser und begebe mich so schnell es geht wieder nach unten."
+            #scene keller
+            "Sie sitzt noch genau so da, wie ich sie verlassen habe."
+            "Anscheinend hat sie wirklich nicht vor abzuhauen."
+            "...oder ist das ein Trick?"
+            "Ich reiche ihr ein Glas und setze mich wieder hin."
+            yan "..."
+            yan "Danke."
+            "Also..."
+            "Was nun?"
