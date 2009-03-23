@@ -209,16 +209,22 @@ init:
 
 # Neues Spiel startet hier
 label start:
-    #menu:
-    #    "Springe zu Kapitel..."
-    #    
-    #    "Prolog":
-    #        jump namenFrage
-    #        
-    #    "Eins":
-    #        jump eins
+    #jump namenFrage
             
 
+label skipTo: #namen des labels eingeben -> springen
+    menu:
+        "Normal beginnen oder springen?"
+        
+        "Springen":
+            $ skipToLabel = renpy.input("Name des labels?") or "namenFrage"
+            if renpy.has_label(skipToLabel):
+                $ renpy.jump(skipToLabel)
+            else:
+                "Label nicht gefunden."
+                jump skipTo
+        "Normal beginnen":
+            jump namenFrage
 
 label namenFrage:
     menu:
