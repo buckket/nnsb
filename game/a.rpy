@@ -232,7 +232,7 @@ label laura_anja_mail:
         " "
         "Ich gehe auf nicovideo.":
             pass
-        
+            #es muss sich erst auf ein Lied, das Bravo-Bernd singt, geeinigt werden
         
         "Ich gehe auf youtube.":
             "Die Ladezeiten bei nicovideo sind unerträglich."
@@ -245,14 +245,22 @@ label laura_anja_mail:
             
             "Mal sehen."
             "Ich hätte jetzt *wirklich* Lust auf Tsurupettan."
+            #Kanji = つるぺったん。
             "Ich lass es erstmal fertig laden."
             "UN Owen was her ist auch fein."
             "\"U.N. OWEN WAS WINDOWS XP\"."
             "lol Windows."
             "U.N. OWEN..."
             "Hmm..."
+            "Touhou."
+            #Kanji = 東方。
             "Da gibt es bestimmt schon neuere Lieder."
             "Die werde ich aber gleich beim Brausen finden."
+            "So wie ich sie bisher immer fand."
+            "Dann werde ich auch die Remixe finden."
+            "Oh, Tsurupettan ist schon komplett geladen."
+            "Bideo sutato."
+            #Kanji = ビデオ すたと。
             
             play sound "sounds/bernd_singt_tsurupettan.mp3"
             
@@ -760,8 +768,13 @@ label anja_anfang:
             with dissolve
         
             "Einmal kalt duschen und man möchte nicht mehr."
+            if persistent.wieherbuhSprache is 0:
+            "Genau nach Plan."
+            if persistent.wieherbuhSprache is 1:
             "Genau nach keikaku."
-            #Kanji = 計画
+            if persistent.wieherbuhSprache is 2:
+            "{=jp}Genau nach 計画。{/=jp}"
+            "Genau nach keikaku."
             #Bild
             #Hier würde ich gerne oben im Bild einen Kommentar einbauen "Bemerkung: keikaku heißt Plan."
             #Wie machte ich das?
