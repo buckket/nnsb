@@ -123,12 +123,17 @@ label yasmin_anfang:
     
     #hier folgt nun ein dialog, bei dem verschiedene fragen gestellt werden können,
     #wobei jede Frage den Spieler weiterbringen kann, aber nicht muss
-    #für die erste frage erst mal zwei variablen:
-    $ y_bef_11 = 0
-    $ y_bef_12 = 0
-    #diese symbolisieren die 2 ersten fragen, die dritte wird immer angezeigt
     
 label yasmin_befragung_eins:
+    python:
+        try:
+            y_bef_11
+        except NameError:
+            y_bef_11 = 0
+        try:
+            y_bef_12
+        except NameError:
+            y_bef_12 = 0
     menu:
         "Wie soll ich jetzt weiter Fragen?"
         
@@ -176,12 +181,15 @@ label yasmin_befragung_eins:
             b "..."
             "Ich sag lieber nichts."
             b "Bin gleich wieder da."
-            #scene küche
+            scene bg kueche
+            with fade
             "Tatsächlich."
             "Wir haben Traubensaft."
             "Genau da, wo sie gesagt hat."
             "Ich fülle zwei Gläser und begebe mich so schnell es geht wieder nach unten."
-            #scene keller
+            scene bg keller_aus
+            show yasmin stalker
+            with fade
             "Sie sitzt noch genau so da, wie ich sie verlassen habe."
             "Anscheinend hat sie wirklich nicht vor abzuhauen."
             "...oder ist das ein Trick?"
@@ -190,3 +198,70 @@ label yasmin_befragung_eins:
             yan "Danke."
             "Also..."
             "Was nun?"
+            
+label yasmin_befragung_zwei:
+    python:
+        try:
+            y_bef_21
+        except NameError:
+            y_bef_21 = 0
+        try:
+            y_bef_22
+        except NameError:
+            y_bef_22 = 0
+    menu:
+        "Wie soll ich weiter vorgehen?"
+        
+        "Was willst du von mir?" if y_bef_21 == 0:
+            b "Was willst du von mir?"
+            b "Warum bist du hier?"
+            yan "..."
+            b "Es muss doch einen Grund geben?"
+            yan "..."
+            yan "Nein."
+            yan "Ich..."
+            yan "Ich weiß nicht..."
+            "So kommen wir nicht weiter."
+            $ y_bef_21 = 1
+            jump yasmin_befragung_zwei
+            
+        "...und was soll ich jetzt mit dir machen?": #immer anzeigen
+            b "...und was soll ich jetzt mit dir machen?"
+            yan "..."
+            b "Ich kann dich ja nicht einfach laufen lassen."
+            "Nein, das geht auf keinen Fall."
+            "...aber ans Weglaufen scheint sie ja auch gar nicht zu denken."
+            b "Warum bist du nicht weggelaufen."
+            b "Ich habe dir genug Zeit gegeben, oder?"
+            #schockierter Blick
+            yan "..."
+            b "Was willst du denn von mir?"
+            b "Wenn du nicht sprichst, kann ich dir nicht helfen."
+            yan "..."
+            "Sie will jedenfalls nicht weglaufen."
+            "Irgendetwas muss es noch geben, was sie davon abhält."
+            jump yasmin_befragung_drei
+            
+        "Wie schmeckt der Traubensaft?" if y_bef_22 == 0:
+            b "Wie schmeckt der Traubensaft?"
+            yan "...gut."
+            b "..."
+            yan "..."
+            $ y_bef_22 = 1
+            jump yasmin_befragung_zwei
+            
+            
+label yasmin_befragung_drei:
+    python:
+        try:
+            y_bef_31
+        except NameError:
+            y_bef_31 = 0
+        try:
+            y_bef_32
+        except NameError:
+            y_bef_32 = 0
+    #menu:
+    #    "Nach was frage ich sie jetzt?"
+        
+        

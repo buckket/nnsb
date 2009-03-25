@@ -101,7 +101,8 @@ label laura_anja_mail:
     
     play sound "sounds/metaldooropen.wav"
     
-    show blond mad
+    #show blond mad
+    show blond angry
     with dissolve
     #Bild existiert noch nicht
     
@@ -240,7 +241,7 @@ label laura_anja_mail:
             "Es ist zwar nicht so aktuell wie nicovideo, aber es gibt noch genügend Videos zum Schauen."
             "Und es gibt Videos, die ich immer wieder sehe."
             
-            scene bg desktop_youtube
+            scene bg desktop_youtube #AE unnötig?
             with fade
             
             "Mal sehen."
@@ -275,7 +276,7 @@ label laura_anja_mail:
     
     
     
-    scene bg keller_os_blur
+    scene bg keller_blur
     with fade
     
     
@@ -321,7 +322,7 @@ label laura_anja_mail:
 
 label anja_anfang:
 
-    scene bg desktop_404
+    scene bg desktop_404 #AE unnötig?
     with fade
     #Bild existiert nicht
     
@@ -541,7 +542,7 @@ label anja_anfang:
     b "Ich bin jeden Moment wieder zurück."
     b "Halte bitte noch so lang aus."
 
-    scene bg hausflur
+    scene bg hausflur #AE zuhause_drinnen?
     with fade
 
     "Ich renne aus dem Zimmer raus auf der Suche nach einem Schuh."
@@ -560,7 +561,7 @@ label anja_anfang:
     "Ich hole weit aus."
     sis "Das kann ich mir nicht mit ansehen."
 
-    show sis closed_eyes
+    show sis closed_eyes #AE unnötig? evtl. sis scared?
     with dissolve
     #Bild existiert nicht
     #Vielleicht die Hände vor die Augen halten
@@ -1006,7 +1007,7 @@ label anja_anfang:
     "Ich will mich auf andere Gedanken bringen."
     "Wie immer öffne ich als erstes meinen Browser und öffne Krautchan."
    
-    scene bg desktop_404
+    scene bg desktop_404 #AE unnötig?
     with fade
     #Bild existiert noch nicht
     
@@ -1024,7 +1025,7 @@ label anja_anfang:
     "Aber welchen?"
     "Ich öffne meine Animepartition."
     
-    scene bg desktop_anime
+    scene bg desktop_anime #AE unnötig?
     with fade
     #Bild existiert noch nicht
     
@@ -1174,7 +1175,7 @@ label anja_anfang:
 
     scene bg keller_blur
     with fade
-    #Bild existiert noch nicht
+    #Bild existiert noch nicht (DOCH!?)
     
     "Stimme" "Aufstehen."
     b "Jaja."
@@ -1300,7 +1301,7 @@ label anja_weiter:
     "Hmm..."
     "Mal schauen, ob schon die neue Folge Strike with Cheese fertig heruntergeladen ist."
     
-    scene bg desktop_torrent
+    scene bg desktop_torrent #AE unnötig?
     with fade
     #Bild existiert noch nicht
     
@@ -1358,7 +1359,7 @@ label anja_weiter:
     
     play sound "sounds/metaldooropen.wav"
     
-    show blond mad
+    show blond mad #AE unnötig? blond angry?
     with dissolve
     #Bild existiert noch nicht
     
@@ -1381,7 +1382,7 @@ label anja_weiter:
     b "..."
     "Geh sterben."
     
-    show blond really_mad
+    show blond really_mad #AE hier dann blond mad statt in 1362
     with dissolve
     #Bild existiert noch nicht
     
@@ -1557,7 +1558,7 @@ label anja_weiter:
     
     "Ich öffne meinen Internetbrowser."
     
-    scene bg desktop_google
+    scene bg desktop_google #AE unnötig?
     with fade
     #Bild existiert noch nicht
     
@@ -1565,7 +1566,7 @@ label anja_weiter:
     "Dann drücke ich mit der Pfeiltaste einen runter und drücke Enter."
     "Es lädt nor-"
     
-    scene bg desktop_404
+    scene bg desktop_404 #AE unnötig?
     with fade
     #Bild existiert noch nicht
     
@@ -1789,7 +1790,7 @@ label anja_besprechung:
     "Wie in einem Anime, in dem gerade ein schlechter Witz gemacht wurde."
     "Nur, dass es diesmal in der Wirklichkeit so ist."
     
-    show blond serious_g
+    show blond serious_g #AE unnötig? evtl. lieber angry?
     with dissolve
     #Bild existiert noch nicht
     
@@ -1867,7 +1868,7 @@ label anja_besprechung:
     b "..."
     "Ich laufe ihr hinterher."
     
-    scene bg anjas_kueche
+    scene bg anja_kueche
     with fade
     
     show blond happy_g
@@ -1959,7 +1960,9 @@ label anja_besprechung:
     "AKAGI!"
     "QUALITÄTSNASEN!"
     
-    jump kapitel_3
+    #jump kapitel_3
+    #erst mal rauslassen, sonst gibts nen fehler.
+    #auch: drei_anja oder anja_drei aber nicht kapitel_3
 
 label bernd_kapzwei_grillen:
 
