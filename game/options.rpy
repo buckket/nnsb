@@ -17,8 +17,8 @@ init -1 python hide:
 
     ## These control the width and height of the screen.
 
-    config.screen_width = 640
-    config.screen_height = 480
+    config.screen_width = 1024
+    config.screen_height = 768
 
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
@@ -120,10 +120,10 @@ init -1 python hide:
     ## This is the minimum height of the window, including the margins
     ## and padding.
 
-    style.window.yminimum = 100
-    style.say_label.size = 16
-    style.say_dialogue.size = 16
-    style.say_thought.size = 16
+    style.window.yminimum = 200
+    style.say_label.size = 24
+    style.say_dialogue.size = 24
+    style.say_thought.size = 24
     style.say_thought.italic = True
 
     #########################################

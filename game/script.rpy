@@ -1,10 +1,14 @@
 # Script
 
 init python:
+    import os
+    
     config.font_replacement_map["DejaVuSans.ttf", False, True] = ("DejaVuSans-Oblique.ttf", False, False)
     style.jp = Style(style.say_thought)
     style.jp.font = "mikachan.ttf"
     style.jp.italic = False
+    
+    config.log = "debuglog.txt"
     
     
     #diverse funktionen
@@ -24,7 +28,21 @@ init python:
         
     if persistent.wieherbuhSprache is None:
         persistent.wieherbuhSprache = 2
+    
+    #Bilder laden
+    #diese Funktion lädt alle Bilder aus einem gegeben Ordner
+    #wenn das Bild "test.png" aus "images/backgrounds/test" geladen wird
+    #entspricht das einem image backgrounds test = "images/backgrounds/test.png"
+    def loadImagesFromDir(dirName):
+        theFiles = os.listdir(config.basedir + "/game/" + dirName + "/") #alle files aus dirName anzeigen
         
+        for file in theFiles: #jedes File durchgehen
+            if file.endswith(".png") or file.endswith(".jpg"): #wenn es in .png oder .jpg endet
+                theFileName = dirName[7:len(dirName)] + "/" + file[0:len(file)-4] #"images/" und die letzten vier zeichen abschneiden
+                imageName = str(theFileName.split("/"))#von "a/b/c" nach ('a','b','c')
+                renpy.image(imageName,file) #und ein bild draus machen
+            
+            
     config.preferences['prefs_left'].append(
         _Preference(
             "Japanisch",
@@ -48,8 +66,11 @@ init:
     #global
     image black = Solid((0,0,0,255))
     image white = Solid((255,255,255,255))
-    image owari = "images/owari.png"
-    image ende = "images/ende.png"
+    #image owari = "images/owari.png"
+    #image ende = "images/ende.png"
+    
+    $ loadImagesFromDir("images")
+    $ loadImagesFromDir("images/bg")
     $ fastFade = Fade(.2, 0, .2, color="#000")
     $ flash = Fade(.1, 0, .3, color="#fff")
     $ slowFlash = Fade(.1, 0, .5, color="#fff")

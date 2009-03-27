@@ -49,7 +49,7 @@ init:
             # The button contains this text. We can't use ui.textbutton,
             # since we want to restyle things.
             ui.text("%s:%d" % (filename, line),
-                    xpos=638, xanchor=1.0, ypos = 464,
+                    xpos=1022, xanchor=1.0, ypos = 752,
                     size=14)
             
         # Append the overlay function to the list of overlay functions. 
