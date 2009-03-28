@@ -135,7 +135,7 @@ init:
     
     image bg traumkueche = "images/bg/traumkueche.jpg"
     image bg krankenzimmer = "images/bg/krankenzimmer.jpg"
-    image bg krankenzimmer_bluur = "images/bg/krankenzimmer_blur.jpg"
+    image bg krankenzimmer_blur = "images/bg/krankenzimmer_blur.jpg"
     image bg anja_kueche = "images/bg/anja_kueche.jpg"
     image bg treppenhaus = "images/bg/treppenhaus.jpg"
     image bg anjas_zimmer = "images/bg/anja_zimmer.jpg"
