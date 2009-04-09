@@ -224,68 +224,11 @@ label laura_anja_mail:
     "Bernds? In MEINEM Mehrfamilienhaus?"
     "Ich muss das verarbeiten."
     "Ich muss mich ablenken."
+    "Ich sollte mir was zu essen holen."
     
-    scene bg desktop_none
-    "Ich muss Wieherbuhvideos schauen."
     
-    "Soll ich auf nicovideo oder auf youtube gehen?"
-    menu:
-        " "
-        "Ich gehe auf nicovideo.":
-            pass
-            #es muss sich erst auf ein Lied, das Bravo-Bernd singt, geeinigt werden
-        
-        "Ich gehe auf youtube.":
-            "Die Ladezeiten bei nicovideo sind unerträglich."
-            "Da geh ich lieber auf youtube."
-            "Es ist zwar nicht so aktuell wie nicovideo, aber es gibt noch genügend Videos zum Schauen."
-            "Und es gibt Videos, die ich immer wieder sehe."
-            
-            scene bg desktop_youtube #AE unnötig?
-            with fade
-            
-            "Mal sehen."
-            "Ich hätte jetzt *wirklich* Lust auf Tsurupettan."
-            #Kanji = つるぺったん。
-            "Ich lass es erstmal fertig laden."
-            "UN Owen was her ist auch fein."
-            "\"U.N. OWEN WAS WINDOWS XP\"."
-            "lol Windows."
-            "U.N. OWEN..."
-            "Hmm..."
-            "Touhou."
-            #Kanji = 東方。
-            "Da gibt es bestimmt schon neuere Lieder."
-            "Die werde ich aber gleich beim Brausen finden."
-            "So wie ich sie bisher immer fand."
-            "Dann werde ich auch die Remixe finden."
-            "Oh, Tsurupettan ist schon komplett geladen."
-            "Bideo sutato."
-            #Kanji = ビデオ すたと。
-            
-            play sound "sounds/bernd_singt_tsurupettan.mp3"
-            
-                
-    
-    #WIEHERBUH
+    #Situation für abends
     #BUTTERGOTT
-    
-    scene black
-    with fade
-    
-    
-    
-    
-    scene bg keller_blur
-    with fade
-    
-    
-    
-    
-    #BUTTERGOTT
-    #"sinnloses" Gespräch erwünscht
-    #vielleicht ein Chat mit einem alten Freund aus der alten Stadt
-    
     
     
     
@@ -1053,7 +996,7 @@ label anja_anfang:
     "Liegt wohl doch an mir und nicht am Berndsein."
     "Mehr wie: Liegt wohl doch daran, dass sie ein Mädchen ist."
     "Ich hatte ja noch nie was mit Mädchen am Hut."
-    "Da bleibe ich lieber bei meinen waifus."
+    "Da bleibe ich lieber bei mai waifus."
     "Hach, Lynette..."
     #der Traum beginnt, daher einen netten Bildeffekt für den Traumbeginn reinbringen, wenn sowas überhaupt geht
     #gleichzeitiger Übergehen auf das Bild "traumkueche.jpg", aber mit kleiner, weißer Umrandung,
@@ -1066,45 +1009,100 @@ label anja_anfang:
     show lynette_essen
     with dissolve
     
-    "Lynette" "...%(berndName)s-sama."
-    b "Hmm?"
-    "Lynette" "Ohayou gozaimasu, %(berndName)s-sama."
-    #Kanji = お早うございます、　ベルンド様。
     if persistent.wieherbuhSprache is 0:
-        b "Guten Morgen."
+        "Lynette" "...Meister."
+    if persistent.wieherbuhSprache is 1:
+        "Lynette" "...Goshujin-sama."
+    if persistent.wieherbuhSprache is 2:
+        "Lynette" "{=jp}。。。御主人様。{/=jp}"
+    #-----------------------------------------------
+    b "Hmm?"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Lynette" "Guten Morgen, Meister."
+    if persistent.wieherbuhSprache is 1:
+        "Lynette" "Ohayou gozaimasu, Goshujin-sama."
+    if persistent.wieherbuhSprache is 2:
+        "Lynette" "{=jp}お早うございます、　御主人様。{/=jp}"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        b "Morgen."
     if persistent.wieherbuhSprache is 1:
         b "Ohayou."
     if persistent.wieherbuhSprache is 2:
         b "{=jp}お早う。{/=jp}"
-    b "Ja, Lynette?"
-    "Lynette" "Ich hab dir Frühstück gemacht."
+    #-----------------------------------------------
+    "Lynette" "Ich habe dir Frühstück gemacht."
+    b "Aber Lynette."
     b "Wir sind doch noch gar nicht umgezogen."
     b "Und es ist erst 7 Uhr."
     "Lynette" "Aber ich..."
     "Lynette" "...ich..."
-    "Lynette" "...ich koche doch so gerne für dich, %(berndName)s-sama."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Lynette" "...ich koche doch so gerne für dich, Meister."
+    if persistent.wieherbuhSprache is 1:
+        "Lynette" "...ich koche doch so gerne für dich, Goshujin-sama."
+    if persistent.wieherbuhSprache is 2:
+        "Lynette" "...ich koche doch so gerne für dich, {=jp}御主人様。{/=jp}"
+    #-----------------------------------------------
     b "Ach, Lynette."
     b "Was soll ich nur mit dir machen."
     b "Da bleibt mir wohl nichts Anderes übrig."
     b "Ich werde es wohl erst essen müssen."
     b "Nachher wäre es kalt."
-    "Lynette" "Douzo."
-    #Kanji = どうぞ。
-    b "Arigatou, Lynette-chan."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Lynette" "Bitteschön."
+    if persistent.wieherbuhSprache is 1:
+        "Lynette" "Douzo."
+    if persistent.wieherbuhSprache is 2:
+        "Lynette" "{=jp}どうぞ。{/=jp}"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        b "Dankeschön."
+    if persistent.wieherbuhSprache is 1:
+        b "Arigatou."
+    if persistent.wieherbuhSprache is 2:
+        b "{=jp}ありがとう。{/=jp}"
+    #-----------------------------------------------
     "Ich nehme das Tablett und setze mich damit an den Tisch."
     #Bild von Lynette ohne Tablett
-    b "Itadakimasu."
-    #Kanji = いただきます。
-    "Lynette" "%(berndName)s-sama."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        b "Guten Appetit!"
+    if persistent.wieherbuhSprache is 1:
+        b "Itadakimasu!"
+    if persistent.wieherbuhSprache is 2:
+        b "{=jp}いただきます！{/=jp}"
+    #-----------------------------------------------    
+    if persistent.wieherbuhSprache is 0:
+        "Lynette" "Meister?"
+    if persistent.wieherbuhSprache is 1:
+        "Lynette" "Goshujin-sama?"
+    if persistent.wieherbuhSprache is 2:
+        "Lynette" "{=jp}御主人様？{/=jp}"
+    #-----------------------------------------------
     b "Ja?"
     "Lynette" "Ich muss gleich noch einkaufen gehen, aber ich habe kein Geld."
     b "Kein Problem."
-    "Ich greife in meiner Anzugsjacke nach meinem Portemonnaie und hole zwei 200-Euroscheine heraus."
+    "Ich greife in meine Anzugsjacke und hole mein Portemonnaie heraus."
     b "Hier."
-    "Lynette" "Aber %(berndName)s-sama."
+    "Ich gebe ihr zwei 200-Euroscheine."
+    "Lynette" "Aber..."
     "Lynette" "Das ist so viel Geld."
     "Lynette" "Ist das denn wirklich in Ordnung?"
-    b "Hai, hai."
+    #-----------------------------------------------    
+    if persistent.wieherbuhSprache is 0:
+        b "Natürlich ist es das."
+    if persistent.wieherbuhSprache is 1:
+        b "Atarimae sa."
+    if persistent.wieherbuhSprache is 2:
+        b "{=jp}当たり前さ。{/=jp}"
+    #-----------------------------------------------
+    #EXPERTENWIEHERBUH GEFRAGT: "Atarimae sa" oder "mochiron"?
+    
+    
     b "Da gab es doch diese Halskette, die du unbedingt haben wolltest."
     b "Wie teuer war die noch gleich?"
     b "300 Euro?"
@@ -1113,8 +1111,21 @@ label anja_anfang:
     "Lynette" "Woher weißt du davon?"
     b "Ich wäre nicht mit dir zusammen, wenn ich sowas nicht wüsste."
     #Bild mit blush von Lynette für maximalen Gewinn
-    "Lynette" "Sonna..."
-    "Stimme" "%(berndName)s-sama."
+    #-----------------------------------------------    
+    if persistent.wieherbuhSprache is 0:
+        "Lynette" "Das ist...."
+    if persistent.wieherbuhSprache is 1:
+        "Lynette" "Sonna..."
+    if persistent.wieherbuhSprache is 2:
+        "Lynette" "{=jp}そんな。。。{/=jp}"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Stimme" "Meister!"
+    if persistent.wieherbuhSprache is 1:
+        "Stimme" "Goshujin-sama!"
+    if persistent.wieherbuhSprache is 2:
+        "Stimme" "{=jp}御主人様！{/=jp}"
+    #-----------------------------------------------
     "Diese Stimme..."
     "Das ist..."
     
@@ -1122,48 +1133,129 @@ label anja_anfang:
     show erika_normal at left
     with dissolve
     
-    "Erika" "%(berndName)s-sama."
-    b "Ohayou, Erika-chan."
-    #Kanji = お早う
-    "Erika" "Ohayou."
-    #Kanji = お早う。
-    "Erika" "Wie befohlen bin ich nun geduscht, %(berndName)s-sama."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Erika" "Meister!"
+    if persistent.wieherbuhSprache is 1:
+        "Erika" "Goshujin-sama!"
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}御主人様！{/=jp}"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Erika" "Morgen!"
+    if persistent.wieherbuhSprache is 1:
+        "Erika" "Ohayou!"
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}お早う！{/=jp}"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        b "Morgen!"
+    if persistent.wieherbuhSprache is 1:
+        b "Ohayou!"
+    if persistent.wieherbuhSprache is 2:
+        b "{=jp}お早う！{/=jp}"
+    #-----------------------------------------------
+    "Erika" "Wie befohlen bin ich nun geduscht."
     b "Fein."
-    "Erika" "Kimitachi..."
-    #Kanji = 君たち...
-    "Erika" "Mou."
-    #Kanji = もう。
-    "Erika" "Iyashii."
-    #Kanji = 卑しい
-    b "Nani?"
-    #Kanji = 何
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Erika" "Mann."
+    if persistent.wieherbuhSprache is 1:
+        "Erika" "Mou."
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}もう。{/=jp}"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Erika" "Gemein."
+    if persistent.wieherbuhSprache is 1:
+        "Erika" "Iyashii."
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}卑しい。{/=jp}"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        b "Was?"
+    if persistent.wieherbuhSprache is 1:
+        b "Nani?"
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}何？{/=jp}"
+    #-----------------------------------------------
     "Lynette" "Für dich habe ich doch auch Frühstück gemacht, Erika."
     "Erika" "Ihr esst aber schon."
     "Erika" "Ihr habt ohne mich angefangen."
-    b "Gomen, Erika-chan."
-    #Kanji = ごめん
-    "Erika" "Dafür musst du nachher was mit mir unternehmen, %(berndName)s-sama."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        b "Sorry, Erika-chan."
+    if persistent.wieherbuhSprache is 1:
+        b "Gomen, Erika-chan."
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}ごめん、 ダーリング{/=jp}"
+    #-----------------------------------------------
+    #Sorry benutzt, weil es lockerer rüberkommt als ein "Entschuldigung"
+ 
+    "Erika" "Dafür musst du aber gleich was mit mir unternehmen."
+    b "OK."
+    "Erika" "Versprochen?"
+    b "Ja."
     b "Worauf hast du denn Lust?"
-    "Erika" "Am liebsten würde ich noch eine Runde schlafen."
+    "Erika" "Also eigentlich bin ich noch müde."
+    "Erika" "Ich würde mich am liebsten noch eine Runde hinlegen."
     b "Ich soll also mit dir schlafen?"
     "Erika" "Ja."
     b "Sicher?"
     "Erika" "Ja."
-    "Lynette" "Nein! Nicht so!"
+    #Blushbild von Lynette für maximalen Gewinn
+    #Bild existiert noch nicht
+    #ansonsten muss ich das irgendwie per Dialog darstellen
+    
     "Erika" "Was ist denn los, Lynette?"
     "Lynette" "Das ist einfach..."
-    "Lynette" "%(berndName)s-sama!"
-    "Lynette" "Sag doch auch mal was!"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Lynette" "Meister!"
+    if persistent.wieherbuhSprache is 1:
+        "Lynette" "Goshujin-sama!"
+    if persistent.wieherbuhSprache is 2:
+        "Lynette" "{=jp}御主人様！{/=jp}"
+    #-----------------------------------------------
+    "Lynette" "Sagt doch auch mal was!"
+    b "Was denn?"
+    "Lynette" "Na, Ihr weißt schon."
     b "Sie versteht es nicht, Lynette-chan."
-    "Erika" "Was denn?"
-    b "Mach dir mal keine Sorgen."
-    
+    "Erika" "Was versteh' ich nicht?"
+    b "Nichts..."
+    #Bild von Erika mit --( - Gesichtsausdruck, sofern es überhaupt solch ein Bild gibt
+    #Bild existiert noch nicht
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Erika" "Mann."
+    if persistent.wieherbuhSprache is 1:
+        "Erika" "Mou."
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}もう。{/=jp}"
+    #-----------------------------------------------
+    "Erika" "Immer verheimlicht ihr mir irgendwas."
+    "Lynette" "Aber Erika..."
+    "Erika" "Kein Aber, Lynette."
+    "Ich gehe zu Erika und streichle ihr über das blonde Haar."
+    b "Nimm solche Sachen doch nicht so ernst, Erika-chan."
+    "Erika" "Aber..."
+    "Erika" "aber..."
+    "Sie senkt ihren Blick Richtung Boden und verstummt."
+    b "Was ist denn?"
+    "Erika" "Ich..."
+    "Erika" "{size=4}Ich liebe dich.{/size}"
+    b "Ich kann dich nicht verstehen, wenn du nuschelst."
+    "Erika" "{size=6}Ich liebe dich.{/size}"
+    b "Ach, Erika."
+    b "Jetzt schau mich doch mal an, wenn du mir was sagen willst."
+    "Sie hebt ihren Kopf und schaut mir in die Augen."
+    "Erika" "Ich will nicht, dass du mir Sachen verheimlichst."
+    "Erika" "Ich will, dass du mir alles sagst."
+     
     
     
     #BUTTERGOTT
-    #if EXPERTENPROGRAMMIERER at work
 
-    
     scene black
     with fade
     
