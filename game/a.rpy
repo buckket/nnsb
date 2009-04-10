@@ -65,7 +65,7 @@ label laura_anja_mail:
     "Warum kommt immer nur ein \"KOMM SCHNELL!\", wenn ich nachfrage?"
     "Ich hasse sowas."
     b "JAJA!."
-    "Ich stehe auf und ."    
+    "Ich stehe auf und ..."    
     
     play sound "sounds/metaldooropen.wav"
         
@@ -77,12 +77,12 @@ label laura_anja_mail:
     show anja neutral
     with dissolve    
     
-    "Mädchen" "Oh, hai."
+    u"Mädchen" "Oh, hai."
     b "..."
     "Wer ist das denn?"
-    "Mädchen" "Kann ich runterkommen?"
+    u"Mädchen" "Kann ich runterkommen?"
     b "Nein."
-    "Ohne ein weiteres Wort gehe gehe einfach wieder in meinen Keller zurück."
+    "Ohne ein weiteres Wort gehe ich einfach wieder in meinen Keller zurück."
     
     scene bg keller
     with fade
@@ -104,15 +104,15 @@ label laura_anja_mail:
     show anja angry
     with dissolve
         
-    "Mädchen" "Was ist los mit dir?"
+    u"Mädchen" "Was ist los mit dir?"
     b "..."
     "Lass mich einfach in Ruhe."
-    "Mädchen" "Du ignorierst mich einfach."
+    u"Mädchen" "Du ignorierst mich einfach."
     b "..."
     "Geh einfach."
-    "Mädchen" "Dabei habe ich dir doch noch eine Mail geschrieben, dass ich vorbeikomme."
+    u"Mädchen" "Dabei habe ich dir doch noch eine Mail geschrieben, dass ich vorbeikomme."
     b "..."
-    "Mädchen" "Hast du die nicht gelesen?"
+    u"Mädchen" "Hast du die nicht gelesen?"
     b "Moment."
     b "Eine E-Mail?"
     b "DIE E-Mail?"
@@ -120,33 +120,35 @@ label laura_anja_mail:
     show anja neutral
     with dissolve
     
-    "Mädchen" "Ja."
+    u"Mädchen" "Ja."
     b "D-D-Du bist ein B-B-Bernd?"
-    "Mädchen" "Ja."
-    "Mädchen" "Willkommen in der Wirklichkeit."
+    u"Mädchen" "Ja."
+    u"Mädchen" "Willkommen in der Wirklichkeit."
     b "Ein Mädchen? Ein Bernd?"
-    "Mädchen" "Ja."
-    b "wat"
-    "Mädchen" "Nenn mich aber nicht immer Bernd."
-    "Mädchen" "Ich hab auch einen richtigen Namen."
-    "Mädchen" "Ich heiße %(wBerndName)s."
+    u"Mädchen" "Ja."
+    b "Was zum?"
+    u"Mädchen" "Nenn mich aber nicht immer Bernd."
+    u"Mädchen" "Ich hab auch einen richtigen Namen."
+    u"Mädchen" "Ich heiße %(wBerndName)s."
     b "Aha."
+    bw "Ja."
+    b "Ja."
     bw "Ja."
     b "Komm endlich zur Sache."
     bw "Wir müssen Krautchan retten."
     b "Und wie soll ich dir dabei helfen?"
     bw "Weiß ich noch nicht."
-    b "Auch: Was ist denn mit Krautchan passiert?"
+    b "Was ist denn eigentlich mit Krautchan passiert?"
     bw "Der Server wurde beschlagnahmt."
     b "Server beschlagnahmt."
-    b "So so."
+    b "Soso."
     bw "Ja."
     bw "Von der Polizei."
     b "Polizei."
-    b "So so."
+    b "Soso."
     bw "Die genauen Einzelheiten kenne ich auch nicht."
     bw "Ich weiß nur, dass der Server eines Morgens von der Polizei beschlagnahmt wurde."
-    bw "Deshalb brauch ich deine Hilfe."
+    bw "Deshalb brauche ich deine Hilfe."
     b "Und wie sollen wir da was machen?"
     bw "Weiß ich nicht."
     b "Und warum bist du dann hier?"
@@ -176,11 +178,6 @@ label laura_anja_mail:
     #K1
     
     "Was zum?"
-    "Dass es hier mehrere Bernds gibt, war mir vorher schon klar."
-    "Das lässt sich in einer Großstadt wie Berlin nicht vermeiden."
-    "Vor allem, wenn sich ein Bernd schon berlinbernd nennt."
-    "Aber..."
-    "Bernds? In MEINEM Mehrfamilienhaus?"
     bw "Du siehst irgendwie sprachlos aus."
     b "..."
     bw "OH MEIN GOTT!"
@@ -227,6 +224,7 @@ label laura_anja_mail:
     
     
     #Situation für abends
+    #Siehe dafür ins Forum
     #BUTTERGOTT
     
     
@@ -240,18 +238,18 @@ label laura_anja_mail:
     
     "Langsam werde ich wach."
     "Ich schaue auf die Uhr."
-    "Es ist 13:19 Uhr."
+    "Es ist 13:42 Uhr."
     
     scene black
     with fade
     
     "Lasst mich noch schlafen."
-    "Es ist doch erst Zwanzig nach Eins."
+    "Es ist doch erst Zwanzig vor Zwei."
     
     scene bg keller_aus
     
     "WAS?!"
-    "Es ist schon nach 13 Uhr?"
+    "Es ist schon so spät?"
     "Ich habe wirklich lange geschlafen."
     "Ich sollte mich beeilen, wenn ich noch zu %(wBerndName)s will."
     "Andererseits sollte ich mich nicht so hetzen."
@@ -1721,7 +1719,7 @@ label anja_besprechung:
             $ friendLove += 10
     
     "Ich schaue auf die Uhr."
-    "Es ist schon 15:43 Uhr."
+    "Es ist schon 14:06 Uhr."
     "Dann mache ich mich mal langsam auf den Weg."
     "Geduscht habe ich ja gestern."
     
@@ -1745,24 +1743,30 @@ label anja_besprechung:
     
     play sound "sounds/knock.wav"
     
+    $ renpy.pause(0.5)
+    
     "Stimme" "Ich komme gleich."
     "..."
-    $ renpy.pause(1.5)
-    "..."
-    $ renpy.pause(1.5)
-    "..."
+    
+    $ renpy.pause(2.0)
    
     play sound "sounds/knock.wav"
     
-    "Stimme" "JAAAAA, ich komme gleich."
+    $ renpy.pause(0.5)
+    
+    "Stimme" "JAAAA, ich komme gleich."
     "..."
     $ renpy.pause(0.5)
     
     play sound "sounds/knock.wav"
     
+    $ renpy.pause(0.5)
+    
     "Dieses Mal gibt es gar keine Reaktion."
     
     play sound "sounds/knock2.wav"
+    
+    $ renpy.pause(0.5)
       
     "Stimme" "JAAAAHAAAAA!"
     "Stimme" "Ich komme doch."
@@ -1776,9 +1780,9 @@ label anja_besprechung:
     with dissolve
     
     bw "Oh, hai."
-    b "Ja ja."
+    b "Jaja."
     b "Also."
-    b "Du sagtest, ich soll vorbeikommen."
+    b "Du sagtest, ich solle vorbeikommen."
     bw "Ja."
     bw "Komm doch rein."
     "Ich trete ein."
@@ -1816,17 +1820,24 @@ label anja_besprechung:
     "Ganz anders als meins."
     "Bei mir macht es keinen Unterschied, ob man auf dem Fußboden liegt oder im Bett."
     "Ich lasse meinen Blick durch das Zimmer schweifen."
-    "PLÖTZLICH: Glurak."
-    "Eine Plüschfigur davon."
+    "PLÖTZLICH: Pokémon."
+    "Mehrere Plüschfigur davon."
+    "Pikachu."
+    "Das Standardpokémon schlechthin."
+    "Evoli."
+    "Wie süß."
+    "Glurak."
     b "JA MAN GLUARK!"
-    bw "FICK JA!"
+    "Habe ich das gerade laut gesagt?"
+    "Verdammt."
+    "%(wBerndName)s steht mit zwei Gläsern wieder im Zimmer."
     
     show anja neutral
     with dissolve
     
-    b "..."
-    "Sie steht mit zwei Gläsern wieder im Zimmer."
+    "Hat sie das gerade gehört?"
     bw "Du wirst aber schnell wieder ruhig."
+    "Hat sie."
     bw "Ich hab dir ein Glas Milch mitgebracht."
     "Milch? In MEINEM Glas?"
     b "Zum Trinken?"
