@@ -1,15 +1,16 @@
-init:
+﻿init:
     $ prolog_GeldGenommen = 0
     
 label prolog:
 
-    scene splash prolog
+    scene bg splash_prolog
     with gradientTrans
 
     $ renpy.pause(5.0)
 
     scene black
     with gradientTrans
+
 
     "\"Aufwachen, %(berndName)s!\""
     
@@ -42,7 +43,7 @@ label prolog:
 
     play music "music/schwester.ogg"
 
-    show sis happy
+    show laura happy
     with dissolve
 
     sis "Welches ist mein Zimmer, Mama? Welches?"
@@ -53,11 +54,12 @@ label prolog:
 
     "Ich ärgere meine Schwester gerne mit sowas."
     
-    hide sis happy
+    hide laura happy
     with dissolve
 
     ma "Eigentlich..."
     ma "...bist du es, der im Keller schlafen muss, %(berndName)s."
+
 
     stop music fadeout 0.4
 
@@ -67,13 +69,13 @@ label prolog:
     ma "%(sisName)s ist schon 13. Sie braucht ein eigenes Zimmer."
     ma "Da bleibt für dich nur noch der Keller."
     
-    show sis happy
+    show laura happy
     with dissolve
 
     "Mein Blick wandert herüber zu meiner Schwester."
     "Sie grinst siegessicher."
     
-    hide sis happy
+    hide laura happy
     with dissolve
 
     ma "Ach, komm schon! So schlimm wird es nicht sein."
@@ -150,12 +152,12 @@ label prolog_duschen:
     
     play sound "sounds/door_1.wav"
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Hey, %(berndName)s. Hast du mein-"
     
-    show sis surprised
+    show laura surprised
     with dissolve
     
     "Sie starrt mich an."
@@ -167,7 +169,7 @@ label prolog_duschen:
     
     play music "music/schwester.ogg"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Hihi! %(berndName)s hat einen Steifen!"
@@ -178,7 +180,7 @@ label prolog_duschen:
     
     "Sie verschwindet kichernd."   
     
-    hide sis happy
+    hide laura happy
     with dissolve
     
     "Das fängt ja gut an."
@@ -202,13 +204,13 @@ label prolog_duschen:
     b "Kannst du nicht %(sisName)s mitnehmen?"
     b "Dafür geh' ich heute auch einkaufen."
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Ja, Mama!"
     sis "Ich will die Nachbarn begrüßen!"
     
-    hide sis happy
+    hide laura happy
     with dissolve
     
     ma "Hm..."
@@ -230,12 +232,12 @@ label prolog_duschen:
     
     ma "Los, %(sisName)s, wir gehen und stellen uns den neuen Nachbarn vor."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "OK!"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Du schuldest mir was, %(berndName)s!"
@@ -245,7 +247,7 @@ label prolog_duschen:
     b "Schon gut, schon gut."
     b "Danke."
     
-    hide sis happy
+    hide laura happy
     with dissolve
     
     "Die Beiden verlassen die Wohnung."
@@ -271,12 +273,12 @@ label prolog_dreckig:
     ma "Dann werd' ich halt deine Schwester mitnehmen."
     ma "Du solltest dir an ihr ein Beispiel nehmen!"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Genau!"
     
-    hide sis happy
+    hide laura happy
     with dissolve
     
     "Die Beiden verlassen die Wohnung."
@@ -395,7 +397,7 @@ label prolog_EinkaufenLinks:
 label prolog_EinkaufenWLAN:
     b "W-LAN Adapter haben die hier sicher nicht..."
     "Obwohl ich nur leise vor mich hin gemurmelt habe, hat mich wohl jemand gehört."
-    "Verkäuferin" "Doch, haben wir. Zweite Reihe, drittes Regal."
+    u"Verkäuferin" "Doch, haben wir. Zweite Reihe, drittes Regal."
     b "Äh... ja."
     "Tatsächlich finde ich dort einen W-LAN Adapter für nur 15 Euro."
     $ geld -= 15
@@ -407,43 +409,43 @@ label prolog_EinkaufenWLAN:
     scene bg supermarkt_innen
     with vpunch
     play sound "sounds/hit_1.wav"
-    show blond weird
+    show anja weird_n
     with dissolve
-    "Mädchen" "Autsch..."
+    u"Mädchen" "Autsch..."
     "Scheiße."
     "Jetzt hab ich ein Mädchen umgelaufen."
     "Warum passiert sowas immer mir?"
     b "Äh... alles in Ordnung?"
-    show blond surprised
+    show anja surprised_n
     with dissolve
     play music "music/bernd_anja_theme.mp3"
-    "Mädchen" "Äh... ja."
-    "Mädchen" "Alles ok."
-    show blond neutral
+    u"Mädchen" "Äh... ja."
+    u"Mädchen" "Alles ok."
+    show anja neutral_n
     with dissolve
     "Scheiße."
     "Die sieht auch noch geil aus."
     "Wieso immer ich?"
-    "Mädchen" "Meine Brille...?"
+    u"Mädchen" "Meine Brille...?"
     "Ihre Brille liegt auf dem Boden."
     "Schnell hebe ich sie auf."
     b "Hier."
-    show blond shy
+    show anja shy
     with dissolve
-    "Mädchen" "Oh, danke."
+    u"Mädchen" "Oh, danke."
     b "Ja."
     b "Kein Problem."
-    "Mädchen" "Tut mir wirklich Leid."
+    u"Mädchen" "Tut mir wirklich Leid."
     "Was?"
     "Das war doch meine Schuld."
     b "Ähm... kein Problem."
-    "Mädchen" "Na gut... ähm..."
-    show blond neutral_g
+    u"Mädchen" "Na gut... ähm..."
+    show anja neutral
     with dissolve
-    "Mädchen" "Tschüss."
+    u"Mädchen" "Tschüss."
     b "Ja."
     b "Tschüss."
-    hide blond neutral_g
+    hide anja neutral
     with dissolve
     stop music fadeout 1.0
     "Sie dreht sich um und geht."

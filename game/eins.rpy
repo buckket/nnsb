@@ -93,7 +93,7 @@ label eins:
     
     play sound "sounds/door_1.wav"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     play music "music/schwester.ogg"
@@ -117,7 +117,7 @@ label eins:
             b "Wieso willst du das wissen?"
             "Was soll ich schon geträumt haben?"
             "Was Jemand, der in meinem Alter noch Jungfrau ist, wohl jede Nacht träumt."
-            show sis neutral
+            show laura neutral
             with dissolve
             sis "Nur so."
             sis "Man sagt, dass das, was man in der ersten Nacht in einer neuen Wohnung träumt, in Erfüllung geht."
@@ -125,20 +125,20 @@ label eins:
             "Wer denkt sich sowas aus?"
             b "Tja, vielleicht hast du Recht."
             b "Was hast DU denn heute Nacht geträumt?"
-            show sis embarrassed
+            show laura embarrassed
             with dissolve
             sis "Ach..."
             sis "...nichts Besonderes."
             b "Sag schon!"
-            show sis happy
+            show laura happy
             with dissolve
             sis "Ist doch sowieso nur ein dummer Aberglaube!"
             "Sie will es mir wohl nicht erzählen..."
             b "Ist es dir peinlich oder warum willst du es mir nicht sagen?"
-            show sis emb_surprised
+            show laura emb_surprised
             with dissolve
             sis "Peinlich?"
-            show sis embarrassed
+            show laura embarrassed
             with dissolve
             sis "W- wieso das denn?"
             sis "Was soll ich denn Peinliches träumen?"
@@ -148,12 +148,12 @@ label eins:
             ma "Ich will, dass du fertig angezogen bist und gefrühstückt hast, wenn wir wiederkommen."
             b "Geht in Ordnung."
             
-            show sis neutral
+            show laura neutral
             with dissolve
             
             sis "Bis gleich, %(berndName)s!"
             
-            hide sis neutral
+            hide laura neutral
             with dissolve
             
             "Die beiden verlassen endlich das Zimmer."
@@ -165,7 +165,7 @@ label eins:
             
             play sound "sounds/door_1.wav"
             
-            show sis neutral
+            show laura neutral
             with dissolve
             
             play music "music/schwester.ogg"
@@ -182,13 +182,13 @@ label eins:
                     b "Kondome."
                     b "Da haben wir beide was von."
                     
-                    show sis surprised
+                    show laura surprised
                     with dissolve
                     
                     sis "Aber %(berndName)s!"
                     "Sie rennt aus dem Zimmer."
                     
-                    hide sis surprised
+                    hide laura surprised
                     with dissolve
                     
                     stop music fadeout 0.4
@@ -208,7 +208,7 @@ label eins:
                     
                     b "Ja, bis gleich." 
                     
-                    hide sis neutral
+                    hide laura neutral
                     with dissolve
                     
                     stop music fadeout 0.4
@@ -225,7 +225,7 @@ label eins:
             sis "Dann geh' ich halt!"
             sis "Bäh!"
             
-            hide sis happy
+            hide laura happy
             with dissolve
             
             ma "Aber %(berndName)s, wie redest du denn mit deiner Schwester?"
@@ -307,17 +307,27 @@ label eins:
     scene bg badezimmer
     with fade
 
+
+
     #play sound "sound/dusche.wav"
+
     #muss noch gefunden werden
     play music "music/2.mp3"
 
+
     b "So, fertig geduscht."
+
     "Jetzt muss ich erstmal meinen Hunger bekämpfen."
+
+
 
     scene bg kueche
     with fade
 
+
+
     b "Was ess' ich denn jetzt mal..."
+
     b "Mal gucken, was so im Kühlschrank ist."
     "Ich öffne die Kühlschranktür."
     $ renpy.music.play ("music/rugenwalder.ogg", channel=7, loop=False, fadeout=None, synchro_start=False, fadein=0, tight=False, if_changed=False)
@@ -330,9 +340,11 @@ label eins:
     #om nom nom sound
     b "RÜGENWALDER!"
     b "GROB ODER FEIN, DIE MIT DER MÜHLE MUSS ES SEIN!"
+
     b "Hm..."
     b "Lecker."
     stop music fadeout 0.5
+
     b "So, endlich kann ich Strike with Cheese schauen."
     
     scene bg keller_bluescreen
@@ -428,7 +440,7 @@ label eins:
         
         play sound "sounds/door_1.wav"
     
-        show sis happy
+        show laura happy
         with dissolve
     
         sis "%(berndName)s, ich hab dir was mitgebracht!"
@@ -436,12 +448,12 @@ label eins:
         if mitbringen == "gummi":
         
             "Sie hat eine Packung Gummibärchen in der Hand."
-            show sis neutral
+            show laura neutral
             with dissolve
             sis "Bitte."
         
         if mitbringen == "kondome":
-            show sis neutral
+            show laura neutral
             with dissolve
             
             sis "Hier..."
@@ -454,19 +466,19 @@ label eins:
             "...bedanke mich.":
                 b "Danke, %(sisName)s."
                 $ sisLove += 5
-                show sis neutral
+                show laura neutral
                 with dissolve
                 
                 sis "Für dich mach' ich das doch gerne, %(berndName)s."
                 
-                hide sis neutral
+                hide laura neutral
                 with dissolve
             
             "...bedanke mich nicht.":
                 "Ohne Worte nehme ich die Packung."
                 "Mit einer Handbewegung signalisiere ich %(sisName)s, dass sie jetzt gehen kann."
                 $ sisLove -= 5
-                hide sis neutral
+                hide laura neutral
                 with dissolve
     
     "Endlich kann ich Strike with Cheese gucken."
@@ -629,7 +641,7 @@ label eins:
     ma "Hast du eine Ahnung, wo die Kopfschmerztabletten sein könnten?"
     "Meine Schwester kommt aus ihrem Zimmer."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Die was?"
@@ -638,7 +650,7 @@ label eins:
     "Sie hat die Packung in der Hand?"
     ma "Wo hast du die denn her?"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Die standen direkt hier im Schrank."
@@ -646,7 +658,7 @@ label eins:
     
     ma "Was würde ich nur ohne dich machen?"
     
-    hide sis happy
+    hide laura happy
     with dissolve
     
     "Meine Mutter füllt ein Glas mit Wasser und lässt eine Tablette hineinfallen."
@@ -760,25 +772,25 @@ label eins:
     "Das wird meine Mutter mit dem Essen sein."
     "Ich setze mich aufrecht auf meine Matratze."
     "Überraschenderweise ist es %(sisName)s, die das Zimmer betritt."
-    show sis neutral
+    show laura neutral
     with dissolve
     b "Was machst du denn hier?"
     b "Müsstest du nicht schon längst schlafen?"
     "Sie setzt sich neben mich auf die Matratze."
-    show sis embarrassed
+    show laura embarrassed
     with dissolve
     sis "Aber..."
     sis "...ich hab' mir solche Sorgen um dich gemacht, dass ich nicht schlafen konnte."
     b "Dummkopf."
     b "Um mich musst du dir keine Sorgen machen."
     b "Ich halte sowas doch aus."
-    show sis sad
+    show laura sad
     with dissolve
     sis "Aber..."
     sis "...ich hatte so Angst, dass dir was Schlimmes passiert ist und..."
     "Oh Mann."
     "Gleich heult sie los."
-    show sis crying
+    show laura crying
     with dissolve
     sis "...versprich mir, dass du sowas nie wieder machst!"
     "Wenn meine Mutter jetzt reinkommt, glaubt sie wieder, ich wäre Schuld."
@@ -793,7 +805,7 @@ label eins:
     b "Ich verspreche es."
     "Ich bin zu nett zu ihr..."
     b "Ich passe auf mich auf."
-    show sis sad
+    show laura sad
     with dissolve
     sis "Wenn du das so sagst..."
     sis "...klingt das nicht sehr überzeugend."
@@ -802,20 +814,20 @@ label eins:
     b "Ja."
     b "Ganz ehrlich."
     "Sie legt ihren Kopf an meine Schulter."
-    show sis sadsmile
+    show laura sadsmile
     with dissolve
     sis "Ich hab dich gern, %(berndName)s."
     "Hey!"
     "So viel körperliche Nähe bin ich nicht gewohnt!"
     b "D- Du solltest jetzt wirklich schlafen gehen."
     b "Ich brauche meine Ruhe."
-    show sis happy
+    show laura happy
     with dissolve
     sis "OK!"
     sis "Gute Nacht, %(berndName)s!"
     b "Schlaf gut."
     "Sie dreht sich um und läuft die Treppe nach oben."
-    hide sis happy
+    hide laura happy
     with dissolve
     "Manchmal ist sie total nervig und manchmal total nett."
     "Ich verstehe sie einfach nicht."
@@ -1050,10 +1062,10 @@ label eins_treffenBerndf:
     "Schrecklich."
     "Was wollen die alle h-"
     
-    show blond neutral_g
+    show anja neutral
     with flash
     
-    hide blond neutral_g
+    hide anja neutral
     with dissolve
     
     b "Das war doch..."
@@ -1076,7 +1088,7 @@ label eins_treffenBerndf:
     "Jetzt kann ich sie erkennen."
     "Das ist sie ganz sicher."
     
-    show blond neutral_g
+    show anja neutral
     with flash
     
     "Ich gehe an ihr vorbei und sehe sie an."
@@ -1108,7 +1120,7 @@ label eins_treffenBerndf:
     scene bg alexanderplatz_drei
     with fade
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     "Mädchen" "Hier sind weniger Leute."
@@ -1117,13 +1129,13 @@ label eins_treffenBerndf:
     b "Ich..."
     "Wovon redet sie?"
     
-    show blond surprised_g
+    show anja surprised
     with dissolve
     
     "Mädchen" "Ah!"
     "Mädchen" "Ich habe mich ja noch gar nicht vorgestellt!"
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     "Mädchen" "Ich bin %(wBerndName)s."
@@ -1143,14 +1155,14 @@ label eins_treffenBerndf:
     b "J... ja."
     b "Ich bin wegen der E-Mail hier aber..."
     
-    show blond surprised_g
+    show anja surprised
     with dissolve
     
     bw "Ah!"
     bw "Jetzt versteh' ich!"
     bw "Du bist überrascht, dass ich ein Mädchen bin, richtig?"
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     b "Äh... ja."
@@ -1178,7 +1190,7 @@ label eins_treffenBerndf:
     "Sind ALLE Frauen verrückt im Kopf?"
     b "Was redest du v-"
     
-    show blond surprised_g
+    show anja surprised
     with dissolve
     
     bw "OH!"
@@ -1186,7 +1198,7 @@ label eins_treffenBerndf:
     
     "Was zum...?"
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     bw "%(berndName)s."
@@ -1258,13 +1270,13 @@ label eins_treffenBerndf:
     ma "Das muss aber ein kurzes Treffen gewesen sein."
     b "War es."
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Hallo, %(berndName)s."
     b "Hi."
     
-    hide sis happy
+    hide laura happy
     with dissolve
     
     ma "Ich will, dass du %(sisName)s zum Einkaufen mitnimmst."
@@ -1272,7 +1284,7 @@ label eins_treffenBerndf:
    
     b "Ich will aber ni-"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "OK!"
@@ -1288,7 +1300,7 @@ label eins_treffenBerndf:
     
     "Wir gehen in Richtung %(supermarkt)s."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Sag mal %(berndName)s..."
@@ -1303,7 +1315,7 @@ label eins_treffenBerndf:
     sis "Ich wusste es."
     sis "Du bist hoffnungslos, %(berndName)s."
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Aber ich hab dich trotzdem lieb!"
@@ -1342,12 +1354,12 @@ label eins_treffenBerndf:
     
     b "Was sollen wir nochmal einkaufen?"
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Hm..."
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Keine Ahnung!"
@@ -1355,7 +1367,7 @@ label eins_treffenBerndf:
     b "Naja..."
     b "Kaufen wir halt Butter und Rügenwalder."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Sicher, dass wir nicht mehr brauchen?"
@@ -1363,11 +1375,11 @@ label eins_treffenBerndf:
     sis "Ich könnte Mama anrufen."
     sis "Ich hab' mein Handy dabei."
     b "Du hast ein Handy?"
-    show sis happy
+    show laura happy
     with dissolve
     sis "Klar hab ich eins!"
     b "Na dann, ruf sie an."
-    show sis neutral
+    show laura neutral
     with dissolve
     sis "OK."
     "Sie zieht ein rosafarbenes Handy aus der Tasche."
@@ -1381,24 +1393,24 @@ label eins_treffenBerndf:
     sis "Sonst noch was?"
     sis "..."
     sis "Alles klar!"
-    show sis happy
+    show laura happy
     with dissolve
     sis "Bis gleich!"
     "Sie legt auf."
-    show sis neutral
+    show laura neutral
     with dissolve
     sis "Sie sagt, dass wir auch noch Milch und Brot brauchen."
     "Also Milch, Butter, Brot und Rügenwalder."
     b "OK."
     b "Dann besorgen wir das schnell und danach gehen wir nach Hause."
     sis "OK."
-    hide sis neutral
+    hide laura neutral
     with dissolve
     "Nachdem wir alles gefunden haben, gehen wir zur Kasse."
     "Vor uns ist eine ältere Frau, die langsam einen Artikel nach dem anderen auf's Band legt."
     "Die Kassiererin ist sichtlich genervt."
     "Warum kaufen alte Leute immer so viel ein und brauchen dann eine halbe Stunde an der Kasse?"
-    show sis neutral
+    show laura neutral
     with dissolve
     sis "%(berndName)s?"
     b "Was denn?"
@@ -1409,7 +1421,7 @@ label eins_treffenBerndf:
     sis "Ganz bestimmt!"
     "Hm..."
     b "Na gut, nimm dir eine Packung."
-    show sis happy
+    show laura happy
     with dissolve
     sis "Danke, %(berndName)s."
     
@@ -1438,7 +1450,7 @@ label eins_treffenBerndf:
     #BUTTERGOTT MEHR DIALOG HIER
     
     play sound "sounds/door_1.wav"
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "%(berndName)s?"
@@ -1486,7 +1498,7 @@ label eins_treffenBerndf:
             b "Sicher."
             $ sisFrage = "richtigFalsch"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "OK, danke %(berndName)s!"
@@ -1504,7 +1516,7 @@ label eins_treffenBerndf:
     b "Ja."
     b "Bis morgen."
     
-    hide sis happy
+    hide laura happy
     with dissolve
     
     b "Schon wieder so spät... ich lauer noch ein wenig auf /b/ und gehe dann schlafen."
@@ -1568,7 +1580,7 @@ label eins_treffenBerndf:
     with fade
     
     "Als ich ankomme wartet %(wBerndName)s bereits auf mich."
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     play music "music/bernd_anja_theme.mp3"
@@ -1708,7 +1720,7 @@ label eins_accept_fBernd:
     bw "Bis dann."
     b "OK..."
     "Sie bricht zur Straßenbahnhaltestelle auf."
-    hide blond neutral_g
+    hide anja neutral
     with dissolve
     b "Am besten gehe ich nach Hause."
    
@@ -1768,7 +1780,7 @@ label eins_refuse_fBernd:
             $ friendLove -= 20
             b "Tut mir Leid, aber ich denke, ich gehe besser."
     "Ohne ein weiteres Wort zu sagen, drehe ich mich um und gehe."
-    hide blond neutral_g
+    hide anja neutral
     with dissolve
     
     bw "%(berndName)s!!"
@@ -1845,7 +1857,7 @@ label eins_sisAbholen:
     
     play music "music/donerladen.ogg"
     
-    show salih
+    show char salih
     with dissolve
     
     "Salih" "Hallo."
@@ -1867,7 +1879,7 @@ label eins_sisAbholen:
     "Salih" "döner dauerd noch minude ja?"
     b "Ja, ist ok."
 
-    hide salih
+    hide char salih
     with dissolve
 
     "Wieso können die nicht mal jemanden einstellen, der ordentlich Deutsch redet?"
@@ -1933,7 +1945,7 @@ label eins_sisAbholen:
     "Sie wird mich umbringen wollen."
     "Da hinten steht sie."
     
-    show sis sad
+    show laura sad
     with dissolve
     
     sis "Da bist du ja endlich!"
@@ -1948,7 +1960,7 @@ label eins_sisAbholen:
     b "T- Tut mir Leid."
     "Gleich passiert es..."
     
-    show sis crying
+    show laura crying
     with dissolve
     
     sis "Wieso bist du immer so gemein zu mir?!"
@@ -1961,7 +1973,7 @@ label eins_sisAbholen:
     "Hauptsache sie hört auf zu weinen..."
     "Ich hasse es, wenn sie weint."
     
-    show sis sad
+    show laura sad
     with dissolve
     
     sis "..."
@@ -1971,7 +1983,7 @@ label eins_sisAbholen:
     b "Und wenn du jetzt aufhörst zu weinen, kauf ich dir ein Eis."
     "...wenn ich noch genug Geld habe."
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "OK!"
@@ -1990,17 +2002,17 @@ label eins_sisAbholen:
     scene bg eiswagen
     with fade
     
-    show salih
+    show char salih
     with dissolve
     
     "Salih" "Guten Tag."
     "Salih" "Was darfs denn sein?"
     "Den kenn ich doch..."
     
-    show salih at right
+    show char salih at right
     with move
     
-    show sis neutral at left
+    show laura neutral at left
     with dissolve
     
     sis "3 Kugeln bitte."
@@ -2015,10 +2027,10 @@ label eins_sisAbholen:
     "Salih" "Dankeschön."
     "Salih" "Schönen Tag noch."
     
-    hide salih
+    hide char salih
     with dissolve
     
-    show sis happy at center
+    show laura happy at center
     with move
     
     sis "Danke, %(berndName)s."
@@ -2210,7 +2222,7 @@ label eins_sisAbholenZuerst:
     
     play music "music/donerladen.ogg"
     
-    show salih
+    show char salih
     with dissolve
     
     "Salih" "Hallo."
@@ -2231,7 +2243,7 @@ label eins_sisAbholenZuerst:
     "Ich gebe ihm das Geld."
     "Salih" "döner dauerd noch minude ja?"
     b "Ja, ist ok."
-    hide salih
+    hide char salih
     with dissolve
     "Wieso können die nicht mal jemanden einstellen, der ordentlich Deutsch redet?"
     "Hier dauert die Bestellung länger als die eigentliche Zubereitung."
@@ -2296,7 +2308,7 @@ label eins_sisAbholenZuerst:
     "Sie wird mich umbringen wollen."
     "Da hinten steht sie."
     
-    show sis sad
+    show laura sad
     with dissolve
     
     sis "Da bist du ja endlich!"
@@ -2311,7 +2323,7 @@ label eins_sisAbholenZuerst:
     b "T- Tut mir Leid."
     "Gleich passiert es..."
     
-    show sis crying
+    show laura crying
     with dissolve
     
     sis "Wieso bist du immer so gemein zu mir?!"
@@ -2324,7 +2336,7 @@ label eins_sisAbholenZuerst:
     "Hauptsache sie hört auf zu weinen..."
     "Ich hasse es, wenn sie weint."
     
-    show sis sad
+    show laura sad
     with dissolve
     
     sis "..."
@@ -2334,7 +2346,7 @@ label eins_sisAbholenZuerst:
     b "Und wenn du jetzt aufhörst zu weinen, kauf ich dir ein Eis."
     "...wenn ich noch genug Geld habe."
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "OK!"
@@ -2353,17 +2365,17 @@ label eins_sisAbholenZuerst:
     scene bg eiswagen
     with fade
     
-    show salih
+    show char salih
     with dissolve
     
     "Salih" "Guten Tag."
     "Salih" "Was darfs denn sein?"
     "Den kenn ich doch..."
     
-    show salih at right
+    show char salih at right
     with move
     
-    show sis neutral at left
+    show laura neutral at left
     with dissolve
     
     sis "3 Kugeln bitte."
@@ -2378,10 +2390,10 @@ label eins_sisAbholenZuerst:
     "Salih" "Dankeschön."
     "Salih" "Schönen Tag noch."
     
-    hide salih
+    hide char salih
     with dissolve
     
-    show sis happy at center
+    show laura happy at center
     with move
     
     sis "Danke, %(berndName)s."
@@ -2434,7 +2446,7 @@ label eins_sisAbholenZuerst:
     b "Ist ja schon gut, ich gehe."
     "Blöde Kuh."
     "Aufgeregt kommt meine Schwester in die Küche gerannt."
-    show sis neutral
+    show laura neutral
     with dissolve
     sis "Darf ich auch mit, Mama?"
     ma "Ja, ja."
@@ -2453,14 +2465,14 @@ label eins_sisAbholenZuerst:
     
     "Wir gehen in Richtung %(supermarkt)s."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Du, %(berndName)s?"
     b "Ja?"
     "Das hört sich nicht gut an..."
     sis "Ich..."
-    show sis happy
+    show laura happy
     with dissolve
     sis "Danke, dass du mich heute von der Schule abgeholt hast!"
     "Wow."
@@ -2468,7 +2480,7 @@ label eins_sisAbholenZuerst:
     "Was ist hier los?"
     b "Hm... ja."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Man merkt es mir vielleicht nicht an, aber ich freue mich immer, wenn du mich abholen kommst."
@@ -2481,13 +2493,13 @@ label eins_sisAbholenZuerst:
     b "Hm... ja."
     "Warte... was?"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "OK, dann ist es abgemacht!"
     b "Hey, ich hab morgen aber..."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Was?"
@@ -2497,7 +2509,7 @@ label eins_sisAbholenZuerst:
     b "...nichts."
     b "Ich komme dich abholen."
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Na dann ist ja alles klar!"
@@ -2511,12 +2523,12 @@ label eins_sisAbholenZuerst:
     
     b "Was sollen wir nochmal einkaufen?"
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Hm..."
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Keine Ahnung!"
@@ -2524,7 +2536,7 @@ label eins_sisAbholenZuerst:
     b "Naja..."
     b "Kaufen wir halt Butter und Rügenwalder."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Sicher, dass wir nicht mehr brauchen?"
@@ -2532,11 +2544,11 @@ label eins_sisAbholenZuerst:
     sis "Ich könnte Mama anrufen."
     sis "Ich habe mein Handy dabei."
     b "Du hast ein Handy?"
-    show sis happy
+    show laura happy
     with dissolve
     sis "Klar hab ich eins!"
     b "Na dann, ruf' sie an."
-    show sis neutral
+    show laura neutral
     with dissolve
     sis "OK."
     "Sie zieht ein rosafarbenes Handy aus der Tasche."
@@ -2550,24 +2562,24 @@ label eins_sisAbholenZuerst:
     sis "Sonst noch was?"
     sis "..."
     sis "Alles klar!"
-    show sis happy
+    show laura happy
     with dissolve
     sis "Bis gleich!"
     "Sie legt auf."
-    show sis neutral
+    show laura neutral
     with dissolve
     sis "Sie sagt, dass wir auch noch Milch und Brot brauchen."
     "Also Milch, Butter, Brot und Rügenwalder."
     b "OK."
     b "Dann besorgen wir das schnell und danach gehen wir nach Hause."
     sis "OK."
-    hide sis neutral
+    hide laura neutral
     with dissolve
     "Nachdem wir alles gefunden haben, gehen wir zur Kasse."
     "Vor uns ist eine ältere Frau, die langsam einen Artikel nach dem anderen auf's Band legt."
     "Die Kassiererin ist sichtlich genervt."
     "Warum kaufen alte Leute immer so viel ein und brauchen dann eine halbe Stunde an der Kasse?"
-    show sis neutral
+    show laura neutral
     with dissolve
     sis "%(berndName)s?"
     b "Was denn?"
@@ -2578,7 +2590,7 @@ label eins_sisAbholenZuerst:
     sis "Ganz bestimmt!"
     "Hm..."
     b "Na gut, nimm dir eine Packung."
-    show sis happy
+    show laura happy
     with dissolve
     sis "Danke, %(berndName)s."
     
@@ -2605,7 +2617,7 @@ label eins_sisAbholenZuerst:
     #BUTTERGOTT MEHR DIALOG HIER
     
     play sound "sounds/door_1.wav"
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "%(berndName)s?"
@@ -2653,14 +2665,14 @@ label eins_sisAbholenZuerst:
             b "Sicher."
             $ sisFrage = "richtigFalsch"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "OK, danke %(berndName)s!"
     sis "Jetzt krieg ich sicher eine gute Note."
     b "Kein Problem."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Achso..."
@@ -2675,7 +2687,7 @@ label eins_sisAbholenZuerst:
     b "Ja."
     b "Bis morgen."
     
-    hide sis happy
+    hide laura happy
     with dissolve
     
     b "Schon wieder so spät... ich lauer noch ein wenig auf /b/ und gehe dann schlafen."
@@ -2694,53 +2706,98 @@ label eins_sisAbholenZuerst:
     # ENDE TAG 1
     "Am nächsten Morgen..."
 
+
+
     ma "%(berndName)s?"
+
     ma "Willst du nicht langsam mal aufstehen?"
+
  
+
     b "Wie spät ist es denn?"
+
    
+
     ma "Schon 13 Uhr."
+
   
+
     scene bg keller
+
     with flash
+
  
+
     b "WAS!?"
+
     b "Ich wollte doch heute wieder %(sisName)s abholen."
+
     "Scheiße."
+
     "Jetzt hab ich es laut gesagt."
+
     "Ich wollte meine Verspätung gestern doch wieder gut machen."
+
      
+
     ma "Soso, du wolltest %(sisName)s abholen?"
+
     ma "Als ob!"
     ma "Das würdest du doch nie freiwillig machen."
+
     #kann man auch anders ausdrücken, mir ist aber nichts Besseres eingefallen
+
     ma "Mach' dich nicht lächerlich."
+
     b "Ich kann nicht anders."
+
     b "Ich hab' es ihr versprochen."
+
     ma "Na dann beeil' dich mal lieber."
     ma "Du weißt, dass sie es hasst, wenn man zu spät kommt."
+
     b "Jaja."
+
     "Hektisch ziehe ich mich an, packe alles ein und mache mich auf den Weg."
+
     #insgesamt noch sehr ausbaufähig
+
     #Bernd geht los
 
+
+
     scene bg schulweg1
+
     with fade
 
+
+
     "Hmm..."
+
     "Irgendwie habe ich kein gutes Gefühl."
+
     "Das gleiche Gefühl hatte ich gestern auch schon."
+
     "Ich kann mich doch nicht zweimal so irren."
+
     "Irgendjemand verfolgt mich doch."
+
     "Es ist bestimmt irgendein Bernd, der heimlich Fotos von mir macht und dann auf Krautchan veröffentlicht."
+
     "Das Treffen war wahrscheinlich nur eine Falle, um mich aus meinem Haus zu locken."
     "Gut, dass ich nicht hingegangen bin."
+
     "Sowas würde total zu Bernd passen."
     "Anstatt geradeaus weiterzugehen, biege ich nach links ab."
     "Hoffentlich kann ich ihn so abhängen."
 
+
+
     scene bg schulwegPano at right
+
     with fade
+
+
 
     "Wenn ich mich jetzt umdrehe, hat er eigentlich keine Zeit mehr, um sich zu verstecken."
     "3"
@@ -2748,110 +2805,185 @@ label eins_sisAbholenZuerst:
     "1"
     "Jetzt!"
 
+
+
     scene bg schulwegPano at left
+
     with move
+
     #Bild existiert noch nicht. Schulweg1 spiegeln und dann zeigen.
     #NEIN spiegeln ist schwul! braucht neues bild! (breitbild und dann sliden :3)
 
+
     "..."
+
     "..."
+
     "Wo ist der Typ?"
+
     "Ich sehe ihn nicht."
+
     "Vielleicht bilde ich mir das auch alles nur ein..."
     "In so einer großen Stadt wird man anscheinend schnell verrückt."
 
+
+
     "Ja."
+
     "So wird es wohl sein."
+
     "In letzter Zeit ist ja auch einiges geschehen."
+
     "Ich schaue auf die Uhr."
+
     "13:45 Uhr."
+
     "Ich hab noch eine Viertelstunde bis Schulschluss."
+
     "Gott sei Dank weiß ich den Weg jetzt auswendig."
 
+
+
     scene bg schulhof
+
     with fade
 
+
+
     "Ein Blick auf meine Uhr verrät mir, dass es kurz vor zwei ist."
+
     "Diesmal bin ich pünktlich."
     "Die Schule ist noch nicht aus."
+
     "Aber ich werde das Gefühl einfach nicht los."
     "Wenn mich doch jemand verfolgt...?"
+
  
+
     play sound "sounds/schulglocke.wav"
+
     #Sound exisitiert noch nicht
+
 
     "Das war die Schulglocke."
     "Wenn ich %(sisName)s da nicht mit reinziehen will, muss ich hier weg."
     "Ganz egal, wie nervig sie ist, sie ist immer noch meine kleine Schwester!"
+
     "Am besten stelle ich mich direkt an den Eingang, damit ich so schnell wie möglich verschwinden kann."
+
+
 
     "Stimme" "%(berndName)s!"
     $ berndNameUpper = berndName.upper()
+
     "Stimme" "%(berndNameUpper)s!"
 
+
+
     "Das ist %(sisName)s."
+
     "Dahinten kommt sie."
 
-    show sis happy
+
+
+    show laura happy
+
     with dissolve
 
+
+
     sis "Hi."
+
     b "Hi."
+
     b "Wir müssen hier schleunigst weg."
+
     "Ich packe sie am Handgelenk."
     
-    show sis surprised
+    show laura surprised
     with dissolve
     
+
     sis "Hey, das tut weh!"
     sis "Was soll das!?"
 
     "Ich ignoriere sie und zerre sie von der Schule weg."
 
+
+
     scene bg schulweg2
+
     with fade
     
-    show sis angry
+    show laura angry
     with dissolve
     #fehlt
 
+
+
     sis "Hey, warum ziehst du mich so?"
+
     b "Ich erklär' dir gleich alles."
+
     sis "Aber du tust mir weh."
+
     b "Ahh, da vorne."
     "Ich ziehe sie in eine Seitengasse."
 
+
+
     show bg gasse1
+
     with fade
     
-    show sis angry
+    show laura angry
+
     with dissolve
+
     #Mir ist kein besserer Gesichtsausdruck eingefallen
 
+
+
     sis "Was soll das alles?"
+
     b "Hör mir gut zu."
     sis "Ja...?"
+
     b "Wir werden verfolgt."
-    show sis surprised
+
+    show laura surprised
+
     with dissolve
+
     #diesen Gesichtsausdruck nehmen, nur ohne Erröten
+
     sis "Was?"
+
     b "Eigentlich werde nur ich verfolgt."
+
     b "Aber du bist nunmal hier, also bist du auch in Gefahr."
+
     b "Wer weiß, was mit dir passiert."
+
     sis "Weswegen wirst du verfolgt?"
+
     sis "Und von wem?"
     "Wie soll ich das erklären?"
+
     b "Ich..."
     b "Pass auf."
     b "Ich erklär' das später."
+
     sis "Was?"
     sis "Wieso denn?"
+
     b "Das ist schwer zu erklären..."
+
     b "Wir müssen hier zuerst weg."
+
     b "Bitte %(sisName)s, höre nur einmal auf deinen großen Bruder."
     
-    show sis pissed
+    show laura pissed
     with dissolve
     
     sis "So ein Schwachsinn!"
@@ -2868,13 +3000,13 @@ label eins_sisAbholenZuerst:
     
     b "...und er Fotos von dir macht..."
     
-    show sis angry
+    show laura angry
     
     sis "Lass mich los."
     
     b "...und sie ins Internet stellt..."
     
-    show sis angry_talk
+    show laura angry_talk
     with dissolve
     
     sis "Du sollst mich loslassen!"
@@ -2892,7 +3024,7 @@ label eins_sisAbholenZuerst:
     sis "Aua!"
     sis "Du tust mir weh!"
     
-    show sis angry
+    show laura angry
     with dissolve
     
     sis "Lass mich los, ich will nach Hause!"
@@ -2905,7 +3037,7 @@ label eins_sisAbholenZuerst:
     
     "Ich lockere meinen Griff und sie geht einen Schritt zurück."
     
-    show sis pissed
+    show laura pissed
     with dissolve
     
     sis "Was ist denn los mit dir, %(berndName)s?"
@@ -2914,7 +3046,7 @@ label eins_sisAbholenZuerst:
     
     b "Ich..."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Können wir jetzt einfach nach Hause gehen?"
@@ -2923,14 +3055,14 @@ label eins_sisAbholenZuerst:
     b "Na gut."
     b "Aber wenn du jemanden siehst, der verdächtig aussieht, sag' mir Bescheid."
     
-    show sis pissed
+    show laura pissed
     with dissolve
     
     sis "Ist ja gut, ist ja gut."
     
     "Bevor wir auf die offene Straße hinausgehen, spähe ich vorsichtig nach links und rechts."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "...und?"
@@ -2938,13 +3070,13 @@ label eins_sisAbholenZuerst:
     b "Nichts."
     b "Lass uns gehen."
     
-    show sis embarrassed
+    show laura embarrassed
     with dissolve
     
     sis "Ach %(berndName)s..."
     b "Hm? Was ist denn?"
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Danke, dass du mich heute von der Schule abgeholt hast."
@@ -2955,12 +3087,12 @@ label eins_sisAbholenZuerst:
     b "Ich hab's dir doch versprochen."
     b "Was man verspricht, muss man halten, oder nicht?"
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Komisch, dass gerade du das sagst."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Komm, beeilen wir uns."
@@ -2972,7 +3104,7 @@ label eins_sisAbholenZuerst:
     
     "Nachdem wir eine Weile still nebeneinander gelaufen sind, spüre ich, wie %(sisName)s mich antippt."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Du, %(berndName)s?"
@@ -2980,7 +3112,7 @@ label eins_sisAbholenZuerst:
     b "Hast du etwas verdächtiges bemerkt?"
     "Ich sehe mich um, aber es ist niemand da."
     
-    show sis embarrassed
+    show laura embarrassed
     with dissolve
     
     sis "Ich..."
@@ -3003,7 +3135,7 @@ label eins_sisAbholenZuerst:
     b "Na gut."
     "Ich greife nach ihrer Hand."
     
-    show sis happy
+    show laura happy
     with dissolve
     
     sis "Danke, %(berndName)s."
@@ -3012,92 +3144,165 @@ label eins_sisAbholenZuerst:
     
     "Gemeinsam treten wir den Weg nach Hause an."
 
+
+
     scene black
     with fade
     
     "Zuhause..."
     
     scene bg keller_aus
+
     with fade
 
+
     "Endlich bin ich wieder in meinem Zimmer."
+
     "Hier kann mich niemand mehr beobachten."
+
     "Nur im Keller bin ich vor anderen Bernds sicher."
+
     "Erstmal den Computer starten."
 
+
+
     scene bg keller
+
     with dissolve
+
     #Bild existiert noch nicht, sollte aber von Bifuss gemacht werden
 
+
+
     "Erstmal ein bisschen im Internet brausen."
+
     "Ich öffne meinen Browser."
+
     "Automatisch drücke ich die Tastenkombination Strg + L."
+
     "Aus Reflex tippe ich \"kr\" ein, geh einmal runter, betätige die Enter-Taste und lande auf /b/."
+
+
 
     scene bg keller_kc
     with dissolve
 
+
+
     "Ein Japperfaden."
+
     "Nicht schon wieder."
+
     "Thread ausblenden."
+
     "Gurofaden."
+
     "NEIN!"
+
     "Thread ausblenden."
+
     "Fleshlightfaden."
+
     #"Ach, Pervles."
+
     "Thread ausblenden."
+
     "/b/ ist schon seit ein paar Wochen der Krebs."
+
     "Zum Glück haben die Admins diese Funktion eingeführt."
+
     "Dafür hat dergeneral echt mal ein Lob verdient."
+
     "Ich gehe auf /kc/ und mache einen neuen Thread auf."
+
     "\"Heil dir, General.\""
+
     "\"Bernd dankt für die Thread-ausblenden-Funktion.\""
+
 #evtl. die letzten beiden Zeilen einfach weglassen.
+
     "So, das wäre erledigt."
+
     "Ohhhhhhhhhhhhhh."
+
     "Nach /w/ - Wissenschaft und Ecchi soll es jetzt auch /t/ - Technik und Tentakel geben?"
+
+
 
     menu:
         " "
+
         "Ja!":
+
             "Fick ja, Tentakel."
+
             "Ich kontributierte."
 
+
+
         "Nein.":
+
             "NEIN!"
+
             "SAGE."
 
+
+
 #menu ist entscheidend dafür, ob am Ende,
+
 #wenn KC wieder on ist, es /t/ - Technik oder /t/ - Technik und Tentakel gibt
+
 #evtl. bei "Entscheidung = Ja" ein Tentakelbild zeigen
 
 
+
+
+
     "Dann wollen wir doch mal schauen, was Bernd von der neuen Episode von Strike with Cheese hält."
+
     "...das Übliche halt."
 
+
+
     "Hmm..."
+
     "Was mache ich jetzt?"
     
     scene bg desktop_none
     with dissolve
     
+
     "Woah..."
+
     "Ich erblicke das Icon von \"Wolfgang no haraise\" auf meinem Desktop."
+
     "Das habe ich lang nicht mehr gespielt."
+
     "Es wird mal wieder Zeit."
+
     "Ich starte das Spiel."
+
     "Ein Klick auf \"Spielstand laden\"."
+
     "Was war noch gleich der richtige Spielstand..."
+
     "Ach, was soll's."
+
     "Neues Spiel."
+
     
     scene bg keller_aus
+
     with dissolve
 
+
     "Was denn jetzt?"
+
     "Achso, der Ladebildschirm."
+
     "Schwarzes Bild und Ladebalken."
     "Wie einfallsreich."
+
     "Diese Ladezeiten sind wirklich unerträglich."
     "Ich muss mir einen neuen Computer anschaffen."
     "Mit diesem alten Ding kann man ja nichts mehr anfangen."
@@ -3179,21 +3384,34 @@ label eins_sisAbholenZuerst:
     scene black
     with fade
     
+
     scene bg keller_aus
+
     with fade
+
+
 
     "Wenigstens habe ich jetzt erstmal meine Ruhe."
     "Ein Blick zum Fenster bestätigt das."
     "Niemand da."
     "Ich blicke auf den Bildschirm."
+
     "Immer noch nicht geladen."
+
     "Da vergeht einem echt die Lust."
+
     "Wütend drücke ich Strg + Alt + Entf."
 
+
+
     scene bg keller
+
     with dissolve
 
+
+
     "Prozess beenden."
+
     "Ich schau mal, was auf Krautchan los ist."
 
     "Da war ich lange genug nicht mehr."

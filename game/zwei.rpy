@@ -95,7 +95,7 @@ label zwei_laura_stalk_entscheid:
     "Stimme" "Scheint, als wärest du endlich wach."
     "Erschrocken blicke ich auf."
     
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Hallo %(berndName)s."
@@ -439,7 +439,7 @@ label zwei_weiter_entscheid:
     "Jetzt musste sie jemand abholen, und dieser jemand war ich."
     scene bg schulweg1
     with fade
-    show sis angry
+    show laura angry
     with dissolve
     "Ich bin also mit %(sisName)s im Schlepptau auf dem Rückweg von der Schule nach Hause."
     "Bisher haben wir kein Wort gesprochen."
@@ -449,7 +449,7 @@ label zwei_weiter_entscheid:
     "Wir sind schon fast zuhause."
     scene bg zuhause_draussen
     with fade
-    show sis angry
+    show laura angry
     with dissolve
     sis "%(berndName)s!"
     sis "Hörst du mir überhaupt zu?"
@@ -477,20 +477,20 @@ label zwei_weiter_entscheid:
             "Was glaubt sie wer sie ist?"
             b "Du bist doch selbst Schuld."
             sis "W... was?"
-            show sis angry_talk
+            show laura angry_talk
             with dissolve
             sis "Jetzt willst du mir die Schuld in die Schuhe schieben, oder was?"
             b "Hättest du dein Handy im Unterricht ausgeschaltet, so wie es sich gehört, dann wäre das sicher nicht passiert!"
-            show sis sad
+            show laura sad
             with dissolve
             sis "Aber..."
             b "Jetzt heul hier nicht rum!"
             b "Akzeptiere einfach, dass du Schuld bist!"
-            show sis crying
+            show laura crying
             with dissolve
             sis "Aber ich bin nicht Schuld!"
             sis "Du hast mich angerufen also bist du Schuld!"
-            hide sis crying
+            hide laura crying
             with dissolve
             "Weinend rennt sie nach Hause."
             "Jetzt wird sie sicher alles erzählen und ich krieg dafür Ärger."
@@ -506,7 +506,7 @@ label zwei_weiter_entscheid:
             b "{size=-8}Entschuldigung.{/size}"
             sis "Ich hab es leider immer noch nicht verstanden."
             b "Es tut mir Leid, ok?"
-            show sis happy
+            show laura happy
             with dissolve
             sis "Geht doch."
             "Anscheinend hat das gereicht, um sie wieder fröhlich zu stimmen."
@@ -516,7 +516,7 @@ label zwei_weiter_entscheid:
             sis "Wir wollten uns ja heute treffen."
             sis "Ich geh schon mal nach Hause vor, %(berndName)s!"
             b "Wie du meinst."
-            hide sis happy
+            hide laura happy
             with dissolve
             "Wahrscheinlich würde sie zuhause alles erzählen."
             "Scheiße."
@@ -600,12 +600,12 @@ label zwei_weiter_entscheid:
     "Was machen denn andere Leute so, wenn sie nicht lauern?"
     scene bg keller
     with dissolve
-    show sis happy
+    show laura happy
     with dissolve
     sis "Hey, %(berndName)s."
     sis "Ich gehe jetzt rüber zu meiner Freundin."
     sis "Wollte dir nur Bescheid sagen."
-    hide sis happy
+    hide laura happy
     with dissolve
     b "..."
     "Meine Schwester hat anscheinend Freunde und sowas."

@@ -74,7 +74,7 @@ label laura_anja_mail:
     
     "Ich schaue die Kellertreppe nach oben."
     
-    show blond neutral_g
+    show anja neutral
     with dissolve    
     
     "Mädchen" "Oh, hai."
@@ -101,8 +101,8 @@ label laura_anja_mail:
     
     play sound "sounds/metaldooropen.wav"
     
-    #show blond mad
-    show blond angry
+    #show anja mad
+    show anja angry
     with dissolve
     #Bild existiert noch nicht
     
@@ -119,7 +119,7 @@ label laura_anja_mail:
     b "Eine E-Mail?"
     b "DIE E-Mail?"
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     "Mädchen" "Ja."
@@ -190,8 +190,8 @@ label laura_anja_mail:
     bw "Bis morgen, %(berndName)s."
     b "..."
     
-    hide blond mad
-    with dissolve
+    #hide anja mad
+    #with dissolve
     
     "Sie war genauso schnell weg wie sie kam."
     "Ich kann es immer noch nicht glauben."
@@ -829,7 +829,7 @@ label anja_anfang:
     "Ich mag das nicht."
     "Irgendwie..."
 
-    show blond neutral_g at right
+    show anja neutral at right
     with dissolve
 
     bw "Hallo, %(berndName)s."
@@ -885,7 +885,7 @@ label anja_anfang:
     with fade
     #Bild fehlt noch
 
-    show blond neutral_g
+    show anja neutral
     with dissolve
 
     b "..."
@@ -1431,7 +1431,7 @@ label anja_weiter:
     
     "Ich schaue die Kellertreppe nach oben."
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     bw "Oh, hai."
@@ -1451,8 +1451,8 @@ label anja_weiter:
     
     play sound "sounds/metaldooropen.wav"
     
-    show blond mad #AE unnötig? blond angry?
-    with dissolve
+    #show anja mad #AE unnötig? anja angry?
+    #with dissolve
     #Bild existiert noch nicht
     
     bw "Was ist los mit dir?"
@@ -1474,8 +1474,8 @@ label anja_weiter:
     b "..."
     "Geh sterben."
     
-    show blond really_mad #AE hier dann blond mad statt in 1362
-    with dissolve
+    #show anja really_mad #AE hier dann anja mad statt in 1362
+    #with dissolve
     #Bild existiert noch nicht
     
     bw "Ach, %(berndName)s."
@@ -1488,7 +1488,7 @@ label anja_weiter:
     bw "Du hast etwas gesagt."
     "Verdammt."
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
         
     bw "Jetzt will ich nur noch wissen, warum du mich ignorierst."
@@ -1517,8 +1517,8 @@ label anja_weiter:
     bw "Ist es das?"
     b "..."
     
-    show blond doppelpunkt_drei
-    with dissolve
+    #show blond doppelpunkt_drei
+    #with dissolve
     #Bild existiert noch nicht
     
     bw "Ach, %(berndName)s."
@@ -1526,7 +1526,7 @@ label anja_weiter:
     bw "Aber irgendwie süß von dir."
     bw "Dass du dich deswegen anstellst."
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     bw "Auf jeden Fall tut es mir Leid."
@@ -1791,7 +1791,7 @@ label anja_besprechung:
     
     play sound "sounds/anja_dooropen.wav"
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     bw "Oh, hai."
@@ -1806,7 +1806,7 @@ label anja_besprechung:
     with fade
     #Bild existiert noch nicht
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     "Nett."
@@ -1819,14 +1819,14 @@ label anja_besprechung:
     scene bg anjas_zimmer
     with fade
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     "Das ist also ihr Zimmer."
     bw "Setz dich."
     bw "Ich hole eben was zu trinken."
     
-    hide blond neutral_g
+    hide anja neutral
     with dissolve
     
     "Ich setze mich auf das Bett."
@@ -1840,7 +1840,7 @@ label anja_besprechung:
     b "JA MAN GLUARK!"
     bw "FICK JA!"
     
-    show blond neutral_g
+    show anja neutral
     with dissolve
     
     b "..."
@@ -1872,7 +1872,7 @@ label anja_besprechung:
     b "Wie?"
     bw "weissnichlol."
     
-    show blond happy_g
+    show anja happy
     with dissolve
     
     $ renpy.pause(1.0)
@@ -1882,8 +1882,8 @@ label anja_besprechung:
     "Wie in einem Anime, in dem gerade ein schlechter Witz gemacht wurde."
     "Nur, dass es diesmal in der Wirklichkeit so ist."
     
-    show blond serious_g #AE unnötig? evtl. lieber angry?
-    with dissolve
+    #show blond serious_g #AE unnötig? evtl. lieber angry?
+    #with dissolve
     #Bild existiert noch nicht
     
     b "Sch-"
@@ -1905,7 +1905,7 @@ label anja_besprechung:
     bw "Weiß ich noch nicht."
     b "Und was soll ich dann hier?"
     
-    show blond happy_g
+    show anja happy
     with dissolve
     
     bw "Ich wollte mich mal ein bisschen mit dir unterhalten."
@@ -1963,7 +1963,7 @@ label anja_besprechung:
     scene bg anja_kueche
     with fade
     
-    show blond happy_g
+    show anja happy
     with dissolve
     #Bild existiert noch nicht
     

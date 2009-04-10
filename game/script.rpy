@@ -34,13 +34,15 @@ init python:
     #wenn das Bild "test.png" aus "images/backgrounds/test" geladen wird
     #entspricht das einem image backgrounds test = "images/backgrounds/test.png"
     def loadImagesFromDir(dirName):
-        theFiles = os.listdir(config.basedir + "/game/" + dirName + "/") #alle files aus dirName anzeigen
+        thePath = config.basedir + "/game/" + dirName + "/"
+        thePath = thePath.replace("\\","/")
+        theFiles = os.listdir(thePath) #alle files aus dirName anzeigen
         
         for file in theFiles: #jedes File durchgehen
             if file.endswith(".png") or file.endswith(".jpg"): #wenn es in .png oder .jpg endet
                 theFileName = dirName[7:len(dirName)] + "/" + file[0:len(file)-4] #"images/" und die letzten vier zeichen abschneiden
-                imageName = str(theFileName.split("/"))#von "a/b/c" nach ('a','b','c')
-                renpy.image(imageName,file) #und ein bild draus machen
+                imageName = tuple(theFileName.split("/"))#von "a/b/c" nach ('a','b','c')
+                renpy.image(imageName,thePath + file) #und ein bild draus machen
             
             
     config.preferences['prefs_left'].append(
@@ -70,7 +72,7 @@ init:
     #image ende = "images/ende.png"
     
     $ loadImagesFromDir("images")
-    $ loadImagesFromDir("images/bg")
+    
     $ fastFade = Fade(.2, 0, .2, color="#000")
     $ flash = Fade(.1, 0, .3, color="#fff")
     $ slowFlash = Fade(.1, 0, .5, color="#fff")
@@ -87,95 +89,22 @@ init:
     $ fastMove = MoveTransition(0.2)
     $ slowDissolve = Dissolve(1.0)
     
+
+    $ loadImagesFromDir("images/bg")
     
-    #prolog
-    image splash prolog = "images/bg/splash_prolog.png"
-    image bg zuhause_draussen = "images/bg/strasse.jpg"
-    image bg zuhause_draussen_dunkel = "images/bg/strasse_dunkel.jpg"
-    image bg zuhause_hausflur = "images/bg/hausflur.jpg"
-    image bg zuhause_drinnen = "images/bg/wohnung_innen.jpg"
-    image bg badezimmer = "images/bg/badezimmer.jpg"
-    image bg keller = "images/bg/berndszimmer_os.jpg"
-    image bg keller_kc = "images/bg/berndszimmer.jpg"
-    image bg keller_blur = "images/bg/berndszimmer_blur.jpg"
-    image bg supermarkt_innen = "images/bg/supermarkt.jpg"
-    image bg aldi = "images/bg/aldi.jpg"
-    image bg lidl = "images/bg/lidl.jpg"
-    image bg kueche = "images/bg/kueche.jpg"
-    image bg kellertreppe = "images/bg/kellertreppe.jpg"
-    image bg kellertreppe_blur = "images/bg/kellertreppe_blur.jpg"
     
-    #kapitel 1
-    image splash eins_open = "images/bg/splash_eins.png"
-    image bg keller_aus = "images/bg/berndszimmer_aus.jpg"
-    image bg keller_bluescreen = "images/bg/berndszimmer_blau.jpg"
-    image bg alexanderplatz_eins = "images/bg/alexanderplatz_1.jpg"
-    image bg alexanderplatz_zwei = "images/bg/alexanderplatz_2.jpg"
-    image bg alexanderplatz_drei = "images/bg/alexanderplatz_3.jpg"
-    image bg gasse1 = "images/bg/gasse1.png"
-    image bg gasse2 = "images/bg/gasse2.png"
-    image bg schulweg1 = "images/bg/schulweg1.jpg"
-    image bg schulweg2 = "images/bg/schulweg2.jpg"
-    image bg schulwegPano = "images/bg/schulweg_pano.jpg"
-    image bg schulhof = "images/bg/schulhof.jpg"
-    image bg eiswagen = "images/bg/eiswagen.jpg"
-    image bg donerladen = "images/bg/donerladen.jpg"
-    image bg desktop_none = "images/bg/desktop_none.png"
-    image bg desktop_email = "images/bg/desktop_mail.jpg"
-    image bg desktop_hilfe = "images/bg/desktop_hilfe.jpg"
-    image bg desktop_a = "images/bg/desktop_a.jpg"
-    image bg desktop_b = "images/bg/desktop_b.jpg"
-    
-    #kapitel 2
-    image bg knastkeller = "images/bg/knastkeller.jpg"
-    image gameover_vierkanal = "images/bg/gameover_vierkanal.jpg"
-    image bg lieferwagen = "images/bg/lieferwagen.jpg"
-    image bg lauraszimmer = "images/bg/lauras_zimmer.jpg"
-    image bg keller_aus_blur = "images/bg/berndszimmer_aus_blur.jpg"
-    
-    image bg traumkueche = "images/bg/traumkueche.jpg"
-    image bg krankenzimmer = "images/bg/krankenzimmer.jpg"
-    image bg krankenzimmer_blur = "images/bg/krankenzimmer_blur.jpg"
-    image bg anja_kueche = "images/bg/anja_kueche.jpg"
-    image bg treppenhaus = "images/bg/treppenhaus.jpg"
-    image bg anjas_zimmer = "images/bg/anja_zimmer.jpg"
         
     #charakter bilder
-    #prolog
-    image sis neutral = "images/char/schwester_neutral.png"
-    image sis happy = "images/char/schwester_happy.png"
-    image sis surprised = "images/char/schwester_surprised.png"
-    image sis embarrassed = "images/char/schwester_emb.png"
-    image sis emb_surprised = "images/char/schwester_surprised_drop.png"
-    image sis crying = "images/char/schwester_crying.png"
-    image sis sad = "images/char/schwester_sad.png"
-    image sis sadsmile = "images/char/schwester_sad_smile.png"
-    image sis angry = "images/char/schwester_mad.png"
-    image sis angry_talk = "images/char/schwester_mad_talk.png"
-    image sis pissed = "images/char/schwester_pissed.png"
     
-    image blond neutral_g = "images/char/blondBernd_glasses.png"
-    image blond surprised = "images/char/blondBernd_surprised.png"
-    image blond surprised_g = "images/char/blondBernd_surprised_glasses.png"
-    image blond weird = "images/char/blondBernd_weird.png"
-    image blond neutral = "images/char/blondBernd.png"
-    image blond shy = "images/char/blondBernd_shy.png"
-    image blond shy_g = "images/char/blondBernd_shy_glasses.png"
-    image blond angry = "images/char/blondBernd_angry_glasses.png"
-    image blond happy_g = "images/char/blondBernd_smiling_glasses.png"
-    image blond think = "images/char/blondBernd_thinking_glasses.png"
-     
+    $ loadImagesFromDir("images/anja")
     
-    image yasmin stalker = "images/char/stalker_bernd.png"
+    $ loadImagesFromDir("images/laura")
 
-    image salih = "images/char/salih.png"
-
-    image yandere neutral = "images/char/kotono_traurig.png"
-    #ÄNDERN ÄNDERN ÄNDERN
+    $ loadImagesFromDir("images/yasmin")
     
-    #image doc = "images/char/doc.png"
-    image lynette_essen = "images/char/lynette_essen.png"
-    image erika_normal = "images/char/erika_normal.png"
+    $ loadImagesFromDir("images/tsundere")
+    
+    $ loadImagesFromDir("images/char")
 
     # charaktere
     $ b = DynamicCharacter("berndName", color="#dddddd")
@@ -264,20 +193,20 @@ label namenGeben:
     $ berndName = renpy.input("Wie ist dein Name?") or "Bernd"
     #bild von mutter
     $ maName = renpy.input("Wie heisst deine Mutter?") or "Dorothea"
-    show sis neutral
+    show laura neutral
     with dissolve
     $ sisName = renpy.input("...und deine Schwester?") or "Laura"
-    hide sis neutral
+    hide laura neutral
     with dissolve
-    show blond neutral_g
+    show anja neutral
     with dissolve
     $ wBerndName = renpy.input("Zuletzt noch dieses Mädchen hier.") or "Anja"
-    hide blond neutral_g
+    hide anja neutral
     with dissolve
-    show yandere neutral
+    show yasmin neutral
     with dissolve
     $ yanName = renpy.input("Oh, ich habe dieses Mädchen hier noch vergessen.") or "Yasmin"
-    hide yandere neutral
+    hide yasmin neutral
     with dissolve
     
     "OK, das war schon alles."
