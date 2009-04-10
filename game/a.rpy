@@ -30,7 +30,7 @@ label laura_anja_mail:
     
     scene bg desktop_hilfe
     with fade
-    #Bild existiert noch nicht/neues Bild bitte mit neuem Text
+    #Bild existiert noch nicht/neues Bild mit neuem Text bitte
     
     "gestern..."
     "heute..."
@@ -101,11 +101,9 @@ label laura_anja_mail:
     
     play sound "sounds/metaldooropen.wav"
     
-    #show anja mad
     show anja angry
     with dissolve
-    #Bild existiert noch nicht
-    
+        
     "Mädchen" "Was ist los mit dir?"
     b "..."
     "Lass mich einfach in Ruhe."
@@ -175,6 +173,7 @@ label laura_anja_mail:
     #show blondbernd_hämisches_grinsen -> Umbennenung & Registrierung erforderlich
     #with dissolve
     #Bild existiert noch nicht
+    #K1
     
     "Was zum?"
     "Dass es hier mehrere Bernds gibt, war mir vorher schon klar."
@@ -190,8 +189,8 @@ label laura_anja_mail:
     bw "Bis morgen, %(berndName)s."
     b "..."
     
-    #hide anja mad
-    #with dissolve
+    hide anja
+    with dissolve
     
     "Sie war genauso schnell weg wie sie kam."
     "Ich kann es immer noch nicht glauben."
@@ -265,9 +264,8 @@ label laura_anja_mail:
 
 label anja_anfang:
 
-    scene bg desktop_404 #AE unnötig?
+    scene bg desktop_none
     with fade
-    #Bild existiert nicht
     
     "Bitte wie?"
     "Liegt wohl an meiner Verbindung."
@@ -388,12 +386,14 @@ label anja_anfang:
     "Das Zimmer wird auf jeden Fall nicht so duster wie mein Keller sein."
     "Und sie wird bestimmt auch irgendwo Kuscheltiere rumstehen haben."
     "Sie hat bestimmt eine Plüschfigur von Hello, Kitty."
+    #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
         "Wie süß!"
     if persistent.wieherbuhSprache is 1:
         "Kawaii desu, ne?"
     if persistent.wieherbuhSprache is 2:
         "{=jp}かわいいですね。{/=jp}"
+    #-----------------------------------------------
     "Hat nicht jedes Mädchen heutzutage eine Figur von Hello, Kitty?"
     "Und die Figur wird nach %(wBerndName)s riechen."
     "Das Zimmer wird nach ihr riechen."    
@@ -402,13 +402,13 @@ label anja_anfang:
     "Nicht so hart und unnachgiebig wie meins."
     "Hmm..."
     "Ich kann nicht, %(wBerndName)s..."
+    "Wenn du so weitermachst..."
     "Ich kann jetzt nicht mehr..."
     "Hmmmmm...."
     "%(wBerndName)s..."
     "Schnell."
     "Ein Taschentuch."
     "AH-HAH!"
-    #eventuell einen Effekt einbauen oder noch ein bisschen umschreiben
     "Hach..."
     "%(wBerndName)s..."
 
@@ -456,9 +456,10 @@ label anja_anfang:
 
     "Ich sehe Laura auf einem Stuhl stehen."
 
-    show sis scared
+    show laura scared
     with dissolve
     #Bild fehlt noch
+    #K1
 
     b "Was ist los, %(sisName)s?"
     $ berndNameUpper = berndName.upper()
@@ -485,7 +486,7 @@ label anja_anfang:
     b "Ich bin jeden Moment wieder zurück."
     b "Halte bitte noch so lang aus."
 
-    scene bg hausflur #AE zuhause_drinnen?
+    scene bg wohnung_innen
     with fade
 
     "Ich renne aus dem Zimmer raus auf der Suche nach einem Schuh."
@@ -504,17 +505,18 @@ label anja_anfang:
     "Ich hole weit aus."
     sis "Das kann ich mir nicht mit ansehen."
 
-    show sis closed_eyes #AE unnötig? evtl. sis scared?
-    with dissolve
+    #show laura closed_eyes #AE unnötig? evtl. sis scared?
+    #with dissolve
     #Bild existiert nicht
     #Vielleicht die Hände vor die Augen halten
+    #K1
   
     "FLATSCH!"
     sis "Ist sie nun weg?"
     b "Ja."
     b "Du kannst die Augen wieder öffnen."
     
-    show sis sad
+    show laura sad
     with dissolve
     
     sis "IIIIIIIIHHHHHHHHHHHHHHHHHHHHH!"
@@ -541,7 +543,7 @@ label anja_anfang:
     scene bg lauraszimmer
     with fade
     
-    show sis sad
+    show laura sad
     with dissolve
     
     b "So."
@@ -551,7 +553,7 @@ label anja_anfang:
     sis "Und du lügst mich auch nicht an?"
     b "Nein."
     
-    show sis crying
+    show laura crying
     with dissolve
     
     "Nicht das schon wieder."
@@ -567,7 +569,7 @@ label anja_anfang:
     "Es passt auch gar nicht zu ihr."
     b "Geht's jetzt wieder?"
     
-    show sis sadsmile
+    show laura sad_smile
     with dissolve
     
     sis "Ich glaube schon."
@@ -667,7 +669,7 @@ label anja_anfang:
             
             play sound "sounds/doorlock.wav"
         
-            show sis angry_talk
+            show laura mad_talk
             with dissolve
         
             sis "Du wartest draußen."
@@ -695,8 +697,7 @@ label anja_anfang:
             with dissolve
         
             "Ich trockne mich ab und ziehe mich dann an."
-            
-        
+                    
         "Nein, sie ist zu rein.":
             "Ich muss mich davon ablenken."
             "Ich darf nicht auf sie fappieren."
@@ -710,7 +711,7 @@ label anja_anfang:
                         
             scene bg keller_aus
             with dissolve
-        
+            #-----------------------------------------------
             "Einmal kalt duschen und man möchte nicht mehr."
             if persistent.wieherbuhSprache is 0:
                 "Genau nach Plan."
@@ -718,14 +719,14 @@ label anja_anfang:
                 "Genau nach keikaku."
             if persistent.wieherbuhSprache is 2:
                 "{=jp}Genau nach 計画。{/=jp}"
-            "Genau nach keikaku."
+            #-----------------------------------------------
             #Bild
             #Hier würde ich gerne oben im Bild einen Kommentar einbauen "Bemerkung: keikaku heißt Plan."
             #Wie machte ich das?
 
     "Damit wäre ich eigentlich fertig."
     
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
 
     "Ich gehe nochmal alles durch."
@@ -818,7 +819,7 @@ label anja_anfang:
     "Verdammt."
     "Was mache ich denn jetzt?"
     
-    show yandere surprise at left
+    show yasmin surprise at left
     with dissolve
     #Bild existiert noch nicht
 
@@ -835,7 +836,7 @@ label anja_anfang:
     bw "Hallo, %(berndName)s."
     b "..."
 
-    show yandere neutral at left
+    show yasmin neutral at left
     with dissolve
     #Bild existiert noch nicht
 
@@ -851,7 +852,7 @@ label anja_anfang:
     "Sie will mich nur ausnutzen."
     "Typisch Frau."
 
-    show yandere embarassed at left
+    show yasmin embarassed at left
     with dissolve
     #Bild existiert noch nicht
 
@@ -872,7 +873,7 @@ label anja_anfang:
     scene bg treppenhaus
     with fade
     
-    show yandere from_behind
+    show yasmin from_behind
     with dissolve
     #Bild existiert noch nicht
 
@@ -897,7 +898,6 @@ label anja_anfang:
     scene bg treppenhaus
     with fade
     
-
     bw "Was ist los?"
     "Ich gehe einfach."
     bw "%(berndName)s?"
@@ -924,13 +924,13 @@ label anja_anfang:
     "Nein."
     "Ich öffne die Türe."
 
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
 
     "Ich ziehe meine Schuhe aus."
     "Dann gehe ich direkt in meinen Keller."
 
-    show sis neutral
+    show laura neutral
     with dissolve
 
     $ berndNameKurz = stringShorten(berndName,2)
@@ -949,11 +949,6 @@ label anja_anfang:
 
     "Ich will mich auf andere Gedanken bringen."
     "Wie immer öffne ich als erstes meinen Browser und öffne Krautchan."
-   
-    scene bg desktop_404 #AE unnötig?
-    with fade
-    #Bild existiert noch nicht
-    
     "404..."
     "Achja..."
     "Was mach ich denn jetzt?"
@@ -963,23 +958,17 @@ label anja_anfang:
     "Öhm..."
     "Verdammt."
     "Ohne Krautchan hat mein Leben einfach keinen Sinn."
-
     "Ich schau einen Anime."
     "Aber welchen?"
     "Ich öffne meine Animepartition."
-    
-    scene bg desktop_anime #AE unnötig?
-    with fade
-    #Bild existiert noch nicht
-    
-    #Nach Einbau des Bildes schau ich nochmal drüber, ob man den Part erweitern kann
-    #im Sinne von "Saint October? Nicht schon wieder. Gundam? Langweilig." usw.
+    "Saint October?"
+    "Nicht schon wieder."
+    "Gundam?"
+    "Langweilig."
+    "Akagi?"
     "Nein."
-    "Der nicht."
-    "Den auch nicht."
-    "Nicht dieser."
-    "Der schon wieder? Lieber nicht."
-    
+    "Was ist nur aus mir geworden?."
+    "Selbst auf Akagi habe ich keine Lust."    
     "Ich werfe mich auf's Bett."
     "Ich kann mich einfach nicht auf andere Gedanken bringen."
     "Ich muss immer wieder an vorhin denken."
@@ -987,8 +976,17 @@ label anja_anfang:
     "Ja."
     "Sie ist ja Schuld."
     "Mädchen sind immer Schuld."
-    "Ich kann es ihnen nie recht machen."
-    "Ich kenne es nicht anders."
+    "IMMER!"
+    "Nie kann man es ihnen recht machen."
+    "Ich kenne es nicht anders."     
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "GO TO HELL, BITCHES!"
+    if persistent.wieherbuhSprache is 1:
+        "KIEUSERO, ONNA-DOMO!"
+    if persistent.wieherbuhSprache is 2:
+        "{=jp}消えうせろ、 女共！{/=jp}"
+    #-----------------------------------------------
     "Aber sie ist eine Bernadette."
     "Und ich ein Bernd."
     "Das hat anscheinend nichts zu sagen, wenn man sich im realen Leben kennt."
@@ -998,17 +996,14 @@ label anja_anfang:
     "Ich hatte ja noch nie was mit Mädchen am Hut."
     "Da bleibe ich lieber bei mai waifus."
     "Hach, Lynette..."
-    #der Traum beginnt, daher einen netten Bildeffekt für den Traumbeginn reinbringen, wenn sowas überhaupt geht
-    #gleichzeitiger Übergehen auf das Bild "traumkueche.jpg", aber mit kleiner, weißer Umrandung,
-    #um anzuzeigen, dass es nur ein Traum ist
-    #geht das per Effekt oder muss ein neues Bild dafür herhalten? Dann weiß ich für die nächsten Male Bescheid.
+    #Bild "traumkueche.jpg", aber mit kleiner, weißer Umrandung, um anzuzeigen, dass es nur ein Traum ist
     
     scene bg traumkueche
     with fade
     
     show lynette_essen
     with dissolve
-    
+    #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
         "Lynette" "...Meister."
     if persistent.wieherbuhSprache is 1:
@@ -1250,9 +1245,12 @@ label anja_anfang:
     b "Jetzt schau mich doch mal an, wenn du mir was sagen willst."
     "Sie hebt ihren Kopf und schaut mir in die Augen."
     "Erika" "Ich will nicht, dass du mir Sachen verheimlichst."
-    "Erika" "Ich will, dass du mir alles sagst."
-     
-    
+    "Erika" "Ich habe auch keine Geheimnisse vor dir!"
+    "Erika" "Ich..."
+    "Sie neigt ihren kurz nach rechts unten."
+    "Dann hebt sie ihn wieder und schaut mir wieder tief in die Augen."
+    "Erika" "Ich..."
+    "Erika" "li..."
     
     #BUTTERGOTT
 
@@ -1276,14 +1274,14 @@ label anja_anfang:
     scene bg keller
     with wooshTrans
 
-    show sis neutral
+    show laura neutral
     with dissolve
     
     sis "Das Abendessen ist fertig."
     b "Ist ja gut, ist ja gut."
     sis "Ich geh schon mal vor."
     
-    hide sis
+    hide laura
     with dissolve
     
     "Ich setze mich aufrecht auf mein Bett."
@@ -1392,11 +1390,6 @@ label anja_weiter:
     "Ich schau einen Anime."
     "Hmm..."
     "Mal schauen, ob schon die neue Folge Strike with Cheese fertig heruntergeladen ist."
-    
-    scene bg desktop_torrent #AE unnötig?
-    with fade
-    #Bild existiert noch nicht
-    
     "Sehr gut."
     "Oh, schon die elfte Folge."
     "Bald ist der Anime vorbei."
@@ -1451,9 +1444,8 @@ label anja_weiter:
     
     play sound "sounds/metaldooropen.wav"
     
-    #show anja mad #AE unnötig? anja angry?
-    #with dissolve
-    #Bild existiert noch nicht
+    show anja angry
+    with dissolve
     
     bw "Was ist los mit dir?"
     b "..."
@@ -1474,8 +1466,8 @@ label anja_weiter:
     b "..."
     "Geh sterben."
     
-    #show anja really_mad #AE hier dann anja mad statt in 1362
-    #with dissolve
+    show anja mad
+    with dissolve
     #Bild existiert noch nicht
     
     bw "Ach, %(berndName)s."
@@ -1517,8 +1509,8 @@ label anja_weiter:
     bw "Ist es das?"
     b "..."
     
-    #show blond doppelpunkt_drei
-    #with dissolve
+    show anja doppelpunkt_drei
+    with dissolve
     #Bild existiert noch nicht
     
     bw "Ach, %(berndName)s."
@@ -1647,21 +1639,10 @@ label anja_weiter:
     with fade
     
     "Für Internet und Anime reicht der noch."
-    
     "Ich öffne meinen Internetbrowser."
-    
-    scene bg desktop_google #AE unnötig?
-    with fade
-    #Bild existiert noch nicht
-    
     "Wie immer drücke ich automatisch Strg + L und tippe dann \"kr\" ein."
     "Dann drücke ich mit der Pfeiltaste einen runter und drücke Enter."
-    "Es lädt nor-"
-    
-    scene bg desktop_404 #AE unnötig?
-    with fade
-    #Bild existiert noch nicht
-    
+    "Es lädt nor-"    
     "404."
     "Verdammt."
     "Ich hätte nie gedacht, dass ich das jemals sagen werde."
@@ -1826,7 +1807,7 @@ label anja_besprechung:
     bw "Setz dich."
     bw "Ich hole eben was zu trinken."
     
-    hide anja neutral
+    hide anja
     with dissolve
     
     "Ich setze mich auf das Bett."
@@ -1872,7 +1853,7 @@ label anja_besprechung:
     b "Wie?"
     bw "weissnichlol."
     
-    show anja happy
+    show anja smiling
     with dissolve
     
     $ renpy.pause(1.0)
@@ -1882,9 +1863,8 @@ label anja_besprechung:
     "Wie in einem Anime, in dem gerade ein schlechter Witz gemacht wurde."
     "Nur, dass es diesmal in der Wirklichkeit so ist."
     
-    #show blond serious_g #AE unnötig? evtl. lieber angry?
-    #with dissolve
-    #Bild existiert noch nicht
+    show anja angry
+    with dissolve
     
     b "Sch-"
     bw "Ich werde dich erstmal testen."
@@ -1905,7 +1885,7 @@ label anja_besprechung:
     bw "Weiß ich noch nicht."
     b "Und was soll ich dann hier?"
     
-    show anja happy
+    show anja smiling
     with dissolve
     
     bw "Ich wollte mich mal ein bisschen mit dir unterhalten."
@@ -1963,7 +1943,7 @@ label anja_besprechung:
     scene bg anja_kueche
     with fade
     
-    show anja happy
+    show anja smiling
     with dissolve
     #Bild existiert noch nicht
     
@@ -2020,6 +2000,7 @@ label anja_besprechung:
     
     scene bg anjas_wohnung
     with fade
+    #Bild existiert noch nicht
     
     "Sie zieht sich an."
     bw "So, %(berndName)s."
@@ -2047,8 +2028,14 @@ label anja_besprechung:
     
     "Ich schau erstmal einen Animu."
     "Die ersten paar Folgen von Akagi sind fertig."
-    "Keikaku doori."
-    #Kanji = 計画	通り。
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Genau nach Plan."
+    if persistent.wieherbuhSprache is 1:
+        "Keikaku doori!"
+    if persistent.wieherbuhSprache is 2:
+        "{=jp}計画通り。{/=jp}"
+    #-----------------------------------------------
     "AKAGI!"
     "QUALITÄTSNASEN!"
     
@@ -2085,7 +2072,7 @@ label bernd_kapzwei_grillen:
     "Wo..."
     "Wo bin ich?"    
    
-    show sis sadsmile at left
+    show laura sad_smile at left
     with dissolve
     
     show doc at right
@@ -2095,7 +2082,7 @@ label bernd_kapzwei_grillen:
     ma "Wie geht es ihm, Herr Doktor?"
     "Arzt" "Wir können leider nicht mehr allzu viel für ihn tun."
 
-    show sis sad at left
+    show laura sad at left
     with dissolve
     
     ma "Was heißt das?"
@@ -2109,7 +2096,7 @@ label bernd_kapzwei_grillen:
     "Arzt" "Es tut mir Leid."
     sis "Ich will nicht, dass er stirbt."       
  
-    show sis crying at left
+    show laura crying at left
     with dissolve
     
     ma "Ist schon gut..."
@@ -2117,7 +2104,7 @@ label bernd_kapzwei_grillen:
     b "Komm her."
     b "%(sisName)s."
     
-    show sis sad at left
+    show laura sad at left
     with dissolve
     
     sis "Ja?"
@@ -2127,7 +2114,7 @@ label bernd_kapzwei_grillen:
     sis "aber..."
     sis "%(berndName)s."
     
-    show sis crying at left
+    show laura crying at left
     with dissolve
     
     b "Das ist ja nicht auszuhalten."
@@ -2143,7 +2130,7 @@ label bernd_kapzwei_grillen:
     hide doc
     with dissolve
        
-    show sis crying
+    show laura crying
     with dissolve
             
     if sisLove >= 60:
@@ -2155,13 +2142,13 @@ label bernd_kapzwei_grillen:
         sis "Ich bin ..."
         b "Ich weiß, was du sagen willst."
         
-        show sis sad
+        show laura sad
         with dissolve
         
         b "Ich weiß auch, dass ich es dir nie gesagt habe."
         b "Aber ich liebe dich."
         
-        show sis sadsmile
+        show laura sad_smile
         with dissolve
         
         sis "Ach, %(berndName)s."
