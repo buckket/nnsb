@@ -153,6 +153,12 @@ label laura_anja_mail:
     bw "Weiß ich nicht."
     b "Und warum bist du dann hier?"
     bw "Weil du nicht geantwortet hast."
+    b "Warum nahmst du nicht mit den Mods Kontakt auf?"
+    bw "Die Mods?"
+    bw "Tsaryu ist nach Japan ausgewandert, Shaky ist nach Mexiko geflohen und dergeneral ist untergetaucht."
+    b "..."
+    b "Und warum nahmst du dann Kontakt mit mir auf?"
+    b "Wieso ausgerechnet mit mir?"
     b "Und woher willst du das alles wissen?"
     bw "..."
     bw "Du vertraust mir nicht?"
@@ -172,10 +178,8 @@ label laura_anja_mail:
     bw "Ich wohne..."
     bw "...im Stockwerk über dir."
     
-    #show blondbernd_hämisches_grinsen -> Umbennenung & Registrierung erforderlich
-    #with dissolve
-    #Bild existiert noch nicht
-    #K1
+    show anja smiling
+    with dissolve
     
     "Was zum?"
     bw "Du siehst irgendwie sprachlos aus."
@@ -193,9 +197,50 @@ label laura_anja_mail:
     "Ich kann es immer noch nicht glauben."
     "Sie wohnt direkt über mir."
     "Ich überhörte vor Fassungslosigkeit sogar das Quietschen der Türe."
-    "Ich sollte das irgendwie verarbeiten."
-    "Ich schlafe da mal ein bis zwei Stunden drüber."
-    "Hmm..."
+    "Ich muss das irgendwie verarbeiten."
+    
+    $ berndNameUpper = berndName.upper()
+    ma "%(berndNameUpper)s!"
+    "Oh Gott, nicht die schon wieder."
+    ma "KOMMST DU MAL EBEN?"
+    b "JA."
+
+    scene bg kueche
+    with fade
+
+    ma "Wer war denn das Mädchen gerade?"
+    b "Wieso interessiert dich das?"
+    ma "Na ja, du bist nun 25."
+    b "Und weiter?"
+    ma "Und du hattest noch keine Freundin."
+    b "Nicht das schon wieder."
+    ma "Aber es ist nur normal für eine Mutter sich Sorgen zu machen."
+    b "Du weißt, dass ich kein Interesse an einer Freundin habe, oder?"
+    ma "Ich weiß, %(berndName)s."
+    ma "Das sagst du immer."
+    ma "Aber ich kann dir nicht glauben, dass du keinerlei Interesse hast."
+    b "Es ist aber so."
+    ma "Du sitzt den ganzen Tag im Zimmer und schaust deine Männekes."
+    b "Anime, Mutter, Anime."
+    ma "Ich weiß auch gar nicht, woher du sie kennst."
+    b "..."
+    ma "Und sie wäre wirklich nichts für dich?"
+    ma "Wie hieß sie noch gleich?"
+    ma "%(wBerndName)s oder so?"
+    b "Nein."
+    b "Außerdem..."
+    b "Was willst du eigentlich?"
+    b "Du hast sie doch nur ein einziges Mal gesehen."
+    b "Und das auch nur kurz."
+    ma "Also eher nicht."
+    b "Ach, lass mich doch in Ruhe."
+    b "Ich geh schlafen."
+    b "Gute Nacht."
+    "Genervt gehe ich eilig zurück in meinen Keller."
+    
+    scene bg keller
+    with fade
+
     "Ich lasse mir alle Details nochmal durch den Kopf gehen."
     "Krautchans Server wurde beschlagnahmt."
     "Von der Polizei."
@@ -206,6 +251,24 @@ label laura_anja_mail:
     "Es könnte doch genauso gut Jemand gewesen sein, der sowas zum Spaß macht."
     "Ein Hacker."
     "Das macht meiner Meinung nach mehr Sinn."
+    "Und die Mods?"
+    "Dass Tsaryu nach Japan ausgewandert ist, ist gut möglich."
+    "Aber Shaky?"
+    "Ist er wirklich nach Mexiko geflohen?"
+    "Ach Quatsch."
+    "Schüttli hat doch kein Geld für sowas."
+    "Andererseits habe ich auch lange nichts mehr von ihm gehört."
+    "Allerdings war er auch eher ein Mitläufer."
+    "dergeneral kümmerte sich ja um das Meiste."
+    "Apropos dergeneral."
+    "Der soll untergetaucht sein?"
+    "Haha, der doch nicht."
+    "Ich finde, dergeneral ist ein cooler Typ. Re ist EXPERTENPROGRAMMIERER und ist vor nichts Angst."
+    "Aber er verhält sich in letzter Zeit komisch."
+    "Wie ein kleines Kind."
+    "Ja, das trifft es genau."
+    "Er verhält sich in letzter Zeit wie ein kleines Kind."
+    "Vielleicht ist wirklich was dran."
     "Sie scheint mehr zu wissen, als sie mir eigentlich weiß machen will."
     "Ich sollte morgen zu ihr gehen."
     "Sie wohnt ja direkt über mir."
@@ -218,19 +281,56 @@ label laura_anja_mail:
     "Vor allem, wenn sich ein Bernd schon berlinbernd nennt."
     "Aber..."
     "Bernds? In MEINEM Mehrfamilienhaus?"
-    "Ich muss das verarbeiten."
-    "Ich muss mich ablenken."
-    "Ich sollte mir was zu essen holen."
-    
-    
-    #Situation für abends
-    #Siehe dafür ins Forum
-    #BUTTERGOTT
-    
-    
-    
-    
-    
+    "Hmmm..."
+    "Was wohl sein wird, wenn ich sie morgen besuche?"
+    "Sie wird mir bestimmt auch was zu trinken anbieten."
+    "Chance auf einen indirekten Kuss?"
+    "Eher gering."
+    "Dann müssten wir ja schon aus dem selben Glas trinken."
+    "Oder aus der selben Flasche mit dem Mund trinken."
+    "Und das wird wahrscheinlich nicht geschehen."
+    "Hmm..."
+    "Wie ihr Zimmer wohl aussehen mag?"
+    "Es ist bestimmt ein typisches Mädchenzimmer."
+    "Aber wie sieht ein typisches Mädchenzimmer aus?"
+    "Ich war ja noch nie bei einem Mädchen im Zimmer."
+    "Gute Frage."
+    "Wie sieht ein typisches Mädchenzimmer aus?"
+    "Helle Tapeten?"
+    "Wahrscheinlich."
+    "Die Tapeten werden wahrscheinlich eine helle Farbe haben."
+    "Das Zimmer wird auf jeden Fall nicht so duster wie mein Keller sein."
+    "Und sie wird bestimmt auch irgendwo Kuscheltiere rumstehen haben."
+    "Sie hat bestimmt eine Plüschfigur von Hello, Kitty."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Wie süß!"
+    if persistent.wieherbuhSprache is 1:
+        "Kawaii desu, ne?"
+    if persistent.wieherbuhSprache is 2:
+        "{=jp}かわいいです、 ね。{/=jp}"
+    #-----------------------------------------------
+    "Hat nicht jedes Mädchen heutzutage eine Figur von Hello, Kitty?"
+    "Und die Figur wird nach %(wBerndName)s riechen."
+    "Das Zimmer wird nach ihr riechen."    
+    "Und ich werde auf ihrem Bett sitzen."
+    "Es wird schön weich sein."
+    "Nicht so hart und unnachgiebig wie meins."
+    "Hmm..."
+    "Ich kann nicht, %(wBerndName)s..."
+    "Wenn du so weitermachst..."
+    "Ich kann jetzt nicht mehr..."
+    "Hmmmmm...."
+    "%(wBerndName)s..."
+    "Schnell."
+    "Ein Taschentuch."
+    "AH-HAH!"
+    "Hach..."
+    "%(wBerndName)s..."
+
+    scene black
+    with fade
+
     "Am nächsten Tag..."
     
     scene bg keller_aus_blur
@@ -303,7 +403,7 @@ label anja_anfang:
     ma "Na ja, du bist nun 25."
     b "Und weiter?"
     ma "Und du hattest noch keine Freundin."
-    b "Ach, nicht das schon wieder."
+    b "Nicht das schon wieder."
     ma "Aber es ist nur normal für eine Mutter sich Sorgen zu machen."
     b "Du weißt, dass ich kein Interesse an einer Freundin habe, oder?"
     ma "Ich weiß, %(berndName)s."
@@ -1140,6 +1240,9 @@ label traum:
     
     show erika_normal at left
     with dissolve
+    #Getestet, das geht so nicht. owari und Ende gehen btw auch nicht.
+    #BILD BILD BILD
+    #PROBLEM PROBLEM PROBLEM
     
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
@@ -1257,14 +1360,67 @@ label traum:
     "Sie hebt ihren Kopf und schaut mir in die Augen."
     "Erika" "Ich will nicht, dass du mir Sachen verheimlichst."
     "Erika" "Ich habe auch keine Geheimnisse vor dir!"
+    "Erika" "Ich will mehr über dich wissen."
+    "Erika" "Denn ich..."
     "Erika" "Ich..."
     "Sie neigt ihren kurz nach rechts unten."
     "Dann hebt sie ihn wieder und schaut mir wieder tief in die Augen."
-    "Erika" "Ich..."
-    "Erika" "li..."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Erika" "Ich..."
+    if persistent.wieherbuhSprache is 1:
+        "Erika" "Ai..."
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}愛。。。{/=jp}"
+    b "Ist schon gut, Erika-chan."
+    b "Ich weiß genau, was du sagen willst."
+    b "Du musst das nicht laut sagen, wenn du nicht willst."
+    "Erika" "Aber ich habe es dir noch nie gesagt."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Erika" "Ich lie..."
+    if persistent.wieherbuhSprache is 1:
+        "Erika" "Ai shite..."
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}愛して。。。{/=jp}"
+    #-----------------------------------------------    
+    if persistent.wieherbuhSprache is 0:
+        "Erika" "...be dich."
+    if persistent.wieherbuhSprache is 1:
+        "Erika" "...masu."
+    if persistent.wieherbuhSprache is 2:
+        "Erika" "{=jp}。。。ます。{/=jp}"
+    #-----------------------------------------------
+    b "Komm her, Erika-chan."
+    "Ich umarme sie und drücke sie ganz fest an mich."
+    "Lynette" "Aber..."
+    "Ich merke, wie auch Erika nun ihre Arme um mich legt."
+    "Erika" "Ich bin so glücklich."
+    "Erika" "Ich war noch nie so nah an dir dran."
+    "Erika" "Lass mich nicht mehr los."
+    "Erika" "Nie wieder."
+    "Erika" "OK?"
+    b "Ist gut."
+    b "Ich werde dich nie wieder loslassen."
+    "Lynette" "Aber..."
+    "Langsam lösen wir uns wieder voneinander."
+    "Dann ergreife ich Erikas Hand und halte sie fest."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Lynette" "MEISTER!"
+    if persistent.wieherbuhSprache is 1:
+        "Lynette" "GOSHUJIN-SAMA!"
+    if persistent.wieherbuhSprache is 2:
+        "Lynette" "{=jp}御主人様！{/=jp}"
+    #-----------------------------------------------
+    "Lynette" "Ich dachte, ich wäre..."
+    b "Sorry, Lynette."
+    b "Ich kann mich nicht für eine von euch beiden entscheiden, weil das gleichzeitig bedeutet, dass ich die andere ablehne."
+    b "Und das kann ich nicht."
+    b "Das bringe ich nicht über's Herz."
+    "Erika" "Hach..."
+    "Lynette" "Hach..."
     
-    #BUTTERGOTT
-
     scene black
     with fade
     
@@ -1276,11 +1432,10 @@ label traum:
 
     scene bg keller_blur
     with fade
-    #Bild existiert noch nicht (DOCH!?)
     
     "Stimme" "Aufstehen."
     b "Jaja."
-    "Ich reibe mir einmal durch die Augen."
+    "Ich reibe mir durch die Augen."
 
     scene bg keller
     with wooshTrans
@@ -1730,6 +1885,8 @@ label anja_besprechung:
                 
         "Ich hab gerade eh nichts Besseres zu tun.":
             $ friendLove += 10
+            "Ach, was soll's."
+            "Ich hab gerade eh nichts Besseres zu tun."
     
     "Ich schaue auf die Uhr."
     "Es ist schon 14:06 Uhr."
@@ -2112,9 +2269,7 @@ label anja_besprechung:
     "AKAGI!"
     "QUALITÄTSNASEN!"
     
-    #jump kapitel_3
-    #erst mal rauslassen, sonst gibts nen fehler.
-    #auch: drei_anja oder anja_drei aber nicht kapitel_3
+    #jump anja_drei
 
 label bernd_kapzwei_grillen:
 
