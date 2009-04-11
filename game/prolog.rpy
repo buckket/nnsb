@@ -36,7 +36,7 @@ label prolog:
 
     "Ich folge meiner Mutter in die Wohnung."
     
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with wooshTrans
 
     "Als wir durch die Tür kommen, läuft meine kleine Schwester bereits aufgeregt im Flur umher."
@@ -100,7 +100,7 @@ label prolog:
     
     "Ich gehe nach oben, um meine Mutter nach Geld zu fragen."
     
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
     
     play music "music/2.mp3"
@@ -191,7 +191,7 @@ label prolog_duschen:
     
     "Etwas später..."
     
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
     
     play music "music/2.mp3"

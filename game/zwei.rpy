@@ -196,7 +196,7 @@ label zwei_laura_stalk_entscheid:
     "Ich entscheide mich, nach oben zu gehen und etwas zu essen aufzutreiben."
     scene bg kellertreppe
     with fade
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
     "Komisch."
     "Es ist niemand hier."
@@ -342,14 +342,14 @@ label zwei_weiter_entscheid:
     "Wohlmöglich haben sie ihn heute Nacht erwischt und er hat sie niedergeschlagen oder sonstwas mit ihnen angestellt?!"
     scene bg zuhause_hausflur
     with fade
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
     scene bg lauraszimmer 
     with fade
     "So schnell ich kann renne ich in die Wohnung und reiße die Tür zu %(sisName)ss Zimmer auf."
     "Leer."
     "Niemand hier."
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
     "Systematisch durchkämme ich jeden Winkel der Wohnung, aber es ist niemand hier."
     "Sie sind wie vom Erdboden verschluckt."
@@ -539,7 +539,7 @@ label zwei_weiter_entscheid:
     "Etwas verunsichert gehe ich rein."
     scene black
     with wooshTrans
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with wooshTrans
     "%(sisName)s hat natürlich schon alles erklärt."
     b "...und?"
@@ -616,7 +616,7 @@ label zwei_weiter_entscheid:
     b "Scheiße."
     "Vielleicht ist ja inzwischen das Essen fertig."
     "Ich gehe am besten hoch und frage wie lange es noch dauert."
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
     ma "Ah, %(berndName)s!"
     ma "Du kommst grade richtig."
@@ -726,7 +726,7 @@ label zwei_weiter_entscheid:
             "Wenn ich mich beeile erwische ich ihn noch!"
             scene bg kellertreppe
             with fastFade
-            scene bg zuhause_drinnen
+            scene bg wohnung_innen
             with fastFade
             scene bg zuhause_hausflur
             with fastFade

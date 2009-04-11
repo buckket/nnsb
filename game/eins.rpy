@@ -1259,7 +1259,7 @@ label eins_treffenBerndf:
     ma "Bist du hier?"
     "Ich gehe in den Flur."
     
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
     
     b "Ja."
@@ -3342,7 +3342,7 @@ label eins_sisAbholenZuerst:
     scene bg kellertreppe
     with fade
     
-    scene bg zuhause_drinnen
+    scene bg wohnung_innen
     with fade
     
     scene bg zuhause_hausflur

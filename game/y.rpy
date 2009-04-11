@@ -24,21 +24,21 @@ label yasmin_anfang:
     b "...aber."
     b "Ich dachte doch..."
     b "Du..."
-    "Mädchen" "Was?"
-    "Mädchen" "Wirst du jetzt die Polizei rufen?"
-    "Mädchen" "Ich bin ein Stalker, du hast ja Recht."
-    "Mädchen" "Also."
-    "Mädchen" "Ruf sie schon an, ich habe es verdient."
+    u"Mädchen" "Was?"
+    u"Mädchen" "Wirst du jetzt die Polizei rufen?"
+    u"Mädchen" "Ich bin ein Stalker, du hast ja Recht."
+    u"Mädchen" "Also."
+    u"Mädchen" "Ruf sie schon an, ich habe es verdient."
     "Ich kann ihr irgendwie nicht folgen..."
     b "Du bist kein Bernd?"
-    "Mädchen" "Bernd?" #hier bitte verwirrt gucken, fragezeichenmädchen-style
+    u"Mädchen" "Bernd?" #hier bitte verwirrt gucken, fragezeichenmädchen-style
     "Habe ich mich geirrt?"
     "Ist sie wirklich kein Bernd?"
     "Aber warum sollte mich sonst jemand stalken?"
     b "Verarsch mich nicht!"
     b "Warum solltest du mich sonst stalken?!"
     #wieder schüchtern
-    "Mädchen" "..."
+    u"Mädchen" "..."
     b "..."
     "Vielleicht ist sie wirklich kein Bernd?"
     "...aber ist das nicht egal?"
@@ -50,17 +50,17 @@ label yasmin_anfang:
         "Ich werde sie erst befragen.":
             "Vielleicht hatte sie ja einen guten Grund."
     b "Warum bist du bei mir eingebrochen?"
-    "Mädchen" "..."
+    u"Mädchen" "..."
     b "Warum hast du mich verfolgt?"
-    "Mädchen" "..."
+    u"Mädchen" "..."
     b "Wer bist du?"
-    "Mädchen" "..."
+    u"Mädchen" "..."
     b "Was willst du von mir?"
     $ yanNameKurz = stringShorten(yanName,2)
-    "Mädchen" "%(yanNameKurz)s- %(yanName)s."
+    u"Mädchen" "%(yanNameKurz)s- %(yanName)s."
     b "Wa- wie bitte?"
     "%(yanName)s?"
-    "Mädchen" "Ich heisse %(yanName)s."
+    u"Mädchen" "Ich heisse %(yanName)s."
     b "..."
     yan "..."
     "%(yanName)s also..."
@@ -261,7 +261,117 @@ label yasmin_befragung_drei:
             y_bef_32
         except NameError:
             y_bef_32 = 0
-    #menu:
-    #    "Nach was frage ich sie jetzt?"
+    menu:
+        "Nach was frage ich sie jetzt?"
         
-        
+        "Warum antwortest du mir nicht?":
+             b "Warum antwortest du mir nicht?"
+             b "Es muss doch einen Grund geben, sonst wären wir jetzt nicht hier."
+             yan "..."
+             b "Kannst du es mir nicht sagen, oder willst du es mir nicht sagen?"
+             yan "..."
+             
+        "Soll ich dich einfach gehen lassen, oder was?":
+             b "Soll ich dich einfach gehen lassen, oder was?"
+             yan "..."
+             b "Willst du gehen?"
+             "Inzwischen ist es mir egal."
+             b "Ich gehe auf."
+             b "Geh."
+             yan "..."
+             "Sie geht nicht."
+             "Sie rührt sich keinen Zentimeter."
+             
+        "Antworte mir, sonst kann ich für nichts garantieren!":
+             b "Antworte mir, sonst kann ich für nichts garantieren!"
+             yan "..."
+             b "Ich rufe die Polizei!"
+             yan "..."
+             b "Ich warne dich zum letzen Mal!"
+             yan "..."
+    
+    b "{b}Verdammt!{/b}"
+    #yasmin schockiert
+    b "Was willst du nur von mir!?"
+    "Ich springe auf und drücke sie gegen die Wand."
+    b "ANTWORTE!"
+    yan "..."
+    
+    "Stimme" "%(berndName)s?"
+    "Das ist Laura!"
+    "Verdammt, was mache ich jetzt?"
+    "Ich hätte nicht so schreien sollen."
+    sis "Alles ok da unten?"
+    "Scheiße!"
+    b "J- Ja!"
+    b "Alles ok!"
+    b "Nicht reinkommen!"
+    "Ich muss dieses verrückte Mädchen loswerden!"
+    b "Versteck dich!"
+    yan "..."
+    "Warum macht sie denn nichts!?"
+    b "Du sollst dich verstecken!"
+    yan "...wo denn?"
+    "Stimmt ja."
+    "Hier unten ist ja nichts, wo man sich verstecken könnte."
+    sis "%(berndName)s? Wieso soll ich nicht reinkommen?"
+    "Sie ist schon direkt vor der Tür."
+    b "Warte nur kurz, ja?"
+    "%(yanName)s steht immer noch wie angewurzelt da."
+    b "Los!"
+    b "Irgendwo!"
+    sis "Mit wem sprichst du?"
+    b "Mit niemandem!"
+    "Ich packe %(yanName)s an den Armen und werfe sie aufs Bett."
+    b "Los, unter die Decke!"
+    #yasmin blush
+    yan "...!"
+    b "Los!"
+    sis "Ich komme jetzt rein, %(berndName)s!"
+    #yasmin hide
+    
+    show laura neutral
+    with dissolve
+    
+    sis "Was machst du denn hier?"
+    b "N- nichts!"
+    "Ich stelle mich vorsichtshalber vor das Bett."
+    sis "Ist wirklich alles ok?"
+    b "Ja!"
+    b "Alles ok!"
+    "Hoffentlich merkt sie nichts."
+    sis "Du bist komisch."
+    b "Tja."
+    "Mehr bringe ich nicht hervor."
+    b "D- Du kannst jetzt gehen."
+    sis "OK."
+    b "..."
+    sis "..."
+    b "Worauf wartest du?"
+    sis "...ganz sicher, dass alles ok ist?"
+    b "Ja."
+    sis "Mit wem hast du dann eben gesprochen?"
+    b "Ich..."
+    b "Das war online!"
+    "Perfekte Ausrede ist perfekt!"
+    sis "Achso!"
+    show laura happy
+    with dissolve
+    sis "Da habe ich nicht dran gedacht!"
+    sis "Dann ist ja alles ok."
+    b "Sag ich doch."
+    show laura neutral
+    with dissolve
+    sis "Gute Nacht, %(berndName)s!"
+    b "Gute Nacht."
+    hide laura neutral
+    with dissolve
+    "Sie geht schon so früh schlafen?"
+    "Das wusste ich gar nicht."
+    "...aber in ihrem Alter musste ich wahrscheinlich auch so früh ins Bett."
+    "..."
+    "Ah!"
+    "Ich drehe mich zum Bett und schlage die Decke zurück."
+    #yasmin blush happy
+    "Nanu?"
+    "Warum ist sie denn so fröhlich?"
