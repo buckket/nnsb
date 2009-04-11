@@ -390,7 +390,7 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 1:
         "Kawaii desu, ne?"
     if persistent.wieherbuhSprache is 2:
-        "{=jp}かわいいですね。{/=jp}"
+        "{=jp}かわいいです、 ね。{/=jp}"
     #-----------------------------------------------
     "Hat nicht jedes Mädchen heutzutage eine Figur von Hello, Kitty?"
     "Und die Figur wird nach %(wBerndName)s riechen."
@@ -461,7 +461,7 @@ label anja_anfang:
 
     b "Was ist los, %(sisName)s?"
     $ berndNameUpper = berndName.upper()
-    sis "%(berndNameUpper)s!, HILFE!"
+    sis "%(berndNameUpper)s! HILFE!"
     sis "DA."
     b "Was ist da?"
     sis "EINE...EINE...EINE...EINE SPINNE!"
@@ -535,6 +535,8 @@ label anja_anfang:
     "Ich schmeiße das Taschentuch in die Toilette."
     
     play sound "sounds/toilet.wav"
+    
+    $ renpy.pause(7,5)
     
     "Ich gehe wieder zurück zu Laura."
     
@@ -640,7 +642,7 @@ label anja_anfang:
             "Dann bewege ich meinen Kopf immer näher an ihren."
             "Ich flüstere ihr \"Ich liebe dich\" ins Ohr."
             "Sie zieht ihren Kopf zurück."
-            "Sie wird rot."
+            "Und wird rot."
             "Nach ein paar Sekunden kommt sie wieder näher."
             "Sie geht mit ihrem Mund zu meinem Ohr..."
             
@@ -676,7 +678,7 @@ label anja_anfang:
             sis "Mir egal."
             sis "Ich hab' Vorrang."
             
-            scene bg zuhause_drinnen 
+            scene bg wohnung_innen 
             with fade
             
             play sound "sounds/door_1.wav"
@@ -730,9 +732,9 @@ label anja_anfang:
     "Ich gehe nochmal alles durch."
     "Sicher ist sicher."
     "Es ist immerhin das erste Mal, dass ich bei einem Mädchen bin."
-    "Und dann noch bei so einem süßen."
+    "Und dann noch bei so einem Süßen."
     "Also..."
-    "Habe ich gefrühstückt?."
+    "Habe ich gefrühstückt?"
     "Ja."
     "Habe ich geduscht?"
     "Ja."
@@ -770,7 +772,7 @@ label anja_anfang:
     "Werde ich mich wirklich in einem Mädchenzimmer wohl fühlen?"
     "Ich war noch nie in so einer Situation."
     "Voller Angst nehme ich meine Hand wieder runter."
-    "Das Gefühl der Unsicherheit in mir wird immer stärker."
+    "Die Unsicherheit in mir wird immer stärker."
     "Was ist nur los mit dir, %(berndName)s?"
     "Seit wann gibst du so schnell auf?"
     "OK, eigentlich gebe ich immer schnell auf."
@@ -779,6 +781,8 @@ label anja_anfang:
     "Ich hole einmal tief Luft und nehme meinen ganzen Mut zusammen."
     
     play sound "sounds/knock.wav"
+    
+    $ renpy.pause(1)
     
     "Ich warte."
     "Nichts passiert."
@@ -804,6 +808,8 @@ label anja_anfang:
     "Ich klopfe nochmals."
     
     play sound "sounds/knock.wav"
+    
+    $ renpy.pause(1)
     
     "Ich höre immer noch jemanden reden, aber niemand macht auf." 
     "Ich drehe mich um und laufe los."
@@ -838,7 +844,7 @@ label anja_anfang:
     with dissolve
     #Bild existiert noch nicht
 
-    "Mädchen" "Wer ist das, %(wBerndName)s?"
+    u"Mädchen" "Wer ist das, %(wBerndName)s?"
     bw "Das ist nur %(berndName)s."
     "Was soll hier \"nur\" heißen?"
     bw "Er ist nur ein Nachbarsjunge."
@@ -854,16 +860,16 @@ label anja_anfang:
     with dissolve
     #Bild existiert noch nicht
 
-    "Mädchen" "Oh, hi."
+    u"Mädchen" "Oh, hi."
     b "..."
     "Ich will sprechen."
     "Aber ich kann nicht."
     b "..."
-    "Mädchen" "Du musst wohl einer von der schüchternen Sorte sein."
+    u"Mädchen" "Du musst wohl einer von der schüchternen Sorte sein."
     bw "Oh ja, %(berndName)s ist sehr schüchtern."
     "Ich bin immer noch nicht in der Lage zu sprechen."
-    "Mädchen" "Na dann, ich muss jetzt los."
-    "Mädchen" "Tschau, %(wBerndName)s."
+    u"Mädchen" "Na dann, ich muss jetzt los."
+    u"Mädchen" "Tschau, %(wBerndName)s."
     bw "Tschüss, %(yanName)s."
     yan "Tschau, %(berndName)s."
     b "..."
@@ -888,7 +894,7 @@ label anja_anfang:
     with dissolve
 
     b "..."
-    bw "H-A-L-L-O?"
+    bw "HAL-LO?"
     b "..."
     bw "Na ja, komm' erstmal rein."
     "Ich drehe mich zur Treppe hin."
@@ -904,6 +910,9 @@ label anja_anfang:
     "Einfach nur weiterlaufen."
     "Ich bin die Treppe schon zur Hälfte runtergelaufen."
     bw "Dann halt nicht."
+    
+    play sound "sounds/anja_dooropen.wav"
+    
     "Ich bleibe kurz stehen."
     "Dann laufe ich einfach weiter."
     "Ich stehe nun vor der Wohnungstüre."
@@ -965,7 +974,7 @@ label anja_anfang:
     "Langweilig."
     "Akagi?"
     "Nein."
-    "Was ist nur aus mir geworden?."
+    "Was ist nur aus mir geworden?"
     "Selbst auf Akagi habe ich keine Lust."    
     "Ich werfe mich auf's Bett."
     "Ich kann mich einfach nicht auf andere Gedanken bringen."
@@ -996,10 +1005,12 @@ label anja_anfang:
     "Hach, Lynette..."
     #Bild "traumkueche.jpg", aber mit kleiner, weißer Umrandung, um anzuzeigen, dass es nur ein Traum ist
     
+label traum:
+    
     scene bg traumkueche
     with fade
     
-    show lynette_essen
+    show char lynette_essen
     with dissolve
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
@@ -1033,11 +1044,11 @@ label anja_anfang:
     "Lynette" "...ich..."
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        "Lynette" "...ich koche doch so gerne für dich, Meister."
+        "Lynette" "...ich koche doch so gerne, Meister."
     if persistent.wieherbuhSprache is 1:
-        "Lynette" "...ich koche doch so gerne für dich, Goshujin-sama."
+        "Lynette" "...ich koche doch so gerne, Goshujin-sama."
     if persistent.wieherbuhSprache is 2:
-        "Lynette" "...ich koche doch so gerne für dich, {=jp}御主人様。{/=jp}"
+        "Lynette" "...ich koche doch so gerne, {=jp}御主人様。{/=jp}"
     #-----------------------------------------------
     b "Ach, Lynette."
     b "Was soll ich nur mit dir machen."
@@ -1122,7 +1133,11 @@ label anja_anfang:
     "Diese Stimme..."
     "Das ist..."
     
-    #Lynette nach rechts
+    hide char lynette_essen
+    
+    show char lynette_essen at right
+    #Wie verschiebte ich eine Person zur Seite?
+    
     show erika_normal at left
     with dissolve
     
@@ -1170,7 +1185,7 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 1:
         b "Nani?"
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}何？{/=jp}"
+        b "{=jp}何？{/=jp}"
     #-----------------------------------------------
     "Lynette" "Für dich habe ich doch auch Frühstück gemacht, Erika."
     "Erika" "Ihr esst aber schon."
@@ -1183,8 +1198,6 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 2:
         "Erika" "{=jp}ごめん、 ダーリング{/=jp}"
     #-----------------------------------------------
-    #Sorry benutzt, weil es lockerer rüberkommt als ein "Entschuldigung"
- 
     "Erika" "Dafür musst du aber gleich was mit mir unternehmen."
     b "OK."
     "Erika" "Versprochen?"
@@ -1743,30 +1756,31 @@ label anja_besprechung:
     
     play sound "sounds/knock.wav"
     
-    $ renpy.pause(0.5)
+    $ renpy.pause(1.0)
     
     "Stimme" "Ich komme gleich."
-    "..."
     
-    $ renpy.pause(2.0)
+    $ renpy.pause(1.0)
+    
+    "..."
    
     play sound "sounds/knock.wav"
     
-    $ renpy.pause(0.5)
+    $ renpy.pause(1.0)
     
     "Stimme" "JAAAA, ich komme gleich."
     "..."
-    $ renpy.pause(0.5)
+    $ renpy.pause(1.0)
     
     play sound "sounds/knock.wav"
     
-    $ renpy.pause(0.5)
+    $ renpy.pause(1.0)
     
     "Dieses Mal gibt es gar keine Reaktion."
     
     play sound "sounds/knock2.wav"
     
-    $ renpy.pause(0.5)
+    $ renpy.pause(0.75)
       
     "Stimme" "JAAAAHAAAAA!"
     "Stimme" "Ich komme doch."
@@ -1825,9 +1839,11 @@ label anja_besprechung:
     "Pikachu."
     "Das Standardpokémon schlechthin."
     "Evoli."
-    "Wie süß."
+    "Niedliches Pokémon."
+    "Passendes Pokémon für Mädchen."
     "Glurak."
     b "JA MAN GLUARK!"
+    "Oh mein Gott."
     "Habe ich das gerade laut gesagt?"
     "Verdammt."
     "%(wBerndName)s steht mit zwei Gläsern wieder im Zimmer."
@@ -1839,12 +1855,12 @@ label anja_besprechung:
     bw "Du wirst aber schnell wieder ruhig."
     "Hat sie."
     bw "Ich hab dir ein Glas Milch mitgebracht."
-    "Milch? In MEINEM Glas?"
-    b "Zum Trinken?"
+    "Milch?"
+    b "Was soll ich damit?"
+    bw "Trinken?"
+    b "Trinken?"
     bw "Ja."
     bw "Natürlich zum Trinken."
-    b "Wieso würdest du das tun?"
-    bw "Einfach so."
     b "..."
     "Ich nehme das Glas entgegen."
     bw "Du bist also doch gekommen."
@@ -1854,18 +1870,18 @@ label anja_besprechung:
     bw "Ja."
     b "Was ist nun?"
     bw "Wir müssen Krautchan retten."
-    "Wir?"
     b "Ja."
     b "Ich weiß."
+    b "Das sagtest du bereits."
     b "Was willst du tun?"
-    bw "Ich werde Krautchan retten."
-    "Sie?"
+    bw "Krautchan retten."
     b "Ja."
-    b "Wie?"
+    b "Aber wie?"
     bw "weissnichlol."
     
     show anja smiling
-    with dissolve
+    #with dissolve <- Lass ich hier absichtlich stehen, der Effekt wird aber nicht benötigt...
+    #sonst baut das nachher jemand ein und sagt "GSB hat das vergessen"
     
     $ renpy.pause(1.0)
     "Stille."
@@ -1881,7 +1897,7 @@ label anja_besprechung:
     bw "Ich werde dich erstmal testen."
     b "Testen?"
     bw "Ja."
-    "Was zum?"
+    "Sie ändert ihre Laune aber schnell."
     b "Wieso?"
     bw "Weil du dich gestern komisch verhalten hast."
     b "Wie verhielt ich mich denn?"
@@ -1896,11 +1912,13 @@ label anja_besprechung:
     bw "Weiß ich noch nicht."
     b "Und was soll ich dann hier?"
     
-    show anja smiling
+    show anja neutral
     with dissolve
     
     bw "Ich wollte mich mal ein bisschen mit dir unterhalten."
     bw "Wir kennen uns doch kaum."
+    "Sie ist anscheinend wirklich launisch."
+    "Hat sie ihre Tage?"
     b "Aha."
     b "Und worüber?"
     bw "Unzulässige Information."
@@ -1914,15 +1932,24 @@ label anja_besprechung:
     bw "Klar."
     b "Darf ich dir vielleicht eine einzige Frage stellen?"
     bw "Und was willst du wissen?"
-    b "Ich möchte einfach gern wissen, wie alt du bist."
+    b "Ich möchte einfach gern' wissen, wie alt du bist."
     bw "Unzulässige Information."
+    b "Du..."
+    b "Moeblobb!"
     b "Yuki ist sowieso überlegen."
-    bw "Yuki ist eine modifizierte Rei."
+    bw "Yuki ist doch nur eine modifizierte Rei."
     b "Eine Rei ist auch fein."
-    bw "Ja."
-    b "Ja."
     $ renpy.pause(1.0)
-    "Oh wow. Ein QUALITÄTSGESPRÄCH!"
+    "Oh wow. Das ist das erste Mal, dass ich mit einer Person in der Realität über Anime rede."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Ich bin so glücklich!"
+    if persistent.wieherbuhSprache is 1:
+        "Tanoshii!"
+    if persistent.wieherbuhSprache is 2:
+        "{=jp}楽しい！{/=jp}"
+    #-----------------------------------------------
+    "Ich weine innerlich vor Freude."
     
     #---------------------------------------------------
     bw "Deine Milch."
@@ -1930,18 +1957,13 @@ label anja_besprechung:
     bw "Du hast sie noch nicht getrunken."
     "Erst jetzt bemerke ich, dass sie ihr Glas schon ausgetrunken hat."
     "Sie trank ihr Glas während des Gesprächs aus."
-    "Ich schaue auf das weiße Getränk."
+    "Ich schaue auf mein Glas."
     "Dann nehme ich einen großen Schluck von der Milch."
     "Es ist köstliche Milch."
     "Wirklich erfrischend."
-    "Deliziös."
-    bw "Die Milch ist übrigens nicht FETTreduziert."
-    "Ich setze das Glas kurz ab."
-    b "FETT."
+    "Ich setze das Glas ab."
+    "Ich trank die Milch mit einem Male aus."
     b "Lecker."
-    "Ich trinke weiter."
-    "Das Glas ist leer."
-    b "MEER MILCH!"
     bw "Du scheinst Milch zu lieben."
     b "Milch ist die Butter der Getränke."
     b "Beweise mich falsch."
@@ -1949,49 +1971,88 @@ label anja_besprechung:
     b "..."
     bw "Ich bin gerade sowieso alleine hier."
     b "..."
-    "Ich laufe ihr hinterher."
+    bw "Du brauchst keine Angst zu haben meinen Eltern zu begegnen."
+    b "..."
+    bw "Ach, was soll's."
+    bw "Dann bringe ich die Milch halt hierhin."
+
+    $ renpy.pause(2.0)
+    
+    play sound "sounds/anjas_klingelton.wav"
+    #Sound existiert noch nicht
+    
+    "Was ist das?"
+    "Ist das ihr Handy?"
+    "Soll ich ihr das Handy bringen?"
+    "Soll ich einfach hier sitzen bleiben?"
+    "Das mache ich."
+    "Ich warte erstmal."
+    "Sie wird ja sowieso gleich wieder hier sein."
+    
+    $ renpy.pause(1.0)
+    "Langsam halte ich das nicht mehr aus."
+    "Dann gehe ich halt in die Küche."
     
     scene bg anja_kueche
     with fade
     
     show anja smiling
     with dissolve
-    #Bild existiert noch nicht
     
+    bw "Oh."
+    bw "Dann muss ich dir die Milch ja gar nicht bringen."
     bw "Hier."
-    bw "Genieße deine Milch."
-    "Sie schenkt mir neue Milch ein."
-    "Ich nehme das Glas wieder in meine Hand und trinke einfach."
-    "Normalerweise trinke ich nichts auf ex."
-    "Doch ich trinke einfach weiter."
-    "Ich kann nicht mehr aufhören."
+    "Ich nehme das Glas in meine rechte Hand."
+    bw "Gibt es einen Grund, warum du doch in die Küche gekommen bist?"
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        b "Nicht wirklich."
+    if persistent.wieherbuhSprache is 1:
+        "Betsu ni."
+    if persistent.wieherbuhSprache is 2:
+        "{=jp}別に。{/=jp}"
+    #-----------------------------------------------
+    "Ich nehme einen Schluck von der Milch."
     "Dieses Gefühl."
     "Es fühlt sich so gut an."
     "So erfrischend."
-    "Ich liebe dieses Gefühl."
-    "Ich liebe Milch."
-    "Ich liebe das Leben."
-    "Ich vergesse alles um mich herum."
-    "Mir ist gerade alles egal."
-    #------------------------------------------------
+    "Ich liebe kalte Milch."
     
     play sound "sounds/telefon.wav"
     
     "Plötzlich geht das Telefon."    
-    "Ich werde aus meinen Träumen gerissen."
-    "%(wBerndName)s läuft zum Telefon und schaut auf das Display."
-    
+    "%(wBerndName)s läuft zum Telefon."
+    b "Warte, %(wBerndName)s."
+    bw "Was ist denn?"
+    b "Dein..."
+    bw "Mein was?"
+        
     play sound "sounds/telefon.wav"
     
+    b "Dein Handy ging gerade."
+    bw "Oh."
+    bw "Danke, %(berndName)s."
+    "Nun schaut %(wBerndName)s auf das Display des Telefons."
     bw "Oh, es ist nur meine Mutter."
     "Dann nimmt sie den Hörer ab."
     bw "Ja, Mama?"
+    "Moment."
+    "Hat sie mir gerade gedankt?"
+    "Ein Mädchen?"
+    "Mir?"
+    bw "...enk für Papa."
+    
+    $ renpy.pause(0.5)
+    
     bw "Milch?"
     bw "Nein, wir haben keine mehr."
     bw "Ich trank sie vorhin aus."
     "Ich trank ihnen die Milch weg."
     bw "OK."
     bw "Sonst noch etwas?"
+    
+    $ renpy.pause(0.5)
+    
     bw "OK."
     bw "Bis nachher."
     "Sie legt den Hörer wieder auf."
@@ -1999,14 +2060,15 @@ label anja_besprechung:
     bw "Ich muss jetzt einkaufen gehen."
     bw "Lass uns morgen nochmal reden."
     "Ich könnte ihr ja anbieten, dass ich ihr hel-"
-    "OH WARTE"
+    "OH WARTE!"
     "Wieso bin ich eigentlich so gut drauf?"
     b "OK."
     bw "Ich komm dann morgen zu dir."
     "Wieso zu mir?"
     b "OK."
     "Und wieso stimme ich einfach so zu?"
-    bw "Ich werde mir bis morgen auch was für den Test einfallen."
+    "Verdammt, kaum bedankt sich ein Mädchen bei mir, schon bin ich so glücklich, dass ich nicht mehr klar denken kann."
+    bw "Ich werde mir bis morgen auch was für den Test einfallen lassen."
     "Wir gehen in den Flur."
     
     scene bg anjas_wohnung
@@ -2073,7 +2135,7 @@ label bernd_kapzwei_grillen:
     $ sisNameKurz = stringShorten(sisName,3)
     "%(sisNameKurz)s..."
     $ sisNameEnde = stringEnde(sisName,2)
-    "...%(sisName)s..."
+    "...%(sisNameEnde)s..."
     sis "Da."
     sis "Er kommt zu sich."
     
@@ -2111,7 +2173,7 @@ label bernd_kapzwei_grillen:
     with dissolve
     
     ma "Ist schon gut..."
-    "Ich heb meine linke Hand leicht."
+    "Ich heb' meine linke Hand leicht."
     b "Komm her."
     b "%(sisName)s."
     
@@ -2143,7 +2205,7 @@ label bernd_kapzwei_grillen:
        
     show laura crying
     with dissolve
-            
+   
     if sisLove >= 60:
         
         "Ich richte mich einigermaßen auf, sodass ich nun auf dem Bett sitze."
