@@ -923,9 +923,8 @@ label anja_anfang:
     "Verdammt."
     "Was mache ich denn jetzt?"
     
-    show yasmin surprise at left
+    show yasmin surprised at left
     with dissolve
-    #Bild existiert noch nicht
 
     "Wer ist DAS denn?"
     "Und warum starrt sie mich so an?"
@@ -942,8 +941,7 @@ label anja_anfang:
 
     show yasmin neutral at left
     with dissolve
-    #Bild existiert noch nicht
-
+    
     u"Mädchen" "Wer ist das, %(wBerndName)s?"
     bw "Das ist nur %(berndName)s."
     "Was soll hier \"nur\" heißen?"
@@ -958,7 +956,6 @@ label anja_anfang:
 
     show yasmin embarassed at left
     with dissolve
-    #Bild existiert noch nicht
 
     u"Mädchen" "Oh, hi."
     b "..."
@@ -977,9 +974,8 @@ label anja_anfang:
     scene bg treppenhaus
     with fade
     
-    show yasmin from_behind
+    show yasmin back
     with dissolve
-    #Bild existiert noch nicht
 
     "Ich sehe nur noch, wie das Mädchen die Treppen runtergeht."
     
@@ -1677,7 +1673,6 @@ label anja_weiter:
     
     show anja doppelpunkt_drei
     with dissolve
-    #Bild existiert noch nicht
     
     bw "Ach, %(berndName)s."
     bw "Was soll ich nur mit dir machen?"
