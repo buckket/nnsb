@@ -6,6 +6,9 @@ init:
     #  yasmin weinend mit mantel
     pass
 
+label yasmin_polizei:
+    "lol bullenschweine"
+
 
 label yasmin_anfang:
     "Stalkerbernd" "Stalkerbernd?"
@@ -19,6 +22,10 @@ label yasmin_anfang:
     b "...du bist ein Mädchen?"
     #hier nimmt yasmin die kapuze runter und man sieht das gesicht
     #sie schaut schüchtern zur seite
+    hide yasmin stalker
+    with dissolve
+    show yasmin stalker_neutral
+    with dissolve
     "Wow."
     "Ich habe mit allem gerechnet, aber damit nicht."
     b "...aber."
@@ -79,7 +86,10 @@ label yasmin_anfang:
     b "Sprich ruhig weiter."
     yan "..."
     yan "Ich..."
-    #weinend!
+    
+    show yasmin stalker_cry
+    with dissolve
+    
     yan "...es tut mir so Leid!"
     yan "*schluchz*"
     "Warum weint sie denn jetzt!?"
@@ -96,7 +106,10 @@ label yasmin_anfang:
     b "Beruhig dich doch erst mal!"
     b "Ich werde schon nicht die Polizei rufen oder so."
     b "Allerdings musst du mir schon erklären, was es mit dieser ganzen Sache auf sich hat."
-    #yasmin mit tränen in den augen
+    
+    show yasmin stalker_cry
+    with dissolve
+    
     yan "..."
     b "Nun?"
     yan "..."
@@ -112,6 +125,10 @@ label yasmin_anfang:
     "Irgendwie muss ich sie zum Reden bringen..."
     "...aber wie?"
     b "Fangen wir noch mal ganz von vorne an."
+    
+    show yasmin stalker_neutral
+    with dissolve
+    
     yan "..."
     "Zuerst frage ich sie, warum sie mich verf-... nein."
     "Das ist zu direkt."
@@ -188,7 +205,7 @@ label yasmin_befragung_eins:
             "Genau da, wo sie gesagt hat."
             "Ich fülle zwei Gläser und begebe mich so schnell es geht wieder nach unten."
             scene bg keller_aus
-            show yasmin stalker
+            show yasmin stalker_neutral
             with fade
             "Sie sitzt noch genau so da, wie ich sie verlassen habe."
             "Anscheinend hat sie wirklich nicht vor abzuhauen."
@@ -233,17 +250,28 @@ label yasmin_befragung_zwei:
             "...aber ans Weglaufen scheint sie ja auch gar nicht zu denken."
             b "Warum bist du nicht weggelaufen."
             b "Ich habe dir genug Zeit gegeben, oder?"
-            #schockierter Blick
+            
+            show yasmin stalker_surprised
+            with dissolve
+            
             yan "..."
             b "Was willst du denn von mir?"
             b "Wenn du nicht sprichst, kann ich dir nicht helfen."
-            yan "..."
+            
+            show yasmin stalker_embarrased
+            with dissolve
+            
+            yan "..."  
             "Sie will jedenfalls nicht weglaufen."
             "Irgendetwas muss es noch geben, was sie davon abhält."
             jump yasmin_befragung_drei
             
         "Wie schmeckt der Traubensaft?" if y_bef_22 == 0:
             b "Wie schmeckt der Traubensaft?"
+            
+            show yasmin stalker_neutral
+            with dissolve
+            
             yan "...gut."
             b "..."
             yan "..."
@@ -267,6 +295,10 @@ label yasmin_befragung_drei:
         "Warum antwortest du mir nicht?":
              b "Warum antwortest du mir nicht?"
              b "Es muss doch einen Grund geben, sonst wären wir jetzt nicht hier."
+             
+             show yasmin stalker_embarrased
+             with dissolve
+             
              yan "..."
              b "Kannst du es mir nicht sagen, oder willst du es mir nicht sagen?"
              yan "..."
@@ -291,7 +323,10 @@ label yasmin_befragung_drei:
              yan "..."
     
     b "{b}Verdammt!{/b}"
-    #yasmin schockiert
+    
+    show yasmin stalker_surprised
+    with dissolve
+    
     b "Was willst du nur von mir!?"
     "Ich springe auf und drücke sie gegen die Wand."
     b "ANTWORTE!"
@@ -324,11 +359,16 @@ label yasmin_befragung_drei:
     b "Mit niemandem!"
     "Ich packe %(yanName)s an den Armen und werfe sie aufs Bett."
     b "Los, unter die Decke!"
-    #yasmin blush
+    
+    show yasmin stalker_embarrased
+    with dissolve
+    
     yan "...!"
     b "Los!"
     sis "Ich komme jetzt rein, %(berndName)s!"
-    #yasmin hide
+    
+    hide yasmin stalker_embarrased
+    with dissolve
     
     show laura neutral
     with dissolve
