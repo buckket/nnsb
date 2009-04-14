@@ -43,7 +43,15 @@ init python:
                 theFileName = dirName[7:len(dirName)] + "/" + file[0:len(file)-4] #"images/" und die letzten vier zeichen abschneiden
                 imageName = tuple(theFileName.split("/"))#von "a/b/c" nach ('a','b','c')
                 renpy.image(imageName,thePath + file) #und ein bild draus machen
-            
+    
+    #Diese funktion lädt ALLE Bilder
+    def loadImagesFromAllDirs():  
+        imagesPath = config.basedir + "/game/images/"
+        filesInImages = os.listdir(imagesPath)
+        
+        for filePath in filesInImages:
+            if os.path.isdir(imagesPath + filePath):
+                loadImagesFromDir("images/" + filePath)
             
     config.preferences['prefs_left'].append(
         _Preference(
@@ -64,47 +72,28 @@ init:
     #styles
     #style.say_window.background = "#f00"
     
+    $ loadImagesFromAllDirs()
+    
     # hintergründe
     #global
     image black = Solid((0,0,0,255))
     image white = Solid((255,255,255,255))
-    #image owari = "images/owari.png"
-    #image ende = "images/ende.png"
-    
-    $ loadImagesFromDir("images")
     
     $ fastFade = Fade(.2, 0, .2, color="#000")
     $ flash = Fade(.1, 0, .3, color="#fff")
     $ slowFlash = Fade(.1, 0, .5, color="#fff")
     $ damnSlowFlash = Fade(.2, 0, 1, color="#fff")
     $ slowFade = Fade(.8, 1, 0, color ="#000")
-    $ cloudtrans = ImageDissolve("images/bg/cloud_trans.png", 1.0, 12, reverse=True)
-    $ cloudtransSlow = ImageDissolve("images/bg/cloud_trans.png", 2.0, 12)
-    $ noisetrans = ImageDissolve("images/bg/noise_trans.png", 1.0, 8, reverse=True)
-    $ wooshTrans = ImageDissolve("images/bg/woosh_trans.png", 0.5, 8)
-    $ wooshTransReverse = ImageDissolve("images/bg/woosh_trans.png", 0.5, 8, reverse=True)
-    $ gradientTrans = ImageDissolve("images/bg/grad_trans.png", 0.5, 8)
-    $ gradientTransReverse = ImageDissolve("images/bg/grad_trans.png", 0.5, 8, reverse=True)
-    $ spotTrans = ImageDissolve("images/bg/spots_trans.png", 1.0, 8)
+    $ cloudtrans = ImageDissolve("images/splash/cloud_trans.png", 1.0, 12, reverse=True)
+    $ cloudtransSlow = ImageDissolve("images/splash/cloud_trans.png", 2.0, 12)
+    $ noisetrans = ImageDissolve("images/splash/noise_trans.png", 1.0, 8, reverse=True)
+    $ wooshTrans = ImageDissolve("images/splash/woosh_trans.png", 0.5, 8)
+    $ wooshTransReverse = ImageDissolve("images/splash/woosh_trans.png", 0.5, 8, reverse=True)
+    $ gradientTrans = ImageDissolve("images/splash/grad_trans.png", 0.5, 8)
+    $ gradientTransReverse = ImageDissolve("images/splash/grad_trans.png", 0.5, 8, reverse=True)
+    $ spotTrans = ImageDissolve("images/splash/spots_trans.png", 1.0, 8)
     $ fastMove = MoveTransition(0.2)
     $ slowDissolve = Dissolve(1.0)
-    
-
-    $ loadImagesFromDir("images/bg")
-    
-    
-        
-    #charakter bilder
-    
-    $ loadImagesFromDir("images/anja")
-    
-    $ loadImagesFromDir("images/laura")
-
-    $ loadImagesFromDir("images/yasmin")
-    
-    $ loadImagesFromDir("images/tsundere")
-    
-    $ loadImagesFromDir("images/char")
 
     # charaktere
     $ b = DynamicCharacter("berndName", color="#dddddd")
