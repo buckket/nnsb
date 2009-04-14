@@ -38,7 +38,7 @@ label eins:
     
     stop music fadeout 1.0
 
-    scene splash eins_open
+    scene splash splash_eins
     with gradientTrans
 
     $ renpy.pause(5.0)
@@ -1857,7 +1857,7 @@ label eins_sisAbholen:
     
     play music "music/donerladen.ogg"
     
-    show char salih
+    show salih neutral
     with dissolve
     
     "Salih" "Hallo."
@@ -1879,7 +1879,7 @@ label eins_sisAbholen:
     "Salih" "döner dauerd noch minude ja?"
     b "Ja, ist ok."
 
-    hide char salih
+    hide salih neutral
     with dissolve
 
     "Wieso können die nicht mal jemanden einstellen, der ordentlich Deutsch redet?"
@@ -2002,14 +2002,14 @@ label eins_sisAbholen:
     scene bg eiswagen
     with fade
     
-    show char salih
+    show salih neutral
     with dissolve
     
     "Salih" "Guten Tag."
     "Salih" "Was darfs denn sein?"
     "Den kenn ich doch..."
     
-    show char salih at right
+    show salih neutral at right
     with move
     
     show laura neutral at left
@@ -2027,7 +2027,7 @@ label eins_sisAbholen:
     "Salih" "Dankeschön."
     "Salih" "Schönen Tag noch."
     
-    hide char salih
+    hide salih neutral
     with dissolve
     
     show laura happy at center
@@ -2222,7 +2222,7 @@ label eins_sisAbholenZuerst:
     
     play music "music/donerladen.ogg"
     
-    show char salih
+    show salih neutral
     with dissolve
     
     "Salih" "Hallo."
@@ -2243,8 +2243,10 @@ label eins_sisAbholenZuerst:
     "Ich gebe ihm das Geld."
     "Salih" "döner dauerd noch minude ja?"
     b "Ja, ist ok."
-    hide char salih
+    
+    hide salih neutral
     with dissolve
+    
     "Wieso können die nicht mal jemanden einstellen, der ordentlich Deutsch redet?"
     "Hier dauert die Bestellung länger als die eigentliche Zubereitung."
     "Macht nichts, ich bin noch gut in der Zeit."
@@ -2365,14 +2367,14 @@ label eins_sisAbholenZuerst:
     scene bg eiswagen
     with fade
     
-    show char salih
+    show salih neutral
     with dissolve
     
     "Salih" "Guten Tag."
     "Salih" "Was darfs denn sein?"
     "Den kenn ich doch..."
     
-    show char salih at right
+    show salih neutral at right
     with move
     
     show laura neutral at left
@@ -2390,7 +2392,7 @@ label eins_sisAbholenZuerst:
     "Salih" "Dankeschön."
     "Salih" "Schönen Tag noch."
     
-    hide char salih
+    hide salih neutral
     with dissolve
     
     show laura happy at center

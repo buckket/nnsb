@@ -919,7 +919,7 @@ label anja_anfang:
     "Verdammt."
     "Was mache ich denn jetzt?"
     
-    show yasmin surprised at left
+    show yasmin surprised
     with dissolve
 
     "Wer ist DAS denn?"
@@ -928,6 +928,9 @@ label anja_anfang:
     "Sie soll mich nicht anschauen."
     "Ich mag das nicht."
     "Irgendwie..."
+
+    show yasmin surprised at left
+    with move
 
     show anja neutral at right
     with dissolve
@@ -1102,7 +1105,7 @@ label traum:
     scene bg traumkueche
     with fade
     
-    show char lynette_essen
+    show lynette essen
     with dissolve
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
@@ -1225,16 +1228,11 @@ label traum:
     "Diese Stimme..."
     "Das ist..."
     
-    hide char lynette_essen
+    show lynette essen at right
+    with move
     
-    show char lynette_essen at right
-    #Wie verschiebte ich eine Person zur Seite?
-    
-    show erika_normal at left
+    show erika normal at left
     with dissolve
-    #Getestet, das geht so nicht. owari und Ende gehen btw auch nicht.
-    #BILD BILD BILD
-    #PROBLEM PROBLEM PROBLEM
     
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
@@ -1355,7 +1353,7 @@ label traum:
     "Erika" "Ich will mehr über dich wissen."
     "Erika" "Denn ich..."
     "Erika" "Ich..."
-    "Sie neigt ihren kurz nach rechts unten."
+    "Sie neigt ihren Kopf kurz nach rechts unten."
     "Dann hebt sie ihn wieder und schaut mir wieder tief in die Augen."
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:

@@ -3,7 +3,7 @@
     
 label prolog:
 
-    scene bg splash_prolog
+    scene splash splash_prolog
     with gradientTrans
 
     $ renpy.pause(5.0)
