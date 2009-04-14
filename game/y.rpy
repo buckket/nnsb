@@ -21,13 +21,7 @@ label yasmin_anfang:
     "Seine Stimme klingt wie..."
     b "...du bist ein Mädchen?"
     
-    show yasmin shy
-    with dissolve
-        
-    hide yasmin stalker
-    with dissolve
-    
-    show yasmin stalker_neutral
+    show yasmin stalker_shy
     with dissolve
     
     "Wow."
@@ -35,6 +29,10 @@ label yasmin_anfang:
     b "...aber."
     b "Ich dachte doch..."
     b "Du..."
+    
+    show yasmin stalker_neutral
+    with dissolve
+    
     u"Mädchen" "Was?"
     u"Mädchen" "Was hast du gedacht?"
     u"Mädchen" "Und was wirst du nun mit mir machen?"
@@ -48,8 +46,8 @@ label yasmin_anfang:
     "Ich kann ihr irgendwie nicht folgen..."
     b "Du bist kein Bernd?"
     
-    show yasmin confused
-    with dissolve
+    #show yasmin confused
+    #with dissolve
     #Bild existiert noch nicht
     
     u"Mädchen" "Bernd?"
@@ -62,10 +60,10 @@ label yasmin_anfang:
     "Ist sie wirklich kein Bernd?"
     "Andererseits kann sie mir hier auch nur einen vorspielen."
     "Aber warum sollte mich sonst jemand stalken?"
-    b "Mach dich nicht über mich lustig!" #AE hier stand vorher "verarschen"
+    b "Mach dich nicht über mich lustig!"
     b "Warum solltest du mich sonst stalken?!"
     
-    show yasmin shy
+    show yasmin stalker_shy
     with dissolve
     
     u"Mädchen" "..."
@@ -104,9 +102,17 @@ label yasmin_anfang:
     b "..."
     "Was soll ich denn nun mit ihr machen?"
     "Die Polizei rufen?"
+    
+    show yasmin stalker_neutral
+    with dissolve
+    
     yan "%(berndName)s... ich..."
     "Woher kennt sie meinen Namen überhaupt?"
     b "Woher kennst du meinen Namen?"
+    
+    show yasmin stalker_shy
+    with dissolve
+    
     yan "..."
     "Jetzt schweigt sie wieder."
     "Ich sollte nicht dazwischen reden, wenn ich etwas von ihr erfahren will."
@@ -114,14 +120,14 @@ label yasmin_anfang:
     yan "..."
     yan "Ich..."
     
-    show yasmin stalker_cry
+    show yasmin stalker_cry #braucht noch besseres bild für wenn sie RICHTIG heult
     with dissolve
     
     yan "...es tut mir so Leid!"
     yan "*schluchz*"
     "Warum weint sie denn jetzt!?"
     "Ist das nur Show?"
-    "Nimmt sie mich gerade auf den Arm?" #AE hier stand vorher "verarscht"
+    "Will sie mich auf den Arm nehmen?"
     "Nur um dann einen überraschenden Fluchtversuch zu starten?"
     "Oder ist es echt?"
     
@@ -236,8 +242,9 @@ label yasmin_befragung_eins:
             yan "Im Kühlschrank."
             yan "Dritte Flasche von hinten."
             b "..."
+            "Woher will sie das wissen?!"
+            "Sie wird doch nicht die Wohnung durchsucht haben?"
             "Ich sag lieber nichts."
-            #AE der wzf-Effekt muss besser rüberkommen
             b "Bin gleich wieder da."
             
             scene bg kueche
@@ -246,14 +253,15 @@ label yasmin_befragung_eins:
             "Tatsächlich."
             "Wir haben Traubensaft."
             "Genau da, wo sie gesagt hat."
-            #AE spätestens hier muss Bernd richtig wzf? sein
-            "Ich fülle zwei Gläser und begebe mich so schnell es geht wieder nach unten."
+            "Das ist nicht normal!"
+            "Die ist ja völlig krank."
+            "Ich sollte mich lieber beeilen."
+            "Hastig fülle ich zwei Gläser und begebe mich so schnell es geht wieder nach unten."
             
             scene bg keller_aus
-            with fade
             
             show yasmin stalker_neutral
-            with dissolve
+            with fade
             
             "Sie sitzt noch genau so da, wie ich sie verlassen habe."
             "Anscheinend hat sie wirklich nicht vor abzuhauen."
@@ -372,14 +380,14 @@ label yasmin_befragung_drei:
              b "Ich warne dich zum letzen Mal!"
              yan "..."
     
-    b "{b}Verdammt!{/b}" #AE -Bold +Erhöhung der Schriftgröße
+    b "{size=32}Verdammt!{/size}"
     
     show yasmin stalker_surprised
     with dissolve
     
     b "Was willst du nur von mir!?"
     "Ich springe auf und drücke sie gegen die Wand."
-    b "ANTWORTE!"
+    b "{size=32}ANTWORTE!{/size}"
     yan "..."
     
     "Stimme" "%(berndName)s?"
@@ -402,7 +410,7 @@ label yasmin_befragung_drei:
     sis "%(berndName)s? Wieso soll ich nicht reinkommen?"
     "Sie ist schon direkt vor der Tür."
     b "Warte nur kurz, ja?"
-    "%(yanName)s steht immer noch wie angewurzelt da." #Vor ein paar Minuten saß sie doch noch, als Bernd ihr Traubensaft brachte
+    "%(yanName)s sitzt immer noch da und rührt sich nicht."
     b "Los!"
     b "Irgendwo!"
     sis "Mit wem sprichst du?"
@@ -445,17 +453,23 @@ label yasmin_befragung_drei:
     b "Das war online!"
     "Perfekte Ausrede ist perfekt!"
     sis "Achso!"
+    
     show laura happy
     with dissolve
+    
     sis "Da habe ich nicht dran gedacht!"
     sis "Dann ist ja alles ok."
     b "Sag ich doch."
+    
     show laura neutral
     with dissolve
+    
     sis "Gute Nacht, %(berndName)s!"
     b "Gute Nacht."
+    
     hide laura neutral
     with dissolve
+    
     "Sie geht schon so früh schlafen?"
     "Das wusste ich gar nicht."
     "...aber in ihrem Alter musste ich wahrscheinlich auch so früh ins Bett."
@@ -463,7 +477,7 @@ label yasmin_befragung_drei:
     "Ah!"
     "Ich drehe mich zum Bett und schlage die Decke zurück."
     
-    show yasmin happy
+    show yasmin stalker_happy
     with dissolve
     
     "Nanu?"
