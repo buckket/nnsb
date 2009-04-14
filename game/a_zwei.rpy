@@ -634,10 +634,6 @@ label anja_anfang:
     
     "Ich schmeiße das Taschentuch in die Toilette."
     
-    play sound "sounds/toilet.wav"
-    
-    $ renpy.pause(7,5)
-    
     "Ich gehe wieder zurück zu Laura."
     
     scene bg lauraszimmer
