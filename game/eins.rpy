@@ -3430,6 +3430,8 @@ label eins_sisAbholenZuerst:
     b "Krautchan ist..."
     b "...offline."
     
+    stop music fadeout 0.4
+    
     jump eins_ende
     
 label eins_ende:
