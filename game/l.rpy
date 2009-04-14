@@ -26,15 +26,15 @@ label zwei_laura: #Beginn der "echten" Laura-Story, einzige Linie, die zu Lauras
     #UND LOS!
     "Immer noch starre ich ungläubig auf den Monitor."
     "...Krautchan ist wirklich offline?"
-    "Immer und immer wieder drücke ich auf den Refresh-Button, aber das Ergebniss bleibt gleich."
+    "Immer und immer wieder drücke ich auf den Refresh-Button, aber das Ergebniss bleibt gleich." #AE -> Ergebniss -> ss -> Ergebnis
     "404."
-    "Frustriert werfe ich mich aufs Bett."
+    "Frustriert werfe ich mich aufs Bett." #AE -> auf's Bett
     "Krautchan ist erst seit ein paar Minuten offline, und mir ist jetzt schon langweilig."
-    "...ob diese %(berndWName)s Recht hatte mit ihren Verschwörungstheorien?"
+    "...ob diese %(berndWName)s Recht hatte mit ihren Verschwörungstheorien?" #AE -> %(berndWName)s -> heißt das nicht %(wBerndName)s?
     "...oder trollen die Admins wieder nur?"
     "Das wird es sein."
     "Wenn ich morgen früh aufwache, ist alles wieder so wie früher."
-    "Mit diesem Gedanken, schlafe ich ein."
+    "Mit diesem Gedanken, schlafe ich ein." #AE -> Komma muss weg
     
     scene black
     with fade
@@ -48,4 +48,4 @@ label zwei_laura: #Beginn der "echten" Laura-Story, einzige Linie, die zu Lauras
     "Leute wie ich..."
     "...wir brauchen Krautchan einfach!"
     "Was soll ich denn jetzt den ganzen Tag machen?"
-    "Mir bleibt wohl nichts übrig, als abzuwarten."
+    "Mir bleibt wohl nichts übrig, als abzuwarten." #AE -> Komma muss weg

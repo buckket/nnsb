@@ -16,9 +16,9 @@ label yasmin_anfang:
     "Es hat gesprochen."
     "Stalkerbernd" "Wer soll das sein?"
     "Diese Stimme...?"
-    "Ich lasse seine Arme los, und setze mich aufs Bett."
+    "Ich lasse seine Arme los, und setze mich aufs Bett." #AE -> auf's Bett
     "Ich bin verwirrt."
-    "Seine Stimmte klingt wie..."
+    "Seine Stimmte klingt wie..." #AE -> Stimmte -> t -> Stimme
     b "...du bist ein Mädchen?"
     #hier nimmt yasmin die kapuze runter und man sieht das gesicht
     #sie schaut schüchtern zur seite
@@ -32,6 +32,8 @@ label yasmin_anfang:
     b "Ich dachte doch..."
     b "Du..."
     u"Mädchen" "Was?"
+    #AE u"Mädchen" "Was hast du gedacht?"
+    #AE u"Mädchen" "Und was wirst du nun mit mir machen?"
     u"Mädchen" "Wirst du jetzt die Polizei rufen?"
     u"Mädchen" "Ich bin ein Stalker, du hast ja Recht."
     u"Mädchen" "Also."
@@ -39,10 +41,16 @@ label yasmin_anfang:
     "Ich kann ihr irgendwie nicht folgen..."
     b "Du bist kein Bernd?"
     u"Mädchen" "Bernd?" #hier bitte verwirrt gucken, fragezeichenmädchen-style
+    #AE if berndName == "Bernd":
+        #AE u"Mädchen" "Ich dachte, du wärst %(berndName)s."
+        #AE b "Ja, der bin ich auch."
+        #AE u"Mädchen" "Und wie kommst du dann drauf, dass ich Bernd sei?"
+        #AE b "Ach, schon gut."
     "Habe ich mich geirrt?"
     "Ist sie wirklich kein Bernd?"
+    #AE "Andererseits kann sie mir hier auch nur einen vorspielen."
     "Aber warum sollte mich sonst jemand stalken?"
-    b "Verarsch mich nicht!"
+    b "Verarsch mich nicht!" #AE b "Verschaukel mich nicht!"
     b "Warum solltest du mich sonst stalken?!"
     #wieder schüchtern
     u"Mädchen" "..."
@@ -93,8 +101,8 @@ label yasmin_anfang:
     yan "...es tut mir so Leid!"
     yan "*schluchz*"
     "Warum weint sie denn jetzt!?"
-    "Ist das nur show?"
-    "Verarscht sie mich, um einen überraschenden Fluchtversuch zu starten?"
+    "Ist das nur show?" #AE show -> Show
+    "Verarscht sie mich, um einen überraschenden Fluchtversuch zu starten?" #AE ""Nimmt sie mich auf den Arm, um einen ..."
     "...oder ist es echt?"
     menu:
         "Ich rufe jetzt die Polizei!":
@@ -104,7 +112,7 @@ label yasmin_anfang:
             "Ich muss mehr über sie herausfinden."
     yan "*schluchz*"
     b "Beruhig dich doch erst mal!"
-    b "Ich werde schon nicht die Polizei rufen oder so."
+    b "Ich werde schon nicht die Polizei rufen oder so." #AE "oder so" streichen
     b "Allerdings musst du mir schon erklären, was es mit dieser ganzen Sache auf sich hat."
     
     show yasmin stalker_cry
@@ -133,6 +141,11 @@ label yasmin_anfang:
     "Zuerst frage ich sie, warum sie mich verf-... nein."
     "Das ist zu direkt."
     "Ich muss das langsamer angehen."
+    #AE "Aber wie?"
+    #AE "Was weiß ich denn bisher über sie?"
+    #AE "Hmm..."
+    #AE "Ich kenne nur ihren Namen."
+    #AE "Fangen wir damit an."
     b "Dein Name ist also %(yanName)s?"
     "Sie nickt."
     "Das ist doch schon mal ein Anfang."
@@ -152,7 +165,7 @@ label yasmin_befragung_eins:
         except NameError:
             y_bef_12 = 0
     menu:
-        "Wie soll ich jetzt weiter Fragen?"
+        "Wie soll ich jetzt weiter Fragen?" #AE weiter Fragen -> weiterfragen
         
         "Was willst du hier?" if y_bef_11 == 0:
             $ y_bef_11 = 1
@@ -169,7 +182,7 @@ label yasmin_befragung_eins:
             "Keine Antwort..."
             jump yasmin_befragung_eins
         "Willst du vielleicht erst mal was trinken?": #wird immer angezeigt
-            b "Willst du vielleicht was trinken?"
+            b "Willst du vielleicht was trinken?" #AE Wo bleibt hier das "erst mal"?
             "Sie nickt."
             "...aber kann ich sie hier einfach alleine lassen?"
             "Eigentlich nicht..."
@@ -188,21 +201,21 @@ label yasmin_befragung_eins:
             b "Was möchtest du denn trinken?"
             yan "..."
             "Sie sagt wieder nichts."
-            b "Na gut dann bringe ich d-"
+            b "Na gut dann bringe ich d-" #AE b "Na gut, dann bringe ich di-"
             yan "Traubensaft."
-            "Traubensaft."
+            "Traubensaft." #AE "Traubensaft?", ein verwirrter Bernd käme besser
             b "Ich weiß nicht, ob wir welchen hier haben."
             yan "..."
             yan "Im Kühlschrank."
             yan "Dritte Flasche von hinten."
             b "..."
-            "Ich sag lieber nichts."
+            "Ich sag lieber nichts." #AE der wzf-Effekt muss besser rüberkommen
             b "Bin gleich wieder da."
             scene bg kueche
             with fade
             "Tatsächlich."
             "Wir haben Traubensaft."
-            "Genau da, wo sie gesagt hat."
+            "Genau da, wo sie gesagt hat." #AE spätestens hier muss Bernd richtig wzf? sein
             "Ich fülle zwei Gläser und begebe mich so schnell es geht wieder nach unten."
             scene bg keller_aus
             show yasmin stalker_neutral
@@ -308,7 +321,7 @@ label yasmin_befragung_drei:
              yan "..."
              b "Willst du gehen?"
              "Inzwischen ist es mir egal."
-             b "Ich gehe auf."
+             b "Ich gehe auf." #AE b "Ich gebe auf."
              b "Geh."
              yan "..."
              "Sie geht nicht."
@@ -322,7 +335,7 @@ label yasmin_befragung_drei:
              b "Ich warne dich zum letzen Mal!"
              yan "..."
     
-    b "{b}Verdammt!{/b}"
+    b "{b}Verdammt!{/b}" #AE -Bold +Erhöhung der Schriftgröße
     
     show yasmin stalker_surprised
     with dissolve
@@ -333,15 +346,15 @@ label yasmin_befragung_drei:
     yan "..."
     
     "Stimme" "%(berndName)s?"
-    "Das ist Laura!"
+    "Das ist Laura!" #AE Laura -> %(sisName)s
     "Verdammt, was mache ich jetzt?"
-    "Ich hätte nicht so schreien sollen."
+    "Ich hätte nicht so schreien sollen." #AE "Ich hätte nicht so laut sein sollen."
     sis "Alles ok da unten?"
     "Scheiße!"
     b "J- Ja!"
     b "Alles ok!"
     b "Nicht reinkommen!"
-    "Ich muss dieses verrückte Mädchen loswerden!"
+    "Ich muss dieses verrückte Mädchen loswerden!" #AE "verrückt" klingt hier so merkwürdig. Evtl. einfach weglassen oder durch "verdammte" ersetzen
     b "Versteck dich!"
     yan "..."
     "Warum macht sie denn nichts!?"
@@ -352,12 +365,12 @@ label yasmin_befragung_drei:
     sis "%(berndName)s? Wieso soll ich nicht reinkommen?"
     "Sie ist schon direkt vor der Tür."
     b "Warte nur kurz, ja?"
-    "%(yanName)s steht immer noch wie angewurzelt da."
+    "%(yanName)s steht immer noch wie angewurzelt da." #Vor ein paar Minuten saß sie doch noch, als Bernd ihr Traubensaft brachte
     b "Los!"
     b "Irgendwo!"
     sis "Mit wem sprichst du?"
     b "Mit niemandem!"
-    "Ich packe %(yanName)s an den Armen und werfe sie aufs Bett."
+    "Ich packe %(yanName)s an den Armen und werfe sie aufs Bett." #AE -> auf's Bett
     b "Los, unter die Decke!"
     
     show yasmin stalker_embarrased
