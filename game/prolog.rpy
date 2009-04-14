@@ -17,7 +17,7 @@ label prolog:
     scene bg zuhause_draussen
     with fade
 
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
 
     "Eine Stimme weckte mich aus meinem unruhigen Schlaf."
 
@@ -41,7 +41,7 @@ label prolog:
 
     "Als wir durch die Tür kommen, läuft meine kleine Schwester bereits aufgeregt im Flur umher."
 
-    play music "music/schwester.ogg"
+    play music "music/laura_theme.ogg"
 
     show laura happy
     with dissolve
@@ -83,7 +83,7 @@ label prolog:
     ma "Los! Wir bringen deinen Computer nach unten."
 
     #hier keller einblenden
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     scene bg keller_aus
     with fade
@@ -103,7 +103,7 @@ label prolog:
     scene bg wohnung_innen
     with fade
     
-    play music "music/2.mp3"
+    play music "music/bernd_wohnung.mp3"
     
     #mutter einblenden
     ma "%(berndName)s! Wie siehst du denn aus?!"
@@ -167,7 +167,7 @@ label prolog_duschen:
     
     b "Scheiße! Raus mit dir! Was fällt dir ein hier einfach reinzuplatzen?!"
     
-    play music "music/schwester.ogg"
+    play music "music/laura_theme.ogg"
     
     show laura happy
     with dissolve
@@ -194,7 +194,7 @@ label prolog_duschen:
     scene bg wohnung_innen
     with fade
     
-    play music "music/2.mp3"
+    play music "music/bernd_wohnung.mp3"
     
     b "Muss ich wirklich mit?"
     
@@ -359,7 +359,7 @@ label prolog_nimmGeldDoch:
     
 label prolog_Einkaufen:
 
-   play music "music/1.ogg"
+   play music "music/bernd_theme.ogg"
    scene bg zuhause_draussen
    with fade
    
@@ -383,7 +383,7 @@ label prolog_EinkaufenLinks:
     scene bg aldi
     with fade
     "Tatsächlich finde ich nach etwa zehn Minuten einen Aldi."
-    play music "music/3.mp3"
+    play music "music/shop.mp3"
     scene bg supermarkt_innen
     with fade
     if (prolog_GeldGenommen):
@@ -418,7 +418,7 @@ label prolog_EinkaufenWLAN:
     b "Äh... alles in Ordnung?"
     show anja surprised_n
     with dissolve
-    play music "music/bernd_anja_theme.mp3"
+    play music "music/anja_theme.mp3"
     u"Mädchen" "Äh... ja."
     u"Mädchen" "Alles ok."
     show anja neutral_n
@@ -464,7 +464,7 @@ label prolog_EinkaufenRechts:
     scene bg lidl
     with fade
     "Tatsächlich finde ich nach etwa zehn Minuten einen Lidl."
-    play music "music/3.mp3"
+    play music "music/shop.mp3"
     scene bg supermarkt_innen
     with fade
     if (prolog_GeldGenommen):

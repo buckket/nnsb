@@ -48,7 +48,7 @@ label eins:
     
     "Einen Monat später..."
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     scene bg keller_aus
     with spotTrans
@@ -96,7 +96,7 @@ label eins:
     show laura happy
     with dissolve
     
-    play music "music/schwester.ogg"
+    play music "music/laura_theme.ogg"
     
     sis "Guten Morgen, %(berndName)s."
     
@@ -168,7 +168,7 @@ label eins:
             show laura neutral
             with dissolve
             
-            play music "music/schwester.ogg"
+            play music "music/laura_theme.ogg"
             
             sis "Soll ich dir irgendwas mitbringen?"
             
@@ -240,7 +240,7 @@ label eins:
             
     "Endlich bin ich allein und kann in Ruhe fappieren."
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     "Seit einem Monat denke ich immer an das Mädchen aus dem Supermarkt."
     
@@ -289,7 +289,7 @@ label eins:
     
     "Ein Signalton befördert mich unsanft aus meinen Gedanken."
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     "Oh, scheint als wäre ein Download fertig."
     "Ich zieh' mir meine Unterhose hoch und sehe nach."
@@ -312,19 +312,15 @@ label eins:
     #play sound "sound/dusche.wav"
 
     #muss noch gefunden werden
-    play music "music/2.mp3"
+    play music "music/bernd_wohnung.mp3"
 
 
     b "So, fertig geduscht."
 
     "Jetzt muss ich erstmal meinen Hunger bekämpfen."
 
-
-
     scene bg kueche
     with fade
-
-
 
     b "Was ess' ich denn jetzt mal..."
 
@@ -338,6 +334,7 @@ label eins:
     b "Wie viele nehm' ich denn?"
     b "ALLE!"
     #om nom nom sound
+    #Sound
     b "RÜGENWALDER!"
     b "GROB ODER FEIN, DIE MIT DER MÜHLE MUSS ES SEIN!"
 
@@ -350,7 +347,7 @@ label eins:
     scene bg keller_bluescreen
     with fade
    
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     "Als ich wieder in den Keller komme, ist der ganze Raum in ein blaues Licht getaucht."
     "Sofort schaue ich auf den Bildschirm."
@@ -427,13 +424,12 @@ label eins:
     scene bg keller
     with fade
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     if mitbringen == "kondome":
         if sisLove < 50:
             $ mitbringen = "nichts"
-    
-    
+        
     if mitbringen != "nichts":
     
         b "Endlich kann ich Strike with Cheese guck-"
@@ -601,7 +597,7 @@ label eins:
     scene bg keller
     with fade
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     "Das scheint nicht geholfen zu haben."
     "Im Gegenteil."
@@ -613,7 +609,7 @@ label eins:
     scene bg kueche
     with fade
     
-    play music "music/2.mp3"
+    play music "music/bernd_wohnung.mp3"
     
     ma "%(berndName)s!"
     ma "Was ist denn passiert?"
@@ -727,7 +723,7 @@ label eins:
     #with Dissolve(2.0)
     with noisetrans
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     b "Was..."
     b "...ist passiert?"
@@ -881,7 +877,7 @@ label eins:
     scene bg keller
     with fade
    
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
    
     "Als ich aufwache, sehe ich auf die Uhr."
     "Es ist bereits 13 Uhr."
@@ -1000,7 +996,7 @@ label eins_treffenBerndf:
     scene bg zuhause_draussen
     with fade
     
-    play music "music/2.mp3"
+    play music "music/bernd_wohnung.mp3"
     
     b "Wo lang jetzt...?"
     "Ich kenn mich hier ja überhaupt nicht aus."
@@ -1100,7 +1096,7 @@ label eins_treffenBerndf:
     
     "Mädchen" "%(berndName)s?"
     
-    play music "music/bernd_anja_theme.mp3"
+    play music "music/anja_theme.mp3"
     
     "Was...?"
     "Meint sie mich?"
@@ -1227,7 +1223,7 @@ label eins_treffenBerndf:
     scene bg keller
     with fade
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     "Zuhause angekommen lasse ich mich auf meine Matratze fallen."
     "Noch einmal lasse ich mir die Geschehnisse des heutigen Tages durch den Kopf gehen."
@@ -1247,7 +1243,7 @@ label eins_treffenBerndf:
     scene bg kueche
     with fade
     
-    play music "music/2.mp3"
+    play music "music/bernd_wohnung.mp3"
     
     "Ich öffne die Kühlschranktür."
     b "OH MEIN GOTT!"
@@ -1350,7 +1346,7 @@ label eins_treffenBerndf:
     scene bg supermarkt_innen
     with fade
     
-    play music "music/3.mp3"
+    play music "music/shop.mp3"
     
     b "Was sollen wir nochmal einkaufen?"
     
@@ -1436,7 +1432,7 @@ label eins_treffenBerndf:
     scene bg keller
     with fade
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     b "Mal schauen, ob der Faden mit meinen Daten noch auf /b/ ist..."
     scene bg keller_kc
@@ -1583,7 +1579,7 @@ label eins_treffenBerndf:
     show anja neutral
     with dissolve
     
-    play music "music/bernd_anja_theme.mp3"
+    play music "music/anja_theme.mp3"
     
     bw "Hey, %(berndName)s."
     b "H- Hi."
@@ -1736,7 +1732,7 @@ label eins_accept_fBernd:
     scene bg keller
     with fade
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     "Ich setze mich vor meinen Rechner."
     b "Informationen sammeln..."
@@ -1798,7 +1794,6 @@ label eins_refuse_fBernd:
     "Wieder zuhause..."
     
     jump eins_krautchanOff
-    
     
 label eins_sisAbholen_promise:
     $ lauraRoute = 1
@@ -2048,7 +2043,6 @@ label eins_sisAbholen:
     "Endlich wieder zuhause..."
     
     jump eins_krautchanOff
-
 
 label eins_krautchanOff:
     scene bg keller
@@ -2417,7 +2411,7 @@ label eins_sisAbholenZuerst:
     scene bg keller
     with fade
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     "Komisch..."
     "Auf dem Rückweg hatte ich nicht mehr das Gefühl beobachtet zu werden."
@@ -2460,7 +2454,7 @@ label eins_sisAbholenZuerst:
     scene bg zuhause_draussen
     with fade
     
-    play music "music/2.mp3"
+    play music "music/bernd_wohnung.mp3"
     
     if supermarkt == "":
         $ supermarkt = "Aldi"
@@ -2521,7 +2515,7 @@ label eins_sisAbholenZuerst:
     scene bg supermarkt_innen
     with fade
     
-    play music "music/3.mp3"
+    play music "music/shop.mp3"
     
     b "Was sollen wir nochmal einkaufen?"
     
@@ -2607,7 +2601,7 @@ label eins_sisAbholenZuerst:
     scene bg keller
     with fade
     
-    play music "music/1.ogg"
+    play music "music/bernd_theme.ogg"
     
     b "Mal schauen, ob der Faden mit meinen Daten noch auf /b/ ist..."
     "..."
@@ -2708,281 +2702,149 @@ label eins_sisAbholenZuerst:
     # ENDE TAG 1
     "Am nächsten Morgen..."
 
-
-
     ma "%(berndName)s?"
-
     ma "Willst du nicht langsam mal aufstehen?"
-
- 
-
     b "Wie spät ist es denn?"
-
-   
-
     ma "Schon 13 Uhr."
 
-  
-
     scene bg keller
-
     with flash
 
- 
-
     b "WAS!?"
-
     b "Ich wollte doch heute wieder %(sisName)s abholen."
-
-    "Scheiße."
-
+    "Mist."
     "Jetzt hab ich es laut gesagt."
-
     "Ich wollte meine Verspätung gestern doch wieder gut machen."
-
-     
-
     ma "Soso, du wolltest %(sisName)s abholen?"
-
     ma "Als ob!"
     ma "Das würdest du doch nie freiwillig machen."
-
-    #kann man auch anders ausdrücken, mir ist aber nichts Besseres eingefallen
-
     ma "Mach' dich nicht lächerlich."
-
     b "Ich kann nicht anders."
-
     b "Ich hab' es ihr versprochen."
-
     ma "Na dann beeil' dich mal lieber."
     ma "Du weißt, dass sie es hasst, wenn man zu spät kommt."
-
     b "Jaja."
-
     "Hektisch ziehe ich mich an, packe alles ein und mache mich auf den Weg."
 
     #insgesamt noch sehr ausbaufähig
 
-    #Bernd geht los
-
-
-
     scene bg schulweg1
-
     with fade
 
-
-
     "Hmm..."
-
     "Irgendwie habe ich kein gutes Gefühl."
-
     "Das gleiche Gefühl hatte ich gestern auch schon."
-
     "Ich kann mich doch nicht zweimal so irren."
-
     "Irgendjemand verfolgt mich doch."
-
     "Es ist bestimmt irgendein Bernd, der heimlich Fotos von mir macht und dann auf Krautchan veröffentlicht."
-
     "Das Treffen war wahrscheinlich nur eine Falle, um mich aus meinem Haus zu locken."
     "Gut, dass ich nicht hingegangen bin."
-
     "Sowas würde total zu Bernd passen."
     "Anstatt geradeaus weiterzugehen, biege ich nach links ab."
     "Hoffentlich kann ich ihn so abhängen."
 
-
-
     scene bg schulwegPano at right
-
     with fade
-
-
 
     "Wenn ich mich jetzt umdrehe, hat er eigentlich keine Zeit mehr, um sich zu verstecken."
-    "3"
-    "2"
-    "1"
+    "3..."
+    "2..."
+    "1..."
     "Jetzt!"
 
-
-
     scene bg schulwegPano at left
-
     with move
-
-    #Bild existiert noch nicht. Schulweg1 spiegeln und dann zeigen.
-    #NEIN spiegeln ist schwul! braucht neues bild! (breitbild und dann sliden :3)
-
-
     "..."
-
     "..."
-
     "Wo ist der Typ?"
-
     "Ich sehe ihn nicht."
-
     "Vielleicht bilde ich mir das auch alles nur ein..."
     "In so einer großen Stadt wird man anscheinend schnell verrückt."
-
-
-
     "Ja."
-
     "So wird es wohl sein."
-
     "In letzter Zeit ist ja auch einiges geschehen."
-
     "Ich schaue auf die Uhr."
-
     "13:45 Uhr."
-
     "Ich hab noch eine Viertelstunde bis Schulschluss."
-
     "Gott sei Dank weiß ich den Weg jetzt auswendig."
 
-
-
     scene bg schulhof
-
     with fade
 
-
-
     "Ein Blick auf meine Uhr verrät mir, dass es kurz vor zwei ist."
-
     "Diesmal bin ich pünktlich."
     "Die Schule ist noch nicht aus."
-
     "Aber ich werde das Gefühl einfach nicht los."
     "Wenn mich doch jemand verfolgt...?"
 
- 
-
     play sound "sounds/schulglocke.wav"
-
-    #Sound exisitiert noch nicht
-
+    #Sound
 
     "Das war die Schulglocke."
     "Wenn ich %(sisName)s da nicht mit reinziehen will, muss ich hier weg."
     "Ganz egal, wie nervig sie ist, sie ist immer noch meine kleine Schwester!"
-
     "Am besten stelle ich mich direkt an den Eingang, damit ich so schnell wie möglich verschwinden kann."
-
-
-
     "Stimme" "%(berndName)s!"
     $ berndNameUpper = berndName.upper()
-
     "Stimme" "%(berndNameUpper)s!"
-
-
-
     "Das ist %(sisName)s."
-
     "Dahinten kommt sie."
 
-
-
     show laura happy
-
     with dissolve
 
-
-
     sis "Hi."
-
     b "Hi."
-
     b "Wir müssen hier schleunigst weg."
-
     "Ich packe sie am Handgelenk."
-    
+
     show laura surprised
     with dissolve
     
-
     sis "Hey, das tut weh!"
     sis "Was soll das!?"
-
     "Ich ignoriere sie und zerre sie von der Schule weg."
 
-
-
     scene bg schulweg2
-
     with fade
     
-    show laura angry
+    show laura mad
     with dissolve
-    #fehlt
-
-
 
     sis "Hey, warum ziehst du mich so?"
-
     b "Ich erklär' dir gleich alles."
-
     sis "Aber du tust mir weh."
-
     b "Ahh, da vorne."
     "Ich ziehe sie in eine Seitengasse."
 
-
-
     show bg gasse1
-
     with fade
     
-    show laura angry
-
+    show laura mad
     with dissolve
 
-    #Mir ist kein besserer Gesichtsausdruck eingefallen
-
-
-
     sis "Was soll das alles?"
-
     b "Hör mir gut zu."
     sis "Ja...?"
-
     b "Wir werden verfolgt."
 
     show laura surprised
-
     with dissolve
 
-    #diesen Gesichtsausdruck nehmen, nur ohne Erröten
-
     sis "Was?"
-
     b "Eigentlich werde nur ich verfolgt."
-
     b "Aber du bist nunmal hier, also bist du auch in Gefahr."
-
     b "Wer weiß, was mit dir passiert."
-
     sis "Weswegen wirst du verfolgt?"
-
     sis "Und von wem?"
     "Wie soll ich das erklären?"
-
     b "Ich..."
     b "Pass auf."
     b "Ich erklär' das später."
-
     sis "Was?"
     sis "Wieso denn?"
-
     b "Das ist schwer zu erklären..."
-
     b "Wir müssen hier zuerst weg."
-
     b "Bitte %(sisName)s, höre nur einmal auf deinen großen Bruder."
     
     show laura pissed
@@ -2992,51 +2854,38 @@ label eins_sisAbholenZuerst:
     sis "Du willst mich ja nur ärgern!"
     sis "Bleib' du meinetwegen hier in der Gasse sitzen."
     sis "Ich gehe nach Hause, so!"
-    
     "Wütend dreht sie sich um und will gehen, aber ich halte sie fest und ziehe sie zurück in die Gasse."
-    
     b "Du musst mir glauben."
     b "Wenn da draußen wirklich einer ist..."
-    
     sis "Lass mich los, %(berndName)s."
-    
     b "...und er Fotos von dir macht..."
     
-    show laura angry
-    
+    show laura mad
+   
     sis "Lass mich los."
-    
     b "...und sie ins Internet stellt..."
-    
-    show laura angry_talk
+
+    show laura mad_talk
     with dissolve
     
     sis "Du sollst mich loslassen!"
-    
     "Sie versucht ihren Arm zu befreien, aber ich lasse nicht los."
     "Mit meiner freien Hand greife ich nach ihrem anderen Arm, aber sie weicht aus."
-    
     b "Jetzt hör' mir doch mal zu!"
-    
     sis "Nein!"
     sis "Du sollst mich loslassen!"
-    
     "Ich ziehe sie näher an mich ran und greife ihren freien Arm."
-    
     sis "Aua!"
     sis "Du tust mir weh!"
     
-    show laura angry
+    show laura mad
     with dissolve
     
     sis "Lass mich los, ich will nach Hause!"
-    
     b "Nur, wenn du mir glaubst."
-    
     sis "In Ordnung, in Ordnung."
     sis "Ich glaube dir."
     sis "Kannst du mich jetzt endlich loslassen?"
-    
     "Ich lockere meinen Griff und sie geht einen Schritt zurück."
     
     show laura pissed
@@ -3045,7 +2894,6 @@ label eins_sisAbholenZuerst:
     sis "Was ist denn los mit dir, %(berndName)s?"
     sis "Du bist doch sonst nicht so?"
     sis "Seit wir in Berlin wohnen, bist du immer so komisch."
-    
     b "Ich..."
     
     show laura neutral
@@ -3053,7 +2901,6 @@ label eins_sisAbholenZuerst:
     
     sis "Können wir jetzt einfach nach Hause gehen?"
     sis "Ich habe Hunger."
-    
     b "Na gut."
     b "Aber wenn du jemanden siehst, der verdächtig aussieht, sag' mir Bescheid."
     
@@ -3061,14 +2908,12 @@ label eins_sisAbholenZuerst:
     with dissolve
     
     sis "Ist ja gut, ist ja gut."
-    
     "Bevor wir auf die offene Straße hinausgehen, spähe ich vorsichtig nach links und rechts."
     
     show laura neutral
     with dissolve
     
     sis "...und?"
-    
     b "Nichts."
     b "Lass uns gehen."
     
@@ -3098,7 +2943,6 @@ label eins_sisAbholenZuerst:
     with dissolve
     
     sis "Komm, beeilen wir uns."
-    
     "Wir treten aus der Gasse auf die offene Straße."
     
     scene bg schulweg1
@@ -3111,7 +2955,7 @@ label eins_sisAbholenZuerst:
     
     sis "Du, %(berndName)s?"
     b "Was ist denn?"
-    b "Hast du etwas verdächtiges bemerkt?"
+    b "Hast du etwas Verdächtiges bemerkt?"
     "Ich sehe mich um, aber es ist niemand da."
     
     show laura embarrassed
@@ -3125,14 +2969,12 @@ label eins_sisAbholenZuerst:
     "Mitten in der Stadt?"
     "Hand in Hand mit einem kleinen Mädchen?"
     "Wie sieht das denn aus?"
-    
     b "Bist du dafür nicht schon etwas zu alt?"
     sis "Aber..."
     sis "Du hast mir Angst gemacht mit deinen Verfolgungsgeschichten."
     sis "Ich glaube, dass du Recht haben könntest."
     sis "Wenn du meine Hand halten würdest..."
     sis "Ich würde mich sicherer fühlen, weißt du?"
-    
     "*seufz*"
     b "Na gut."
     "Ich greife nach ihrer Hand."
@@ -3141,12 +2983,8 @@ label eins_sisAbholenZuerst:
     with dissolve
     
     sis "Danke, %(berndName)s."
-    sis "Ich hab dich lieb."
-    #ändern
-    
+    sis "Ich hab dich lieb."    
     "Gemeinsam treten wir den Weg nach Hause an."
-
-
 
     scene black
     with fade
@@ -3154,157 +2992,82 @@ label eins_sisAbholenZuerst:
     "Zuhause..."
     
     scene bg keller_aus
-
     with fade
 
-
     "Endlich bin ich wieder in meinem Zimmer."
-
     "Hier kann mich niemand mehr beobachten."
-
     "Nur im Keller bin ich vor anderen Bernds sicher."
-
     "Erstmal den Computer starten."
 
-
-
     scene bg keller
-
     with dissolve
 
-    #Bild existiert noch nicht, sollte aber von Bifuss gemacht werden
-
-
-
     "Erstmal ein bisschen im Internet brausen."
-
     "Ich öffne meinen Browser."
-
     "Automatisch drücke ich die Tastenkombination Strg + L."
-
     "Aus Reflex tippe ich \"kr\" ein, geh einmal runter, betätige die Enter-Taste und lande auf /b/."
-
-
 
     scene bg keller_kc
     with dissolve
 
-
-
     "Ein Japperfaden."
-
     "Nicht schon wieder."
-
     "Thread ausblenden."
-
     "Gurofaden."
-
     "NEIN!"
-
     "Thread ausblenden."
-
     "Fleshlightfaden."
-
-    #"Ach, Pervles."
-
     "Thread ausblenden."
-
     "/b/ ist schon seit ein paar Wochen der Krebs."
-
     "Zum Glück haben die Admins diese Funktion eingeführt."
-
     "Dafür hat dergeneral echt mal ein Lob verdient."
-
     "Ich gehe auf /kc/ und mache einen neuen Thread auf."
-
     "\"Heil dir, General.\""
-
     "\"Bernd dankt für die Thread-ausblenden-Funktion.\""
-
-#evtl. die letzten beiden Zeilen einfach weglassen.
-
     "So, das wäre erledigt."
-
     "Ohhhhhhhhhhhhhh."
-
     "Nach /w/ - Wissenschaft und Ecchi soll es jetzt auch /t/ - Technik und Tentakel geben?"
-
-
 
     menu:
         " "
 
         "Ja!":
-
             "Fick ja, Tentakel."
-
             "Ich kontributierte."
 
-
-
         "Nein.":
-
             "NEIN!"
-
             "SAGE."
 
 
-
 #menu ist entscheidend dafür, ob am Ende,
-
 #wenn KC wieder on ist, es /t/ - Technik oder /t/ - Technik und Tentakel gibt
 
-#evtl. bei "Entscheidung = Ja" ein Tentakelbild zeigen
-
-
-
-
-
     "Dann wollen wir doch mal schauen, was Bernd von der neuen Episode von Strike with Cheese hält."
-
     "...das Übliche halt."
-
-
-
     "Hmm..."
-
     "Was mache ich jetzt?"
     
     scene bg desktop_none
-    with dissolve
+    with fade
     
-
     "Woah..."
-
     "Ich erblicke das Icon von \"Wolfgang no haraise\" auf meinem Desktop."
-
     "Das habe ich lang nicht mehr gespielt."
-
     "Es wird mal wieder Zeit."
-
     "Ich starte das Spiel."
-
     "Ein Klick auf \"Spielstand laden\"."
-
     "Was war noch gleich der richtige Spielstand..."
-
     "Ach, was soll's."
-
     "Neues Spiel."
 
-    
     scene bg keller_aus
-
-    with dissolve
-
+    with fade
 
     "Was denn jetzt?"
-
     "Achso, der Ladebildschirm."
-
     "Schwarzes Bild und Ladebalken."
     "Wie einfallsreich."
-
     "Diese Ladezeiten sind wirklich unerträglich."
     "Ich muss mir einen neuen Computer anschaffen."
     "Mit diesem alten Ding kann man ja nichts mehr anfangen."
@@ -3386,36 +3149,22 @@ label eins_sisAbholenZuerst:
     scene black
     with fade
     
-
     scene bg keller_aus
-
     with fade
-
-
 
     "Wenigstens habe ich jetzt erstmal meine Ruhe."
     "Ein Blick zum Fenster bestätigt das."
     "Niemand da."
     "Ich blicke auf den Bildschirm."
-
     "Immer noch nicht geladen."
-
     "Da vergeht einem echt die Lust."
-
     "Wütend drücke ich Strg + Alt + Entf."
 
-
-
     scene bg keller
-
     with dissolve
 
-
-
     "Prozess beenden."
-
     "Ich schau mal, was auf Krautchan los ist."
-
     "Da war ich lange genug nicht mehr."
     "..."
     "Verbindung wird hergestellt."
