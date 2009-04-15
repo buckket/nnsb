@@ -103,19 +103,19 @@ init:
     $ yan = DynamicCharacter("yanName", color="#ff00ff")
         
     #Musik
-    #Draußen, Keller = bernd_theme.ogg
-    #Wohnung, Treppenhaus = bernd_wohnung.mp3
-    #Schwester = laura_theme.ogg
-    #Supermarkt = shop.mp3
-    #Anja und ihr Zimmer = anja_theme.mp3
-    #Anjas Wohnung, bis auf ihr eigenes Zimmer = anja_wohnung.mp3
-    #Psychosachen = psycho.mp3
-    #Traurige Stellen = sad_ronery.mp3
-    #Dates usw. = date.mp3
-    #Spannung usw. = exciting.mp3
-    #wegrennen, hinterherrennen, usw. = run_fast.mp3
-    #Stalkerbernd = yasmin_stalkerbernd.mp3
-    #Yasmin = yasmin_theme.mp3
+    $ m_bernd = "music/bernd_theme.ogg" #Draußen, Keller
+    $ m_wohnung = "music/bernd_wohnung.mp3" #Wohnung, Treppenhaus
+    $ m_laura = "music/laura_theme.ogg" #Schwester
+    $ m_shop = "music/shop.mp3" #Supermarkt
+    $ m_anja = "music/anja_theme.mp3" #Anja und ihr Zimmer
+    $ m_anjaWohnung = "music/anja_wohnung.mp3" #Anjas Wohnung, außer ihrem Zimmer
+    $ m_pyscho = "music/psycho.mp3" #Psychosachen
+    $ m_traurig = "music/sad_ronery.mp3" #traurige stellen
+    $ m_date = "music/date.mp3" #Dates usw.
+    $ m_spannung = "music/exciting.mp3" #Spannung usw.
+    $ m_rennen = "music/run_fast.mp3" #wegrennen, hinterherrennen, usw.
+    $ m_yasminStalk = "music/yasmin_stalkerbernd.mp3" #Stalkerbernd-Theme
+    $ m_yasmin = "music/yasmin_theme.mp3" #Yasmin
     #Irgendwie fehlt aber noch das passende Lied für die Laura-Spinnen-Szene
     
     #namen
@@ -149,6 +149,7 @@ label start:
             
 
 label skipTo: #namen des labels eingeben -> springen
+    
     menu:
         "Normal beginnen oder springen?"
         
