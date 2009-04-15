@@ -4,6 +4,11 @@
 #--------------------------------------------------------------------------------------------------#
 
 label zwei:
+    python:
+        try:
+            stalker
+        except NameError:
+            stalker = 0
     if(lauraRoute):
         if(stalker):
             jump zwei_laura_stalk_entscheid

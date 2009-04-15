@@ -1094,23 +1094,23 @@ label eins_treffenBerndf:
     "Ich hätte sie nicht so anstarren dürfen."
     "Schnell wende ich mich ab."
     
-    "Mädchen" "%(berndName)s?"
+    u"Mädchen" "%(berndName)s?"
     
     play music "music/anja_theme.mp3"
     
     "Was...?"
     "Meint sie mich?"
     "Unmöglich."
-    "Mädchen" "Hey, %(berndName)s!"
+    u"Mädchen" "Hey, %(berndName)s!"
     "Ich spüre eine Hand auf meiner Schulter und zucke zusammen."
     b "Was...?"
     "Woher kennt sie meinen Namen?"
     "Was soll das...?"
-    "Mädchen" "Du bist doch %(berndName)s, oder?"
+    u"Mädchen" "Du bist doch %(berndName)s, oder?"
     "Ich nicke verwirrt."
-    "Mädchen" "Na also."
-    "Mädchen" "Komm mit."
-    "Mädchen" "Wir gehen irgendwo hin, wo wir reden können."
+    u"Mädchen" "Na also."
+    u"Mädchen" "Komm mit."
+    u"Mädchen" "Wir gehen irgendwo hin, wo wir reden können."
     "Ich folge ihr."
     
     scene bg alexanderplatz_drei
@@ -1119,22 +1119,22 @@ label eins_treffenBerndf:
     show anja neutral
     with dissolve
     
-    "Mädchen" "Hier sind weniger Leute."
-    "Mädchen" "Das ist besser zum Reden."
-    "Mädchen" "Gut, dass du gekommen bist, %(berndName)s."
+    u"Mädchen" "Hier sind weniger Leute."
+    u"Mädchen" "Das ist besser zum Reden."
+    u"Mädchen" "Gut, dass du gekommen bist, %(berndName)s."
     b "Ich..."
     "Wovon redet sie?"
     
     show anja surprised
     with dissolve
     
-    "Mädchen" "Ah!"
-    "Mädchen" "Ich habe mich ja noch gar nicht vorgestellt!"
+    u"Mädchen" "Ah!"
+    u"Mädchen" "Ich habe mich ja noch gar nicht vorgestellt!"
     
     show anja neutral
     with dissolve
     
-    "Mädchen" "Ich bin %(wBerndName)s."
+    u"Mädchen" "Ich bin %(wBerndName)s."
     bw "Ich habe dir die E-Mail geschickt."
     bw "Deshalb bist du hier, oder?"
     "Was zum...?"
@@ -1343,7 +1343,7 @@ label eins_treffenBerndf:
             sis "Schau!"
             sis "Wir sind da."
             
-    scene bg supermarkt_innen
+    scene bg supermarkt
     with fade
     
     play music "music/shop.mp3"
@@ -2512,7 +2512,7 @@ label eins_sisAbholenZuerst:
     sis "Los, beeilen wir uns!"
     b "..."
     
-    scene bg supermarkt_innen
+    scene bg supermarkt
     with fade
     
     play music "music/shop.mp3"
