@@ -48,7 +48,7 @@ label eins:
     
     "Einen Monat später..."
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     scene bg keller_aus
     with spotTrans
@@ -96,7 +96,7 @@ label eins:
     show laura happy
     with dissolve
     
-    play music "music/laura_theme.ogg"
+    play music m_laura
     
     sis "Guten Morgen, %(berndName)s."
     
@@ -168,7 +168,7 @@ label eins:
             show laura neutral
             with dissolve
             
-            play music "music/laura_theme.ogg"
+            play music m_laura
             
             sis "Soll ich dir irgendwas mitbringen?"
             
@@ -240,7 +240,7 @@ label eins:
             
     "Endlich bin ich allein und kann in Ruhe fappieren."
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     "Seit einem Monat denke ich immer an das Mädchen aus dem Supermarkt."
     
@@ -289,7 +289,7 @@ label eins:
     
     "Ein Signalton befördert mich unsanft aus meinen Gedanken."
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     "Oh, scheint als wäre ein Download fertig."
     "Ich zieh' mir meine Unterhose hoch und sehe nach."
@@ -307,13 +307,10 @@ label eins:
     scene bg badezimmer
     with fade
 
-
-
     #play sound "sound/dusche.wav"
-
     #muss noch gefunden werden
-    play music "music/bernd_wohnung.mp3"
 
+    play music m_wohnung
 
     b "So, fertig geduscht."
 
@@ -347,7 +344,7 @@ label eins:
     scene bg keller_bluescreen
     with fade
    
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     "Als ich wieder in den Keller komme, ist der ganze Raum in ein blaues Licht getaucht."
     "Sofort schaue ich auf den Bildschirm."
@@ -424,7 +421,7 @@ label eins:
     scene bg keller
     with fade
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     if mitbringen == "kondome":
         if sisLove < 50:
@@ -597,7 +594,7 @@ label eins:
     scene bg keller
     with fade
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     "Das scheint nicht geholfen zu haben."
     "Im Gegenteil."
@@ -609,7 +606,7 @@ label eins:
     scene bg kueche
     with fade
     
-    play music "music/bernd_wohnung.mp3"
+    play music m_wohnung
     
     ma "%(berndName)s!"
     ma "Was ist denn passiert?"
@@ -723,7 +720,7 @@ label eins:
     #with Dissolve(2.0)
     with noisetrans
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     b "Was..."
     b "...ist passiert?"
@@ -877,7 +874,7 @@ label eins:
     scene bg keller
     with fade
    
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
    
     "Als ich aufwache, sehe ich auf die Uhr."
     "Es ist bereits 13 Uhr."
@@ -996,7 +993,7 @@ label eins_treffenBerndf:
     scene bg zuhause_draussen
     with fade
     
-    play music "music/bernd_wohnung.mp3"
+    play music m_wohnung
     
     b "Wo lang jetzt...?"
     "Ich kenn mich hier ja überhaupt nicht aus."
@@ -1096,7 +1093,7 @@ label eins_treffenBerndf:
     
     u"Mädchen" "%(berndName)s?"
     
-    play music "music/anja_theme.mp3"
+    play music m_anja
     
     "Was...?"
     "Meint sie mich?"
@@ -1223,7 +1220,7 @@ label eins_treffenBerndf:
     scene bg keller
     with fade
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     "Zuhause angekommen lasse ich mich auf meine Matratze fallen."
     "Noch einmal lasse ich mir die Geschehnisse des heutigen Tages durch den Kopf gehen."
@@ -1243,7 +1240,7 @@ label eins_treffenBerndf:
     scene bg kueche
     with fade
     
-    play music "music/bernd_wohnung.mp3"
+    play music m_wohnung
     
     "Ich öffne die Kühlschranktür."
     b "OH MEIN GOTT!"
@@ -1346,7 +1343,7 @@ label eins_treffenBerndf:
     scene bg supermarkt
     with fade
     
-    play music "music/shop.mp3"
+    play music m_shop
     
     b "Was sollen wir nochmal einkaufen?"
     
@@ -1432,7 +1429,7 @@ label eins_treffenBerndf:
     scene bg keller
     with fade
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     b "Mal schauen, ob der Faden mit meinen Daten noch auf /b/ ist..."
     scene bg keller_kc
@@ -1579,7 +1576,7 @@ label eins_treffenBerndf:
     show anja neutral
     with dissolve
     
-    play music "music/anja_theme.mp3"
+    play music m_anja
     
     bw "Hey, %(berndName)s."
     b "H- Hi."
@@ -1732,7 +1729,7 @@ label eins_accept_fBernd:
     scene bg keller
     with fade
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     "Ich setze mich vor meinen Rechner."
     b "Informationen sammeln..."
@@ -1829,7 +1826,7 @@ label eins_sisAbholen:
     scene bg schulweg1
     with fade
     
-    play music "music/schulweg.mp3"
+    play music m_schulweg
     
     "Noch zwanzig Minuten, bis die Schule vorbei ist und bis ich da bin brauche ich noch knapp eine viertel Stunde."
     "Gut, dass meine Mutter mir rechtzeitig Bescheid gesagt hat, sonst wäre ich nie pünktlich gekommen."
@@ -1850,7 +1847,7 @@ label eins_sisAbholen:
     scene bg donerladen
     with fade
     
-    play music "music/donerladen.ogg"
+    play music m_donerladen
     
     show salih neutral
     with dissolve
@@ -1902,7 +1899,7 @@ label eins_sisAbholen:
     scene bg schulweg2
     with fade
     
-    play music "music/schulweg.mp3"
+    play music m_schulweg
     
     b "OH SCHEI-"
     b "In 5 Minuten ist die Schule vorbei."
@@ -1989,7 +1986,7 @@ label eins_sisAbholen:
     scene bg schulweg1
     with fade
     
-    play music "music/schulweg.mp3"
+    play music m_schulweg
     
     "Irgendwo war hier doch ein Eiswagen..."
     "Ah! Da ist er."
@@ -2113,7 +2110,7 @@ label eins_sisAbholenZuerst:
             scene bg schulweg1
             with fade
             
-            play music "music/schulweg.mp3"
+            play music m_schulweg
             
             "Nachdem ich einige Zeit gelaufen bin, verschwindet das beklemmende Gefühl."
             "Wahrscheinlich habe ich mir alles nur eingebildet."
@@ -2214,7 +2211,7 @@ label eins_sisAbholenZuerst:
     scene bg donerladen
     with fade
     
-    play music "music/donerladen.ogg"
+    play music m_donerladen
     
     show salih neutral
     with dissolve
@@ -2266,7 +2263,7 @@ label eins_sisAbholenZuerst:
     scene bg schulweg2
     with fade
     
-    play music "music/schulweg.mp3"
+    play music m_schulweg
     
     b "OH SCHEI-"
     b "In 5 Minuten ist die Schule vorbei."
@@ -2353,7 +2350,7 @@ label eins_sisAbholenZuerst:
     scene bg schulweg1
     with fade
     
-    play music "music/schulweg.mp3"
+    play music m_schulweg
     
     "Irgendwo war hier doch ein Eiswagen..."
     "Ah! Da ist er."
@@ -2411,7 +2408,7 @@ label eins_sisAbholenZuerst:
     scene bg keller
     with fade
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     "Komisch..."
     "Auf dem Rückweg hatte ich nicht mehr das Gefühl beobachtet zu werden."
@@ -2454,7 +2451,7 @@ label eins_sisAbholenZuerst:
     scene bg zuhause_draussen
     with fade
     
-    play music "music/bernd_wohnung.mp3"
+    play music m_wohnung
     
     if supermarkt == "":
         $ supermarkt = "Aldi"
@@ -2515,7 +2512,7 @@ label eins_sisAbholenZuerst:
     scene bg supermarkt
     with fade
     
-    play music "music/shop.mp3"
+    play music m_shop
     
     b "Was sollen wir nochmal einkaufen?"
     
@@ -2601,7 +2598,7 @@ label eins_sisAbholenZuerst:
     scene bg keller
     with fade
     
-    play music "music/bernd_theme.ogg"
+    play music m_bernd
     
     b "Mal schauen, ob der Faden mit meinen Daten noch auf /b/ ist..."
     "..."

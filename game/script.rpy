@@ -112,6 +112,8 @@ init:
     $ m_pyscho = "music/psycho.mp3" #Psychosachen
     $ m_traurig = "music/sad_ronery.mp3" #traurige stellen
     $ m_date = "music/date.mp3" #Dates usw.
+    $ m_schulweg = "music/schulweg.mp3" #Schulweg usw.
+    $ m_donerladen = "music/donerladen.ogg"
     $ m_spannung = "music/exciting.mp3" #Spannung usw.
     $ m_rennen = "music/run_fast.mp3" #wegrennen, hinterherrennen, usw.
     $ m_yasminStalk = "music/yasmin_stalkerbernd.mp3" #Stalkerbernd-Theme
