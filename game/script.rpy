@@ -2,6 +2,7 @@
 
 init python:
     import os
+    import random
     
     config.font_replacement_map["DejaVuSans.ttf", False, True] = ("DejaVuSans-Oblique.ttf", False, False)
     style.jp = Style(style.say_thought)
@@ -61,6 +62,9 @@ init python:
               ("Romaji", 1, "True"),
               ("Kanji", 2, "True") ],
             base=persistent))
+            
+            
+    namenListe = ["Bernd"] #hier brauchen wir mehr
 
 init:
     #Wichtige Storyflags:
@@ -163,7 +167,8 @@ label skipTo: #namen des labels eingeben -> springen
                 "Label nicht gefunden."
                 jump skipTo
         "Normal beginnen":
-            jump namenFrage
+            #jump namenFrage
+            jump namenGeben #temporär
 
 label namenFrage:
     menu:
@@ -178,26 +183,42 @@ label namenFrage:
             jump prolog
 
 label namenGeben:
-    $ berndName = renpy.input("Wie ist dein Name?") or "Bernd"
+
+    $ nameEins = random.choice(namenListe)
+    $ nameZwei = random.choice(namenListe)
+
+    menu:
+        "Wie ist dein Name?"
+        
+        "Bernd":
+            $ berndName = "Bernd"
+        "%(nameEins)s":
+            $ berndName = nameEins
+        "%(nameZwei)s":
+            $ berndName = nameZwei
+        "Anderer...":
+            $ berndName = renpy.input("Wie ist dein Name?") or "Bernd"
+            
+    #$ berndName = renpy.input("Wie ist dein Name?") or "Bernd"
     #bild von mutter
-    $ maName = renpy.input("Wie heisst deine Mutter?") or "Dorothea"
-    show laura neutral
-    with dissolve
-    $ sisName = renpy.input("...und deine Schwester?") or "Laura"
-    hide laura neutral
-    with dissolve
-    show anja neutral
-    with dissolve
-    $ wBerndName = renpy.input("Zuletzt noch dieses Mädchen hier.") or "Anja"
-    hide anja neutral
-    with dissolve
-    show yasmin neutral
-    with dissolve
-    $ yanName = renpy.input("Oh, ich habe dieses Mädchen hier noch vergessen.") or "Yasmin"
-    hide yasmin neutral
-    with dissolve
+    #$ maName = renpy.input("Wie heisst deine Mutter?") or "Dorothea"
+    #show laura neutral
+    #with dissolve
+    #$ sisName = renpy.input("...und deine Schwester?") or "Laura"
+    #hide laura neutral
+    #with dissolve
+    #show anja neutral
+    #with dissolve
+    #$ wBerndName = renpy.input("Zuletzt noch dieses Mädchen hier.") or "Anja"
+    #hide anja neutral
+    #with dissolve
+    #show yasmin neutral
+    #with dissolve
+    #$ yanName = renpy.input("Oh, ich habe dieses Mädchen hier noch vergessen.") or "Yasmin"
+    #hide yasmin neutral
+    #with dissolve
     
-    "OK, das war schon alles."
+    #"OK, das war schon alles."
     "Viel Spaß, %(berndName)s!"
     
     jump prolog
