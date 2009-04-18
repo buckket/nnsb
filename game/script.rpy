@@ -109,6 +109,7 @@ init:
     #Musik
     $ m_bernd = "music/bernd_theme.ogg" #Draußen, Keller
     $ m_wohnung = "music/bernd_wohnung.mp3" #Wohnung, Treppenhaus
+    $ m_handyb = "music/bernd_handy.mp3" #Bernds Klingelton
     $ m_laura = "music/laura_theme.ogg" #Schwester
     $ m_shop = "music/shop.mp3" #Supermarkt
     $ m_anja = "music/anja_theme.mp3" #Anja und ihr Zimmer
