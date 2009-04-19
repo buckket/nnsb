@@ -1101,6 +1101,7 @@ label anja_anfang:
     #Bild "traumkueche.jpg", aber mit kleiner, weißer Umrandung, um anzuzeigen, dass es nur ein Traum ist
     
 label traum:
+#Label wegmachen
     
     scene bg traumkueche
     with fade
@@ -1159,7 +1160,7 @@ label traum:
         "Lynette" "{=jp}どうぞ。{/=jp}"
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        b "Dankeschön."
+        b "Danke."
     if persistent.wieherbuhSprache is 1:
         b "Arigatou."
     if persistent.wieherbuhSprache is 2:
@@ -1169,7 +1170,7 @@ label traum:
     #Bild von Lynette ohne Tablett
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        b "Guten Appetit!"
+        pass
     if persistent.wieherbuhSprache is 1:
         b "Itadakimasu!"
     if persistent.wieherbuhSprache is 2:
@@ -1184,8 +1185,8 @@ label traum:
     #-----------------------------------------------
     b "Ja?"
     "Lynette" "Ich muss gleich noch einkaufen gehen, aber ich habe kein Geld."
-    b "Kein Problem."
     "Ich greife in meine Anzugsjacke und hole mein Portemonnaie heraus."
+    b "Kein Problem."
     b "Hier."
     "Ich gebe ihr zwei 200-Euroscheine."
     "Lynette" "Aber..."
@@ -1199,7 +1200,7 @@ label traum:
     if persistent.wieherbuhSprache is 2:
         b "{=jp}当たり前さ。{/=jp}"
     #-----------------------------------------------
-    #EXPERTENWIEHERBUH GEFRAGT: "Atarimae sa" oder "mochiron"?
+    #EXPERTENWIEHERBUH GEFRAGT: "Atarimae sa", "mochiron" oder "touzen da"?
     
     
     b "Da gab es doch diese Halskette, die du unbedingt haben wolltest."
@@ -1226,7 +1227,7 @@ label traum:
         "Stimme" "{=jp}御主人様！{/=jp}"
     #-----------------------------------------------
     "Diese Stimme..."
-    "Das ist..."
+    "Das kann nur..."
     
     show lynette essen at right
     with move
@@ -1465,12 +1466,12 @@ label traum:
             "Schwarze Haare sind etwas für Emos."
             "Brünett ist schön."
             "Blond ist auch fein."
-            "Aber schwarz ist nicht schön."
+            "Aber Schwarz ist nicht schön."
             "Nein."
             "Wirklich nicht."
             "Dazu dann noch ihre Augen."
             "Ihre Tränensäcke."
-            "Sowas sieht nicht sehr schön aus."
+            "BAH!."
             "Sie sieht aus wie ein Verbrecher."
             "Sie sieht aus wie ein Stalker."
             "Da läuft es mir eiskalt den Rücken runter."
@@ -1544,6 +1545,7 @@ label anja_weiter:
     "Ohne KC ist das Internet so fad."
     "Ich hab's."
     "Ich schau einen Anime."
+    "So wie immer."
     "Hmm..."
     "Mal schauen, ob schon die neue Folge Strike with Cheese fertig heruntergeladen ist."
     "Sehr gut."
