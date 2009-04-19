@@ -169,6 +169,7 @@ label skipTo: #namen des labels eingeben -> springen
                 jump skipTo
         "Normal beginnen":
             #jump namenFrage
+            
             jump namenGeben #temporär
 
 label namenFrage:
@@ -226,8 +227,8 @@ label namenGeben:
 
 
 label ende: 
-    scene owari
+    scene splash owari
     $ renpy.pause(2.0)
-    scene ende
+    scene splash ende
     with slowDissolve
     $ renpy.pause()
