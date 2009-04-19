@@ -115,14 +115,18 @@ init:
     $ m_anja = "music/anja_theme.mp3" #Anja und ihr Zimmer
     $ m_anjaWohnung = "music/anja_wohnung.mp3" #Anjas Wohnung, außer ihrem Zimmer
     $ m_pyscho = "music/psycho.mp3" #Psychosachen
-    $ m_traurig = "music/sad_ronery.mp3" #traurige stellen
+    $ m_traurig = "music/ronery.mp3" #traurige Stellen
+    $ m_drama = "music/sad.mp3" #ebenfalls traurige Stellen
     $ m_date = "music/date.mp3" #Dates usw.
     $ m_schulweg = "music/schulweg.mp3" #Schulweg usw.
     $ m_donerladen = "music/donerladen.ogg"
     $ m_spannung = "music/exciting.mp3" #Spannung usw.
-    $ m_rennen = "music/run_fast.mp3" #wegrennen, hinterherrennen, usw.
+    $ m_rennen = "music/run_fast.mp3" #Action
     $ m_yasminStalk = "music/yasmin_stalkerbernd.mp3" #Stalkerbernd-Theme
     $ m_yasmin = "music/yasmin_theme.mp3" #Yasmin
+    $ m_yasminWohnung = "music/yasmin_wohnung.mp3" # Yasmins Wohnung (sie wohnt alleine...)
+    $ m_traum = "music/traum.mp3" #für Bernds Animeträume und seinen vielen Waifus
+    $ m_battle = "music/battle.mp3" #u. a. bisher für die Spinnenszene, weil ich noch keine bessere BGM fand
     #Irgendwie fehlt aber noch das passende Lied für die Laura-Spinnen-Szene
     
     #namen
