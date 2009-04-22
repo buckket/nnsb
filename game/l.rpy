@@ -413,6 +413,18 @@ label zwei_laura_irc: #Bernd geht in den IRC-Kanal und trifft dort auf die Mods.
     
 label zwei_laura_anja_ausgang: #Übergang zwischen zwei_laura und zwei_laura_mail
 #Tritt auf, wenn Bernd den Tee nicht bringt. Keine Möglichkeit auf Laura zurückzukommen.
+    "Ich schnapp mit mein Toastbrot und gehe wieder in den Keller."
+    
+    scene bg keller
+    with fade
+    
+    "Krautchan ist immer noch offline."
+    "Es muss doch irgendwie Möglich sein, herauszufinden, wieso."
+    "Wer könnte mir da helfen...?"
+    show anja neutral
+    with flash
+    hide anja neutral
+    with dissolve
     pass
    
 label zwei_laura_weiter: #Bernd entscheidet sich, anscheinend, gegen Krautchan

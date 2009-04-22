@@ -7,9 +7,161 @@ init:
     pass
 
 label yasmin_polizei:
-    "lol bullenschweine"
-
-
+    #passiert, wenn Bernd die Polizei rufen will
+    #Yasmin flieht und er sieht sie nie wieder
+    #Er landet auf der Bernd-Route und schlägt sich ziemlich allein mit Lauras und Yasmins Hilfe durch
+    b "Mir reicht es!"
+    b "Ich rufe jetzt die Polizei!"
+    show yasmin stalker_surprised
+    with dissolve
+    
+    if yanKennen == 0:
+        u"Mädchen" "Aber...!"
+    else:
+        yan "Aber...!"
+    
+    b "Kein aber!"
+    b "Ich gehe jetzt hoch zum Telefon, und du kommst mit, verstanden?"
+    
+    show yasmin stalker_embarrased
+    with dissolve
+    
+    if yanKennen == 0:
+        u"Mädchen" "..."
+    else:
+        yan "..."
+    
+    "Ich drehe mich um und gehe in Richtung der Tür."
+    "Sie folgt mir die Treppe nach oben."
+    "Was soll ich der Polizei sagen?"
+    "Ich werde ihnen einfach die Wahrheit erzählen."
+    b "Komm schon, lauf ein bissch-"
+    
+    scene bg kellertreppe
+    with dissolve
+    
+    "Ich blicke die Treppe herunter, aber sie ist nicht da."
+    "Schnell renne ich zurück in den Keller."
+    
+    scene bg keller
+    with fade
+    
+    "...aber hier ist sie auch nicht."
+    b "Verdammt!"
+    "Ich hätte sie nicht aus den Augen lassen dürfen."
+    "...soll ich trotzdem die Polizei rufen?"
+    "Sicher ist sicher."
+    "Vielleicht kommt sie ja nochmal zurück."
+    
+    scene bg wohnung_innen
+    with fade
+    
+    "Ich gehe zum Telefon und will 110 tippen, als..."
+    
+    show laura neutral
+    with dissolve
+    
+    sis "Wen rufst du an, %(berndName)s?"
+    "Was macht %(sisName)s so spät noch hier?"
+    "Müsste die nicht schon im Bett liegen?"
+    b "Niemanden."
+    b "Also..."
+    b "...den kennst du nicht."
+    b "Geh wieder ins Bett."
+    sis "Hm?"
+    "Sie beugt sich über das Telefon."
+    sis "Wieso steht dann da 110?"
+    sis "Das ist die Nummer der Feuerwehr."
+    
+    show laura surprised
+    with dissolve
+    
+    sis "Brennt es irgendwo?"
+    "Oh man..."
+    b "Das ist nicht die Feuerwehr, sondern die Polizei."
+    b "Ich rufe die an, weil jemand bei mir eingebrochen ist."
+    
+    show laura happy
+    with dissolve
+    
+    sis "Achso!"
+    
+    show laura surprised
+    with dissolve
+    
+    sis "Eingebrochen!?"
+    b "Ja."
+    b "Ein verrücktes Mädchen ist bei mir in den Keller eingestiegen."
+    "Selbst, wenn ich es sage, hört sich das nicht glaubwürdig an..."
+    "...dabei habe ich es selbst erlebt."
+    
+    show laura happy
+    with dissolve
+    
+    sis "Achso!"
+    sis "Klar!"
+    sis "Ein verrücktes Mädchen."
+    sis "Wie sah die denn aus?"
+    b "Naja, sie hatte einen schwarzen Mantel und schwarze Haare und..."
+    b "...wieso erzähle ich dir das alles!?"
+    sis "Hihi..."
+    
+    show laura neutral
+    with dissolve
+    
+    sis "Könnte es sein, dass..."
+    sis "...du das nur geträumt hast?"
+    b "..."
+    "Will sie mich für dumm verkaufen?"
+    "Sowas könnte ich nie träumen."
+    b "Nein, das war ganz sicher kein Traum."
+    sis "Sicher?"
+    sis "Es hört sich nur sehr..."
+    
+    show laura happy
+    with dissolve
+    
+    sis "...lächerlich an."
+    "Meine kleine Schwester macht sich über mich lustig..."
+    "Aber sie hat Recht."
+    "Es hört sich wirklich lächerlich an."
+    
+    show laura neutral
+    with dissolve
+    
+    sis "Ist sie denn noch da?"
+    b "Nein."
+    b "Sie ist abgehauen."
+    
+    show laura happy
+    with dissolve
+    
+    sis "Verstehe schon."
+    sis "..."
+    sis "Warum legst du nicht einfach den Telefonhörer zur Seite, und gehst schlafen?"
+    b "..."
+    "Hält sie mich irgendwie für verrückt?"
+    "Naja... so ganz weit hergeholt ist das ja nicht."
+    "Vielleicht sollte ich wirklich einfach schlafen gehen, und nochmal gründlich darüber nachdenken."
+    b "Du hast Recht..."
+    b "...ich bin mir zwar sicher, dass sie da war, aber ich schlaf lieber noch eine Nacht drüber."
+    "Abgesehen davon, dass ich sowieso nicht am Telefon mit jemandem sprechen kann..."
+    "Ich wüsste nicht, was ich sagen sollte."
+    sis "Na dann..."
+    sis "Gute Nacht, %(berndName)s."
+    b "Gute Nacht."
+    
+    hide laura happy
+    with dissolve
+    
+    "Ich sollte dann auch schlafen gehen..."
+    
+    scene black
+    with fade
+    
+    jump b_anfang #BUTTERGOTT - b.rpy erstellen
+    
+    
 label yasmin_anfang:
     "Stalkerbernd" "Stalkerbernd?"
     "!"
@@ -93,6 +245,7 @@ label yasmin_anfang:
     b "Wa- wie bitte?"
     "%(yanName)s?"
     u"Mädchen" "Ich heiße %(yanName)s."
+    $ yanKennen = 1
     b "..."
     yan "..."
     "%(yanName)s also..."

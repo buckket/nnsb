@@ -146,6 +146,7 @@ init:
     $ anjaRoute = 0
     $ anjaOffer = 0
     $ lauraRoute = 0
+    $ yanKennen = 0 #bestimmt, ob Bernd Yasmins Namen kennt
     
     #andere stats
     $ geld = 0
