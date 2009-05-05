@@ -635,3 +635,214 @@ label yasmin_befragung_drei:
     
     "Nanu?"
     "Warum ist sie denn so fröhlich?"
+    
+    b "Warum so grinsend?"
+    
+    show yasmin stalker_surprised
+    with dissolve
+    
+    show yasmin stalker_shy
+    with dissolve
+    
+    b "Hm...?"
+    yan "..."
+    "Ich habe es genau gesehen."
+    "Sie kann mir nichts vormachen."
+    b "Also...?"
+    b "Weswegen grinst du so?"
+    yan "..."
+    yan "...deine... {w=1}Bettwäsche."
+    "Meine Bettwäsche?"
+    "Was ist daran so besonders?"
+    "..."
+    "Oh."
+    "Wahrscheinlich ist es für einen Mann in meinem Alter nicht normal, Animebettwäsche zu besitzen."
+    "Kein Wunder, dass sie sich darüber lustig macht."
+    show yasmin stalker_happy
+    with dissolve
+    yan "Das ist Lucky Star, richtig?"
+    "Was zum...?"
+    "Woher kennt sie Lucky Star?"
+    b "J-Ja."
+    yan "Ist es lustig?"
+    yan "Ich bin noch nicht dazu gekommen, es zu sehen."
+    yan "Also ich wollte eigentlich schon die ganze Zeit, aber dann kam immer was dazwischen und es hat ja auch nicht grade wenig Folgen und dann haben so viele Leute erzählt wie schlecht die Serie sei und irgendwie fand ich dann aber manche Bilder doch recht lustig und hab dann mal in die ersten beiden Folgen reingeschaut aber die waren nicht so gut also{nw}"
+    b "Stop!"
+    show yasmin stalker_surprised
+    with dissolve
+    yan "T-Tut mir Leid..."
+    "Ich bin verwirrt."
+    "Was war das grade?"
+    "Sie hat den Spieß komplett umgedreht."
+    "Erst spricht sie kein Wort und dann redet sie wie ein Wasserfall..."
+    "...und das auch noch über Anime!"
+    "Mein Spezialgebiet!"
+    "Was bildet die sich ein?"
+    "Wütend balle ich meine Fäuste."
+    show yasmin stalker_shy
+    with dissolve
+    yan "T-Tut mir wirklich Leid!"
+    yan "Ich wollte nicht so viel reden aber..."
+    show yasmin stalker_embarrased
+    with dissolve
+    yan "..."
+    b "..."
+    "Anscheinend habe ich sie erschreckt."
+    "Vielleicht sollte ich mich entschuldigen."
+    yan "W-Wenn..."
+    "Oh, sie spricht?"
+    yan "Wenn ich über etwas rede, was mich interessiert, kann ich gar nicht mehr aufhören..."
+    b "..."
+    "Sie will mir also erzählen, dass sie Lucky Star mag?"
+    "...ist das nur ein Trick?"
+    yan "...du magst Anime, oder?"
+    b "Sieht man das nicht?"
+    b "Mein ganzes Zimmer ist voll mit Postern!"
+    yan "...ja."
+    show yasmin stalker_shy
+    with dissolve
+    yan "Das war eine dumme Frage."
+    yan "Entschuldigung."
+    b "Ja, ich mag Anime."
+    b "Ist das so schlimm?"
+    b "Darf man in meinem Alter sowas nicht mehr gucken, oder was?"
+    show yasmin stalker_surprised
+    with dissolve
+    yan "Nein, nein!"
+    yan "D-Das meinte ich nicht."
+    show yasmin stalker_shy
+    with dissolve
+    yan "Ich war nur... {w}überrascht."
+    "Hm..."
+    "Irgendwie verständlich."
+    "..."
+    "Aber eine Lösung für dieses Problem finden wir so nicht."
+    "Ich muss sie immer noch irgendwie loswerden."
+    "...aber ich habe keine Lust mehr, die Polizei zu rufen."
+    yan "%(berndName)s...?"
+    yan "Wenn du willst...{w} gehe ich einfach."
+    b "..."
+    "Kann ich sie einfach gehen lassen?"
+    "Ich will wissen, warum sie überhaupt hier ist!"
+    "Nein, bevor ich das nicht herausgefunden habe, bleibt sie hier!"
+    b "Willst du mir nicht erst erzählen, was das hier alles soll?"
+    yan "..."
+    b "Du brichst in meine Wohnung ein, versuchst meine Festplatte zu kopieren..."
+    b "...du wusstest sogar, wo im Kühlschrank die Saftflasche steht!"
+    yan "..."
+    b "Wieviel weißt du noch über mich, hä?"
+    yan "..."
+    yan "Nicht viel..."
+    yan "D-Dein Name ist %(berndName)s."
+    yan "Du magst Anime."
+    yan "Du hast eine kleine Schwester...{w} %(sisName)s."
+    yan "Das war alles...{w} denke ich."
+    "Sie weiß wirklich nicht viel."
+    b "Aber was willst du denn dann von mir?"
+    b "Sag es mir doch einfach!"
+    yan "Ich würde es dir sagen... {w}wenn ich könnte."
+    b "Was soll das denn bedeuten?"
+    b "Wieso solltest du es nicht können?"
+    yan "Weil..."
+    show yasmin stalker_neutral
+    with dissolve
+    yan "...ich es nicht weiß."
+    b "Also nochmal..."
+    yan "Warte, %(berndName)s..."
+    yan "...egal, wie oft du fragen wirst, ich kann es dir nicht sagen."
+    yan "Du wirst keine Antwort bekommen, weil ich dir keine Antwort geben kann."
+    yan "Ich kann nicht und ich darf nicht, obwohl ich will."
+    show yasmin stalker_shy
+    with dissolve
+    yan "...das ist alles, was ich dir noch sagen wollte."
+    yan "Darf ich nun gehen?"
+    b "..."
+    "Was soll ich dazu sagen?"
+    menu:
+        "Ich lasse sie gehen.":
+            jump yasmin_geht
+        "Sie soll bleiben!":
+            b "Nein, bleib hier."
+            yan "..."
+            yan "Warum?"
+            yan "Es wird nichts ändern."
+            "Ich darf sie nicht entkommen lassen."
+            "Ich muss sie irgendwie davon überzeugen, zu bleiben."
+            b "I-Ich werde dich nichts mehr fragen."
+            yan "...?"
+            b "Ich..."
+            "Was jetzt?"
+            b "Du sagtest, du magst Lucky Star... oder?"
+            yan "Was?"
+            yan "Wieso spielt das jetzt eine Rolle?"
+            b "Ich..."
+            b "Ich will dich einfach ein bisschen... {w}besser kennenlernen."
+            show yasmin stalker_surprised
+            with dissolve
+            "Habe ich das wirklich gesagt?"
+            "Zu einem Mädchen?"
+            "Mir ist auf die Schnelle nichts besseres eingefallen."
+            "Ob sie mir das abnimmt?"
+            yan "..."
+            "Anscheinend nicht."
+            b "Also... was ist nun?"
+            b "Magst du Lucky Star?"
+            yan "..."
+            show yasmin stalker_shy
+            with dissolve
+            yan "Naja..."
+            yan "Ich habe nur die ersten beiden Folgen gesehen, und die haben mir nicht wirklich gefallen."
+            yan "Aber... was soll das denn plötzlich?"
+            "Ich muss sie ablenken..."
+            b "Lucky Star wird erst nach der vierten Folge richtig gut!"
+            yan "%(berndName)s?"
+            "Wenn ich einfach weiter rede, kann sie gar nicht anders, als mir zuzuhören."
+            "Dann habe ich sie, wo ich sie haben will."
+            b "Die ersten vier Folgen sind ziemlich schlecht und langweilig."
+            b "Danach wird es besser."
+            b "Du solltest unbedingt weiterschauen."
+            yan "%(berndName)s...?"
+            "Ich weiß genau, wie solche Leute drauf sind."
+            "Das habe ich mal in einem Anime gesehen."
+            "Man muss nur ein wenig dominant sein, und sie tun alles, was man von ihnen will."
+            b "Ich habe eine Idee!"
+            b "Warum schauen wir es nicht jetzt?"
+            yan "...jetzt?"
+            b "Ja."
+            yan "Sofort?"
+            b "Ja."
+            yan "..."
+            b "Willst du Folge eins und zwei noch mal sehen, oder überspringen wir die?"
+            show bg keller
+            with dissolve
+            "Ich öffne meinen Animeordner und suche das entsprechene Unterverzeichnis."
+            yan "..."
+            b "Was nun?"
+            yan "...ich möchte sie noch mal sehen."
+            yan "Es ist schon etwas her."
+            "Ja!"
+            "Mission erfolgreich!"
+            "Jetzt habe ich sie."
+            b "Gut!"
+            "Mit einem Doppelklick starte ich die erste Folge von Lucky Star."
+            "Ich setze mich auf's Bett und genieße den Vorspann."
+            b "Jetzt steh da nicht so rum."
+            b "Setz dich!"
+            "Ich signalisiere ihr, dass sie sich hinsetzen soll."
+            "Sie gehorcht ohne Widerworte."
+            "Genau nach Plan."
+            "..."
+            "Moment mal!"
+            "Ich war so sehr darin vertieft, sie dazu zu überreden, nicht zu gehen, dass ich gar nicht realisiert habe, in welcher Situation ich mich befinde."
+            "Ich sitze mitten in der Nacht neben einem fremden Mädchen auf meinem Bett und wir sind am Anfang eines Animemarathons."
+            "Ich schaue aus den Augenwinkeln zu ihr herüber."
+            show yasmin stalker_happy
+            with dissolve
+            "Sie schaut lächelnd auf den Monitor und tippt mit den Finger im Takt zum Vorspann."
+            "Ich rücke ein Stück weiter von ihr weg."
+            "Zu viel menschliche Nähe kann für jemanden wie mich nicht gut sein."
+            "...aber hauptsache sie ist noch da."
+            "Irgendwie werde ich noch alles aus ihr rausquetschen."
+            
+            scene black
+            with fade
