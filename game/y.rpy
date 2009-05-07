@@ -943,7 +943,7 @@ label yasmin_befragung_drei:
     "Außerdem muss sie ja sicher auch mal nach Hause."
     "Ich muss sie also irgendwie davon überzeugen, zu gehen."
     "Aber wie mache ich das?"
-    "Ich kann ihr ja nicht einfach sagen, dass sie sich verpissen soll."
+    "Ich kann ihr ja nicht einfach sagen, dass sie abhauen soll."
     "...oder?"
     menu:
         "Ich muss es ihr irgendwie nett sagen.":
@@ -1014,3 +1014,18 @@ label yasmin_befragung_drei:
     yan "Ich hab uns Frühstück gemacht."
     #KAWAII! (''° ω°)
     #Yasmin ist Bernds waifu!!
+    b "..."
+    #fragezeichenmächen
+    yan "Hast du etwa keinen Hunger?"
+    b "D-Doch."
+    b "Ich habe nur nicht damit gerechnet."
+    "Sie stellt das Tablett auf die Matratze und hockt sich neben mich."
+    "Belegte Brötchen mit Käse, Wurst, Salat, Gurke, Tomate..."
+    "Sogar Rührei hat sie gemacht."
+    yan "Guten Appetit!"
+    b "G-Guten Appetit..."
+    "Sie nimmt sich ein Käsebrötchen und beißt hinein."
+    "Ich nehme mir ein Wurstbrötchen."
+    "Eine Weile sitzen wir kauend und schweigend nebeneinander."
+    "Dann ging Step ins Bett und entschied später weiterzuschreiben."
+    "ENDE"
