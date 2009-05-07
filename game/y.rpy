@@ -458,7 +458,7 @@ label yasmin_befragung_zwei:
             b "Ich kann dich ja nicht einfach laufen lassen."
             "Nein, das geht auf keinen Fall."
             "...aber ans Weglaufen scheint sie ja auch gar nicht zu denken."
-            b "Warum bist du nicht weggelaufen."
+            b "Warum bist du nicht weggelaufen?"
             b "Ich habe dir genug Zeit gegeben, oder?"
             
             show yasmin stalker_surprised
@@ -757,92 +757,260 @@ label yasmin_befragung_drei:
     yan "...das ist alles, was ich dir noch sagen wollte."
     yan "Darf ich nun gehen?"
     b "..."
-    "Was soll ich dazu sagen?"
+    "Ich kann sie nicht gehen lassen."
+    b "Nein, bleib hier."
+    yan "..."
+    yan "Warum?"
+    yan "Es wird nichts ändern."
+    "Ich darf sie nicht entkommen lassen."
+    "Ich muss sie irgendwie davon überzeugen, zu bleiben."
+    b "I-Ich werde dich nichts mehr fragen."
+    yan "...?"
+    b "Ich..."
+    "Was jetzt?"
+    b "Du sagtest, du magst Lucky Star... oder?"
+    yan "Was?"
+    yan "Wieso spielt das jetzt eine Rolle?"
+    b "Ich..."
+    b "Ich will dich einfach ein bisschen... {w}besser kennenlernen."
+    show yasmin stalker_surprised
+    with dissolve
+    "Habe ich das wirklich gesagt?"
+    "Zu einem Mädchen?"
+    "Mir ist auf die Schnelle nichts besseres eingefallen."
+    "Ob sie mir das abnimmt?"
+    yan "..."
+    "Anscheinend nicht."
+    b "Also... was ist nun?"
+    b "Magst du Lucky Star?"
+    yan "..."
+    show yasmin stalker_shy
+    with dissolve
+    yan "Naja..."
+    yan "Ich habe nur die ersten beiden Folgen gesehen, und die haben mir nicht wirklich gefallen."
+    yan "Aber... was soll das denn plötzlich?"
+    "Ich muss sie ablenken..."
+    b "Lucky Star wird erst nach der vierten Folge richtig gut!"
+    yan "%(berndName)s?"
+    "Wenn ich einfach weiter rede, kann sie gar nicht anders, als mir zuzuhören."
+    "Dann habe ich sie, wo ich sie haben will."
+    b "Die ersten vier Folgen sind ziemlich schlecht und langweilig."
+    b "Danach wird es besser."
+    b "Du solltest unbedingt weiterschauen."
+    yan "%(berndName)s...?"
+    "Ich weiß genau, wie solche Leute drauf sind."
+    "Das habe ich mal in einem Anime gesehen."
+    "Man muss nur ein wenig dominant sein, und sie tun alles, was man von ihnen will."
+    b "Ich habe eine Idee!"
+    b "Warum schauen wir es nicht jetzt?"
+    yan "...jetzt?"
+    b "Ja."
+    yan "Sofort?"
+    b "Ja."
+    yan "..."
+    b "Willst du Folge eins und zwei noch mal sehen, oder überspringen wir die?"
+    show bg keller
+    with dissolve
+    "Ich öffne meinen Animeordner und suche das entsprechene Unterverzeichnis."
+    yan "..."
+    b "Was nun?"
+    yan "...ich möchte sie noch mal sehen."
+    yan "Es ist schon etwas her."
+    "Ja!"
+    "Mission erfolgreich!"
+    "Jetzt habe ich sie."
+    b "Gut!"
+    "Mit einem Doppelklick starte ich die erste Folge von Lucky Star."
+    "Ich setze mich auf's Bett und genieße den Vorspann."
+    b "Jetzt steh da nicht so rum."
+    b "Setz dich!"
+    "Ich signalisiere ihr, dass sie sich hinsetzen soll."
+    "Sie gehorcht ohne Widerworte."
+    "Genau nach Plan."
+    "..."
+    "Moment mal!"
+    "Ich war so sehr darin vertieft, sie dazu zu überreden, nicht zu gehen, dass ich gar nicht realisiert habe, in welcher Situation ich mich befinde."
+    "Ich sitze mitten in der Nacht neben einem fremden Mädchen auf meinem Bett und wir sind am Anfang eines Animemarathons."
+    "Ich schaue aus den Augenwinkeln zu ihr herüber."
+    show yasmin stalker_happy
+    with dissolve
+    "Sie schaut lächelnd auf den Monitor und tippt mit den Finger im Takt zum Vorspann."
+    "Ich rücke ein Stück weiter von ihr weg."
+    "Zu viel menschliche Nähe kann für jemanden wie mich nicht gut sein."
+    "...aber hauptsache sie ist noch da."
+    "Irgendwie werde ich noch alles aus ihr rausquetschen."
+    
+    scene black
+    with fade
+    
+    $ renpy.pause(1.0)
+    
+    scene bg keller
+    with fade
+    
+    b "Mhm..."
+    "Nanu, wie spät ist es?"
+    "Ist ja auch egal, ich bin sowieso noch müde, also kann ich mich ruhig wieder hinlegen."
+    "Ich lasse meinen Kopf auf das Kissen fallen, und mache die Augen zu."
+    
+    scene black
+    with fade
+    
+    "Irgendwas ist komisch."
+    "Aber was?"
+    
+    scene bg keller
+    show yasmin happy
+    with fade
+   
+    yan "Guten Morgen, %(berndName)s."
+    b "Oh, guten Morgen, %(yanName)s."
+    "..."
+    b "W-w-w-w-as machst du hier?!"
+    "%(yanName)s sitzt neben mir im Bett."
+    "Wieso sitzt sie da?"
+    
+    show yasmin embarrased
+    with dissolve
+    
+    yan "Aber..."
+    yan "...erinnerst du dich nicht mehr?"
+    b "Woran sollte ich mich... {w}Oh."
+    "Ich erinnere mich tatsächlich an etwas."
+    "Wir haben die ganze Nacht Lucky Star geguckt."
+    "Wieso habe ich mich auf sowas eingelassen?"
+    b "Wie lange haben wir gestern geguckt?"
+    
+    show yasmin happy
+    with dissolve
+    
+    yan "Folge 9."
+    "Folge 9."
+    "Das sind fast fünf Stunden."
+    b "Und dann?"
+    yan "Wir sind wohl eingeschlafen."
+    "Verständlich."
+    "Es war wahrscheinlich ein harter Tag für uns beide."
+    "Kein Wunder, dass wir dann irgendwann eingeschla-"
+    "Wir sind zusammen eingeschlafen."
+    "Ich erinnere mich wieder."
+    "Ihre Augen sind langsam zugefallen, und bevor ich was machen konnte, lag sie neben mir im Bett."
+    "In meinem Bett."
+    "Ein Mädchen."
+    "Das ist fast wie Sex."
+    "..."
+    "Heißt das, ich habe die ganze Nacht mit ihr im Bett gelegen...?!"
+    "...was sonst?"
+    "..."
+    "Ich habe die ganze Nacht neben einem Mädchen geschlafen."
+    "Und jetzt?"
+    yan "Ich muss mal kurz nach oben..."
+    b "Was?"
+    "Will sie nun doch endlich abhauen?"
+    show yasmin shy
+    with dissolve
+    yan "Na... du weißt schon..."
+    yan "Ich müsste eben mal... nach oben."
+    "Hä?"
+    b "Was denn?"
+    show yasmin embarrased
+    with dissolve
+    yan "Naja, ich muss eben mal... {w=1}für kleine Mädchen."
+    "Oh, jetzt verstehe ich, was sie meint."
+    "Drücken sich alle Frauen so umständlich aus?"
+    b "Ja, äh..."
+    b "...du kennst dich aus, oder... {w}muss ich dir den Weg zeigen?"
+    show yasmin smile
+    with dissolve
+    yan "Nein, nein. Ich find es schon."
+    hide yasmin smile
+    with dissolve
+    "..."
+    "Jetzt ist sie weg."
+    "Das ist gut."
+    "Ich kann nun in Ruhe überlegen, wie ich weiter verfahren soll."
+    "Sie kann auf keinen Fall bleiben."
+    "Nachher sieht sie noch jemand."
+    "...!"
+    "Ist es nicht gefährlich, sie nach oben gehen zu lassen?"
+    "Was ist, wenn jemand anders sie sieht?"
+    "...andererseits wird sie schon aufpassen, oder?"
+    "Und wenn."
+    "Ich wäre sie los."
+    "Hätte ich nicht wirklich ein Problem mit."
+    "Im Gegenteil."
+    "Ich kann sie ja auf keinen Fall hier unten verstecken."
+    "Außerdem muss sie ja sicher auch mal nach Hause."
+    "Ich muss sie also irgendwie davon überzeugen, zu gehen."
+    "Aber wie mache ich das?"
+    "Ich kann ihr ja nicht einfach sagen, dass sie sich verpissen soll."
+    "...oder?"
     menu:
-        "Ich lasse sie gehen.":
-            jump yasmin_geht
-        "Sie soll bleiben!":
-            b "Nein, bleib hier."
-            yan "..."
-            yan "Warum?"
-            yan "Es wird nichts ändern."
-            "Ich darf sie nicht entkommen lassen."
-            "Ich muss sie irgendwie davon überzeugen, zu bleiben."
-            b "I-Ich werde dich nichts mehr fragen."
-            yan "...?"
-            b "Ich..."
-            "Was jetzt?"
-            b "Du sagtest, du magst Lucky Star... oder?"
-            yan "Was?"
-            yan "Wieso spielt das jetzt eine Rolle?"
-            b "Ich..."
-            b "Ich will dich einfach ein bisschen... {w}besser kennenlernen."
-            show yasmin stalker_surprised
-            with dissolve
-            "Habe ich das wirklich gesagt?"
-            "Zu einem Mädchen?"
-            "Mir ist auf die Schnelle nichts besseres eingefallen."
-            "Ob sie mir das abnimmt?"
-            yan "..."
-            "Anscheinend nicht."
-            b "Also... was ist nun?"
-            b "Magst du Lucky Star?"
-            yan "..."
-            show yasmin stalker_shy
-            with dissolve
-            yan "Naja..."
-            yan "Ich habe nur die ersten beiden Folgen gesehen, und die haben mir nicht wirklich gefallen."
-            yan "Aber... was soll das denn plötzlich?"
-            "Ich muss sie ablenken..."
-            b "Lucky Star wird erst nach der vierten Folge richtig gut!"
-            yan "%(berndName)s?"
-            "Wenn ich einfach weiter rede, kann sie gar nicht anders, als mir zuzuhören."
-            "Dann habe ich sie, wo ich sie haben will."
-            b "Die ersten vier Folgen sind ziemlich schlecht und langweilig."
-            b "Danach wird es besser."
-            b "Du solltest unbedingt weiterschauen."
-            yan "%(berndName)s...?"
-            "Ich weiß genau, wie solche Leute drauf sind."
-            "Das habe ich mal in einem Anime gesehen."
-            "Man muss nur ein wenig dominant sein, und sie tun alles, was man von ihnen will."
-            b "Ich habe eine Idee!"
-            b "Warum schauen wir es nicht jetzt?"
-            yan "...jetzt?"
-            b "Ja."
-            yan "Sofort?"
-            b "Ja."
-            yan "..."
-            b "Willst du Folge eins und zwei noch mal sehen, oder überspringen wir die?"
-            show bg keller
-            with dissolve
-            "Ich öffne meinen Animeordner und suche das entsprechene Unterverzeichnis."
-            yan "..."
-            b "Was nun?"
-            yan "...ich möchte sie noch mal sehen."
-            yan "Es ist schon etwas her."
-            "Ja!"
-            "Mission erfolgreich!"
-            "Jetzt habe ich sie."
-            b "Gut!"
-            "Mit einem Doppelklick starte ich die erste Folge von Lucky Star."
-            "Ich setze mich auf's Bett und genieße den Vorspann."
-            b "Jetzt steh da nicht so rum."
-            b "Setz dich!"
-            "Ich signalisiere ihr, dass sie sich hinsetzen soll."
-            "Sie gehorcht ohne Widerworte."
-            "Genau nach Plan."
+        "Ich muss es ihr irgendwie nett sagen.":
+            "Ich will sie nicht kränken."
+            "Auch wenn ich sie gar nicht kenne."
+            "Sowas tut man einfach nicht."
+            "Ich muss mir also am Besten irgendwie überlegen, wie ich sie möglichst taktvoll abwimmeln kann, ohne dass sie sich verletzt fühlt."
+            "...aber wie?"
+            '"Hey, ich muss gleich los, also solltest du besser gehen."'
+            "...nein."
+            "Das wird sie mir nicht abnehmen."
+            "Sie wird wissen wollen, wohin ich denn muss, und was soll ich da sagen?"
+            "Schule?"
+            "Training oder so?"
+            "Nicht um die Uhrzeit."
+            "...und nachher will sie dann mitkommen oder so."
+            "Nein, das geht nicht."
             "..."
-            "Moment mal!"
-            "Ich war so sehr darin vertieft, sie dazu zu überreden, nicht zu gehen, dass ich gar nicht realisiert habe, in welcher Situation ich mich befinde."
-            "Ich sitze mitten in der Nacht neben einem fremden Mädchen auf meinem Bett und wir sind am Anfang eines Animemarathons."
-            "Ich schaue aus den Augenwinkeln zu ihr herüber."
-            show yasmin stalker_happy
-            with dissolve
-            "Sie schaut lächelnd auf den Monitor und tippt mit den Finger im Takt zum Vorspann."
-            "Ich rücke ein Stück weiter von ihr weg."
-            "Zu viel menschliche Nähe kann für jemanden wie mich nicht gut sein."
-            "...aber hauptsache sie ist noch da."
-            "Irgendwie werde ich noch alles aus ihr rausquetschen."
+            '"Ich glaube du solltest lieber gehen, bevor dich noch jemand sieht."'
+            "Das könnte klappen."
+            "Wenn das kein Grund ist..."
+            "OK, das wäre geschafft."
+            "Ich muss also nur noch warten, bis sie wieder da ist, dann sage ich es ihr."
+            "Ich lasse mich auf's Kissen fallen und warte ab."
+            "Es ist ganz warm."
+            "Ich rolle mich ein Stück weiter dorthin, wo sie gelegen hat."
+            "Auch warm."
+            "..."
+            "Es fühlt sich genau so an, wie auf meiner Seite, aber doch irgendwie anders."
+            "Ich rolle mich abwechselnd vor und zurück."
+            "Irgendwas ist anders, aber ich kann nicht sagen, was es ist."
+            "..."
+            "Wieso denke ich über sowas nach?"
+            "So ein Schwachsinn!"
+            "...trotzdem bleibe ich am Ende auf \"ihrer\" Seite liegen."
             
-            scene black
-            with fade
+        "Ich sag es so, wie es ist!":
+            "Was interessiert mich, was sie denkt?"
+            "Ich werde ihr einfach ins Gesicht sagen, was ich denke."
+            '"Hau ab und lass mich in Ruhe!"'
+            "Sie wird gehen und ich werde wieder meine Ruhe haben."
+            "Endlich."
+            "Sie hat mir nur Ärger bereitet."
+            "...und ich weiß immer noch nicht, warum."
+            "Das ist ganz schön frustrierend."
+            "Ich vergrabe den Kopf im Kissen und warte ab."
+            
+        
+    scene black
+    with fade
+    
+    scene bg keller
+    with fade
+    
+    "Wieso braucht sie denn so lange?"
+    "Hat sie es doch nicht gefunden?"
+    "Oder ist sie vielleicht doch abgehauen?"
+    "Das wäre vielleicht gar nicht so schlecht."
+    "Vielleicht kehrt dann endlich mein normaler Tagesablauf wieder zurück."
+    "In diesem Moment höre ich die Tür aufgehen."
+    "Jetzt muss ich es ihr sagen."
+    "Ich richte mich auf und..."
+    show yasmin happy
+    with dissolve
+    "...vor mir steht %(yanName)s."
+    "In den Händen trägt sie ein Tablett."
+    "Der sonst muffige Keller füllt sich mit dem Geruch frischer Brötchen."
+    yan "Ich hab uns Frühstück gemacht."
+    #KAWAII! (''° ω°)
+    #Yasmin ist Bernds waifu!!
