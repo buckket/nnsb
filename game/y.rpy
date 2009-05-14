@@ -568,6 +568,7 @@ label yasmin_befragung_drei:
     b "Irgendwo!"
     sis "Mit wem sprichst du?"
     b "Mit niemandem!"
+    b "Mit wem sollte ich denn sprechen?"
     "Ich packe %(yanName)s an den Armen und werfe sie auf's Bett."
     b "Los, unter die Decke!"
     
@@ -585,17 +586,19 @@ label yasmin_befragung_drei:
     with dissolve
     
     sis "Was machst du denn hier?"
-    b "N- nichts!"
+    sis "Wieso bist du so laut?"
+    b "N-nichts!"
     "Ich stelle mich vorsichtshalber vor das Bett."
     sis "Ist wirklich alles ok?"
     b "Ja!"
     b "Alles ok!"
     "Hoffentlich merkt sie nichts."
-    sis "Du bist komisch."
+    b "Wieso?"
+    sis "Du bist anders als sonst."
     b "Tja."
     "Mehr bringe ich nicht hervor."
     b "D- Du kannst jetzt gehen."
-    sis "OK."
+    sis "In Ordnung."
     b "..."
     sis "..."
     b "Worauf wartest du?"
@@ -666,13 +669,13 @@ label yasmin_befragung_drei:
     b "J-Ja."
     yan "Ist es lustig?"
     yan "Ich bin noch nicht dazu gekommen, es zu sehen."
-    yan "Also ich wollte eigentlich schon die ganze Zeit, aber dann kam immer was dazwischen und es hat ja auch nicht grade wenig Folgen und dann haben so viele Leute erzählt wie schlecht die Serie sei und irgendwie fand ich dann aber manche Bilder doch recht lustig und hab dann mal in die ersten beiden Folgen reingeschaut aber die waren nicht so gut also{nw}"
+    yan "{=slow}Also ich wollte eigentlich schon die ganze Zeit, aber dann kam immer was dazwischen und es hat ja auch nicht grade wenig Folgen und dann haben so viele Leute erzählt wie schlecht die Serie sei und irgendwie fand ich dann aber manche Bilder doch recht lustig und hab dann mal in die ersten beiden Folgen reingeschaut aber die waren nicht so gut also{/=slow}{nw}"
     b "Stop!"
     show yasmin stalker_surprised
     with dissolve
     yan "T-Tut mir Leid..."
     "Ich bin verwirrt."
-    "Was war das grade?"
+    "Was war das gerade?"
     "Sie hat den Spieß komplett umgedreht."
     "Erst spricht sie kein Wort und dann redet sie wie ein Wasserfall..."
     "...und das auch noch über Anime!"
@@ -682,7 +685,7 @@ label yasmin_befragung_drei:
     show yasmin stalker_shy
     with dissolve
     yan "T-Tut mir wirklich Leid!"
-    yan "Ich wollte nicht so viel reden aber..."
+    yan "Ich wollte nicht so viel reden, aber..."
     show yasmin stalker_embarrased
     with dissolve
     yan "..."
@@ -723,8 +726,8 @@ label yasmin_befragung_drei:
     yan "Wenn du willst...{w} gehe ich einfach."
     b "..."
     "Kann ich sie einfach gehen lassen?"
-    "Ich will wissen, warum sie überhaupt hier ist!"
-    "Nein, bevor ich das nicht herausgefunden habe, bleibt sie hier!"
+    "Ich will doch wissen, warum sie überhaupt hier ist!"
+    "Nein. {w}Bevor ich das nicht herausgefunden habe, bleibt sie hier!"
     b "Willst du mir nicht erst erzählen, was das hier alles soll?"
     yan "..."
     b "Du brichst in meine Wohnung ein, versuchst meine Festplatte zu kopieren..."
@@ -751,7 +754,7 @@ label yasmin_befragung_drei:
     yan "Warte, %(berndName)s..."
     yan "...egal, wie oft du fragen wirst, ich kann es dir nicht sagen."
     yan "Du wirst keine Antwort bekommen, weil ich dir keine Antwort geben kann."
-    yan "Ich kann nicht und ich darf nicht, obwohl ich will."
+    yan "Ich kann nicht, obwohl ich will."
     show yasmin stalker_shy
     with dissolve
     yan "...das ist alles, was ich dir noch sagen wollte."
@@ -777,7 +780,7 @@ label yasmin_befragung_drei:
     with dissolve
     "Habe ich das wirklich gesagt?"
     "Zu einem Mädchen?"
-    "Mir ist auf die Schnelle nichts besseres eingefallen."
+    "Mir ist auf die Schnelle nichts Besseres eingefallen."
     "Ob sie mir das abnimmt?"
     yan "..."
     "Anscheinend nicht."
@@ -884,7 +887,7 @@ label yasmin_befragung_drei:
     show yasmin happy
     with dissolve
     
-    yan "Folge 9."
+    yan "Bis Folge 9."
     "Folge 9."
     "Das sind fast fünf Stunden."
     b "Und dann?"
@@ -957,7 +960,7 @@ label yasmin_befragung_drei:
             "Das wird sie mir nicht abnehmen."
             "Sie wird wissen wollen, wohin ich denn muss, und was soll ich da sagen?"
             "Schule?"
-            "Training oder so?"
+            "Training?"
             "Nicht um die Uhrzeit."
             "...und nachher will sie dann mitkommen oder so."
             "Nein, das geht nicht."
@@ -1119,7 +1122,7 @@ label yasmin_befragung_drei:
     
     b "..."
     "Sie hat es völlig falsch verstanden."
-    "Aber hauptsache sie ist weg."
+    "Aber Hauptsache sie ist weg."
     
     show yasmin embarrased at center
     with move
@@ -1147,7 +1150,7 @@ label yasmin_befragung_drei:
     show yasmin stalker_happy
     with dissolve
     
-    yan "Wir haben noch 14 Folgen Lucky Star vor uns, schon vergessen?"
+    yan "Wir haben noch 15 Folgen Lucky Star vor uns, schon vergessen?"
     b "..."
     "Mit diesen Worten dreht sie sich um und geht."
     

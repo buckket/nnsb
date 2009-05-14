@@ -9,6 +9,9 @@ init python:
     style.jp.font = "mikachan.ttf"
     style.jp.italic = False
     
+    style.slow = Style(style.say_thought)
+    style.slow.slow_cps = 30
+    
     config.log = "debuglog.txt"
     
     
