@@ -98,6 +98,15 @@ init:
     $ spotTrans = ImageDissolve("images/splash/spots_trans.png", 1.0, 8)
     $ fastMove = MoveTransition(0.2)
     $ slowDissolve = Dissolve(1.0)
+    
+    #positionen
+    $ right = Position(xpos=0.8,xanchor="right")
+    $ left = Position(xpos=0.2,xanchor="left")
+    $ leftoffscreen = Position(xpos=0.0,xanchor="right")
+    $ rightoffscren = Position(xpos=1.0,xanchor="left")
+    $ leftedge = Position(xpos=0.0,xanchor="center")
+    $ rightedge = Position(xpos=1.0,xanchor="center")
+
 
     # charaktere
     $ b = DynamicCharacter("berndName", color="#dddddd")

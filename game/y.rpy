@@ -1024,8 +1024,136 @@ label yasmin_befragung_drei:
     "Sogar Rührei hat sie gemacht."
     yan "Guten Appetit!"
     b "G-Guten Appetit..."
-    "Sie nimmt sich ein Käsebrötchen und beißt hinein."
+    "Sie nimmt sich ein Brötchen mit Käse und beißt hinein."
     "Ich nehme mir ein Wurstbrötchen."
     "Eine Weile sitzen wir kauend und schweigend nebeneinander."
-    "Dann ging Step ins Bett und entschied später weiterzuschreiben."
-    "ENDE"
+    "Ich traue mich nicht, etwas zu sagen."
+    "Ihr geht es sicher genauso."
+    "Ich denke noch einmal über das nach, was geschehen ist."
+    "In der Hoffnung, dass alles am Ende irgendwie Sinn ergibt, gehe ich in Gedanken die Ereignisse der letzten Tage immer und immer wieder durch."
+    "Am Ende bin ich nicht schlauer als zuvor."
+    "..."
+    "Wir haben nun seit einigen Minuten kein Wort mehr gewechselt."
+    "Sie sitzt einfach schweigend da und sieht mich an."
+    "Wenn ich mich zu ihr drehe, wendet sie den Blick ab."
+    "Irgendwie muss ich es ihr jetzt sagen."
+    "Wenn ich noch länger warte, überlege ich es mir vielleicht."
+    "Ich atme tief durch."
+    #hier muss dann die musik stoppen
+    "Also jetzt oder nie!"
+    show yasmin neutral
+    with dissolve
+    yan "%(berndName)s."
+    yan "Ich weiß, was du mir sagen willst."
+    b "Ich..."
+    yan "Lass mich ausreden."
+    yan "Du willst mir sagen, dass ich gehen soll."
+    yan "Du verstehst nicht, warum ich überhaupt hier bin."
+    yan "Du möchtest, dass alles wieder so wird wie vorher."
+    yan "Du glaubst, ich wäre verrückt.{w} Vielleicht hast du sogar recht."
+    yan "Du hasst mich."
+    yan "Aber..."
+    yan "Es gibt eine ganz simple Erklärung für alles."
+    yan "Ich..."
+    
+    scene bg keller
+    show yasmin neutral
+    with vpunch
+    
+    show laura neutral at Position(xpos=0.0,xanchor="right")
+    with None
+    
+    show yasmin surprised at right
+    show laura happy at left
+    with move
+    
+    sis "Hey, %(berndName)s!"
+    "Oh, verflucht!"
+    "Wie immer platzt sie genau dann rein, wenn es den meisten Schaden anrichtet."
+    
+    show laura neutral at left
+    with dissolve
+    
+    sis "Nanu?"
+    sis "Wer ist das?"
+    sis "Deine Freundin?"
+    
+    show laura neutral at center
+    with move
+    show yasmin embarrased at rightedge
+    with fastMove
+    
+    "Blitzschnell weicht sie aus und versteckt sich hinter meinem Rücken."
+    
+    show laura happy
+    with dissolve
+    
+    sis "Oh, sie ist schüchtern!"
+    sis "Bist du %(berndName)ss Freundin?"
+    sis "Wie heißt du?"
+    
+    yan "..."
+    
+    "Die Situation ist außer Kontrolle geraten."
+    "Ich muss eingreifen."
+    
+    b "%(sisName)s..."
+    sis "Hm...?"
+    b "Könntest du eventuell... {w}gehen?"
+    
+    show laura surprised
+    with dissolve
+    
+    sis "..."
+    
+    show laura happy
+    with dissolve
+    
+    sis "Verstehe schon."
+    sis "Ihr zwei wollt alleine sein."
+    sis "Keine Sorge, ich erzähle es niemandem, wenn es dir peinlich ist."
+    sis "Viel Spaß noch euch beiden."
+    
+    hide laura happy
+    with dissolve
+    
+    b "..."
+    "Sie hat es völlig falsch verstanden."
+    "Aber hauptsache sie ist weg."
+    
+    show yasmin embarrased at center
+    with move
+    
+    yan "...ich sollte lieber gehen."
+    "Sie ergibt zum ersten Mal Sinn."
+    "Aber sie wollte mir doch eben noch irgendwas sagen, bevor %(sisName)s hier reingestürmt ist."
+    b "Willst du nicht deinen Satz noch beenden?"
+    b "\"Ich...\”?"
+    yan "..."
+    
+    show yasmin smile
+    with dissolve
+    
+    yan "Das erzähle ich dir ein anderes Mal."
+    yan "Ich muss wirklich weg hier."
+    "Sie nimmt ihren Mantel und wirft ihn sich über."
+    
+    show yasmin stalker_smile
+    with dissolve
+    
+    b "Ein anderes Mal?"
+    b "Warum sollte ich mich wieder mit dir treffen wollen?"
+    
+    show yasmin stalker_happy
+    with dissolve
+    
+    yan "Wir haben noch 14 Folgen Lucky Star vor uns, schon vergessen?"
+    b "..."
+    "Mit diesen Worten dreht sie sich um und geht."
+    
+    hide yasmin stalker_happy
+    with dissolve
+    
+    "Ich bleibe allein und verwirrt zurück."
+    
+    #ende kapitel 2
