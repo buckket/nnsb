@@ -1692,10 +1692,16 @@ label anja_weiter:
     bw "Ich werde auf jeden Fall morgen den ganzen Tag zu Hause sein."
     b "Mir egal."
     b "Ich werde nicht kommen."  
-    bw "Bis morgen, %(berndName)s."
-    "Hört sie mir überhaupt zu?"
-    bw "Tschüss."
-    b "..."
+    if anjaZuYasmin == True:
+        bw "Dann halt nicht."
+        bw "Ich werde mir jemanden anders suchen, um Krautchan zu retten."
+        b "Gut."
+        b "Mach das."
+    else:
+        bw "Bis morgen, %(berndName)s."
+        "Hört sie mir überhaupt zu?"
+        bw "Tschüss."
+        b "..."
     "Sie dreht sich um und geht aus dem Keller raus."
     
     "Sie macht die Tür hinter sich zu."
