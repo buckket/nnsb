@@ -843,4 +843,4 @@ label zwei_weiter_entscheid:
             "Zu schwach, heute Abend noch irgendetwas zu tun, lasse ich mich ins Bett fallen und schlafe ein."
             scene black
             with fade
-            jump laura_anfang
+            jump zwei_laura

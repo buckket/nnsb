@@ -4,6 +4,7 @@ init:
     #  yasmin schüchtern mit mantel
     #  yasmin fragezeichenmädchen mit mantel
     #  yasmin weinend mit mantel
+    $ yanVerdacht = "" #dieb/bernd/kein
     pass
 
 label yasmin_polizei:
@@ -848,6 +849,10 @@ label yasmin_befragung_drei:
     
     $ renpy.pause(1.0)
     
+    jump yasmin_zwei_derMorgenDanach
+    
+label yasmin_zwei_derMorgenDanach:
+    
     scene bg keller
     with fade
     
@@ -1159,4 +1164,316 @@ label yasmin_befragung_drei:
     
     "Ich bleibe allein und verwirrt zurück."
     
+    scene black
+    with dissolve
+    
     #ende kapitel 2
+    jump yasmin_drei_von_yasmin
+    
+label yasmin_drei_von_yasmin: #übergang von y route
+    
+    #anfang kapitel 3
+    
+    scene bg keller
+    with dissolve
+    
+    "Zwei Stunden ist es her, dass sie gegangen ist."
+    "In diesen zwei Stunden habe ich so gut wie nichts gemacht."
+    "Seit zwei Stunden sitze ich hier auf meinem Bett und mache nichts."
+    "Nein, das ist nicht ganz richtig."
+    "Ich mache schon etwas."
+    "Ich denke."
+    "Ich denke sogar ziemlich viel."
+    "Über das, was gestern Abend passiert ist, wie es dazu kommen konnte, was es für Folgen haben wird."
+    "Ich kann %(yanName)s immer noch nicht verstehen."
+    "Warum verhält sie sich so?"
+    "Wo ist ihr Motiv?"
+    "Sie muss ein Motiv haben, oder?"
+    "Irgendwelche Beweggründe, die sie antreiben."
+    "Jeder Mensch hat das."
+    "Außer mir."
+    "Ich habe keine Ziele. {w}Keine Motive. {w}Keinen Antrieb oder sowas."
+    "Deswegen bin ich ja auch ein Bernd."
+    "Aber sie ist kein Bernd."
+    "Welchen Grund kann sie haben?"
+    "Was bringt sie dazu, erst bei mir einzubrechen und dann hier zu übernachten?"
+    "Noch dazu mit mir im selben Bett."
+    "Irgendetwas ist hier faul."
+    "Aber ich werde der Sache auf den Grund gehen."
+    "Ich werde herausfinden, warum sie so ist, wie sie ist."
+    "Schließlich bin ich kein dummer Charakter aus irgendeinem Computerspiel, der nicht merkt, was um ihn herum geschieht."
+    "...aber wie gehe ich vor?"
+    "Wie finde ich heraus, was sie denkt?"
+    "Ich muss mich in ihre Lage versetzen, aber wie macht man das?"
+    "Wenn ich sie wäre... {w}was würde ich tun?"
+    b "Stell es dir vor, %(berndName)s..."
+    b "...du bist ein Mädchen."
+    b "Du bist kein Bernd mehr."
+    b "Du bist ein Mädchen... {w}eine junge Frau..."
+    b "...was würdest du tun?"
+    "... {w}... {w}..."
+    "So sehr ich es auch versuche, ich komme zu keinem richtigen Schluss."
+    "Wenn ich ein Mädchen wäre, würde ich wahrscheinlich den ganzen Tag an mir selbst rumspielen."
+    "Aber ich bezweifle, dass mich das irgendwie dazu bringen könnte, sie besser zu verstehen."
+    "Ich brauche mehr Informationen über sie."
+    "Wenn ich verstehen will, wie sie denkt... {w}muss ich wissen, wer sie ist."
+    "Aber wie soll ich mehr über sie erfahren?"
+    "Dafür bräuchte ich zumindest ihren vollen Namen."
+    "Das kann ich also schon mal vergessen."
+    "Vielleicht sollte ich mich da anders nähern."
+    "Ich muss ja nicht unbedingt herausfinden, wer sie genau ist."
+    "Es reicht eventuell wenn ich herausfinde, in welcher Beziehung sie zu mir steht."
+    "Wieso sollte jemand interesse an mir haben?"
+    "Gehen wir mal die Möglichkeiten durch..."
+    "1. Sie ist ein gewöhnlicher Dieb."
+    "Gut möglich, denn sie ist bei mir eingebrochen."
+    "Das spricht auf jeden Fall dafür."
+    "Dagegen spricht, dass sie nicht abgehauen ist als ich sie erwischt habe."
+    "Aber auch das könnte nur ein Trick sein."
+    "...und er hat funktioniert."
+    "Ich habe nicht die Polizei gerufen."
+    "Sie ist entkommen."
+    "Aber wenn sie ein Dieb wäre... {w}was würde sie bei mir klauen wollen?"
+    "Ich habe nichts."
+    "Sie hat auch keine Anstalten gemacht, etwas mitzunehmen, bevor ich sie überrumpelt habe."
+    "..."
+    "Doch, hat sie."
+    "Sie hat versucht, meine Festplatte zu kopieren."
+    "Warum?"
+    "Was ist da drauf?"
+    "Ich habe nichts außer Animevideos, Musik und ein paar Games."
+    "Definitiv nichts von Wert."
+    "Kommen wir zur nächsten Möglichkeit."
+    "2. Sie ist doch Stalkerbernd."
+    "Zwei Dinge sprechen dagegen."
+    "Sie hat behauptet, kein Bernd zu sein."
+    "Das könnte jeder behaupten."
+    "Kein wirklich wirksames Argument."
+    "Aber es gibt da noch etwas..."
+    "...sie ist definitiv eine Frau."
+    "Sie ist weiblich."
+    "Es gibt keine weiblichen Bernds."
+    "Absolut keine."
+    "Sie existieren nicht."
+    "Das sind irgendwelche Typen, die sich als Frauen ausgeben, um Bernd zu ärgern."
+    "Wenn auch unwahrscheinlich, bleibt das trotzdem eine Möglichkeit."
+    "Schließlich ist Stalkerbernd die einzige Person, von der ich irgendwie von Interesse sein könnte."
+    "Die letzte Möglichkeit wäre..."
+    "3. Sie ist keins von beiden."
+    "Die wahrscheinlich einfachste Antwort."
+    "Aber wirklich weiter bringt mich das nicht."
+    "Was mir fehlt sind mehr Informationen über sie."
+    "Ich kann mir schlecht ein Bild von ihr machen, wenn ich nichts über sie weiß."
+    "...aber ich muss auch nicht sofort zu einem Schluss kommen, oder?"
+    "Vielleicht könnte ich einfach noch ein wenig warten."
+    "Sie wollte sich ja nochmal mit mir treffen."
+    "Dann muss es mir gelingen, soviel wie möglich über sie herauszufinden."
+    "...aber vielleicht sollte ich trotzdem schon mal in eine Richtung forschen."
+    "Es kann nicht schaden."
+    "Also welche Möglichkeit erscheint am wahrscheinlichsten?"
+    menu:
+       "Sie ist eventuell ein Dieb.":
+           $ yanVerdacht = "dieb"
+           "Dass sie ein Dieb ist, erscheint mir im Moment am wahrscheinlichsten."
+           "Ich habe zwar keine Ahnung, was sie von mir stehlen würde, aber das werde ich herausfinden."
+       "Sie ist eventuell Stalkerbernd.":
+           $ yanVerdacht = "bernd"
+           "Auch wenn sie ein Mädchen ist... vielleicht ist sie trotzdem ein Bernd."
+           "Das würde erklären, was sie von mir will und warum sie an meinem Computer wollte."
+           "Sie ist hinter meinen persönlichen Daten her, um sie auf Krautchan zu posten."
+           "Aber Krautchan ist im Moment down, also habe ich fürs Erste nichts zu befürchten."
+           "Trotzdem sollte ich mehr über sie herausfinden."
+       "Ich kann es nicht genau sagen.":
+           $ yanVerdacht = "kein"
+           "Ich habe einfach zu wenig Informationen über sie."
+           "Ich werde mich nochmal mit ihr treffen müssen, um wirklich zu klären, was sie von mir will."
+           "Darauf sollte ich mich vorbereiten."
+           
+    "Aber zuerst brauche ich irgendwas zu trinken."
+    "Immer noch ziemlich verwirrt, steige ich die Treppe nach oben."
+    
+    scene bg kueche
+    with fade
+    
+    "In der Küche ist niemand."
+    "Ich will auch im Moment niemanden sehen."
+    "Das würde mich nur ablenken."
+    "Nachdem ich ein Glas mit Traubensaft gefüllt habe, will ich wieder nach unten gehen aber..."
+    
+    show laura neutral
+    with dissolve
+    
+    sis "Hi, %(berndName)s."
+    sis "Ist deine..."
+    "Sie sieht sich kurz um als würde sie sich vergewissern, dass ihr niemand zuhört und spricht dann leise weiter."
+    sis "...Freundin... schon weg?"
+    b "Sie ist nicht meine Freundin."
+    
+    show laura happy
+    with dissolve
+    
+    sis "Alles klar..."
+    
+    show laura neutral
+    with dissolve
+    
+    sis "Und was macht sie dann bei dir?"
+    sis "Wieso solltest du dich denn mit einem Mädchen hier treffen, wenn sie nicht deine Freundin ist?"
+    "Ich könnte es ihr erklären, aber ich habe keine Lust."
+    "Was soll ich sagen?"
+    sis "Na?"
+    
+    show laura happy
+    with dissolve
+    
+    sis "Also hatte ich recht."
+    sis "Sie ist deine Freundin."
+    sis "Ist dir das peinlich?"
+    sis "Wie alt ist sie überhaupt?"
+    sis "Woher kennst du sie?"
+    sis "Wieso ist sie so schüchtern?"
+    b "Lass mich einfach in Ruhe."
+    b "Nervensäge."
+    
+    show laura pissed
+    with dissolve
+    
+    sis "Dann halt nicht."
+    b "Richtig."
+    b "Es geht dich nichts an."
+    
+    show laura mad
+    with dissolve
+    
+    sis "Idiot..."
+    "Zähneknirschend verlässt sie die Küche."
+    
+    hide laura mad
+    with dissolve
+    
+    "%(yanName)s... meine Freundin?"
+    "So ein Quatsch."
+    "Ich kenne sie gar nicht."
+    "Außerdem..."
+    "Wieso sollte sie mich mögen?"
+    "Ich bin ein Bernd."
+    if yanVerdacht == "bernd":
+       "Sie vielleicht auch..."
+       "Trotzdem..."
+    else:
+       "Sie nicht."
+       "Und überhaupt..."
+    "Ich habe mich sowieso schon damit abgefunden, niemals eine Freundin zu finden."
+    "Und ganz sicher nicht so plötzlich."
+    "Sowas passiert nur in irgendwelchen Filmen oder Mangas."
+    "Nicht im echten Leben."
+    "Das wäre ja total kitschig."
+    "Was sollte sie auch an mir mögen?"
+    "Es gibt doch genug Typen, die nicht solche Versager sind wie ich."
+    "Bei denen wäre sie besser aufgehoben."
+    "Die haben einen Job, viel Geld, sind nett, gepflegt und sehen gut aus."
+    "Ich bin nur ein Bernd."
+    "Aber das ist ja auch völlig egal, denn sie mag mich ja überhaupt nicht."
+    "...mal schauen, ob Krautchan schon wieder online ist."
+    
+    scene bg keller
+    with fade
+    
+    "..."
+    "Nein, sieht nicht so aus."
+    "Verdammt."
+    "Ich kann überhaupt nichts tun."
+    "Mehrmals blicke ich mich um, aber hier ist nichts zu tun."
+    "Einfach nichts."
+    "Null."
+    "Gar nichts."
+    "Mir ist langweilig."
+    "Sehr sogar."
+    "Vielleicht sollte ich mal ein wenig frische Luft schnappen."
+    "...obwohl..."
+    "Dafür müsste ich ja in die Außenwelt."
+    "Will ich das wirklich?"
+    "Wohl kaum."
+    "Aber was soll ich sonst machen?"
+    "Es würde vielleicht reichen, das Fenster zu öffnen, aber ich habe kein richtiges Fenster."
+    "Es hilft alles nichts, ich muss einen klaren Kopf kriegen."
+    "Ich laufe einfach eben eine Runde um den Block."
+    
+    scene bg zuhause_draussen
+    with fade
+    
+    "Die kalte Luft tut mir gut und macht mir den Kopf frei."
+    "Endlich kann ich mal durchatmen."
+    "Immer nur im Keller zu sitzen kann auf die Dauer ganz schön anstrengen."
+    "Ich biege um die Ecke."
+    "Die Straße ist leer, niemand ist hier."
+    "Ich versuche an etwas anderes zu denken, aber irgendwie komme ich immer wieder auf %(yanName)s zurück."
+    "Wieso werde ich aus ihrem Verhalten nicht schlau?"
+    "Weil sie eine Frau ist?"
+    "Verhalten sich etwa alle Frauen so merkwürdig?"
+    "Was sie tut ergibt keinen Sinn..."
+    "Aber warum tut sie es dann?"
+    "Ich verstehe sie einfach nicht."
+    "Hoffentlich sehe ich sie nicht wieder."
+    "Dann könnte ich das einfach alles vergessen und wieder ein ganz normales Leben führen."
+    "So wie vorher."
+    "Ja, das ist das Beste."
+    "Wenn Krautchan erst wieder online ist, wird alles gut."
+    "...aber was mache ich, wenn sie doch wieder bei mir aufkreuzt?"
+    "Sie wegschicken?"
+    "Das könnte ich nicht."
+    "Ich habe nicht die Kraft ihr sowas zu sagen."
+    "Ich konnte es schon heute morgen nicht."
+    "Also was dann?"
+    "Ausreden erfinden?"
+    "Das kann ich ziemlich gut."
+    "Ich habe mich schon immer vor allem gedrückt, indem ich mir irgendwelchen Schwachsinn ausgedacht habe."
+    "Irgendwann bin ich deswegen von der Schule geflogen."
+    "Aber dort hielt mich eh nichts."
+    "Auch mit tollem Abschluss findet man heute kaum noch einen Job, und Freunde hatte ich da auch keine."
+    "Ich hatte noch nie Freunde."
+    "Immer ein paar Leute, mit denen man halbwegs reden konnte, aber auch nur über bestimmte Dinge."
+    "Woran liegt das?"
+    "Bin ich selbst Schuld?"
+    "Hätte ich etwas ändern können?"
+    "Darüber nachzudenken bringt mir jetzt auch nichts."
+    "Es ist schon viel zu spät."
+    "In meinem Leben ändert sich eh nichts mehr."
+    "Ich werde einsam sterben."
+    "Einfach irgendwann grillen gehen..."
+
+    scene bg zuhause_draussen
+    with flash
+    
+    play sound "sounds/donner.wav"
+    
+    "Ein Blitz holt mich aus meinen Gedanken."
+    "..."
+    "Ein Gewitter?"
+
+    play music "sounds/regen.wav" fadein 2.0
+    
+    "Na toll."
+    "Es fängt an zu regnen und ich habe keine Schirm oder sowas."
+    "Wo bin ich überhaupt?"
+    "Ich bin so sehr in Gedanken versunken gewesen, dass ich einfach weiter gelaufen bin, ohne auf den Weg zu achten."
+    "Hier kenne ich mich nicht aus."
+    "Der Regen wird stärker."
+    #"Ich bin schon ganz feucht."
+    "Ich bin schon ganz nass." # :3
+    "Wo komme ich her?"
+    "Ich habe mich verlaufen."
+    
+    scene bg zuhause_draussen
+    with flash
+    
+    play sound "sounds/donner.wav"
+    
+    "Da vorne ist eine Bushaltestelle."
+    "Dort stelle ich mich unter, bis der Regen aufhört."
+    "Da ist bestimmt auch ein Stadtplan."
+    "Vielleicht finde ich dann den Weg zurück."
+    
+    #das waren 300 neue zeilen
+    #Es ist 1:30 AM. gute Nacht, Bernd.
+    #ich uploade es morgen...

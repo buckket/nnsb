@@ -166,7 +166,7 @@ init:
     $ mitbringen = "nichts"
     
     $ show_editor_button = True
-
+    $ hentaiEin = False
 # Neues Spiel startet hier
 label start:
     #jump namenFrage

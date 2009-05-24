@@ -211,8 +211,9 @@ label zwei_laura:#Beginn der "echten" Laura-Story, einzige Linie, die zu Lauras 
     "Andererseits ist %(sisName)s wirklich krank."
     "Sie ist immerhin meine Schwester."
     #entscheidung abhängig von sisLove aaaaaaw :3
+    #entscheidung außerdem abhängig davon, ob H-szenen aktiv sind
     $ sisLove = 70 #test
-    if sisLove < 60:
+    if sisLove < 60 or hentaiEin == False:
         jump zwei_laura_nichtMedizin
     "Ja."
     "Sie ist nur meine Schwester."
@@ -313,23 +314,7 @@ label zwei_laura:#Beginn der "echten" Laura-Story, einzige Linie, die zu Lauras 
     #was würde ich dafür geben, hier ein bildschirmfüllendes CG von dieser situation zu haben ;_;
     #...ist das nun schon KiPo?
     
-    #BUTTERGOTT
-    #keine Lust mehr, ich schreibe es später weiter... vielleicht.
-    #erst andere, wichtige szenen!
     
-    sis "Wer ist das, %(berndName)s?"
-    "Wen meint sie?"
-    sis "Hinter dir..."
-    "Ich drehe mich um und sehe..."
-    "Chris Hansen" "Hallo, %(berndName)s."
-    "Chris Hansen" "Wieso setzt du dich nicht dort hin?"
-    b "FFFFFFFFFFFFFFFFFFUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU-"
-    
-    scene black
-    with fade
-    
-    "Und so wurde Bernd v&."
-    jump ende
     
 label zwei_laura_nichtMedizin:
     "Unmöglich!"
