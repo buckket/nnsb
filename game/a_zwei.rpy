@@ -1456,10 +1456,16 @@ label traum:
         " "
        
         "...ist irgendwie süß.":
-            jump von_anja_zu_yasmin
-       
-       
+            anjaZuYasmin = True
+            "Ja, sie war sogar ziemlich süß."
+            "Schwarze Haare sind toll."
+            "Sie sieht vielleicht ein bisschen wie ein Emo aus, aber das macht nichts."
+            "Im Gegenteil."
+            "Irgendwie finde ich das sogar ziemlich gut."
+            "Naja..."
+            
         "ist irgendwie süß. NICHT!":
+            anjaZuYasmin = False
             $ yanLove -=5
             "Schwarze Haare?"
             "Nicht mein Ding."
@@ -1575,7 +1581,6 @@ label anja_weiter:
     b "ICH KOMME JA SCHON!"
     "Ich stehe auf und gehe nach oben."
     
-    play sound "sounds/metaldooropen.wav"
         
     scene bg kellertreppe
     with fade
@@ -1594,13 +1599,11 @@ label anja_weiter:
     scene bg keller
     with fade
     
-    play sound "sounds/metaldooropen.wav"
     
     "Ich schließe die Tür hinter mir."
     "Wie immer."
     "Ich setze mich wieder vor meinen Rechner."
     
-    play sound "sounds/metaldooropen.wav"
     
     show anja angry
     with dissolve
@@ -1694,8 +1697,6 @@ label anja_weiter:
     bw "Tschüss."
     b "..."
     "Sie dreht sich um und geht aus dem Keller raus."
-    
-    play sound "sounds/metaldooropen.wav"
     
     "Sie macht die Tür hinter sich zu."
     "Etwas, das meine Mutter nie macht, wenn sie aus dem Keller rausgeht."    
@@ -1808,6 +1809,12 @@ label anja_weiter:
     "Was mache ich denn jetzt?"
     "Mein PC ist zu schlecht für Spiele."
     "Und nur Anime und Manga ist langweilig."
+    
+    #wenn bernd yasmin süß fand
+    if anjaZuYasmin == True:
+        jump von_anja_zu_yasmin
+    
+    
     "Ich sollte..."
     
     menu:
