@@ -7,7 +7,7 @@
 #label bernd_kapzwei_grillen = Bernd stirbt an Hautkrebs
 #label von_anja_zu_yasmin = Wechsel von A auf Y
 
-label laura_anja_mail:
+label laura_anja_mail1:
 
     "Aber was schreibe ich denn rein?"
     "Ich sollte meine neuen Mails nochmal abrufen."
@@ -1456,7 +1456,7 @@ label traum:
         " "
        
         "...ist irgendwie süß.":
-            anjaZuYasmin = True
+            $ anjaZuYasmin = True
             "Ja, sie war sogar ziemlich süß."
             "Schwarze Haare sind toll."
             "Sie sieht vielleicht ein bisschen wie ein Emo aus, aber das macht nichts."
@@ -1465,7 +1465,7 @@ label traum:
             "Naja..."
             
         "ist irgendwie süß. NICHT!":
-            anjaZuYasmin = False
+            $ anjaZuYasmin = False
             $ yanLove -=5
             "Schwarze Haare?"
             "Nicht mein Ding."

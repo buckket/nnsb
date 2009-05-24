@@ -145,7 +145,7 @@ label zwei_laura_stalk_entscheid:
     with flash
     
     b "Was zum?!"
-    "Durch das wenige Sonnenlicht, was durch mein Fenster fällt, geweckt, setze ich mich aufrecht aufs Bett."
+    "Durch das wenige Sonnenlicht, das durch mein Fenster fällt, geweckt, setze ich mich aufrecht aufs Bett."
     "Alles nur ein Traum...?"
     "Wie spät ist es?"
     "Wieso hat mich denn niemand geweckt?"
@@ -165,7 +165,7 @@ label zwei_laura_stalk_entscheid:
     "Am nächsten Morgen ziehe ich mich doch eh wieder an."
     "Meine Socken sind verschwunden."
     "Dafür liegt auf dem Boden etwas anderes."
-    "Etwas kleines aus Metall."
+    "Etwas Kleines aus Metall."
     "Aber was...?"
     "Sieht aus wie..."
     "Eine Schraube?"
@@ -217,6 +217,7 @@ label zwei_laura_stalk_entscheid:
     "Neue E-Mails habe ich keine."
     "Und Krautchan ist auch offline."
     "Was nun?"
+   
     menu:
 
         "Ich gehe auf 4chan.":
@@ -246,7 +247,6 @@ label zwei_laura_stalk_entscheid:
             "Das war nichts."
             "Dafür bietet mir Google einen kostenlosen E-Mail-Zugang an."
             "Wer hat schon seine E-Mail bei Google?"
-            "Ich überlege mir, was ich als nächstes suchen soll, und lösche nebenbei ein wenig Spam aus meinem Postfach."
             "..."
             
             jump zwei_email_erinnerung
@@ -256,6 +256,7 @@ label zwei_laura_stalk_entscheid:
             "Ist Krautchan wirklich untergegangen?"
             "Dann hatte der Bernd, der mir die Mail geschickt hat, recht."
             "..."
+            
             jump zwei_email_erinnerung
 
 
@@ -267,22 +268,71 @@ label zwei_laura_stalk_entscheid:
 
 label zwei_email_erinnerung:
     "Die E-Mail!"
-    "Sofort stürze ich an meinen Rechner und öffne die Mail."
+    "Sofort stürze ich an meinen Rechner und öffne meine alten Mails."
+    
     scene bg desktop_hilfe
     with dissolve
-    "Die ist von vor drei Tagen."
+    
+    "Die ist von ???."
     "Wenn die tatsächlich ernst gemeint ist..."
-    "...sollte ich vielleicht antworten?"
+    "...sollte ich..."
+    "...vielleicht..."
+    "...antworten?"
+    
+    if $ lauraRoute = 1:
+        jump laura_anja_mail1
+    else:
+        "blablabla"
+        pass
     
     menu:
         ""
         "Ich sollte eine Antwort schreiben.":
+          
             jump laura_anja_mail
             pass
+            
         "Ich werde sie einfach ignorieren.":
+            
             jump zwei_weiter_entscheid
             pass
 
+ 
+label laura_anja_mail:
+    "Ich klicke auf \"Antworten\"."
+    
+    scene bg desktop_mail_leer
+    with dissolve
+    #Bild existiert noch nicht
+    
+    "OK."
+    "Aber was schreibe ich?"
+    
+    menu:
+        "Ich konnte gestern nicht kommen, weil ..."
+                
+        "...ich bei meiner Freundin war.":
+            "Ich konnte gestern nicht kommen, weil ich bei meiner Freundin war."
+            "Das wird Bernd mir auf keinen Fall glauben."
+            "Ein Wieherbuh und eine Freundin?"
+            "Ein Bernd und eine Freundin?"
+            "ICH und eine Freundin?"
+            "Das ist einfach zu unrealistisch."
+            
+        "...meine Katze AIDS hat.":
+            "Ich konnte gestern nicht kommen, weil meine Katze AIDS hat."
+            "Oh wow."
+            "Und mein Hund hat dazu noch die Hausaufgaben gefressen."
+            "Außerdem standen meine Sterne in einem schlechten Winkel."
+            "Ich konnte einfach nicht kommen."
+            
+        "...Globalisierung.":
+            "Ich konnte gestern nicht kommen, weil Globalisierung."
+            "Ich lass das einfach mal so stehen."
+            
+            
+#GSB GSB GSB
+#Bernd bekam eine zweite Mail -> Wechsel auf Anja-Route
 
 #--------------------------------------------------------------------------#
 #Dieser Abschnitt beinhaltet den Teil von Kapitel 2, bei dem sich Bernd für#
