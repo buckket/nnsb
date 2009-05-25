@@ -1374,6 +1374,7 @@ label yasmin_drei_von_yasmin: #übergang von y route
     "Die haben einen Job, viel Geld, sind nett, gepflegt und sehen gut aus."
     "Ich bin nur ein Bernd."
     "Aber das ist ja auch völlig egal, denn sie mag mich ja überhaupt nicht."
+    
     "...mal schauen, ob Krautchan schon wieder online ist."
     
     scene bg keller
@@ -1382,6 +1383,7 @@ label yasmin_drei_von_yasmin: #übergang von y route
     "..."
     "Nein, sieht nicht so aus."
     "Verdammt."
+  
     "Ich kann überhaupt nichts tun."
     "Mehrmals blicke ich mich um, aber hier ist nichts zu tun."
     "Einfach nichts."
@@ -1399,9 +1401,13 @@ label yasmin_drei_von_yasmin: #übergang von y route
     "Es hilft alles nichts, ich muss einen klaren Kopf kriegen."
     "Ich laufe einfach eben eine Runde um den Block."
     
-    scene bg zuhause_draussen
+    scene bg zuhause_draussen_dunkel
     with fade
     
+    "Es ist schon ziemlich dunkel."
+    "Aber so spät ist es doch noch gar nicht?"
+    "Komisch."
+    "Ich atme tief ein."
     "Die kalte Luft tut mir gut und macht mir den Kopf frei."
     "Endlich kann ich mal durchatmen."
     "Immer nur im Keller zu sitzen kann auf die Dauer ganz schön anstrengen."
@@ -1441,8 +1447,13 @@ label yasmin_drei_von_yasmin: #übergang von y route
     "In meinem Leben ändert sich eh nichts mehr."
     "Ich werde einsam sterben."
     "Einfach irgendwann grillen gehen..."
+    $ vonYasmin = True
+    
+    jump drei_yasmin_gewitter
 
-    scene bg zuhause_draussen
+label drei_yasmin_gewitter:
+
+    scene bg zuhause_draussen_dunkel
     with flash
     
     play sound "sounds/donner.wav"
@@ -1464,7 +1475,7 @@ label yasmin_drei_von_yasmin: #übergang von y route
     "Wo komme ich her?"
     "Ich habe mich verlaufen."
     
-    scene bg zuhause_draussen
+    scene bg zuhause_draussen_dunkel
     with flash
     
     play sound "sounds/donner.wav"
@@ -1474,6 +1485,195 @@ label yasmin_drei_von_yasmin: #übergang von y route
     "Da ist bestimmt auch ein Stadtplan."
     "Vielleicht finde ich dann den Weg zurück."
     
-    #das waren 300 neue zeilen
-    #Es ist 1:30 AM. gute Nacht, Bernd.
-    #ich uploade es morgen...
+    scene bg bushaltestelle
+    with dissolve
+    
+    "Hier ist es erst mal trocken."
+    "Auch wenn ich sowieso schon klitschnass bin."
+    "Ein Stadtplan hängt hier auch, aber irgendwer hat ihn vollgekritzelt."
+    "Man kann nichts erkennen."
+    "Scheiß Unterschichtkinder."
+    "Haben die sonst nichts zu tun?"
+    "Warum machen sie anderen das Leben schwer?"
+    
+    scene bg bushaltestelle
+    with flash
+    
+    play sound "sounds/donner.wav"
+    
+    "Es bleibt mir wohl nichts anderes übrig, als hier zu warten bis es vorbei ist."
+    "..."
+    "Der Regen nimmt kein Ende."
+    "Inzwischen ist es wirklich stockdunkel."
+    "Als wäre es Nacht."
+    "...oder ist es schon Nacht?"
+    "Bin ich so lange gelaufen?"
+    "Ich habe keine Uhr dabei, aber es erscheint mir unwahrscheinlich."
+    "Das liegt wohl nur am Gewitter."
+    "Ich werde hier wohl noch eine Weile warten müssen."
+    "Hoffentlich nicht zu lange."
+    "Notfalls muss ich einfach durch den Regen zurück."
+    "...aber ob ich im Dunkeln den Weg finde..."
+    
+    scene bg bushaltestelle
+    show yasmin stalker_schwarz_k
+    with flash
+    
+    play sound "sounds/donner.wav"
+    
+    hide yasmin stalker_schwarz_k
+    with fastDissolve
+    
+    "...!"
+    "Ich habe es nur kurz gesehen, aber auf der anderen Straßensteite steht jemand."
+    "Irgendwer steht dort und schaut in meine Richtung."
+    "Ganz sicher."
+    "Wer?"
+    "Wer ist das?"
+    "Nur irgendein Fußgänger?"
+    "Nein."
+    "Wer würde bei diesem Regen freiwillig draußen herumlaufen und sich den Tod holen?"
+    "Das ist verdächtig."
+    "Steht er noch dort?"
+    "Oder ist er vielleicht einfach weitergegangen?"
+    "Oder kommt er wohlmöglich schon auf mich zu?"
+    "Sicher will er mich ausrauben oder..."
+    
+    scene bg bushaltestelle
+    with flash
+    
+    play sound "sounds/donner.wav"
+    
+    "...weg."
+    "Er ist weg."
+    "...oder war er gar nicht da?"
+    "Bilde ich mir schon Dinge ein?"
+    "Nein."
+    "Er war da."
+    "Ganz sicher."
+    "Es war am Ende doch nur ein Fußgänger."
+    "Irgendjemand, der vom Regen überrascht wurde und nun auf dem Weg nach Hause ist."
+    "Hoffentlich bleibt das meine einzige Begegnung für heute..."
+    "Schritte."
+    "Ich höre Schritte."
+    "Von wo?"
+    "Irgendwo auf der Straße läuft jemand."
+    "Sie werden lauter."
+    "Jemand läuft in meine Richtung."
+    "Will er nur vorbei?"
+    "Oder will er zu mir?"
+    "Was soll ich tun?"
+    "Ich warte einfach."
+    "Es wird schon nichts passieren."
+    "...hoffe ich."
+    "Die Schritte sind jetzt ganz nah."
+    "Eine Person tritt in den Schein der Haltestellenbeleuchtung."
+    
+    show yasmin stalker_neutral
+    with dissolve
+    
+    "Aber... {w}das ist ja...{w} %(yanName)s."
+    
+    #hier wird die story aufgespalten in zwei teile abhängig davon, ob Bernd
+    #von yasmins oder von anjas route zu diesem treffen kommt. beide storys
+    #vereinigen sich, sobald yasmin auf krautchan aufmerksam wird
+    
+    if vonYasmin == True: #wird nur gesetzt, wenn bernd über yasmin_drei_von_yasmin kommt
+        jump drei_yasmin_regen_vonYasmin
+    else: #sonst muss er über anja gekommen sein
+        jump drei_yasmin_regen_vonAnja
+    
+    
+label drei_yasmin_regen_vonYasmin:
+    show yasmin stalker_happy
+    with dissolve
+    yan "Hey, %(berndName)s."
+    b "Äh... Hey."
+    show yasmin stalker_neutral
+    with dissolve
+    yan "Was machst du hier draußen?"
+    yan "Noch dazu bei diesem Wetter?"
+    yan "Hätte nicht gedacht, dass du jemand bist, der oft draußen herumläuft."
+    yan "Vor allem nicht bei Regen..."
+    "Wer würde auch bei Regen freiwillig rausgehen?"
+    b "Tja, das hat sich so ergeben."
+    b "Irgendwie war ich unterwegs und dann zog dieses Gewitter auf..."
+    b "Nun sitze ich hier und..."
+    "Ich kann ihr schlecht sagen, dass ich den Rückweg nicht finde."
+    "Das ist ja peinlich."
+    b "...und ich warte, bis es zu regnen aufhört."
+    show yasmin stalker_happy
+    with dissolve
+    yan "Achso."
+    yan "Na dann..."
+    yan "Würde es dich stören, wenn ich neben dir sitze?"
+    "Ja."
+    b "Nein."
+    "Verdammt."
+    "Ich würde lieber allein sein, aber das kann ich ihr nicht sagen."
+    "Sie nimmt direkt neben mir Platz."
+    "Viel zu nah."
+    "Ich rutsche ein Stück zur Seite."
+    "Eine Weile lang schweigen wir."
+    "Sollte ich irgendwie ein Gespräch anfangen?"
+    "Oder einfach sitzen bleiben?"
+    "Was würde ich denn sagen?"
+    show yasmin stalker_embarrased
+    with dissolve
+    yan "%(berndName)s..."
+    yan "Wie lange willst du hier noch sitzen?"
+    b "Bis der Regen aufhört."
+    yan "...das kann aber dauern."
+    yan "Willst du so lange hier bleiben?"
+    b "Ja."
+    yan "...ok."
+    show yasmin stalker_happy
+    with dissolve
+    yan "Dann werde ich auch warten."
+    "Na super."
+    "Ich werde also die nächsten Minuten, Stunden oder Tage neben ihr sitzen und schweigen."
+    "Was macht sie überhaupt hier?"
+    "Wieso läuft sie im Regen herum?"
+    b "Was treibt dich eigentlich her?"
+    b "Wieso bist du hier?"
+    yan "Hm... {w}ich war auf dem Weg... {w}zu dir!"
+    b "Wieso zu mir?"
+    yan "Ich wollte mal wieder vorbeischauen..."
+    b "...aber du bist vor ein paar Stunden erst gegangen..."
+    b "...und du meintest, dass du wirklich gehen musst..."
+    show yasmin stalker_embarrased
+    with dissolve
+    yan "Das ist..."
+    yan "...also ich musste auch weg."
+    yan "Aber ich hab alles erledigt..."
+    yan "...und ich hatte nichts zu tun, also wollte ich vorbeischauen."
+    "Als ob."
+    b "Soso."
+    "Jetzt schweigen wir wieder."
+    "Was sie sagt ergibt keinen Sinn."
+    
+    scene bg bushaltestelle
+    show yasmin stalker_schwarz
+    with flash
+    show yasmin stalker_surprised
+    with dissolve
+    
+    play sound "sounds/donner.wav"
+    
+    yan "Ah!"
+    "Sie zuckt zusammen als es blitzt und ich kann mir ein Lächeln nicht verkneifen."
+    "Wieso hat sie in ihrem Alter noch Angst vor Gewitter?"
+    
+    show yasmin stalker_embarrased
+    with dissolve
+    
+    yan "...albern, oder?"
+    b "Hm?"
+    "Sie hat wohl gemerkt, dass ich mich über sie lustig gemacht habe."
+    yan "...ach nichts."
+    
+
+
+    
+label drei_yasmin_regen_vonAnja:
+    pass

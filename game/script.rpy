@@ -101,6 +101,7 @@ init:
     $ spotTrans = ImageDissolve("images/splash/spots_trans.png", 1.0, 8)
     $ fastMove = MoveTransition(0.2)
     $ slowDissolve = Dissolve(1.0)
+    $ fastDissolve = Dissolve(0.3)
     
     #positionen
     $ right = Position(xpos=0.8,xanchor="right")

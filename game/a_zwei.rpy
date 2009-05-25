@@ -1818,6 +1818,7 @@ label anja_weiter:
     
     #wenn bernd yasmin süß fand
     if anjaZuYasmin == True:
+        
         jump von_anja_zu_yasmin
     
     
@@ -2417,14 +2418,65 @@ label bernd_kapzwei_grillen:
     #
 label von_anja_zu_yasmin:
 
-    $ yanLove += 5
-    "Aber ich werde sie wahrscheinlich nie wieder sehen."
-    "Ihre schwarzen Haare."
-    "Ich steh' auf schwarze Haare."
-    "Sie hat zwar Tränensäcke, aber sie ist natürlich."
-    "Ich liebe natürliche Frauen."
-    "Schminke ist der Krebs, der die Frauen zerfrisst."
-    #hier müsste man nun einen gemeinsamen Übergang finden
-    #solange erst einmal:
+    "Ich kann überhaupt nichts tun."
+    "Mehrmals blicke ich mich um, aber hier ist nichts zu tun."
+    "Einfach nichts."
+    "Null."
+    "Gar nichts."
+    "Mir ist langweilig."
+    "Sehr sogar."
+    "Vielleicht sollte ich mal ein wenig frische Luft schnappen."
+    "...obwohl..."
+    "Dafür müsste ich ja in die Außenwelt."
+    "Will ich das wirklich?"
+    "Wohl kaum."
+    "Aber was soll ich sonst machen?"
+    "Es würde vielleicht reichen, das Fenster zu öffnen, aber ich habe kein richtiges Fenster."
+    "Es hilft alles nichts, ich muss einen klaren Kopf kriegen."
+    "Ich laufe einfach eben eine Runde um den Block."
     
-    jump ende
+    scene bg zuhause_draussen
+    with fade
+    
+    "Die kalte Luft tut mir gut und macht mir den Kopf frei."
+    "Endlich kann ich mal durchatmen."
+    "Immer nur im Keller zu sitzen kann auf die Dauer ganz schön anstrengen."
+    "Ich biege um die Ecke."
+    "Die Straße ist leer, niemand ist hier."
+    "Ich versuche an etwas anderes zu denken, aber irgendwie komme ich immer wieder auf %(wBerndName)s zurück."
+    "Wieso werde ich aus ihrem Verhalten nicht schlau?"
+    "Weil sie eine Frau ist?"
+    "Verhalten sich etwa alle Frauen so merkwürdig?"
+    "Was sie tut ergibt keinen Sinn..."
+    "Aber warum tut sie es dann?"
+    "Ich verstehe sie einfach nicht."
+    "Hoffentlich sehe ich sie nicht wieder."
+    "Dann könnte ich das einfach alles vergessen und wieder ein ganz normales Leben führen."
+    "So wie vorher."
+    "Ja, das ist das Beste."
+    "Wenn Krautchan erst wieder online ist, wird alles gut."
+    "...aber was mache ich, wenn sie doch wieder bei mir aufkreuzt?"
+    "Sie wegschicken?"
+    "Das könnte ich nicht."
+    "Ich habe nicht die Kraft ihr sowas zu sagen."
+    "Ich konnte es schon heute morgen nicht."
+    "Also was dann?"
+    "Ausreden erfinden?"
+    "Das kann ich ziemlich gut."
+    "Ich habe mich schon immer vor allem gedrückt, indem ich mir irgendwelchen Schwachsinn ausgedacht habe."
+    "Irgendwann bin ich deswegen von der Schule geflogen."
+    "Aber dort hielt mich eh nichts."
+    "Auch mit tollem Abschluss findet man heute kaum noch einen Job, und Freunde hatte ich da auch keine."
+    "Ich hatte noch nie Freunde."
+    "Immer ein paar Leute, mit denen man halbwegs reden konnte, aber auch nur über bestimmte Dinge."
+    "Woran liegt das?"
+    "Bin ich selbst Schuld?"
+    "Hätte ich etwas ändern können?"
+    "Darüber nachzudenken bringt mir jetzt auch nichts."
+    "Es ist schon viel zu spät."
+    "In meinem Leben ändert sich eh nichts mehr."
+    "Ich werde einsam sterben."
+    "Einfach irgendwann grillen gehen..."
+
+    jump drei_yasmin_gewitter
+    
