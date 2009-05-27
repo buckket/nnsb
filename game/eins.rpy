@@ -1758,6 +1758,7 @@ label eins_accept_fBernd:
     
 label eins_refuse_fBernd:
     $ anjaAccept = 0
+    $ anjaRoute = 0
     b "Ich kann das irgendwie nicht glauben."
     b "Das ist doch völliger Unsinn."
     bw "Aber %(berndName)s!"

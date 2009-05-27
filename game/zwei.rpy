@@ -15,6 +15,8 @@ label zwei:
         jump zwei_laura
     if(anjaRoute):
         jump anja_anfang
+    else:
+        jump bernd_anfang
 
 
   
@@ -279,8 +281,8 @@ label zwei_email_erinnerung:
     "...vielleicht..."
     "...antworten?"
     
-    if $ lauraRoute = 1:
-        jump laura_anja_mail1
+    if lauraRoute :
+        jump laura_anja_mail_vonLaura
     else:
         "blablabla"
         pass
