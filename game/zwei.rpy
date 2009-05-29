@@ -230,7 +230,7 @@ label zwei_laura_stalk_entscheid:
             scene black
             with fade
             "Eine Woche später..."
-            scene gameover_vierkanal
+            scene bg gameover_vierkanal
             with fade
             $ renpy.pause()
             jump ende
@@ -282,9 +282,9 @@ label zwei_email_erinnerung:
     "...antworten?"
     
     if lauraRoute :
-        jump laura_anja_mail_vonLaura
+        #jump laura_anja_mail_vonLaura
+        pass
     else:
-        "blablabla"
         pass
     
     menu:

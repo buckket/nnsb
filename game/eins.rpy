@@ -2741,7 +2741,7 @@ label eins_sisAbholenZuerst:
     "Anstatt geradeaus weiterzugehen, biege ich nach links ab."
     "Hoffentlich kann ich ihn so abhängen."
 
-    scene bg schulwegPano at right
+    scene bg schulwegpano at right
     with fade
 
     "Wenn ich mich jetzt umdrehe, hat er eigentlich keine Zeit mehr, um sich zu verstecken."
@@ -2750,7 +2750,7 @@ label eins_sisAbholenZuerst:
     "1..."
     "Jetzt!"
 
-    scene bg schulwegPano at left
+    scene bg schulwegpano at left
     with move
     "..."
     "..."
