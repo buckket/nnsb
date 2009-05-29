@@ -385,7 +385,7 @@ label prolog_EinkaufenLinks:
     "Tatsächlich finde ich nach etwa zehn Minuten einen Aldi."
     
     play music m_shop
-    scene bg supermarkt_innen
+    scene bg supermarkt
     with fade
     
     if (prolog_GeldGenommen):
@@ -408,7 +408,7 @@ label prolog_EinkaufenWLAN:
     "So schnell es geht gehe ich zur Kasse und bezahle."
     b "Ich sollte mich wirklich beeil-"
     stop music
-    scene bg supermarkt_innen
+    scene bg supermarkt
     with vpunch
     play sound "sounds/hit_1.wav"
     show anja weird_n
@@ -474,7 +474,7 @@ label prolog_EinkaufenRechts:
     
     play music m_shop
     
-    scene bg supermarkt_innen
+    scene bg supermarkt
     with fade
     
     if (prolog_GeldGenommen):
