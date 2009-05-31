@@ -10,7 +10,8 @@ init:
 label yasmin_polizei:
     #passiert, wenn Bernd die Polizei rufen will
     #Yasmin flieht und er sieht sie nie wieder
-    #Er landet auf der Bernd-Route und schlägt sich ziemlich allein mit Lauras und Yasmins Hilfe durch
+    #Er landet auf der Laura-Route und manchmal hilft ihm Yasmin ein bisschen aus dem Hintergrund
+    
     b "Mir reicht es!"
     b "Ich rufe jetzt die Polizei!"
     show yasmin stalker_surprised
@@ -1661,7 +1662,7 @@ label drei_yasmin_regen_vonYasmin:
     play sound "sounds/donner.wav"
     
     yan "Ah!"
-    "Sie zuckt zusammen als es blitzt und ich kann mir ein Lächeln nicht verkneifen."
+    "Sie zuckt zusammen und ich kann mir ein Lächeln nicht verkneifen."
     "Wieso hat sie in ihrem Alter noch Angst vor Gewitter?"
     
     show yasmin stalker_embarrased
@@ -1671,9 +1672,130 @@ label drei_yasmin_regen_vonYasmin:
     b "Hm?"
     "Sie hat wohl gemerkt, dass ich mich über sie lustig gemacht habe."
     yan "...ach nichts."
+    "Wieder Stille."
+    yan "Wollen wir nicht zu dir gehen, %(berndName)s?"
+    b "...aber es regnet noch."
     
-
-
+    show yasmin stalker_shy
+    with dissolve
+    
+    yan "Bist du so empfindlich?"
+    b "Nein... ich..."
+    "Ich kann ihr schlecht sagen, dass ich den Weg nicht finde."
+    "Oder...?"
+    
+    menu:
+        "Ich sollte es ihr sagen.":
+            "Richtig, ich sollte ihr einfach sagen, was Sache ist."
+            "Sie wird mich ja wohl nicht auslachen."
+            "Und wenn... {w}das interessiert mich überhaupt nicht."
+            "Ich bin es ja gewohnt, dass man sich über mich lustig macht."
+            "Also dann..."
+            b "Ich..."
+            b "Ich finde nicht mehr nach Hause."
+            b "Das ist alles."
+            
+            show yasmin stalker_surprised
+            with dissolve
+            
+            yan "Was?"
+            yan "Du..."
+            
+            show yasmin stalker_smile
+            with dissolve
+            
+            yan "Wenn das alles ist..."
+            yan "Ich kenne den Weg doch."
+            yan "Warum hast du nichts gesagt?"
+            b "..."
+            yan "Es muss dir nicht peinlich sein."
+            yan "Nur weil du dich hier nicht auskennst?"
+            yan "Ist doch nicht schlimm... oder?"
+            "Sie hat Recht."
+            b "Nein..."
+            b "Du hast Recht."
+            yan "Also dann... wollen wir?"
+            b "OK..."
+            
+        "Ich sollte mich weiter rausreden.":
+            "Nein, ich kann es ihr auf keinen Fall sagen."
+            "Viel zu peinlich."
+            "Aber was erzähle ich ihr dann?"
+            b "Ich..."
+            "Verdammt, %(berndName)s, überleg dir was!"
+            b "Ich will nicht nach Hause."
+            
+            show yasmin stalker_surprised
+            with dissolve
+            
+            yan "Wieso das?"
+            b "Ich..."
+            "Oh man, was jetzt?"
+            b "Ich will nicht darüber sprechen."
+            "Ich höre mich an wie irgendein Emo oder sowas..."
+            
+            show yasmin stalker_shy
+            with dissolve
+            
+            yan "Das..."
+            yan "Das verstehe ich."
+            yan "Aber du kannst nicht die ganze Nacht hier sitzen bleiben."
+            yan "Lass uns gehen, ok?"
+            yan "Bitte?"
+            b "..."
+            yan "..."
+            "Ach, was solls."
+            b "OK... gehen wir."
+            
+            show yasmin stalker_happy
+            with dissolve
+            
+            yan "Gut."
+            
+    "Sie tritt hinaus in den Regen."
+    
+    show yasmin stalker_happy
+    with dissolve
+    
+    yan "Beeil dich, sonst werden wir ganz nass."
+    b "Du hast wenigstens eine Kapuze."
+    b "Warum setzt du sie nicht auf?"
+    
+    show yasmin stalker_smile
+    with dissolve
+    
+    yan "Mir macht Regen nichts."
+    yan "Ist im Endeffekt ja nur Wasser."
+    "Wo sie Recht hat, hat sie Recht."
+    "Ich stehe auf und mache zwei Schritte vorwärts."
+    "Innerhalb von wenigen Sekunden bin ich nass von Kopf bis Fuß."
+    b "..."
+    
+    show yasmin stalker_happy
+    with dissolve
+    
+    yan "Willst du meinen Mantel haben?"
+    b "Nein."
+    "Ganz bestimmt nicht."
+    
+    show yasmin stalker_shy
+    with dissolve
+    
+    yan "...dann nicht."
+    
+    show yasmin stalker_neutral
+    with dissolve
+    
+    yan "Los, beeil dich ein bisschen."
+    
+    hide yasmin stalker_neutral
+    with dissolve
+    
+    "Sie rennt voraus und ich folge ihr."
+    
+    scene black
+    with fade
+            
     
 label drei_yasmin_regen_vonAnja:
     pass
