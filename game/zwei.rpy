@@ -275,14 +275,15 @@ label zwei_email_erinnerung:
     scene bg desktop_hilfe
     with dissolve
     
-    "Die ist von ???."
+    "Die ist von vorgestern."
     "Wenn die tatsächlich ernst gemeint ist..."
     "...sollte ich..."
     "...vielleicht..."
     "...antworten?"
     
-    if lauraRoute :
-        #jump laura_anja_mail_vonLaura
+    if stalker:
+        jump laura_anja_mail_a_zwei
+        #das Label steht am Anfang von a_zwei.rpy 
         pass
     else:
         pass
@@ -294,12 +295,12 @@ label zwei_email_erinnerung:
             jump laura_anja_mail
             pass
             
-        "Ich werde sie einfach ignorieren.":
+        "Ich werde die Mail einfach ignorieren.":
             
             jump zwei_weiter_entscheid
             pass
 
- 
+
 label laura_anja_mail:
     "Ich klicke auf \"Antworten\"."
     

@@ -1,5 +1,5 @@
 #Inhaltsverzeichnis:
-#label laura_anja_mail = Wechsel von Laura-Route auf Anja-Route
+#label laura_anja_mail_a_zwei = Wechsel von Laura-Route auf Anja-Route
 #label anja_anfang = direkte Anja-Route
 #label bernd_anja_besprechung = menu "Soll ich zu Anja gehen? J/N"
 #label anja_weiter = statt des Wechsels auf Y geht es bei A weiter
@@ -7,7 +7,7 @@
 #label bernd_kapzwei_grillen = Bernd stirbt an Hautkrebs
 #label von_anja_zu_yasmin = Wechsel von A auf Y
 
-label laura_anja_mail1:
+label laura_anja_mail_a_zwei:
 
     "Aber was schreibe ich denn rein?"
     "Ich sollte meine neuen Mails nochmal abrufen."
@@ -15,7 +15,6 @@ label laura_anja_mail1:
     scene bg desktop_email
     with fade
     #Bild existiert noch nicht/neues Bild bitte mit verändertem Spam
-    #muss auch noch registriert werden
     #ganz oben muss nochmal eine Mail von Anja stehen (schnuffel90@googlemail.com)
     
     "Neuer Spam."
@@ -24,9 +23,10 @@ label laura_anja_mail1:
     "Oh."
     "schnuffel90@googlemail.com."
     "Die E-Mail ist von gestern."
-    "Was wohl drin steht?"
+    "Was da wohl drin steht?"
     "Ich öffne die Mail."
     #Ausbaufähig im Sinne von: GSB schon wieder? Der ist ganz schön nervig usw.
+    #Kommt drauf an, was Yubi-chan da ins Bild schreibt
     
     scene bg desktop_hilfe
     with fade
@@ -39,7 +39,9 @@ label laura_anja_mail1:
     "Bernd"
     
     "Moment, Moment, Moment."
-    "Bernd will zu mir kommen?"
+    "Bernd will hierhin kommen?"
+    "Zu mir?"
+    "In diesen Keller?"
     "In MEINEN Keller?"
     "Weil ich mich nicht mit ihm traf?"
     "Er scheint es wirklich ernst zu meinen."
@@ -64,7 +66,7 @@ label laura_anja_mail1:
     ma "KOMM SCHNELL!"
     "Warum kommt immer nur ein \"KOMM SCHNELL!\", wenn ich nachfrage?"
     "Ich hasse sowas."
-    b "JAJA!."
+    b "JAJA!"
     "Ich stehe auf und ..."    
     
     play sound "sounds/metaldooropen.wav"
@@ -124,16 +126,22 @@ label laura_anja_mail1:
     b "D-D-Du bist ein B-B-Bernd?"
     u"Mädchen" "Ja."
     u"Mädchen" "Willkommen in der Wirklichkeit."
-    b "Ein Mädchen? Ein Bernd?"
+    b "Ein...ein...ein Mäd...chen?"
+    b "Ein Bernd?"
     u"Mädchen" "Ja."
     b "Was zum?"
-    u"Mädchen" "Nenn mich aber nicht immer Bernd."
+    b "Ich hätte nie gedacht, dass Bernd ein Mädchen sei."
+    u"Mädchen" "Tja..."
+    u"Mädchen" "Und nenn mich nicht immer Bernd!"
     u"Mädchen" "Ich hab auch einen richtigen Namen."
     u"Mädchen" "Ich heiße %(wBerndName)s."
+    b "..."
+    bw "Ja."
     b "Aha."
     bw "Ja."
     b "Ja."
     bw "Ja."
+    b "Toll."
     b "Komm endlich zur Sache."
     bw "Wir müssen Krautchan retten."
     b "Und wie soll ich dir dabei helfen?"
