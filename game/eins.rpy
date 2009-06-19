@@ -122,7 +122,7 @@ label eins:
             sis "Nur so."
             sis "Man sagt, dass das, was man in der ersten Nacht in einer neuen Wohnung träumt, in Erfüllung geht."
             "Davon hab' ich noch nie gehört."
-            "Wer denkt sich sowas aus?"
+            "Wer denkt sich so was aus?"
             b "Tja, vielleicht hast du Recht."
             b "Was hast DU denn heute Nacht geträumt?"
             show laura embarrassed
@@ -574,7 +574,7 @@ label eins:
     "...Alexanderplatz."
     
     b "Verarschen kann ich mich alleine!"
-    "Wenn man jemanden mit sowas reinlegen will, sollte man sich wenigstens eine halbwegs glaubwürdige Geschichte ausdenken."
+    "Wenn man jemanden mit so was reinlegen will, sollte man sich wenigstens eine halbwegs glaubwürdige Geschichte ausdenken."
     "Bei so einer Nachricht würde doch niemand reagieren."
     "Andererseits..."
     "Ich will nicht den ganzen Tag zuhause sein, wenn die Gefahr besteht, dass ein Bernd vor der Tür auftaucht."
@@ -760,7 +760,7 @@ label eins:
     "Sie geht nach oben."
     "Ich versuche einen klaren Gedanken zu fassen, aber mein Kopf hat wohl etwas dagegen."
     "Warum bin ich überhaupt die Treppe runtergefallen?"
-    "Sowas passiert mir doch sonst nicht."
+    "So was passiert mir doch sonst nicht."
     "Ich höre Schritte auf der Treppe."
     "Das wird meine Mutter mit dem Essen sein."
     "Ich setze mich aufrecht auf meine Matratze."
@@ -776,7 +776,7 @@ label eins:
     sis "...ich hab' mir solche Sorgen um dich gemacht, dass ich nicht schlafen konnte."
     b "Dummkopf."
     b "Um mich musst du dir keine Sorgen machen."
-    b "Ich halte sowas doch aus."
+    b "Ich halte so was doch aus."
     show laura sad
     with dissolve
     sis "Aber..."
@@ -785,7 +785,7 @@ label eins:
     "Gleich heult sie los."
     show laura crying
     with dissolve
-    sis "...versprich mir, dass du sowas nie wieder machst!"
+    sis "...versprich mir, dass du so was nie wieder machst!"
     "Wenn meine Mutter jetzt reinkommt, glaubt sie wieder, ich wäre Schuld."
     "Naja..."
     "...bin ich ja auch indirekt."
@@ -1175,7 +1175,7 @@ label eins_treffenBerndf:
     "Wofür?"
     b "Was meinst du...?"
     bw "Na wegen Krautchan!"
-    "Achso wegen Krautchan."
+    "Ach so wegen Krautchan."
     "Das erklärt..."
     "...nichts."
     bw "Wenn wir nichts unternehmen wird Krautchan untergehen!"
@@ -1497,7 +1497,7 @@ label eins_treffenBerndf:
     sis "OK, danke %(berndName)s!"
     sis "Jetzt krieg ich sicher eine gute Note."
     b "Kein Problem."
-    sis "Achso..."
+    sis "Ach so..."
     b "Ja?"
     "Was denn noch?"
     sis "Hier ist das Geld für die Kaugummis."
@@ -1644,7 +1644,7 @@ label eins_treffenBerndf:
     bw "Es ist eine Falle!"
     "Oho!"
     "Totale Überwachung!"
-    "Sowas glaubt doch kein Mensch."
+    "So was glaubt doch kein Mensch."
     b "Wieso sollte ich dir das glauben?"
     b "Die Admins hätten doch schon längst-"
     bw "Die Admins?"
@@ -2669,7 +2669,7 @@ label eins_sisAbholenZuerst:
     show laura neutral
     with dissolve
     
-    sis "Achso..."
+    sis "Ach so..."
     b "Ja?"
     "Was denn noch?"
     sis "Hier ist das Geld für die Kaugummis."
@@ -2737,7 +2737,7 @@ label eins_sisAbholenZuerst:
     "Es ist bestimmt irgendein Bernd, der heimlich Fotos von mir macht und dann auf Krautchan veröffentlicht."
     "Das Treffen war wahrscheinlich nur eine Falle, um mich aus meinem Haus zu locken."
     "Gut, dass ich nicht hingegangen bin."
-    "Sowas würde total zu Bernd passen."
+    "So was würde total zu Bernd passen."
     "Anstatt geradeaus weiterzugehen, biege ich nach links ab."
     "Hoffentlich kann ich ihn so abhängen."
 
@@ -3063,7 +3063,7 @@ label eins_sisAbholenZuerst:
     with fade
 
     "Was denn jetzt?"
-    "Achso, der Ladebildschirm."
+    "Ach so, der Ladebildschirm."
     "Schwarzes Bild und Ladebalken."
     "Wie einfallsreich."
     "Diese Ladezeiten sind wirklich unerträglich."

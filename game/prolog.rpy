@@ -52,7 +52,7 @@ label prolog:
 
     b "Du kriegst kein Zimmer, du musst im Keller schlafen."
 
-    "Ich ärgere meine Schwester gerne mit sowas."
+    "Ich ärgere meine Schwester gerne mit so was."
     
     hide laura happy
     with dissolve
@@ -416,7 +416,7 @@ label prolog_EinkaufenWLAN:
     u"Mädchen" "Autsch..."
     "Scheiße."
     "Jetzt hab ich ein Mädchen umgelaufen."
-    "Warum passiert sowas immer mir?"
+    "Warum passiert so was immer mir?"
     b "Äh... alles in Ordnung?"
     
     show anja surprised_n

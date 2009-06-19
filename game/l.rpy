@@ -91,7 +91,7 @@ label zwei_laura:#Beginn der "echten" Laura-Story, einzige Linie, die zu Lauras 
     "Erkältet?"
     "So kalt ist es draußen doch gar nicht."
     b "Wenn die mal nicht nur simuliert..."
-    ma "Das musst du grade sagen."
+    ma "Das musst du gerade sagen."
     ma "Du hast früher immer simuliert, weil du nicht zur Schule wolltest."
     "Da hat sie auch wieder Recht."
     ma "Also bringst du ihr nun ihren Tee, oder muss ich das machen?"
@@ -135,11 +135,11 @@ label zwei_laura:#Beginn der "echten" Laura-Story, einzige Linie, die zu Lauras 
     b "Bedank dich bei deiner Mutter."
     b "Sie hat ihn gemacht."
     sis "Aber du hast ihn mir gebracht, also muss ich mich auch bei dir bedanken."
-    b "Jaja, schon gut."
+    b "Ja ja, schon gut."
     "Sie nimmt einen Schluck vom Tee."
     "Anscheinend ist sie tatsächlich krank."
     "Sie ist ziemlich blass."
-    b "Wie gehts dir?"
+    b "Wie geht's dir?"
     sis "Schon viel besser!"
     sis "Ich glaube, ich kann schon wieder aufstehen."
     ma "Nichts da!"
@@ -313,7 +313,7 @@ label zwei_laura:#Beginn der "echten" Laura-Story, einzige Linie, die zu Lauras 
     "..."
     #was würde ich dafür geben, hier ein bildschirmfüllendes CG von dieser situation zu haben ;_;
     #...ist das nun schon KiPo?
-    
+    #Ruegenwalder-Bernd: Nö.
     
     
 label zwei_laura_nichtMedizin:

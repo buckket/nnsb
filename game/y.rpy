@@ -86,7 +86,7 @@ label yasmin_polizei:
     show laura happy
     with dissolve
     
-    sis "Achso!"
+    sis "Ach so!"
     
     show laura surprised
     with dissolve
@@ -100,7 +100,7 @@ label yasmin_polizei:
     show laura happy
     with dissolve
     
-    sis "Achso!"
+    sis "Ach so!"
     sis "Klar!"
     sis "Ein verrücktes Mädchen."
     sis "Wie sah die denn aus?"
@@ -115,7 +115,7 @@ label yasmin_polizei:
     sis "...du das nur geträumt hast?"
     b "..."
     "Will sie mich für dumm verkaufen?"
-    "Sowas könnte ich nie träumen."
+    "So was könnte ich nie träumen."
     b "Nein, das war ganz sicher kein Traum."
     sis "Sicher?"
     sis "Es hört sich nur sehr..."
@@ -610,7 +610,7 @@ label yasmin_befragung_drei:
     b "Ich..."
     b "Das war online!"
     "Perfekte Ausrede ist perfekt!"
-    sis "Achso!"
+    sis "Ach so!"
     
     show laura happy
     with dissolve
@@ -671,7 +671,7 @@ label yasmin_befragung_drei:
     b "J-Ja."
     yan "Ist es lustig?"
     yan "Ich bin noch nicht dazu gekommen, es zu sehen."
-    yan "{=slow}Also ich wollte eigentlich schon die ganze Zeit, aber dann kam immer was dazwischen und es hat ja auch nicht grade wenig Folgen und dann haben so viele Leute erzählt wie schlecht die Serie sei und irgendwie fand ich dann aber manche Bilder doch recht lustig und hab dann mal in die ersten beiden Folgen reingeschaut aber die waren nicht so gut also{/=slow}{nw}"
+    yan "{=slow}Also ich wollte eigentlich schon die ganze Zeit, aber dann kam immer was dazwischen und es hat ja auch nicht gerade wenig Folgen und dann haben so viele Leute erzählt wie schlecht die Serie sei und irgendwie fand ich dann aber manche Bilder doch recht lustig und hab dann mal in die ersten beiden Folgen reingeschaut aber die waren nicht so gut also{/=slow}{nw}"
     b "Stop!"
     show yasmin stalker_surprised
     with dissolve
@@ -710,7 +710,7 @@ label yasmin_befragung_drei:
     yan "Entschuldigung."
     b "Ja, ich mag Anime."
     b "Ist das so schlimm?"
-    b "Darf man in meinem Alter sowas nicht mehr gucken, oder was?"
+    b "Darf man in meinem Alter so was nicht mehr gucken, oder was?"
     show yasmin stalker_surprised
     with dissolve
     yan "Nein, nein!"
@@ -887,7 +887,7 @@ label yasmin_zwei_derMorgenDanach:
     b "Woran sollte ich mich... {w}Oh."
     "Ich erinnere mich tatsächlich an etwas."
     "Wir haben die ganze Nacht Lucky Star geguckt."
-    "Wieso habe ich mich auf sowas eingelassen?"
+    "Wieso habe ich mich auf so was eingelassen?"
     b "Wie lange haben wir gestern geguckt?"
     
     show yasmin happy
@@ -958,7 +958,7 @@ label yasmin_zwei_derMorgenDanach:
         "Ich muss es ihr irgendwie nett sagen.":
             "Ich will sie nicht kränken."
             "Auch wenn ich sie gar nicht kenne."
-            "Sowas tut man einfach nicht."
+            "So was tut man einfach nicht."
             "Ich muss mir also am Besten irgendwie überlegen, wie ich sie möglichst taktvoll abwimmeln kann, ohne dass sie sich verletzt fühlt."
             "...aber wie?"
             '"Hey, ich muss gleich los, also solltest du besser gehen."'
@@ -985,7 +985,7 @@ label yasmin_zwei_derMorgenDanach:
             "Ich rolle mich abwechselnd vor und zurück."
             "Irgendwas ist anders, aber ich kann nicht sagen, was es ist."
             "..."
-            "Wieso denke ich über sowas nach?"
+            "Wieso denke ich über so was nach?"
             "So ein Schwachsinn!"
             "...trotzdem bleibe ich am Ende auf \"ihrer\" Seite liegen."
             
@@ -1193,7 +1193,7 @@ label yasmin_drei_von_yasmin: #übergang von y route
     "Irgendwelche Beweggründe, die sie antreiben."
     "Jeder Mensch hat das."
     "Außer mir."
-    "Ich habe keine Ziele. {w}Keine Motive. {w}Keinen Antrieb oder sowas."
+    "Ich habe keine Ziele. {w}Keine Motive. {w}Keinen Antrieb oder so was."
     "Deswegen bin ich ja auch ein Bernd."
     "Aber sie ist kein Bernd."
     "Welchen Grund kann sie haben?"
@@ -1366,7 +1366,7 @@ label yasmin_drei_von_yasmin: #übergang von y route
        "Und überhaupt..."
     "Ich habe mich sowieso schon damit abgefunden, niemals eine Freundin zu finden."
     "Und ganz sicher nicht so plötzlich."
-    "Sowas passiert nur in irgendwelchen Filmen oder Mangas."
+    "So was passiert nur in irgendwelchen Filmen oder Mangas."
     "Nicht im echten Leben."
     "Das wäre ja total kitschig."
     "Was sollte sie auch an mir mögen?"
@@ -1429,7 +1429,7 @@ label yasmin_drei_von_yasmin: #übergang von y route
     "...aber was mache ich, wenn sie doch wieder bei mir aufkreuzt?"
     "Sie wegschicken?"
     "Das könnte ich nicht."
-    "Ich habe nicht die Kraft ihr sowas zu sagen."
+    "Ich habe nicht die Kraft ihr so was zu sagen."
     "Ich konnte es schon heute morgen nicht."
     "Also was dann?"
     "Ausreden erfinden?"
@@ -1466,7 +1466,7 @@ label drei_yasmin_gewitter:
     play music "sounds/regen.wav" fadein 2.0
     
     "Na toll."
-    "Es fängt an zu regnen und ich habe keine Schirm oder sowas."
+    "Es fängt an zu regnen und ich habe keine Schirm oder so was."
     "Wo bin ich überhaupt?"
     "Ich bin so sehr in Gedanken versunken gewesen, dass ich einfach weiter gelaufen bin, ohne auf den Weg zu achten."
     "Hier kenne ich mich nicht aus."
@@ -1605,7 +1605,7 @@ label drei_yasmin_regen_vonYasmin:
     b "...und ich warte, bis es zu regnen aufhört."
     show yasmin stalker_happy
     with dissolve
-    yan "Achso."
+    yan "Ach so."
     yan "Na dann..."
     yan "Würde es dich stören, wenn ich neben dir sitze?"
     "Ja."
@@ -1732,7 +1732,7 @@ label drei_yasmin_regen_vonYasmin:
             b "Ich..."
             "Oh man, was jetzt?"
             b "Ich will nicht darüber sprechen."
-            "Ich höre mich an wie irgendein Emo oder sowas..."
+            "Ich höre mich an wie irgendein Emo oder so was..."
             
             show yasmin stalker_shy
             with dissolve
@@ -1744,7 +1744,7 @@ label drei_yasmin_regen_vonYasmin:
             yan "Bitte?"
             b "..."
             yan "..."
-            "Ach, was solls."
+            "Ach, was soll's."
             b "OK... gehen wir."
             
             show yasmin stalker_happy
