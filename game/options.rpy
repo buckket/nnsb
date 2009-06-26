@@ -23,7 +23,7 @@ init -1 python hide:
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
-    config.window_title = u"Netto no Shishou: Bernd"
+    config.window_title = u"kcvn"
 
     #########################################
     # Layouts
