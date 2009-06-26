@@ -1240,23 +1240,23 @@ label traum:
     show lynette essen at right
     with move
     
-    show erika normal at left
+    show erica normal at left
     with dissolve
     
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        "Erika" "Meister!"
+        "Erica" "Meister!"
     if persistent.wieherbuhSprache is 1:
-        "Erika" "Goshujin-sama!"
+        "Erica" "Goshujin-sama!"
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}御主人様！{/=jp}"
+        "Erica" "{=jp}御主人様！{/=jp}"
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        "Erika" "Morgen!"
+        "Erica" "Morgen!"
     if persistent.wieherbuhSprache is 1:
-        "Erika" "Ohayou!"
+        "Erica" "Ohayou!"
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}お早う！{/=jp}"
+        "Erica" "{=jp}お早う！{/=jp}"
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
         b "Morgen!"
@@ -1265,22 +1265,22 @@ label traum:
     if persistent.wieherbuhSprache is 2:
         b "{=jp}お早う！{/=jp}"
     #-----------------------------------------------
-    "Erika" "Wie befohlen bin ich nun geduscht."
+    "Erica" "Wie befohlen bin ich nun geduscht."
     b "Fein."
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        "Erika" "Mann."
+        "Erica" "Mann."
     if persistent.wieherbuhSprache is 1:
-        "Erika" "Mou."
+        "Erica" "Mou."
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}もう。{/=jp}"
+        "Erica" "{=jp}もう。{/=jp}"
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        "Erika" "Gemein."
+        "Erica" "Gemein."
     if persistent.wieherbuhSprache is 1:
-        "Erika" "Iyashii."
+        "Erica" "Iyashii."
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}卑しい。{/=jp}"
+        "Erica" "{=jp}卑しい。{/=jp}"
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
         b "Was?"
@@ -1289,33 +1289,33 @@ label traum:
     if persistent.wieherbuhSprache is 2:
         b "{=jp}何？{/=jp}"
     #-----------------------------------------------
-    "Lynette" "Für dich habe ich doch auch Frühstück gemacht, Erika."
-    "Erika" "Ihr esst aber schon."
-    "Erika" "Ihr habt ohne mich angefangen."
+    "Lynette" "Für dich habe ich doch auch Frühstück gemacht, Erica."
+    "Erica" "Ihr esst aber schon."
+    "Erica" "Ihr habt ohne mich angefangen."
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        b "Sorry, Erika-chan."
+        b "Sorry, Erica-chan."
     if persistent.wieherbuhSprache is 1:
-        b "Gomen, Erika-chan."
+        b "Gomen, Erica-chan."
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}ごめん、 ダーリング{/=jp}"
+        b "{=jp}ごめん、 ダーリング{/=jp}"
     #-----------------------------------------------
-    "Erika" "Dafür musst du aber gleich was mit mir unternehmen."
+    "Erica" "Dafür musst du aber gleich was mit mir unternehmen."
     b "OK."
-    "Erika" "Versprochen?"
+    "Erica" "Versprochen?"
     b "Ja."
     b "Worauf hast du denn Lust?"
-    "Erika" "Also eigentlich bin ich noch müde."
-    "Erika" "Ich würde mich am liebsten noch eine Runde hinlegen."
+    "Erica" "Also eigentlich bin ich noch müde."
+    "Erica" "Ich würde mich am liebsten noch eine Runde hinlegen."
     b "Ich soll also mit dir schlafen?"
-    "Erika" "Ja."
+    "Erica" "Ja."
     b "Sicher?"
-    "Erika" "Ja."
+    "Erica" "Ja."
     #Blushbild von Lynette für maximalen Gewinn
     #Bild existiert noch nicht
     #ansonsten muss ich das irgendwie per Dialog darstellen
     
-    "Erika" "Was ist denn los, Lynette?"
+    "Erica" "Was ist denn los, Lynette?"
     "Lynette" "Das ist einfach..."
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
@@ -1329,81 +1329,81 @@ label traum:
     b "Was denn?"
     "Lynette" "Na, Ihr weißt schon."
     b "Sie versteht es nicht, Lynette-chan."
-    "Erika" "Was versteh' ich nicht?"
+    "Erica" "Was versteh' ich nicht?"
     b "Nichts..."
-    #Bild von Erika mit --( - Gesichtsausdruck, sofern es überhaupt solch ein Bild gibt
+    #Bild von Erica mit --( - Gesichtsausdruck, sofern es überhaupt solch ein Bild gibt
     #Bild existiert noch nicht
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        "Erika" "Mann."
+        "Erica" "Mann."
     if persistent.wieherbuhSprache is 1:
-        "Erika" "Mou."
+        "Erica" "Mou."
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}もう。{/=jp}"
+        "Erica" "{=jp}もう。{/=jp}"
     #-----------------------------------------------
-    "Erika" "Immer verheimlicht ihr mir irgendwas."
-    "Lynette" "Aber Erika..."
-    "Erika" "Kein Aber, Lynette."
-    "Ich gehe zu Erika und streichle ihr über das blonde Haar."
-    b "Nimm solche Sachen doch nicht so ernst, Erika-chan."
-    "Erika" "Aber..."
-    "Erika" "aber..."
+    "Erica" "Immer verheimlicht ihr mir irgendwas."
+    "Lynette" "Aber Erica..."
+    "Erica" "Kein Aber, Lynette."
+    "Ich gehe zu Erica und streichle ihr über das blonde Haar."
+    b "Nimm solche Sachen doch nicht so ernst, Erica-chan."
+    "Erica" "Aber..."
+    "Erica" "aber..."
     "Sie senkt ihren Blick Richtung Boden und verstummt."
     b "Was ist denn?"
-    "Erika" "Ich..."
-    "Erika" "{size=4}Ich liebe dich.{/size}"
+    "Erica" "Ich..."
+    "Erica" "{size=4}Ich liebe dich.{/size}"
     b "Ich kann dich nicht verstehen, wenn du nuschelst."
-    "Erika" "{size=6}Ich liebe dich.{/size}"
-    b "Ach, Erika."
+    "Erica" "{size=6}Ich liebe dich.{/size}"
+    b "Ach, Erica."
     b "Jetzt schau mich doch mal an, wenn du mir was sagen willst."
     "Sie hebt ihren Kopf und schaut mir in die Augen."
-    "Erika" "Ich will nicht, dass du mir Sachen verheimlichst."
-    "Erika" "Ich habe auch keine Geheimnisse vor dir!"
-    "Erika" "Ich will mehr über dich wissen."
-    "Erika" "Denn ich..."
-    "Erika" "Ich..."
+    "Erica" "Ich will nicht, dass du mir Sachen verheimlichst."
+    "Erica" "Ich habe auch keine Geheimnisse vor dir!"
+    "Erica" "Ich will mehr über dich wissen."
+    "Erica" "Denn ich..."
+    "Erica" "Ich..."
     "Sie neigt ihren Kopf kurz nach rechts unten."
     "Dann hebt sie ihn wieder und schaut mir wieder tief in die Augen."
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        "Erika" "Ich..."
+        "Erica" "Ich..."
     if persistent.wieherbuhSprache is 1:
-        "Erika" "Ai..."
+        "Erica" "Ai..."
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}愛。。。{/=jp}"
-    b "Ist schon gut, Erika-chan."
+        "Erica" "{=jp}愛。。。{/=jp}"
+    b "Ist schon gut, Erica-chan."
     b "Ich weiß genau, was du sagen willst."
     b "Du musst das nicht laut sagen, wenn du nicht willst."
-    "Erika" "Aber ich habe es dir noch nie gesagt."
+    "Erica" "Aber ich habe es dir noch nie gesagt."
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        "Erika" "Ich lie..."
+        "Erica" "Ich lie..."
     if persistent.wieherbuhSprache is 1:
-        "Erika" "Ai shite..."
+        "Erica" "Ai shite..."
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}愛して。。。{/=jp}"
+        "Erica" "{=jp}愛して。。。{/=jp}"
     #-----------------------------------------------    
     if persistent.wieherbuhSprache is 0:
-        "Erika" "...be dich."
+        "Erica" "...be dich."
     if persistent.wieherbuhSprache is 1:
-        "Erika" "...masu."
+        "Erica" "...masu."
     if persistent.wieherbuhSprache is 2:
-        "Erika" "{=jp}。。。ます。{/=jp}"
+        "Erica" "{=jp}。。。ます。{/=jp}"
     #-----------------------------------------------
-    b "Komm her, Erika-chan."
+    b "Komm her, Erica-chan."
     "Ich umarme sie und drücke sie ganz fest an mich."
     "Lynette" "Aber..."
-    "Ich merke, wie auch Erika nun ihre Arme um mich legt."
-    "Erika" "Ich bin so glücklich."
-    "Erika" "Ich war noch nie so nah an dir dran."
-    "Erika" "Lass mich nicht mehr los."
-    "Erika" "Nie wieder."
-    "Erika" "OK?"
+    "Ich merke, wie auch Erica nun ihre Arme um mich legt."
+    "Erica" "Ich bin so glücklich."
+    "Erica" "Ich war noch nie so nah an dir dran."
+    "Erica" "Lass mich nicht mehr los."
+    "Erica" "Nie wieder."
+    "Erica" "OK?"
     b "Ist gut."
     b "Ich werde dich nie wieder loslassen."
     "Lynette" "Aber..."
     "Langsam lösen wir uns wieder voneinander."
-    "Dann ergreife ich Erikas Hand und halte sie fest."
+    "Dann ergreife ich Ericas Hand und halte sie fest."
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
         "Lynette" "MEISTER!"
@@ -1417,7 +1417,7 @@ label traum:
     b "Ich kann mich nicht für eine von euch beiden entscheiden, weil das gleichzeitig bedeutet, dass ich die andere ablehne."
     b "Und das kann ich nicht."
     b "Das bringe ich nicht über's Herz."
-    "Erika" "Hach..."
+    "Erica" "Hach..."
     "Lynette" "Hach..."
     
     scene black
