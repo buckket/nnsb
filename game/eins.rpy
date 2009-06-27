@@ -577,7 +577,7 @@ label eins:
     "Wenn man jemanden mit so was reinlegen will, sollte man sich wenigstens eine halbwegs glaubwürdige Geschichte ausdenken."
     "Bei so einer Nachricht würde doch niemand reagieren."
     "Andererseits..."
-    "Ich will nicht den ganzen Tag zuhause sein, wenn die Gefahr besteht, dass ein Bernd vor der Tür auftaucht."
+    "Ich will nicht den ganzen Tag zu Hause sein, wenn die Gefahr besteht, dass ein Bernd vor der Tür auftaucht."
     "Warum also nicht hingehen..."
     "...und mich lächerlich machen?"
     "Nein, danke!"
@@ -1222,7 +1222,7 @@ label eins_treffenBerndf:
     
     play music m_bernd
     
-    "Zuhause angekommen lasse ich mich auf meine Matratze fallen."
+    "Zu Hause angekommen lasse ich mich auf meine Matratze fallen."
     "Noch einmal lasse ich mir die Geschehnisse des heutigen Tages durch den Kopf gehen."
     "Stalkerbernd hat meinen Namen, meine E-Mail Adresse und ein Foto von mir gepostet."
     "Ein Bernd hat mir daraufhin einen Hilferuf geschickt."
@@ -1410,7 +1410,7 @@ label eins_treffenBerndf:
     sis "Bekomm' ich eine Packung Kaugummi?"
     b "Nein, die sind zu teuer."
     sis "Aber ich bezahl' es von meinem Taschengeld!"
-    sis "Ich geb' es dir zuhause wieder!"
+    sis "Ich geb' es dir zu Hause wieder!"
     sis "Ganz bestimmt!"
     "Hm..."
     b "Na gut, nimm dir eine Packung."
@@ -1422,7 +1422,7 @@ label eins_treffenBerndf:
     with fade
     
     "Eine halbe Stunde später..."
-    b "Endlich wieder zuhause."
+    b "Endlich wieder zu Hause."
     
     stop music fadeout 1.0
     
@@ -1699,7 +1699,7 @@ label eins_accept_fBernd:
     b "Es war doch deine Idee."
     bw "Also gut dann..."
     bw "Versuch' so viele Informationen wie möglich zu finden."
-    bw "Bleib' am besten zuhause und benutz' das INTERNET."
+    bw "Bleib' am besten zu Hause und benutze das INTERNET."
     "Das kann ich wenigstens."
     bw "Ich werde mich ein wenig umhören..."
     bw "Soziale Interaktion liegt mir wohl besser als dir."
@@ -1789,7 +1789,7 @@ label eins_refuse_fBernd:
     scene black
     with fade
     
-    "Wieder zuhause..."
+    "Wieder zu Hause..."
     
     jump eins_krautchanOff
     
@@ -2038,7 +2038,7 @@ label eins_sisAbholen:
     scene black
     with fade
     
-    "Endlich wieder zuhause..."
+    "Endlich wieder zu Hause..."
     
     jump eins_krautchanOff
 
@@ -2404,7 +2404,7 @@ label eins_sisAbholenZuerst:
     
     stop music fadeout 0.4
     
-    "Endlich wieder zuhause..."
+    "Endlich wieder zu Hause..."
     
     scene bg keller
     with fade
@@ -2580,7 +2580,7 @@ label eins_sisAbholenZuerst:
     sis "Bekomm' ich eine Packung Kaugummi?"
     b "Nein, die sind zu teuer."
     sis "Aber ich bezahl' es von meinem Taschengeld!"
-    sis "Ich geb' es dir zuhause wieder!"
+    sis "Ich geb' es dir zu Hause wieder!"
     sis "Ganz bestimmt!"
     "Hm..."
     b "Na gut, nimm dir eine Packung."
@@ -2592,7 +2592,7 @@ label eins_sisAbholenZuerst:
     with fade
     
     "Eine halbe Stunde später..."
-    b "Endlich wieder zuhause."
+    b "Endlich wieder zu Hause."
     
     stop music fadeout 1.0
     
@@ -2987,7 +2987,7 @@ label eins_sisAbholenZuerst:
     scene black
     with fade
     
-    "Zuhause..."
+    "Zu Hause..."
     
     scene bg keller_aus
     with fade

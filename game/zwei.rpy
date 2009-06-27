@@ -50,12 +50,16 @@ label zwei_laura_stalk_entscheid:
     "Aber heute nicht."
     "Merkwürdig."
     "Vielleicht bilde ich mir das auch nur ein."
+    
     play sound "sounds/schraube.wav"
+    
     "!!!"
     "Was war das?"
     "Ich habe ein Geräusch gehört."
     "Es war nur sehr leise, aber man konnte es deutlich hören."
+    
     play sound "sounds/schraube.wav"
+    
     "Da war es wieder."
     "Woher kommt das?"
     "Soll ich aufstehen und nachsehen?"
@@ -64,7 +68,9 @@ label zwei_laura_stalk_entscheid:
     "Ein Zweig?"
     "Unsinn."
     "Der nächste Baum ist gute 10 Meter vom Haus entfernt."
+    
     play sound "sounds/schraube.wav"
+    
     "Was zum...?"
     "Es kommt von meinem Fenster."
     "Irgendetwas ist dort."
@@ -72,7 +78,9 @@ label zwei_laura_stalk_entscheid:
     "...wenn es wieder Stalkerbernd ist?"
     "Was würde ich dann tun?"
     "Ich sollte versuchen, es zu ignorieren."
+    
     play sound "sounds/schraube.wav"
+    
     "Da war es wieder..."
     "Was macht er da?"
     "Ich ziehe mir mein Kissen über den Kopf und das Geräusch verstummt."
@@ -129,6 +137,7 @@ label zwei_laura_stalk_entscheid:
     b "Und das wäre?"
     sis "Ich will, dass du mir zuhörst."
     sis "Ich möchte dir nur eine kleine Geschichte erzählen."
+    
     menu:
         ""
         "In Ordnung. Ich höre zu.":
@@ -143,6 +152,7 @@ label zwei_laura_stalk_entscheid:
             sis "Es tut mir Leid, %(berndName)s."
             #BUTTERGOTT
             #BILD von Laura mit Messer
+    
     scene bg keller_aus
     with flash
     
@@ -183,7 +193,9 @@ label zwei_laura_stalk_entscheid:
     "Zumindest kann ich mich an nichts erinnern."
     "Es steht auch nichts drauf."
     "Sehr merkwürdig."
+    
     play sound "sounds/error.wav"
+    
     "Oh."
     "Eine Fehlermeldung?"
     "Ach so, nur eine E-Mail."
@@ -201,25 +213,32 @@ label zwei_laura_stalk_entscheid:
     "Vielleicht sollte ich mich einfach irgendwie ablenken."
     "Zur Bestätigung knurrt mein Magen."
     "Ich entscheide mich, nach oben zu gehen und etwas zu essen aufzutreiben."
+    
     scene bg kellertreppe
     with fade
+    
     scene bg wohnung_innen
     with fade
+    
     "Komisch."
     "Es ist niemand hier."
     "%(sisName)s ist wohl noch in der Schule..."
     "Meine Mutter ist wohl einkaufen oder so."
+    
     scene bg kueche
     with fade
+    
     "In der Küche finde ich frische Brötchen und Rügenwalder."
     "Was will man mehr?"
     "Schnell gehe ich wieder nach unten."
+    
     scene bg keller
     with fade
+    
     "Neue E-Mails habe ich keine."
     "Und Krautchan ist auch offline."
     "Was nun?"
-   
+    
     menu:
 
         "Ich gehe auf 4chan.":
@@ -381,8 +400,10 @@ label zwei_weiter_entscheid:
     "Gibt es denn wirklich nichts, was ich tun kann?"
     "Vielleicht sollte ich raus und ein bisschen frische Luft schnappen..."
     "Eine Runde um den Block zu gehen wird mir gut tun."
+    
     scene bg zuhause_draussen
     with fade
+    
     "Ich verlasse das Haus und gehe um die Ecke."
     "Hier habe ich Stalkerbernd getroffen."
     "Mein Blick wandert nach unten zu meinem Kellerfenster."
@@ -419,17 +440,23 @@ label zwei_weiter_entscheid:
     "Ich habe sie heute noch nicht gesehen."
     "Was ist wenn Stalkerbernd ihnen was angetan hat?"
     "Womöglich haben sie ihn heute Nacht erwischt und er hat sie niedergeschlagen oder sonstwas mit ihnen angestellt?!"
+    
     scene bg zuhause_hausflur
     with fade
+    
     scene bg wohnung_innen
     with fade
+    
     scene bg lauraszimmer 
     with fade
+    
     "So schnell ich kann renne ich in die Wohnung und reiße die Tür zu %(sisName)ss Zimmer auf."
     "Leer."
     "Niemand hier."
+   
     scene bg wohnung_innen
     with fade
+   
     "Systematisch durchkämme ich jeden Winkel der Wohnung, aber es ist niemand hier."
     "Sie sind wie vom Erdboden verschluckt."
     "Was geht hier vor?"
@@ -476,7 +503,7 @@ label zwei_weiter_entscheid:
     "Jetzt ist sie total sauer auf mich..."
     "Das gibt sicher Ärger."
     "Bleibt noch zu klären, wo meine Mutter ist."
-    "Zuhause ist sie nicht."
+    "Zu Hause ist sie nicht."
     "Einkaufen?"
     "Es ist 10:30 Uhr."
     "Ich bin um 10 Uhr aufgestanden, also ist sie schon mindestens eine halbe Stunde weg."
@@ -510,25 +537,33 @@ label zwei_weiter_entscheid:
     ma "So kenne ich dich gar nicht."
     ma "Aber ich werde mich sicherlich nicht beschweren."
     "Lachend geht sie in die Küche."
+    
     scene black
     with fade
+    
     "Eine halbe Stunde später klingelte das Telefon."
     "Anscheinend hatte %(sisName)s in der Schule ziemlichen Ärger bekommen, als ich sie angerufen habe."
     "Jetzt musste sie jemand abholen, und dieser jemand war ich."
+    
     scene bg schulweg1
     with fade
+    
     show laura angry
     with dissolve
+    
     "Ich bin also mit %(sisName)s im Schlepptau auf dem Rückweg von der Schule nach Hause."
     "Bisher haben wir kein Wort gesprochen."
     "Anscheinend ist sie ziemlich sauer."
     "Kein Wunder."
     "Meinetwegen wurde sie für eine Woche von der Schule suspendiert."
-    "Wir sind schon fast zuhause."
+    "Wir sind schon fast zu Hause."
+    
     scene bg zuhause_draussen
     with fade
+    
     show laura angry
     with dissolve
+    
     sis "%(berndName)s!"
     sis "Hörst du mir überhaupt zu?"
     b "W... was?"
@@ -555,8 +590,10 @@ label zwei_weiter_entscheid:
             "Was glaubt sie wer sie ist?"
             b "Du bist doch selbst Schuld."
             sis "W... was?"
+    
             show laura angry_talk
             with dissolve
+    
             sis "Jetzt willst du mir die Schuld in die Schuhe schieben, oder was?"
             b "Hättest du dein Handy im Unterricht ausgeschaltet, so wie es sich gehört, dann wäre das sicher nicht passiert!"
             show laura sad
@@ -564,15 +601,20 @@ label zwei_weiter_entscheid:
             sis "Aber..."
             b "Jetzt heul hier nicht rum!"
             b "Akzeptiere einfach, dass du Schuld bist!"
+    
             show laura crying
             with dissolve
+    
             sis "Aber ich bin nicht Schuld!"
             sis "Du hast mich angerufen also bist du Schuld!"
+    
             hide laura crying
             with dissolve
+    
             "Weinend rennt sie nach Hause."
             "Jetzt wird sie sicher alles erzählen und ich krieg dafür Ärger."
             "Dabei bin ich nicht Schuld."
+    
         "Ich entschuldige mich bei ihr.":
             $ zwei_entschuldigt = 1
             "Eigentlich hat sie ja Recht."
@@ -594,9 +636,11 @@ label zwei_weiter_entscheid:
             sis "Wir wollten uns ja heute treffen."
             sis "Ich geh schon mal nach Hause vor, %(berndName)s!"
             b "Wie du meinst."
+     
             hide laura happy
             with dissolve
-            "Wahrscheinlich würde sie zuhause alles erzählen."
+     
+            "Wahrscheinlich würde sie zu Hause alles erzählen."
             "Scheiße."
     "Ich verwerfe den Gedanken und gehe weiter."
     "%(sisName)s ist schon außer Sichtweite."
@@ -608,17 +652,22 @@ label zwei_weiter_entscheid:
     "Die Schraube fehlt immer noch."
     "Das sollte ich wohl oder übel mal beheben."
     "Ich drehe mich um und will reingehen, als mir etwas ins Auge sticht."
+  
     scene bg lieferwagen
     with fade
+  
     "Direkt gegenüber steht ein weißer Lieferwagen mit getönten Scheiben."
     "War der eben auch schon da?"
     "Ich kann mich nicht erinnern."
     "Wahrscheinlich bilde ich mir das nur ein."
     "Etwas verunsichert gehe ich rein."
+  
     scene black
     with wooshTrans
+  
     scene bg wohnung_innen
     with wooshTrans
+  
     "%(sisName)s hat natürlich schon alles erklärt."
     b "...und?"
     b "Hat sie dir alles erzählt?"
@@ -627,6 +676,7 @@ label zwei_weiter_entscheid:
     "Jetzt gehts los."
     ma "...wie kann man so was nur machen?"
     ma "Ist doch klar, dass das Ärger gibt!"
+  
     if(zwei_entschuldigt): #wenn bernd sich entschuldigt hat
         ma "...und so was nennt sich Freundin."
         "Freundin?"
@@ -654,21 +704,30 @@ label zwei_weiter_entscheid:
         ma "Du solltest dich wirklich schämen!"
         "Das Gequatsche halte ich nicht mehr aus."
         "Ich ignoriere sie und verziehe mich in meinen Keller."
+  
     scene black
     with wooshTrans
+  
     scene bg keller
     with wooshTrans
+  
     "Unten angekommen, sehe ich aus dem Fenster."
+  
     scene bg lieferwagen
     with fade
+  
     "Der Lieferwagen steht immer noch draußen."
     "Direkt gegenüber."
+  
     scene bg keller
     with fade
+  
     "Merkwürdig, dass ich ihn noch nie hier gesehen habe."
     "Ich vertreibe den Gedanken und setze mich an meinen Rechner."
+  
     scene bg desktop_none
     with dissolve
+  
     "Nichts neues."
     "Es muss doch mehr im Leben geben, als Krautchan, oder?"
     "...aber spontan fällt mir kein anderer Zeitvertreib ein."
@@ -676,26 +735,33 @@ label zwei_weiter_entscheid:
     "Fappiert habe ich heute morgen."
     "Arbeit oder Schule habe ich nicht."
     "Was machen denn andere Leute so, wenn sie nicht lauern?"
+  
     scene bg keller
     with dissolve
+  
     show laura happy
     with dissolve
+  
     sis "Hey, %(berndName)s."
     sis "Ich gehe jetzt rüber zu meiner Freundin."
     sis "Wollte dir nur Bescheid sagen."
+  
     hide laura happy
     with dissolve
+  
     b "..."
     "Meine Schwester hat anscheinend Freunde und so was."
     "...aber sie geht ja auch zur Schule."
     "Da findet man leicht nette Menschen."
     "Wenn ich mich an meine Schulzeit erinnere..."
     "...fällt mir auf, dass ich selbst damals keine Freunde hatte."
-    b "Scheiße."
+    b "Verdammt."
     "Vielleicht ist ja inzwischen das Essen fertig."
     "Ich gehe am besten hoch und frage wie lange es noch dauert."
+  
     scene bg wohnung_innen
     with fade
+ 
     ma "Ah, %(berndName)s!"
     ma "Du kommst grade richtig."
     ma "Ich wollte dir dein essen runterbringen, aber wenn du schon hier bist, kannst du es selbst mitnehmen."
@@ -708,7 +774,7 @@ label zwei_weiter_entscheid:
     ma "Vielleicht wird ja doch noch was aus dir."
     "Bla. Bla. Bla."
     "Wenn sie glaubt, dass ich mir eine Arbeit suche und in eine eigene Wohnung ziehe, dann hat sie sich getäuscht."
-    "Dafür ist es zuhause viel zu bequem."
+    "Dafür ist es zu Hause viel zu bequem."
     ma "Du kannst nicht ewig von Hartz IV leben, %(berndName)s."
     ma "Willst du denn nicht..."
     ma "...ach vergiss es."
@@ -718,36 +784,57 @@ label zwei_weiter_entscheid:
     "Nach dem Essen kam auch irgendwann %(sisName)s nach Hause und hat vom Treffen mit ihrer Freundin erzählt."
     "Ich ging nach unten und verbrachte den Rest des Tages damit, alte Spiele nochmal durchzuspielen und schaute ab und zu nach Krautchan."
     "An der 404-Seite hatte sich den ganzen Tag über nichts geändert, also gab ich auf und ging ins Bett."
+ 
     scene bg keller_aus
     with fade
+ 
     "Ob jetzt wohl jeder Tag so ablaufen wird?"
     "Vielleicht sollte ich Krautchan einfach vergessen und mich den wichtigen Dingen im Leben zuwenden."
     "Ich könnte ja einen Job suchen."
     "Vielleicht finde ich dort auch Freunde oder zumindest Bekannte."
     "Einfach Menschen, mit denen ich sprechen kann."
     "Immer nur alleine im Keller zu hocken ist auch irgendwie langweilig."
+
     play sound "sounds/schraube.wav"
     "...!"
     "Da ist es wieder."
     "Das gleiche Geräusch wie gestern Abend."
+
     play sound "sounds/schraube.wav"
+
     "Das Geräusch, von dem ich nicht wusste, woher es kommt."
+
     play sound "sounds/schraube.wav"
+
     "Jetzt weiss ich es."
+
     play sound "sounds/schraube.wav"
+
     "Jemand sitzt bei mir am Kellerfenster und öffnet das Gitter."
+
     play sound "sounds/schraube.wav"
+
     "Ich habe total vergessen, die Schraube wieder einzudrehen."
+
     play sound "sounds/schraube.wav"
+
     "Was soll ich machen?"
+
     play sound "sounds/schraube.wav"
+
     "Aufspringen und ihn erschrecken?"
+
     play sound "sounds/schraube.wav"
+
     "Nein, das traue ich mich nicht."
+
     play sound "sounds/schraube.wav"
+
     "Ich werde einfach die Augen zu machen und so tun, als würde ich schlafen."
+
     scene black
     with fade
+
     "..."
     "Das Geräusch ist verstummt."
     "Das kann nur bedeuten, dass er das Fenster schon geöffnet hat."
@@ -757,10 +844,13 @@ label zwei_weiter_entscheid:
     "Ich spüre ihn neben meinem Bett."
     "Er ist verdammt leise."
     "Ich öffne die Augen nur ein wenig, und sehe ihn."
+
     scene bg keller_aus
     with fade
+
     show yasmin stalker
     with dissolve
+
     "Der gleiche schwarze Mantel."
     "Kein Zweifel."
     "Das ist Stalkerbernd."
@@ -772,6 +862,7 @@ label zwei_weiter_entscheid:
     "Wenn er da ran will, muss er mein Passwort knacken."
     
     "Sollte ich nicht eingreifen?"
+
     menu:
         "Ja, ich muss was tun!":
             "Ich muss jetzt eingreifen!"
@@ -871,6 +962,7 @@ label zwei_weiter_entscheid:
             "Er starrt mich schweigend an."
             b "Jetzt bist du fällig, Stalkerbernd!"
             jump yasmin_anfang
+ 
         "Nein, ich warte nur noch ein bisschen...":
             "Ich sollte wirklich nicht unüberlegt handeln."
             "Vielleicht sollte ich doch versuchen, mich ein wenig zu bewegen?"
@@ -879,9 +971,9 @@ label zwei_weiter_entscheid:
             "Plötzlich holt er einen kleinen Kasten unter dem Mantel hervor."
             "Eine Externe Festplatte, die er per USB anschließt."
             "Ich nutze den kurzen Moment, um mich ein wenig zu drehen, so dass ich den Monitor sehen kann."
-            "Er macht ein Backup meiner Daten, um dann zuhause alles in Ruhe durchzugehen."
+            "Er macht ein Backup meiner Daten, um dann zu Hause alles in Ruhe durchzugehen."
             "Clever."
-            "Wenn ich daran denke, dass er zuhause in Seelenruhe durch meine persönlichsten Informationen stöbert..."
+            "Wenn ich daran denke, dass er zu Hause in Seelenruhe durch meine persönlichsten Informationen stöbert..."
             "Mein Hals fühlt sich an, als würde mich jemand erwürgen wollen."
             "Als würde ein ungeheurer Druck ihn zusammenschnüren."
             "Ich will husten, aber ich muss mich zusammenreißen und den Reflex unterdrücken."
@@ -914,6 +1006,8 @@ label zwei_weiter_entscheid:
             "Die Fehlermeldung auf dem Bildschirm lässt mich wissen, dass das externe Gerät unerwartet entfernt wurde, und dass das Backup nicht fertiggestellt werden konnte."
             "Ein Glück."
             "Zu schwach, heute Abend noch irgendetwas zu tun, lasse ich mich ins Bett fallen und schlafe ein."
+     
             scene black
             with fade
+     
             jump zwei_laura
