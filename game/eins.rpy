@@ -2067,7 +2067,7 @@ label eins_krautchanOff:
 
 label eins_sisAbholenZuerst:
     $ lauraRoute = 1
-    $ stalker = 1
+    $ stalker_eins = 1
     #AB HIER LAURA ROUTE MIT STALKER
     scene bg zuhause_draussen
     with fade

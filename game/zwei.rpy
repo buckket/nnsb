@@ -270,7 +270,7 @@ label zwei_laura_stalk_entscheid:
 
 label zwei_email_erinnerung:
     "Die E-Mail!"
-    "Sofort stürze ich an meinen Rechner und öffne meine alten Mails."
+    "Sofort öffne meine alten Mails."
     
     scene bg desktop_hilfe
     with dissolve
@@ -281,7 +281,7 @@ label zwei_email_erinnerung:
     "...vielleicht..."
     "...antworten?"
     
-    if stalker:
+    if stalker_eins:
         jump laura_anja_mail_a_zwei
         #das Label steht am Anfang von a_zwei.rpy 
         pass
@@ -316,7 +316,7 @@ label laura_anja_mail:
                 
         "...ich bei meiner Freundin war.":
             "Ich konnte gestern nicht kommen, weil ich bei meiner Freundin war."
-            "Das wird Bernd mir auf keinen Fall glauben."
+            "Das wird sie mir auf keinen Fall glauben."
             "Ein Wieherbuh und eine Freundin?"
             "Ein Bernd und eine Freundin?"
             "ICH und eine Freundin?"
@@ -332,7 +332,28 @@ label laura_anja_mail:
         "...Globalisierung.":
             "Ich konnte gestern nicht kommen, weil Globalisierung."
             "Ich lass das einfach mal so stehen."
-            
+    
+    "Was soll ich bloß schreiben?"        
+    "..."
+    "Ich weiß es doch nicht."
+    "Ich bin nicht gut mit Mädchen."
+    "Eigentlich ist es ja ganz einfach."
+    "Und doch so kompliziert."
+    $ anja_zwei = 1
+    
+    scene black
+    with fade
+    
+    $ renpy.pause(2)
+
+
+    scene desktop_email_neu
+    with fade
+    #Bild existiert noch nicht
+    #Text = ???
+
+    #Anja antwortet wenig später und gibt ihm ihre Adresse -> er geht am nächsten Tag zu ihr (ab der Szene vor der Türe = label bernd_anja_tuere)
+        
             
 #GSB GSB GSB
 #Bernd bekam eine zweite Mail -> Wechsel auf Anja-Route

@@ -3,7 +3,8 @@
 #label anja_anfang = direkte Anja-Route
 #label bernd_anja_besprechung = menu "Soll ich zu Anja gehen? J/N"
 #label anja_weiter = statt des Wechsels auf Y geht es bei A weiter
-#label anja_besprechung = Bernd geht zu Anja, Milch, Erwähnung des Tests
+#label anja_besprechung = Bernd geht zu Anja
+#label bernd_anja_tuere = Bernd steht vor Anjas Türe und das Gespräch kommt, Milch, Erwähnung des Tests
 #label bernd_kapzwei_grillen = Bernd stirbt an Hautkrebs
 #label von_anja_zu_yasmin = Wechsel von A auf Y
 
@@ -373,7 +374,7 @@ label anja_anfang:
     scene bg desktop_none
     with fade
     
-    "Bitte wie?"
+    "Wie bitte?"
     "Liegt wohl an meiner Verbindung."
     "F5."
     "404."
@@ -392,9 +393,9 @@ label anja_anfang:
     "Ich kann es nicht glauben."
     "Sie hatte verdammt nochmal Recht."
     "Was soll ich jetzt bloß machen?"
-    "Zurück zum Vierka-"
+    "Alternativen zu Krautchan?"
     "Nein."
-    "Das ist der Krebs."
+    "Die sind der Krebs."
 
     $ berndNameUpper = berndName.upper()
     ma "%(berndNameUpper)s!"
@@ -1108,9 +1109,6 @@ label anja_anfang:
     "Hach, Lynette..."
     #Bild "traumkueche.jpg", aber mit kleiner, weißer Umrandung, um anzuzeigen, dass es nur ein Traum ist
     
-label traum:
-#Label wegmachen
-    
     scene bg traumkueche
     with fade
     
@@ -1703,8 +1701,18 @@ label anja_weiter:
     if anjaZuYasmin == True:
         bw "Dann halt nicht."
         bw "Ich werde mir jemanden anders suchen, um Krautchan zu retten."
-        b "Gut."
-        b "Mach das."
+        b "OK."
+        b "Tu dir keinen Zwang an."
+        
+        show anja angry
+        with dissolve
+        
+        bw "Du bist ein typischer Bernd."
+        bw "Du willst, dass alle was für dich machen."
+        bw "Aber du machst selbst nichts!"
+        bw "Du gehst allen Komplikationen aus dem Weg."
+        bw "Du gehst jeder Anstrengung aus dem Weg."
+        bw "Ich hasse Typen wie dich."
     else:
         bw "Bis morgen, %(berndName)s."
         "Hört sie mir überhaupt zu?"
@@ -1740,6 +1748,9 @@ label anja_weiter:
     "Ich schaue nicht genug Animeserien."
     "Jetzt habe ich nichts mehr zum Schauen."
     "So langweilig."
+    "Vielleicht sollte ich nach neuen Wieherbuh-Memes schauen."
+    #Ausbaufähig
+    #RED ZONE?
     "Ich geh schlafen."
     
     scene black
@@ -1909,20 +1920,34 @@ label anja_besprechung:
     scene black
     with fade
     
+    jump bernd_anja_tuere
+    
+label bernd_anja_tuere:
+
     scene bg tuere
     with fade
     #Bild existiert noch nicht
     
     "Irgendwie habe ich kein gutes Gefühl."
     "Ich sollte einfach wieder gehen."
-    "Moment."
-    "Dann kommt sie nachher einfach wieder in meinen Keller."
-    "Bei meinem Glück kommt sie genau dann rein, während ich fappiere."
-    "Ich sollte einfach klopfen."
-    "Ich bin ein Bernd."
-    "Sie ist ein Bernd."
-    "Wir wollen Krautchan retten."
-    "Mehr gibt es da nicht."
+    
+    if anja_zwei:
+        "Wieso kneife ich bei sowas immer?"
+        "...weil ich ein Bernd bin."
+        "Sie ist aber auch nur ein Bernd."
+        "Und wir wollen nur Krautchan retten."
+        "Mehr gibt es da nicht."
+        "Ich sollte einfach klopfen."
+        
+    else:
+        "Moment."
+        "Dann kommt sie nachher einfach wieder in meinen Keller."
+        "Bei meinem Glück kommt sie genau dann rein, während ich fappiere."
+        "Ich sollte einfach klopfen."    
+        "Ich bin ein Bernd."
+        "Sie ist ein Bernd."
+        "Wir wollen Krautchan retten."
+        "Mehr gibt es da nicht."
     
     play sound "sounds/knock.wav"
     
