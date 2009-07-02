@@ -3032,14 +3032,13 @@ label eins_sisAbholenZuerst:
         "Ja!":
             "Fick ja, Tentakel."
             "Ich kontributierte."
+            $ tentakel = 1
 
         "Nein.":
             "NEIN!"
             "SAGE."
+            $ kein_tentakel = 1
 
-
-#menu ist entscheidend dafür, ob am Ende,
-#wenn KC wieder on ist, es /t/ - Technik oder /t/ - Technik und Tentakel gibt
 
     "Dann wollen wir doch mal schauen, was Bernd von der neuen Episode von Strike with Cheese hält."
     "...das Übliche halt."
