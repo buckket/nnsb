@@ -369,9 +369,29 @@ label laura_anja_mail:
     scene desktop_email_neu
     with fade
     #Bild existiert noch nicht
-    #Text = ???
+    #Text = ???; Lass dir was einfallen, Yubi-chan!
+    
+    "Jetzt kann ich nur noch warten."
+    "Ich sollte ..."
+    
+        menu:
+            "Animu schauen"
+                pass
+                
+                
+            "Touhou spielen"
+                pass
+                
+#Bernd braucht mehr Beschäftigungen als Animu schauen und Touhou spielen
+            
+    play sound "sounds/mail.wav"
+    #Sound noch nicht vorhanden        
+    
+    #blabla "oh, eine Mail", Mail einblenden, Rest vom Tag = ???        
+            
+    jump bernd_anja_tuere        
 
-    #Anja antwortet wenig später und gibt ihm ihre Adresse -> er geht am nächsten Tag zu ihr (ab der Szene vor der Türe = label bernd_anja_tuere)
+#Anja antwortet wenig später und gibt ihm ihre Adresse -> er geht am nächsten Tag zu ihr (ab der Szene vor der Türe = label bernd_anja_tuere)
         
             
 #GSB GSB GSB
