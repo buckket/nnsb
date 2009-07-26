@@ -371,18 +371,185 @@ label laura_anja_mail:
     #Bild existiert noch nicht
     #Text = ???; Lass dir was einfallen, Yubi-chan!
     
+    "Ich klicke auf \"Abschicken\"".
     "Jetzt kann ich nur noch warten."
-    "Ich sollte ..."
+    "Ich sollte erstmal was trinken."
+    "Ich greife mit meiner linken Hand nach unten und greife ins Leere."
+    "Nach kurzem Suchen greife ich mir eine Flasche."
+    "Ich öffne den Deckel und führe die Flasche zu meinem Mund."
+    "Leer."
+    "Die Flasche ist leer."
+    "Meine Cola-Flasche ist leer."
+    "Ich muss mir eine Neue kaufen."
+    "Einkaufen zu gehen ist mir aber zu lästig."
+    "Ich sag %(sisName)s, dass sie mir eine Flasche beim nächsten Mal mitbringen soll."
+    "Mann."
+    "Jetzt muss ich auch noch in die Küche, um was zu trinken."
+    "Lästig."
+    #es gibt noch ein besseres Wort für "lästig", aber ich komme gerade nicht drauf
     
-        menu:
-            "Animu schauen"
-                pass
+    scene bg kueche
+    with fade
+    
+    "Ich öffne die Kühlschranktüre."
+    "Was haben wir denn hier alles?"
+    "Hmm..."
+    "Wasser, Milch, Traubensaft und Orangensaft."
+    "Na toll."
+    "Wieso haben wir keine gescheiten Getränke?"
+    
+    menu:
+        "Dann trinke ich..."
+        
+        "...Wasser."
+            $ laura_wasser = 1 
+            
+        "...Milch."
+            $ laura_milch = 1
+            
+        "...Traubensaft."
+            $ laura_traubensaft = 1
+            
+        "...Orangensaft."
+            $ laura_orangensaft = 1
+            
+        
+        if laura_wasser = 1:    
+        "Gerade, als ich die Flasche in die Hand nehme, höre ich die Haustüre."
+        
+        elif laura_milch = 1 or laura_traubensaft = 1 or laura_orangensaft = 1:
+        "Gerade, als ich das Tetrapak in die Hand nehme, höre ich die Haustüre."
+        
+        "Oh Gott."
+        "Bitte nicht."
+        "Nicht jetzt."
+            
+        show sis happy
+        with dissolve
+        
+        sis "Hallo, %(berndName)s."
+        b "Ja ja."
+        sis "Wieso bist du so schlecht drauf?"
+        b "Wieso bist du so gut drauf?"
+        sis "Nun ja..."
+        "Ich hätte nicht fragen sollen."
+        sis "Ich hab meine erste, richtige Freundin gemacht!"
+        b "Oh, du hast eine Freundin?"
+        sis "Ja."
+        b "Das freut mich."
+        "...solange sie bei ihrer Freundin und die Freundin nicht auch noch hier ist."
+        "Ich nehme einen Schluck aus der Wasserflasche."
+            
+        show sis mad_talk
+        with dissolve
+            
+        sis "Was machst du da?"
+        b "Ich trinke."
+        sis "Das meine ich nicht."
+        b "Was denn dann?"
+        
+        if laura_wasser = 1: 
+            sis "Wieso trinkst du aus der Flasche?"
+        
+        elif laura_milch = 1 or laura_traubensaft = 1 or laura_orangensaft = 1:
+            sis "Wieso trinkst du aus der Verpackung?"
+        
+        b "Keine Ahnung."
+        b "Ich fühlte mich danach."
+            
+        show sis pissed
+        with dissolve
+    
+        if laura_wasser = 1 or laura_milch = 1 or laura_traubensaft = 1:
+            sis "Das kann nun keiner mehr trinken."
+            sis "Du bist so gemein, %(berndName)s!"
+            b "Tja."
+            "Jetzt werde ich gefragt, wieso ich so gemein bin."
+            sis "Wieso bist du so gemein?"
+            b "Ich weiß nicht."
+            "Jetzt bekomme ich zu hören, dass ich immer so bin."
+            sis "Du bist immer so."
+            "Nun kommt die Frage, ob ich alle hasse und meine obligatorische Antwort..."
+            sis "Magst du uns etwa nicht?"
+            b "Wenn du groß bist, wirst du mich verstehen."
+            "...gefolgt von einer Beschwerde, ich solle doch mal eine richtige Antwort geben."
+            sis "Immer sagst du \"Wenn du groß bist\"!"
+            sis "Gib doch mal eine richtige Antwort."
+            b "Ich kann nicht."
+            b "Oder besser gesagt..."
+            sis "Besser gesagt?"
+            b "Nichts."
+            b "Du würdest es nicht verstehen."
+            sis "Mann."
+            sis "Immer das Gleiche mit dir."
+            
+        elif laura_orangensaft = 1:
+            $ sisLove -= 5
+            sis "Wieso trinkst du meinen Orangensaft weg."
+            "Ich nehme noch einen Schluck."
+            sis "Dabei dachte ich, dass ich sicher wäre, wenn ich direkt aus dem Tetrapak trinke."
+            "Ich drehe mich zum Waschbecken und spucke den Orangensaft aus."
+            b "Bäh."
+            
+            show sis_fragezeichen
+            with dissolve
+            
+            sis "Wieso spuckst du den Orangensaft aus?"
+            b "Du hast da schon so raus getrunken?"
+            
+            show sis_pissed
+            with dissolve
+            
+            sis "Ja."
+            sis "Das hat dich aber nicht davon abgehalten auch daraus zu trinken."
+            b "Wieso sagst du mir das nicht vorher?"
+            "Ich spüle mir meinem Mund mit Kranwasser aus."
+            
+            show sis_mad_talk
+            with dissolve
+            #Bild existiert noch nicht
+            
+            b "Pfui Teufel."           
+            sis "Wieso trinkst du auch meinen Orangensaft?"
+            sis "Wir haben doch auch noch andere Getränke."
+            b "Woher soll ich wissen, dass es dein Orangensaft ist?"
+            b "Bäh."
+            sis "Wieso spuckst du eigentlich den Orangensaft aus?"
+            b "Weil du schon direkt daraus getrunken hast."
+            sis "Findest du mich so ekelhaft?"
+            
+            menu:
+                ""
+                
+                "Ja."
+                   $ sisLove -= 10
+                   b "Ja."
+                   
+                   show sis crying
+                   with dissolve
+                   
+                   sis "Wieso bist du so gemein zu mir?"
+                   sis "Was habe ich dir getan?"
+                   sis "Was ist so schlimm an mir?"
+                   "Oh Gott, nicht das schon wieder."
                 
                 
-            "Touhou spielen"
-                pass
+                "Nein."
+                    $ sisLove += 10
+                    b "Nein."
+                    b "Im Gegenteil."
+                    
+                    show sis surprised
+                    with dissolve
+                    
+                    sis "Was soll das heißen?"
+                    b "Ich weiß nicht, wie ich es ausdrücken soll."
+                    b "Aber ich hasse dich nicht."
+                    #GSB GSB GSB
+                    
+    
                 
-#Bernd braucht mehr Beschäftigungen als Animu schauen und Touhou spielen
+#Bernd braucht mehr Beschäftigungen als Animu schauen und Touhou spielen -> Konsolen!
             
     play sound "sounds/mail.wav"
     #Sound noch nicht vorhanden        
