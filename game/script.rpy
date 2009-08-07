@@ -67,7 +67,7 @@ init python:
             base=persistent))
             
             
-    namenListe = ["Bernd"] #hier brauchen wir mehr
+    namenListe = ["Bernd","Name","Rot","Blau","Marc-Oliver","Kim","Kevin"] #hier brauchen wir mehr
 
 init:
     #Wichtige Storyflags:
