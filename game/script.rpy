@@ -139,7 +139,8 @@ init:
     $ m_yasmin = "music/yasmin_theme.mp3" #Yasmin
     $ m_yasminWohnung = "music/yasmin_wohnung.mp3" # Yasmins Wohnung (sie wohnt alleine...)
     $ m_traum = "music/traum.mp3" #für Bernds Animeträume und seinen vielen Waifus
-    $ m_battle = "music/battle.mp3" #u. a. bisher für die Spinnenszene, weil ich noch keine bessere BGM fand
+    $ m_battle = "music/battle.mp3" #u. a. bisher für die Spinnenszene, weil ich noch keine bessere BGM fand,
+    $ m_treffen = "music/Treffen, das niemals stattfinden sollte.mp3" #siehe Folge 1 von Sayonara Zetsubou Sensei, genau so etwas...
     #Irgendwie fehlt aber noch das passende Lied für die Laura-Spinnen-Szene
     
     #namen
@@ -168,6 +169,7 @@ init:
     
     $ show_editor_button = True
     $ hentaiEin = False
+    
 # Neues Spiel startet hier
 label start:
     #jump namenFrage

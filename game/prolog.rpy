@@ -1,4 +1,50 @@
-﻿init:
+﻿#Inhaltsverzeichnis:
+#label prolog: Start-Label
+#label prolog_duschen: gerade in der neuen Wohnung angekommen, Bernd ist dreckig, menu: Duschen? J/N -> J
+#label prolog_dreckig: gerade in der neuen Wohnung angekommen, Bernd ist dreckig, menu: Duschen? J/N -> N
+#label prolog_nimmGeld: Bernd ging nicht duschen, braucht Geld zum Einkaufen, menu: Geld nehmen? J/N -> J
+#label prolog_nimmGeldNicht: Bernd ging nicht duschen, braucht Geld zum Einkaufen, menu: Geld nehmen? J/N -> N
+#label prolog_nimmGeldDoch: Bernd hat das Geld nicht genommen, 2. menu: [S]pardose suchen oder [G]eld doch nehmen: G
+#label prolog_suchSpardose: Bernd hat das Geld nicht genommen, 2. menu: [S]pardose suchen oder [G]eld doch nehmen: S
+#label prolog_Einkaufen: Bernd geht nun einkaufen
+#label prolog_EinkaufenLinks: Bernd biegt nach links ab und findet dort einen Aldi
+#label prolog_EinkaufenRechts: Bernd biegt nach links ab und findet dort einen Lidl
+#label prolog_EinkaufenWLAN: was im Supermarkt passiert, für Aldi & Lidl gleich
+#label prolog_abend: Bernd hat sich WLan eingerichtet, er geht auf /b/
+
+
+#Stats:
+#$ sisLove =
+    #Grundeinstellung = +40
+    #prolog_duschen = +5
+    #prolog_dreckig = -5
+    #max. +45 / +35 möglich
+#$ maLove =
+    #Grundeinstellung = +20
+    #prolog_duschen = +5
+    #prolog_dreckig = -5
+    #prolog_nimmGeld = -10
+    #prolog_nimmGeldDoch = -10
+    #max. +25 / +5 möglich
+#$ friendLove =
+    #Grundeinstellung = +-0
+#$ yanLove = 
+    #Grundeinstellung = +-0
+
+#$ geld =
+    #Grundeinstellung = +-0
+    #prolog_duschen = +25
+    #prolog_nimmGeld = +25
+    #prolog_nimmGeldDoch = +25
+    #prolog_suchSpardose = +20
+    #prolog_EinkaufenWLAN = -15
+    #max. +10 / +5 möglich
+
+#-------------------------------------------------------------------------------
+
+
+
+init:
     $ prolog_GeldGenommen = 0
     
 label prolog:
@@ -134,7 +180,7 @@ label prolog:
     
 label prolog_duschen:
     $ maLove += 5
-    $ sisLove +=10
+    $ sisLove +=5
     stop music
     
     scene black
@@ -215,18 +261,18 @@ label prolog_duschen:
     ma "Hm..."
     ma "In Ordnung."
     
-    "Meine Mutter holt einen 20 Euro Schein aus der Tasche."
+    "Meine Mutter holt zwei Geldscheine aus der Tasche."
     
     ma "Hier hast du Geld, %(berndName)s."
     
     b "Ich brauch' auch noch einen W-LAN Adapter."
     b "Sonst habe ich unten kein Internet."
     
-    ma "Na gut, hier hast du noch 20. Mehr kriegst du nicht."
+    ma "Na gut, hier hast du noch 25 Euro. Mehr kriegst du nicht."
     
-    $ geld += 20
+    $ geld += 25
     
-    "20 Euro reichen völlig."
+    "25 Euro reichen völlig."
     "Glück gehabt."
     
     ma "Los, %(sisName)s, wir gehen und stellen uns den neuen Nachbarn vor."
@@ -262,7 +308,7 @@ label prolog_duschen:
     
 label prolog_dreckig:
     $ maLove -= 5
-    $ sisLove -= 2
+    $ sisLove -= 5
     b "Nö. Ich geh' hier niemanden begrüßen!"
     b "Gib mir mal lieber Geld."
     b "Ich brauch' einen W-LAN Adapter, damit ich ins Internet kann."
@@ -298,11 +344,11 @@ label prolog_dreckig:
             jump prolog_nimmGeldNicht
     
 label prolog_nimmGeld:
-    "Ohne weiter nachzudenken, nehme ich mir 20 Euro und verlasse das Haus..."
+    "Ohne weiter nachzudenken, nehme ich mir 25 Euro und verlasse das Haus..."
     $ maLove -= 10
     $ prolog_GeldGenommen = 1
     
-    $ geld += 20
+    $ geld += 25
     
     jump prolog_Einkaufen
     
@@ -340,18 +386,18 @@ label prolog_suchSpardose:
     "Zumindest das, was ich nicht mehr bra..."
     b "Hab sie!"
     "Das ging schneller als erwartet."
-    "Nur noch 15 Euro drin."
+    "Nur noch 20 Euro drin."
     "Naja, muss reichen."
     "Es wird schon spät, ich sollte besser losgehen."
     
-    $ geld += 15
+    $ geld += 20
     
     jump prolog_Einkaufen
     
 label prolog_nimmGeldDoch:
     b "Scheiß doch drauf."
-    "Ich nehme mir 20 Euro von meiner Mutter und verlasse das Haus."
-    $ geld += 20
+    "Ich nehme mir 25 Euro von meiner Mutter und verlasse das Haus."
+    $ geld += 25
     $ maLove -= 10
     $ prolog_GeldGenommen = 1
     jump prolog_Einkaufen

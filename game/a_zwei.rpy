@@ -999,6 +999,7 @@ label anja_anfang:
 
     b "..."
     bw "HAL-LO?"
+    bw "Jemand da?"
     b "..."
     bw "Na ja, komm' erstmal rein."
     "Ich drehe mich zur Treppe hin."
@@ -1053,7 +1054,7 @@ label anja_anfang:
     scene bg keller_aus
     with fade
  
-    "Ich werfe erstmal meinen Computer an."
+    "Ich werfe erstmal meinen Rechner an."
 
     scene bg keller
     with dissolve
@@ -1064,8 +1065,8 @@ label anja_anfang:
     "Ach, ja..."
     "Was mach ich denn jetzt?"
     "Zum Glück gehe ich auf mehr Seiten als nur Krautchan wie zum Beispiel ..."
-    "zum Beispiel..."
     "Öhm..."
+    "Zum Beispiel..."
     "Öhm..."
     "Verdammt."
     "Ohne Krautchan hat mein Leben einfach keinen Sinn."
@@ -1112,13 +1113,15 @@ label anja_anfang:
     scene bg traumkueche
     with fade
     
+    play music m_traum
+    
     show lynette essen
     with dissolve
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
         "Lynette" "...Meister."
     if persistent.wieherbuhSprache is 1:
-        "Lynette" "...Goshujin-sama."
+        "Lynette" "...goshujin-sama."
     if persistent.wieherbuhSprache is 2:
         "Lynette" "{=jp}。。。御主人様。{/=jp}"
     #-----------------------------------------------
@@ -1127,7 +1130,7 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 0:
         "Lynette" "Guten Morgen, Meister."
     if persistent.wieherbuhSprache is 1:
-        "Lynette" "Ohayou gozaimasu, Goshujin-sama."
+        "Lynette" "Ohayou gozaimasu, goshujin-sama."
     if persistent.wieherbuhSprache is 2:
         "Lynette" "{=jp}お早うございます、　御主人様。{/=jp}"
     #-----------------------------------------------
@@ -1138,7 +1141,7 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 2:
         b "{=jp}お早う。{/=jp}"
     #-----------------------------------------------
-    "Lynette" "Ich habe dir Frühstück gemacht."
+    "Lynette" "Ich habe Ihnen Frühstück gemacht."
     b "Aber Lynette."
     b "Wir sind doch noch gar nicht umgezogen."
     b "Und es ist erst 7 Uhr."
@@ -1148,13 +1151,20 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 0:
         "Lynette" "...ich koche doch so gerne, Meister."
     if persistent.wieherbuhSprache is 1:
-        "Lynette" "...ich koche doch so gerne, Goshujin-sama."
+        "Lynette" "...ich koche doch so gerne, goshujin-sama."
     if persistent.wieherbuhSprache is 2:
         "Lynette" "...ich koche doch so gerne, {=jp}御主人様。{/=jp}"
     #-----------------------------------------------
     b "Ach, Lynette."
     b "Was soll ich nur mit dir machen."
-    b "Da bleibt mir wohl nichts Anderes übrig."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        b "Da bleibt mir wohl nichts Anderes übrig."
+    if persistent.wieherbuhSprache is 1:
+        b "Shou ga nai yo."
+    if persistent.wieherbuhSprache is 2:
+        b "{=jp}しょうがないよ。{/=jp}"
+    #-----------------------------------------------
     b "Ich werde es wohl erst essen müssen."
     b "Nachher wäre es kalt."
     #-----------------------------------------------
@@ -1183,18 +1193,18 @@ label anja_anfang:
         b "{=jp}いただきます！{/=jp}"
     #-----------------------------------------------    
     if persistent.wieherbuhSprache is 0:
-        "Lynette" "Meister?"
+        "Lynette" "M-Meister?"
     if persistent.wieherbuhSprache is 1:
-        "Lynette" "Goshujin-sama?"
+        "Lynette" "Ne, goshujin-sama?"
     if persistent.wieherbuhSprache is 2:
-        "Lynette" "{=jp}御主人様？{/=jp}"
+        "Lynette" "{=jp}ね、 御主人様？{/=jp}"
     #-----------------------------------------------
     b "Ja?"
     "Lynette" "Ich muss gleich noch einkaufen gehen, aber ich habe kein Geld."
     "Ich greife in meine Anzugsjacke und hole mein Portemonnaie heraus."
     b "Kein Problem."
     b "Hier."
-    "Ich gebe ihr zwei 200-Euroscheine."
+    "Ich gebe ihr zwei 200-Euro-Scheine."
     "Lynette" "Aber..."
     "Lynette" "Das ist so viel Geld."
     "Lynette" "Ist das denn wirklich in Ordnung?"
@@ -1206,15 +1216,12 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 2:
         b "{=jp}当たり前さ。{/=jp}"
     #-----------------------------------------------
-    #EXPERTENWIEHERBUH GEFRAGT: "Atarimae sa", "mochiron" oder "touzen da"?
-    
-    
     b "Da gab es doch diese Halskette, die du unbedingt haben wolltest."
     b "Wie teuer war die noch gleich?"
     b "300 Euro?"
-    "Ich hole noch einen weiteren 200-Euroschein aus dem Portemonnaie."
+    "Ich hole noch einen weiteren 200-Euro-Schein aus dem Portemonnaie."
     b "Hier."
-    "Lynette" "Woher weißt du davon?"
+    "Lynette" "Woher wissen Sie davon?"
     b "Ich wäre nicht mit dir zusammen, wenn ich so was nicht wüsste."
     #Bild mit blush von Lynette für maximalen Gewinn
     #-----------------------------------------------    
@@ -1274,7 +1281,7 @@ label anja_anfang:
         "Erica" "{=jp}もう。{/=jp}"
     #-----------------------------------------------
     if persistent.wieherbuhSprache is 0:
-        "Erica" "Gemein."
+        "Erica" "Ihr seid gemein."
     if persistent.wieherbuhSprache is 1:
         "Erica" "Iyashii."
     if persistent.wieherbuhSprache is 2:
@@ -1287,6 +1294,7 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 2:
         b "{=jp}何？{/=jp}"
     #-----------------------------------------------
+    "Erica" "Ihr esst schon."
     "Lynette" "Für dich habe ich doch auch Frühstück gemacht, Erica."
     "Erica" "Ihr esst aber schon."
     "Erica" "Ihr habt ohne mich angefangen."
@@ -1299,6 +1307,8 @@ label anja_anfang:
         b "{=jp}ごめん、 ダーリング{/=jp}"
     #-----------------------------------------------
     "Erica" "Dafür musst du aber gleich was mit mir unternehmen."
+    b "Hmm..."
+    "Erica" "Nun komm schon."
     b "OK."
     "Erica" "Versprochen?"
     b "Ja."
@@ -1323,9 +1333,9 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 2:
         "Lynette" "{=jp}御主人様！{/=jp}"
     #-----------------------------------------------
-    "Lynette" "Sagt doch auch mal was!"
+    "Lynette" "Sagen Sie doch auch mal was!"
     b "Was denn?"
-    "Lynette" "Na, Ihr weißt schon."
+    "Lynette" "Na, Ihr wisst schon."
     b "Sie versteht es nicht, Lynette-chan."
     "Erica" "Was versteh' ich nicht?"
     b "Nichts..."
@@ -1345,7 +1355,7 @@ label anja_anfang:
     "Ich gehe zu Erica und streichle ihr über das blonde Haar."
     b "Nimm solche Sachen doch nicht so ernst, Erica-chan."
     "Erica" "Aber..."
-    "Erica" "aber..."
+    "Erica" "...aber..."
     "Sie senkt ihren Blick Richtung Boden und verstummt."
     b "Was ist denn?"
     "Erica" "Ich..."
@@ -1384,9 +1394,9 @@ label anja_anfang:
     if persistent.wieherbuhSprache is 0:
         "Erica" "...be dich."
     if persistent.wieherbuhSprache is 1:
-        "Erica" "...masu."
+        "Erica" "...ru."
     if persistent.wieherbuhSprache is 2:
-        "Erica" "{=jp}。。。ます。{/=jp}"
+        "Erica" "{=jp}。。。る。{/=jp}"
     #-----------------------------------------------
     b "Komm her, Erica-chan."
     "Ich umarme sie und drücke sie ganz fest an mich."
@@ -1412,7 +1422,7 @@ label anja_anfang:
     #-----------------------------------------------
     "Lynette" "Ich dachte, ich wäre..."
     b "Sorry, Lynette."
-    b "Ich kann mich nicht für eine von euch beiden entscheiden, weil das gleichzeitig bedeutet, dass ich die andere ablehne."
+    b "Ich kann mich nicht für eine von euch beiden entscheiden, weil das gleichzeitig bedeutet, dass ich die Andere ablehne."
     b "Und das kann ich nicht."
     b "Das bringe ich nicht über's Herz."
     "Erica" "Hach..."

@@ -1,39 +1,50 @@
+#Inhaltsverzeichnis:
+#label eins = Start von Kapitel 1, alles vor der Entscheidung, ob Treffen oder nicht
+#label eins_treffenBerndf = Erstes und zweites Treffen mit Abzweigung zu Abholen
+#label eins_accept_fBernd = Annehmen des Angebots von Anja
+#label eins_refuse_fBernd = Ablehnen des Angebots von Anja
+#label eins_sisAbholen_promise = Kurzer Dialog, wenn man der Schwester versprochen hat sie abzuholen
+#label eins_sisAbholen = Abholen der Schwester am zweiten Tag nach Berndtreffen
+#label eins_krautchanOff = Krautchan geht off
+#label eins_sisAbholenZuerst = Abholen der Schwester am ersten und zweiten Tag + Stalking
+#label eins_ende = Sprung zu Kapitel 2
+
+
+#Stats:
+#$ sisLove =
+    #Begrüßung am Morgen: "Guten Morgen, Laura" = +5
+    #Begrüßung am Morgen: "Geh weg, Nervensäge" = -5
+    #Kondome werden nur mitgebracht, wenn sisLove > 50
+    #Bernd bedankt sich für die Kondome/Gummibärchen = +5
+    #Bernd bedankt sich nicht für die Kondome/Gummibärchen = -5    
+    #Laura: "Morgen holst du mich aber ab, oder?" - Bernd: "Klar." = +15
+    #Laura: "Morgen holst du mich aber ab, oder?" - Bernd: "Nein." = -15    
+    #max. +65 / +10 möglich
+#$ maLove =
+    #Mutter: "Willst du nicht aufstehen?" - Bernd: "OK." = +5
+    #Mutter: "Willst du nicht aufstehen?" - Bernd: "Nein." = -5
+    #Mutter: "Kommst du beim Tragen helfen?" - Bernd: "OK." = +5
+    #Mutter: "Kommst du beim Tragen helfen?" - Bernd: "Nein." = -5    
+    #max. +35 / -5 möglich
+#$ friendLove =
+    #Anja: "Mit KC ist das und das passiert. Glaubst du mir?" - Bernd: "Ja." = +10
+    #Anja: "Mit KC ist das und das passiert. Glaubst du mir?" - Bernd: "Nein." = -5
+    #Anja: "Hilfst du mir denn?" - Bernd: "Ja." = +10
+    #Anja: "Hilfst du mir denn?" - Bernd: "Nein." = -10
+    #max. +10 / -15 möglich
+#$ yanLove = 
+#$ geld =
+    #Döner kaufen = -3,5
+    #Eis für Laura kaufen = -1,5
+    #max. +5 / +-0 möglich
+
+#-------------------------------------------------------------------------------
 #Kapitel 1
 #Einen Monat nach den Ereignissen des Prologs
-#max sisLove = 50
+#-------------------------------------------------------------------------------
 
-#---------------------------------------
-#
-#INHALT
-#
-#label eins
-#start von kapitel 1, alles vor der entscheidung ob treffen oder nicht
-#
-#label eins_treffenBerndf
-#erstes und zweites treffen mit abzweigung zu abholen
-#
-#label eins_accept_fBernd
-#annehmen des angebots von Anja
-#
-#label eins_refuse_fBernd
-#ablehnen des angebots von Anja
-#
-#label eins_sisAbholen_promise
-#kurzer dialog wenn man der schwester versprochen hat sie abzuholen
-#
-#label eins_sisAbholen
-#abholen der schwester am zweiten tag nach berndtreffen
-#
-#label eins_krautchanOff
-#krautchan geht off
-#
-#label eins_sisAbholenZuerst
-#abholen der schwester am ersten und zweiten tag + stalking
-#
-#label eins_ende
-#sprung zu kapitel 2
-#
-#---------------------------------------
+
+
 label eins:    
     
     stop music fadeout 1.0
@@ -221,11 +232,13 @@ label eins:
             "Warum müssen die jetzt beide hier rumstehen?"
             "Das ist MEIN Keller!"
             
-            #sis beleidigt
+            show sis pissed
+            with dissolve
+            
             sis "Dann geh' ich halt!"
             sis "Bäh!"
             
-            hide laura happy
+            hide laura pissed
             with dissolve
             
             ma "Aber %(berndName)s, wie redest du denn mit deiner Schwester?"
@@ -293,10 +306,10 @@ label eins:
     
     "Oh, scheint als wäre ein Download fertig."
     "Ich zieh' mir meine Unterhose hoch und sehe nach."
-    
+
     scene bg keller
     with dissolve
-    
+
     "Tatsächlich."
     "Die neue Folge von Strike with Cheese ist unten, aber ich muss erst was essen."
     "Und fappiert habe ich eh gerade erst, also hat das noch Zeit."
@@ -307,8 +320,12 @@ label eins:
     scene bg badezimmer
     with fade
 
-    #play sound "sound/dusche.wav"
-    #muss noch gefunden werden
+    play sound "sounds/dusche.wav"
+    
+    $ renpy.pause(8)
+    #evtl. ist das zu lang
+    #muss ich überhaupt ein renpy.pause machen
+    #Stepmania-Bernd
 
     play music m_wohnung
 
@@ -330,8 +347,11 @@ label eins:
     b "DIE MIT DER MÜHLE!"
     b "Wie viele nehm' ich denn?"
     b "ALLE!"
-    #om nom nom sound
-    #Sound
+    
+    play sound "sounds/omnomnom.mp3"
+    
+    $ renpy.pause(5)
+
     b "RÜGENWALDER!"
     b "GROB ODER FEIN, DIE MIT DER MÜHLE MUSS ES SEIN!"
 
@@ -348,13 +368,13 @@ label eins:
     
     "Als ich wieder in den Keller komme, ist der ganze Raum in ein blaues Licht getaucht."
     "Sofort schaue ich auf den Bildschirm."
-    
+ 
     b "OH MEIN GOTT, WAS IST GESCHEHEN!?"
     b "WAS IST DAS DENN!!?"
     b "DU HURENSOHN!"
     b "DIE RESET-TASTE..."
     b "WO IST DIE RESET-TASTE!?"
-    b "STARTE DAS VERDAMMTE BETRIEBSSYSTEM!"
+    b "STARTE {w}DAS {w}VERDAMMTE {w}BETRIEBSSYSTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEM!"
     
     show bg keller_aus
     
@@ -1319,7 +1339,7 @@ label eins_treffenBerndf:
     menu:
         " "
         "Auf jeden Fall!":
-            $ sisLove += 20
+            $ sisLove += 15
             $ anjaTreffen2 = -1
             sis "Ich werde auf dich warten."
             sis "...und wehe du kommst nicht."
@@ -1330,6 +1350,7 @@ label eins_treffenBerndf:
             sis "Schau!"
             sis "Wir sind da."
         "Das kann ich nicht versprechen.":
+            $ sisLove -= 15
             $ anjaTreffen2 = 0
             sis "Wie immer..."
             sis "Na wenigstens bist du ehrlich."
@@ -1771,8 +1792,9 @@ label eins_refuse_fBernd:
             $ friendLove += 10
             jump eins_accept_fBernd
         "Nein.":
-            $ friendLove -= 20
+            $ friendLove -= 10
             b "Tut mir Leid, aber ich denke, ich gehe besser."
+            
     "Ohne ein weiteres Wort zu sagen, drehe ich mich um und gehe."
     hide anja neutral
     with dissolve
@@ -1869,6 +1891,7 @@ label eins_sisAbholen:
     b "Zwiebeln auch."
     "Salih" "drai oiro funfzisch dann bittä"
     "Ich gebe ihm das Geld."
+    $ geld -= 3,50
     "Salih" "döner dauerd noch minude ja?"
     b "Ja, ist ok."
 
@@ -1999,7 +2022,7 @@ label eins_sisAbholen:
     with dissolve
     
     "Salih" "Guten Tag."
-    "Salih" "Was darfs denn sein?"
+    "Salih" "Was darf's denn sein?"
     "Den kenn ich doch..."
     
     show salih neutral at right
@@ -2014,7 +2037,7 @@ label eins_sisAbholen:
     "Salih" "Und welche Sorten?"
     sis "Banane, Schoko und Stracciatella."
     "Salih" "Hier, bitte sehr."
-    "Salih" "Das macht dann 1,80€."
+    "Salih" "Das macht dann 1,80 Euro."
     "Das ist zwar mein letztes Geld, aber was tut man nicht alles für seine kleine Schwester."
     b "Hier."
     "Salih" "Dankeschön."
@@ -2232,6 +2255,7 @@ label eins_sisAbholenZuerst:
     b "Ja..."
     b "Zwiebeln auch."
     "Salih" "drai oiro funfzisch dann bittä"
+    $ geld -= 3,5
     "Ich gebe ihm das Geld."
     "Salih" "döner dauerd noch minude ja?"
     b "Ja, ist ok."
@@ -2363,7 +2387,7 @@ label eins_sisAbholenZuerst:
     with dissolve
     
     "Salih" "Guten Tag."
-    "Salih" "Was darfs denn sein?"
+    "Salih" "Was darf's denn sein?"
     "Den kenn ich doch..."
     
     show salih neutral at right
@@ -2378,7 +2402,8 @@ label eins_sisAbholenZuerst:
     "Salih" "Und welche Sorten?"
     sis "Banane, Schoko und Stracciatella."
     "Salih" "Hier, bitte sehr."
-    "Salih" "Das macht dann 1,80€."
+    "Salih" "Das macht dann 1,50 Euro."
+    $ geld -= 1,50
     "Das ist zwar mein letztes Geld, aber was tut man nicht alles für seine kleine Schwester."
     b "Hier."
     "Salih" "Dankeschön."
@@ -2607,8 +2632,6 @@ label eins_sisAbholenZuerst:
     b "Glück gehabt."
     "Es scheint als wäre wirklich weiter nichts passiert..."
     "Bernd ist wohl wirklich völlig unfähig."
-    
-    #BUTTERGOTT MEHR DIALOG HIER
     
     play sound "sounds/door_1.wav"
     show laura neutral
