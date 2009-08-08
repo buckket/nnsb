@@ -509,13 +509,13 @@ label laura_anja_mail:
             with dissolve
             #Bild existiert noch nicht
             
-            b "Pfui Teufel."           
+            b "Pfui Teufel."
+            #Wie stellte ich ein "hfaslkjyvhoajsflhasgnvflnawfljdsn" dar?           
             sis "Wieso trinkst du auch meinen Orangensaft?"
             sis "Wir haben doch auch noch andere Getränke."
             b "Woher soll ich wissen, dass es dein Orangensaft ist?"
             b "Bäh."
             sis "Wieso spuckst du eigentlich den Orangensaft aus?"
-            b "Weil du schon direkt daraus getrunken hast."
             sis "Findest du mich so ekelhaft?"
             
             menu:
