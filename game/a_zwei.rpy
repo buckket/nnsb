@@ -13,25 +13,31 @@ label laura_anja_mail_a_zwei:
     "Aber was schreibe ich denn rein?"
     "Ich sollte meine neuen Mails nochmal abrufen."
     
-    scene bg desktop_email
+    scene bg desktop_email_2
     with fade
-    #Bild existiert noch nicht/neues Bild bitte mit verändertem Spam
-    #ganz oben muss nochmal eine Mail von Anja stehen (schnuffel90@googlemail.com)
+    #Bild existiert noch nicht/bitte die alten Spam-Mails rauslöschen, da Bernd diese schon in Kap. 1 löschte
     
-    "Neuer Spam."
+    "Spam."
+    "Nicht schon wieder."
+    "Wie lange es wohl dauert bis ich wieder Ruhe vor Bernd habe..."
+    "Wahrscheinlich nie."
+    "Ich sollte mir eine neue Mailadresse einrichten."
+    "Diese ganzen Spam-Mails."
     "Löschen."
-    "ALLES!"
     "Oh."
+    "Moment."
     "schnuffel90@googlemail.com."
-    "Die E-Mail ist von gestern."
+    "Die Adresse kenne ich doch."
+    "!"
+    "Das war doch der Bernd, der meine Hilfe..."
+    "...und mich am Alexanderplatz treffen wollte."
+    "Die alte E-Mail ist von gestern{w} und die neue Mail auch."
     "Was da wohl drin steht?"
     "Ich öffne die Mail."
-    #Ausbaufähig im Sinne von: GSB schon wieder? Der ist ganz schön nervig usw.
-    #Kommt drauf an, was Yubi-chan da ins Bild schreibt
     
     scene bg desktop_hilfe
     with fade
-    #Bild existiert noch nicht/neues Bild mit neuem Text bitte
+    #Bild existiert noch nicht/bitte den Fehler im Text korrigieren
     
     "gestern..."
     "heute..."
@@ -67,10 +73,10 @@ label laura_anja_mail_a_zwei:
     ma "KOMM SCHNELL!"
     "Warum kommt immer nur ein \"KOMM SCHNELL!\", wenn ich nachfrage?"
     "Ich hasse so was."
-    b "JAJA!"
+    b "JA JA!"
     "Ich stehe auf und ..."    
     
-    play sound "sounds/metaldooropen.wav"
+    #play sound "sounds/metaldooropen.wav"
         
     scene bg kellertreppe
     with fade
@@ -92,7 +98,7 @@ label laura_anja_mail_a_zwei:
     
     "Ich schließe die Tür hinter mir."
     
-    play sound "sounds/metaldooropen.wav"
+    #play sound "sounds/metaldooropen.wav"
     
     "Wie immer."
     "Was macht ein Mädchen hier?"
@@ -102,7 +108,7 @@ label laura_anja_mail_a_zwei:
     "Habe ich irgendwas Schlimmes getan?"
     "Ich setze mich wieder in meinen Stuhl."
     
-    play sound "sounds/metaldooropen.wav"
+    #play sound "sounds/metaldooropen.wav"
     
     show anja angry
     with dissolve
@@ -124,10 +130,10 @@ label laura_anja_mail_a_zwei:
     with dissolve
     
     u"Mädchen" "Ja."
-    b "D-D-Du bist ein B-B-Bernd?"
+    b "D-D-Du bist ein {w}Bernd?"
     u"Mädchen" "Ja."
     u"Mädchen" "Willkommen in der Wirklichkeit."
-    b "Ein...ein...ein Mäd...chen?"
+    b "Ein...{w}ein...{w}ein {w}Mäd...{w}chen?"
     b "Ein Bernd?"
     u"Mädchen" "Ja."
     b "Was zum?"
@@ -143,11 +149,13 @@ label laura_anja_mail_a_zwei:
     b "Ja."
     bw "Ja."
     b "Toll."
+    bw "Nicht wahr?"
     b "Komm endlich zur Sache."
     bw "Wir müssen Krautchan retten."
     b "Und wie soll ich dir dabei helfen?"
     bw "Weiß ich noch nicht."
-    b "Was ist denn eigentlich mit Krautchan passiert?"
+    b "Wieso müssen wir Krautchan retten?"
+    b "Was ist mit Krautchan passiert?"
     bw "Der Server wurde beschlagnahmt."
     b "Server beschlagnahmt."
     b "So so."
@@ -158,9 +166,13 @@ label laura_anja_mail_a_zwei:
     bw "Die genauen Einzelheiten kenne ich auch nicht."
     bw "Ich weiß nur, dass der Server eines Morgens von der Polizei beschlagnahmt wurde."
     bw "Deshalb brauche ich deine Hilfe."
-    b "Und wie sollen wir da was machen?"
+    b "Und was sollen wir da machen?"
     bw "Weiß ich nicht."
-    b "Und warum bist du dann hier?"
+    b "Du weißt nicht, wie du KC retten kannst."
+    bw "Ja."
+    b "Du weißt auch nicht, wie ich dir helfen kann."
+    bw "Ja."
+    b "Warum bist du dann hier?"
     bw "Weil du nicht geantwortet hast."
     b "Warum nahmst du nicht mit den Mods Kontakt auf?"
     bw "Die Mods?"
@@ -185,6 +197,12 @@ label laura_anja_mail_a_zwei:
     "Woher sollte ich?"
     b "Nein."
     bw "Ich wohne..."
+    bw "Nun ja..."
+    b "Ja?"
+    bw "Ich wohne..."
+    
+    play sound "sounds/dadadadam.mp3"
+        
     bw "...im Stockwerk über dir."
     
     show anja smiling
