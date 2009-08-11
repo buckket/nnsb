@@ -172,6 +172,11 @@ init -1 python hide:
     ## Set this to False if the game does not have any music.
 
     config.has_music = True
+    
+    ## Musikraum:
+    
+    config.main_menu.insert(3, ("Musikraum", "music_room", "True"))
+    
 
     ## Set this to False if the game does not have voicing.
 
@@ -193,7 +198,7 @@ init -1 python hide:
 
     ## Music that is played while the user is at the main menu.
 
-    config.main_menu_music = "main_menu_theme.mp3"
+    config.main_menu_music = "music/main_menu_theme.mp3"
 
 
     #########################################

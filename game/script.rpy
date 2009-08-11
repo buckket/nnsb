@@ -14,7 +14,6 @@ init python:
     
     config.log = "debuglog.txt"
     
-    
     #diverse funktionen
 
     #string kürzen
@@ -68,6 +67,101 @@ init python:
             
             
     namenListe = ["Bernd","Name","Rot","Blau","Marc-Oliver","Kim","Kevin"] #hier brauchen wir mehr
+
+
+#-----------------------------------------------------------------------    
+    #Musikraum:    
+    def set_playing_(track):
+        store.playing = track
+        return True
+
+    set_playing = renpy.curry(set_playing_)
+
+    # Call this with a button name and a track to define a music
+    # button.
+    def music_button(name, track):
+    
+        if store.playing == track:
+            role = "selected_"
+        else:
+            role = ""
+    
+ #       if not renpy.seen_audio(track):
+  #          name = "???"
+   #         clicked = set_playing(track)
+    #    else:
+     #       clicked = set_playing(track)
+
+        clicked = set_playing(track)
+
+        ui.textbutton(
+            name,
+            clicked=clicked,
+            role=role,
+            size_group="music")
+
+label music_room:
+
+    scene black
+
+    python:
+        _game_menu_screen = None
+
+        # The default track of music.
+        playing = None
+
+label music_room_loop:
+
+    # Play the playing music, if it changed.
+    python:
+        renpy.music.play(playing, if_changed=True, fadeout=1)
+
+        # Display the various music buttons.
+        ui.vbox(xalign=0.5, ypos=100)
+        music_button("Titelbildschirm", "music/main_menu_theme.mp3")
+        music_button("Arrein, arrein...", "music/ronery.mp3")
+        music_button("Anjas Thema", "music/anja_theme.mp3")     
+        music_button("eines Mädchens Wohnung", "music/anja_wohnung.mp3")
+        music_button("Ich wähle dich, Schuh!", "music/battle.mp3")
+        music_button("Jamba", "music/bernd_handy.mp3")
+        music_button("Thema eines Helden", "music/bernd_theme.mp3")      
+        music_button("Pause muss auch mal sein", "music/bernd_wohnung.mp3")
+        music_button("<3", "music/date.mp3")   
+        music_button("Salih-Time", "music/donerladen.ogg")
+        music_button("Wie kam ich auf Namen für die Musikstücke?", "music/exciting.mp3")
+        music_button("Das ist sowieso das einzige Lied, das gehört werden wird", "music/laura_theme.ogg")
+        music_button("Ich sterbe fast vor Anspannung...fast", "music/psycho.mp3")
+        music_button("Er kommt!", "music/rugenwalder.ogg")
+        music_button("Renn schneller", "music/run_fast.mp3")
+        music_button(";_;", "music/sad.mp3")
+        music_button("Wie kam ich zur Schule?", "music/schulweg.mp3")
+        music_button("Kaufe das Hyrule-Schild, stelle fest, dass man es kurz danach umsonst bekommt", "music/shop.mp3")
+        music_button("Träume sind sooo toll", "music/traum.mp3")
+        music_button("Hier fiel mir überhaupt kein Name ein", "music/Treffen, das niemals stattfinden sollte.mp3")
+        music_button("Stalk, stalk...", "music/yasmin_stalkerbernd_theme.mp3")
+        music_button("[drei Punkte in diesem Feld]", "music/yasmin_theme.mp3")
+        music_button("...Wohnung", "music/yasmin_wohnung.mp3")
+        ui.close()
+
+        # This is how we return to the main menu.
+        ui.textbutton(
+            "Return",
+            clicked=ui.returns(False),
+            xalign=1.5,
+            ypos=0,
+            size_group="music")
+
+    if ui.interact():
+        jump music_room_loop
+    else:
+        return
+
+    
+#---------------------------------
+    
+
+
+
 
 init:
     #Wichtige Storyflags:
