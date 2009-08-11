@@ -49,6 +49,8 @@ init:
     
 label prolog:
 
+    stop music
+
     scene splash splash_prolog
     with gradientTrans
 
