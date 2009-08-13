@@ -157,7 +157,7 @@ label zwei_laura_stalk_entscheid:
     with flash
     
     b "Was zum?!"
-    "Durch das wenige Sonnenlicht, das durch mein Fenster fällt, geweckt, setze ich mich aufrecht aufs Bett."
+    "Durch das wenige Sonnenlicht, das durch mein Fenster fällt, geweckt, setze ich mich aufrecht auf's Bett."
     "Alles nur ein Traum...?"
     "Wie spät ist es?"
     "Wieso hat mich denn niemand geweckt?"
@@ -195,6 +195,7 @@ label zwei_laura_stalk_entscheid:
     "Sehr merkwürdig."
     
     play sound "sounds/error.wav"
+    #Sound -> anderer Mailsound
     
     "Oh."
     "Eine Fehlermeldung?"
@@ -302,10 +303,13 @@ label zwei_email_erinnerung:
     
     if stalker_eins:
         jump laura_anja_mail_a_zwei
-        #das Label steht am Anfang von a_zwei.rpy 
+        #das Label steht am Anfang von a_zwei.rpy
+        #Bernd hat Anja kein einziges Mal getroffen, sondern Laura 2x abgeholt 
         pass
+   
     else:
         pass
+        #nachfolgend: Bernd hat zuerst Anja getroffen, dann aber Laura abgeholt
     
     menu:
         ""
@@ -370,6 +374,7 @@ label laura_anja_mail:
     with fade
     #Bild existiert noch nicht
     #Text = ???; Lass dir was einfallen, Yubi-chan!
+    #Das ist die Mail, die Bernd an Anja schreibt
     
     "Ich klicke auf \"Abschicken\"."
     "Jetzt kann ich nur noch warten."
@@ -417,7 +422,7 @@ label laura_anja_mail:
     if laura_getraenk == "wasser":    
         "Gerade, als ich die Flasche in die Hand nehme, höre ich die Haustüre."
     
-    else: #kein wasser -> verpackung
+    else: #kein wasser -> Verpackung
         "Gerade, als ich das Tetrapak in die Hand nehme, höre ich die Haustüre."
     
     "Oh Gott."
@@ -438,7 +443,7 @@ label laura_anja_mail:
     sis "Ja."
     b "Das freut mich."
     "...solange sie bei ihrer Freundin und die Freundin nicht auch noch hier ist."
-    "Ich nehme einen Schluck aus der Wasserflasche."
+    "Ich nehme einen Schluck."
         
     show sis mad_talk
     with dissolve
@@ -451,7 +456,7 @@ label laura_anja_mail:
     if laura_getraenk == "wasser": 
         sis "Wieso trinkst du aus der Flasche?"
     
-    else: #kein wasser -> verpackung
+    else: #kein wasser -> Verpackung
         sis "Wieso trinkst du aus der Verpackung?"
     
     b "Keine Ahnung."
@@ -483,7 +488,7 @@ label laura_anja_mail:
         sis "Mann."
         sis "Immer das Gleiche mit dir."
         
-    else: #orangensaft
+    else: #Orangensaft
         $ sisLove -= 5
         sis "Wieso trinkst du meinen Orangensaft weg."
         "Ich nehme noch einen Schluck."
@@ -532,6 +537,13 @@ label laura_anja_mail:
                sis "Was habe ich dir getan?"
                sis "Was ist so schlimm an mir?"
                "Oh Gott, nicht das schon wieder."
+               b "Du nervst."
+               sis "Du schließt dich doch die ganze Zeit in deinem Keller ein."
+               sis "Wir sehen uns doch kaum."
+               sis "Und das, obwohl wir in der gleichen Wohnung leben."
+               sis "Wie kann ich dich da nerven?"
+               b "Genau so."
+               b "Ach, lass mich doch in Ruhe."
             
             
             "Nein.":
@@ -545,24 +557,41 @@ label laura_anja_mail:
                 sis "Was soll das heißen?"
                 b "Ich weiß nicht, wie ich es ausdrücken soll."
                 b "Aber ich hasse dich nicht."
-                #GSB GSB GSB
+                b "Immerhin bist du doch meine Schwester."
                 
-    
+                show sis sad_smile
+                with dissolve
                 
-#Bernd braucht mehr Beschäftigungen als Animu schauen und Touhou spielen -> Konsolen!
-            
-    play sound "sounds/mail.wav"
-    #Sound noch nicht vorhanden        
+                sis "Ach, %(berndName)s..."
+                sis "Das ist das erste Mal..."
+                sis "...dass du mir sagst..."
+                sis "...dass du mich magst."
+                "Wäre es nicht meine Schwester und das hier ein Eroge wäre, hätte ich bestimmt ein paar Pluspunkte bekommen."
+                "Leider ist es kein Eroge."
+                "Und es ist auch nur meine Schwester."
+                "Ich hätte jetzt *wirklich* Lust auf ein Eroge."
+                
+                
+    b "Ich gehe wieder in meinen Keller."
     
-    #blabla "oh, eine Mail", Mail einblenden, Rest vom Tag = ???        
-            
-    jump bernd_anja_tuere        
+    scene keller
+    with fade
+                    
+    play sound "sounds/mail1.wav"      
+    
+    "Oh was?"
+    "Ich habe neuen Spam erhalten."
+    
+    scene desktop_email_wirklich_neu
+    with fade
+    #Bild existiert noch nicht
+    #in dieser Mail: Anja findet es nicht fehr, dass Bernd am vorherigen Tag nicht gekommen ist
+    #sie gibt ihm aber ihre Daten durch (wo sie wohnt) und erwartet, dass er gleich kommt...
+    #geschockter Bernd, da er durch die Mail feststellt, dass sie im Stockwerk über ihm wohnt
+    #Was macht er in der verbleibenden Zeit?
+    
 
-#Anja antwortet wenig später und gibt ihm ihre Adresse -> er geht am nächsten Tag zu ihr (ab der Szene vor der Türe = label bernd_anja_tuere)
-        
-            
-#GSB GSB GSB
-#Bernd bekam eine zweite Mail -> Wechsel auf Anja-Route
+    jump bernd_anja_tuere 
 
 #--------------------------------------------------------------------------#
 #Dieser Abschnitt beinhaltet den Teil von Kapitel 2, bei dem sich Bernd für#

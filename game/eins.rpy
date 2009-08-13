@@ -2106,7 +2106,7 @@ label eins_sisAbholenZuerst:
     "Das ist sicher nur Einb-"
     "Stalkerbernd."
     "Es muss Stalkerbernd sein."
-    "Oh Scheiße..."
+    "Oh, verdammt..."
         
     menu:
         "Am besten..."
@@ -2345,7 +2345,7 @@ label eins_sisAbholenZuerst:
     with dissolve
     
     sis "Wieso bist du immer so gemein zu mir?!"
-    sis "Du magst mich nicht, stimmts?"
+    sis "Du magst mich nicht, stimmt's?"
     sis "Du hasst mich!"
     
     b "Stimmt doch gar nicht!"

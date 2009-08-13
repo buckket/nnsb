@@ -535,14 +535,21 @@ label prolog_EinkaufenRechts:
     
 label prolog_abend:
 
-    scene bg keller
+    scene bg keller_aus
     with fade
 
     play music m_bernd
     
     "Später am Abend..."
     
-    "Nachdem ich den neu erstandenen W-LAN Adapter angeschlossen und konfiguriert habe, schalte ich meinen Computer ein."
+    "Nachdem ich den neu erstandenen W-LAN Adapter angeschlossen und konfiguriert habe..."
+    
+    play sound "sounds/boot.wav"
+    
+    scene bg keller_aus
+    with fade
+    
+    "Wie ich diese Stimme vermisst habe..."
     "www.krautchan.net"
     "Enter."
     

@@ -1908,6 +1908,7 @@ label bernd_anja_besprechung:
     jump anja_besprechung
     
 label anja_besprechung:
+    
     "Erst..."
     
     menu:
@@ -2501,7 +2502,7 @@ label von_anja_zu_yasmin:
     
     "Die kalte Luft tut mir gut und macht mir den Kopf frei."
     "Endlich kann ich mal durchatmen."
-    "Immer nur im Keller zu sitzen kann auf die Dauer ganz schön anstrengen."
+    "Immer nur im Keller zu sitzen kann auf die Dauer ganz schön anstrengend."
     "Ich biege um die Ecke."
     "Die Straße ist leer, niemand ist hier."
     "Ich versuche an etwas anderes zu denken, aber irgendwie komme ich immer wieder auf %(wBerndName)s zurück."
@@ -2520,7 +2521,7 @@ label von_anja_zu_yasmin:
     "Sie wegschicken?"
     "Das könnte ich nicht."
     "Ich habe nicht die Kraft ihr so was zu sagen."
-    "Ich konnte es schon heute morgen nicht."
+    "Ich konnte es schon heute Morgen nicht."
     "Also was dann?"
     "Ausreden erfinden?"
     "Das kann ich ziemlich gut."
@@ -2540,4 +2541,3 @@ label von_anja_zu_yasmin:
     "Einfach irgendwann grillen gehen..."
 
     jump drei_yasmin_gewitter
-    
