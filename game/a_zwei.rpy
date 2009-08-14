@@ -2079,6 +2079,13 @@ label bernd_anja_tuere:
     bw "Du wirst aber schnell wieder ruhig."
     "Hat sie."
     bw "Ich hab dir ein Glas Milch mitgebracht."
+    
+    play sound "sounds/small_item_receive.wav"
+    
+    "Du hast Milch erhalten!"
+    "Diese Milch ist sehr gesund!"
+    "Benutze sie mit (C), um deine Energie aufzufrischen!"
+    
     "Milch?"
     b "Was soll ich damit?"
     bw "Trinken?"
