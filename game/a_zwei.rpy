@@ -1905,6 +1905,7 @@ label bernd_anja_besprechung:
     "Ja."
     "Ich werde sie ausnutzen."
     "Aber nicht jetzt."
+    
     jump anja_besprechung
     
 label anja_besprechung:

@@ -456,7 +456,7 @@ label laura_anja_mail:
     if laura_getraenk == "wasser": 
         sis "Wieso trinkst du aus der Flasche?"
     
-    else: #kein wasser -> Verpackung
+    else: #kein Wasser -> Verpackung
         sis "Wieso trinkst du aus der Verpackung?"
     
     b "Keine Ahnung."
@@ -587,9 +587,134 @@ label laura_anja_mail:
     #Bild existiert noch nicht
     #in dieser Mail: Anja findet es nicht fehr, dass Bernd am vorherigen Tag nicht gekommen ist
     #sie gibt ihm aber ihre Daten durch (wo sie wohnt) und erwartet, dass er gleich kommt...
-    #geschockter Bernd, da er durch die Mail feststellt, dass sie im Stockwerk über ihm wohnt
-    #Was macht er in der verbleibenden Zeit?
     
+    "Was zum?"
+    "Ich muss das irgendwie verarbeiten."
+    "Ich lege mich auf mein Bett."
+        "Ich lasse mir alle Details nochmal durch den Kopf gehen."
+    "Krautchans Server wurde beschlagnahmt."
+    "Von der Polizei."
+    "Grund: unbekannt."
+    "Woher weiß sie eigentlich davon?"
+    "Woher wusste sie, dass Krautchan off gehen würde?"
+    "Woher will sie wissen, dass die Polizei dahinter steckt?"
+    "Es könnte doch genauso gut Jemand gewesen sein, der so was zum Spaß macht."
+    "Ein Hacker."
+    "Das macht meiner Meinung nach mehr Sinn."
+    "Und die Mods?"
+    "Dass Tsaryu nach Japan ausgewandert ist, ist gut möglich."
+    "Aber Shaky?"
+    "Ist er wirklich nach Mexiko geflohen?"
+    "Ach Quatsch."
+    "Schüttli hat doch kein Geld für so was."
+    "Andererseits habe ich auch lange nichts mehr von ihm gehört."
+    "Allerdings war er auch eher ein Mitläufer."
+    "dergeneral kümmerte sich ja um das Meiste."
+    "Apropos dergeneral."
+    "Der soll untergetaucht sein?"
+    "Haha, der doch nicht."
+    "Ich finde, dergeneral ist ein cooler Typ. Re ist EXPERTENPROGRAMMIERER und ist vor nichts Angst."
+    "Aber er verhält sich in letzter Zeit komisch."
+    "Wie ein kleines Kind."
+    "Ja, das trifft es genau."
+    "Er verhält sich in letzter Zeit wie ein kleines Kind."
+    "Vielleicht ist wirklich was dran."
+    "Sie scheint mehr zu wissen, als sie mir eigentlich weiß machen will."
+    "Ich sollte gleich wirklich zu ihr gehen."
+    "Sie wohnt ja direkt über mir."
+    "Was?"
+    "Irgendwie komme ich mir immer noch dumm vor."
+    "Aber sie scheint es locker zu nehmen."
+    "In einer Großstadt lässt es sich nicht vermeiden, dass es mehrere Bernds gibt."
+    "Besonders in Berlin nicht."
+    "Das war mir vorher schon klar."
+    "Vor allem, wenn sich ein Bernd schon berlinbernd nennt."
+    "Aber..."
+    "Bernds? In MEINEM Mehrfamilienhaus?"
+    "Hmmm..."
+    "Was wohl sein wird, wenn ich sie morgen besuche?"
+    "Sie wird mir bestimmt auch was zu trinken anbieten."
+    "Chance auf einen indirekten Kuss?"
+    "Eher gering."
+    "Dann müssten wir ja schon aus dem selben Glas trinken."
+    "Oder aus der selben Flasche mit dem Mund trinken."
+    "Und das wird wahrscheinlich nicht geschehen."
+    "Hmm..."
+    "Wie ihr Zimmer wohl aussehen mag?"
+    "Es ist bestimmt ein typisches Mädchenzimmer."
+    "Aber wie sieht ein typisches Mädchenzimmer aus?"
+    "Ich war ja noch nie bei einem Mädchen im Zimmer."
+    "Gute Frage."
+    "Wie sieht ein typisches Mädchenzimmer aus?"
+    "Helle Tapeten?"
+    "Wahrscheinlich."
+    "Die Tapeten werden wahrscheinlich eine helle Farbe haben."
+    "Das Zimmer wird auf jeden Fall nicht so düster wie mein Keller sein."
+    "Und sie wird bestimmt auch irgendwo Kuscheltiere rumstehen haben."
+    "Sie hat bestimmt eine Plüschfigur von Hello, Kitty."
+    #-----------------------------------------------
+    if persistent.wieherbuhSprache is 0:
+        "Wie süß!"
+    if persistent.wieherbuhSprache is 1:
+        "Kawaii desu, ne?"
+    if persistent.wieherbuhSprache is 2:
+        "{=jp}かわいいです、 ね。{/=jp}"
+    #-----------------------------------------------
+    "Hat nicht jedes Mädchen heutzutage eine Figur von Hello, Kitty?"
+    "Und die Figur wird nach %(wBerndName)s riechen."
+    "Das Zimmer wird nach ihr riechen."    
+    "Und ich werde auf ihrem Bett sitzen."
+    "Es wird schön weich sein."
+    "Nicht so hart und unnachgiebig wie meins."
+    "Hmm..."
+    "Ich kann nicht, %(wBerndName)s..."
+    "Wenn du so weitermachst..."
+    "Ich kann jetzt nicht mehr..."
+    "Hmmmmm...."
+    "%(wBerndName)s..."
+    "Schnell."
+    "Ein Taschentuch."
+    "AH-HAH!"
+    "Hach..."
+    "%(wBerndName)s..."
+    "Ich schaue auf die Uhr."
+    "Es ist jetzt 13:42 Uhr."
+    "Soll ich schon zu ihr gehen?"
+    
+    menu:
+        
+        "Erst schaue ich Animu.":
+            scene bg desktop_none
+            with fade
+        
+            "Mal sehen."
+            "Oh."
+            "Kot Gayass ist fertig."
+            "Den werde ich nun schauen."
+        
+            scene black
+            with fade
+        
+            scene bg desktop_none
+            with fade
+        
+            "Hmm..."
+            "Ich würde C.C...."
+            "...wenn ich könnte!"
+            "Aber eine Anya ist auch fein."
+            "Ich hab nichts mehr zum Schauen."
+            "Ich brauche unbedingt neue Animeserien."
+            "Oh."
+            "Es ist schon 14:06 Uhr."
+        
+                
+        "Ich hab gerade eh nichts Besseres zu tun.":
+            $ friendLove += 10
+            "Ach, was soll's."
+            "Ich hab gerade eh nichts Besseres zu tun."
+ 
+            
+    "Dann mache ich mich mal langsam auf den Weg."
 
     jump bernd_anja_tuere 
 
