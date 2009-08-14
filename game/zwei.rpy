@@ -591,7 +591,7 @@ label laura_anja_mail:
     "Was zum?"
     "Ich muss das irgendwie verarbeiten."
     "Ich lege mich auf mein Bett."
-        "Ich lasse mir alle Details nochmal durch den Kopf gehen."
+    "Ich lasse mir alle Details nochmal durch den Kopf gehen."
     "Krautchans Server wurde beschlagnahmt."
     "Von der Polizei."
     "Grund: unbekannt."
