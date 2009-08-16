@@ -141,6 +141,7 @@ init:
     $ m_treffen = "music/Treffen, das niemals stattfinden sollte.mp3" #siehe Folge 1 von Sayonara Zetsubou Sensei, genau so etwas...
     #Irgendwie fehlt aber noch das passende Lied für die Laura-Spinnen-Szene
     $ m_cafe = "music/cafe.mp3" #falls Bernd mal mit einem Mädchen in ein Café geht
+    $ m_kanashimi = "music/insert_kanashimi.mp3" #Insert-Song für Abstechszenen
     
     #namen
     $ berndName = "Bernd"

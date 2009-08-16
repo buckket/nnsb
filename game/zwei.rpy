@@ -84,7 +84,7 @@ label zwei_laura_stalk_entscheid:
     "Da war es wieder..."
     "Was macht er da?"
     "Ich ziehe mir mein Kissen über den Kopf und das Geräusch verstummt."
-    "Es wird schon nichts schlimmes passieren..."
+    "Es wird schon nichts Schlimmes passieren..."
     "Hier unten ist es so dunkel, dass er sowieso nicht reingucken kann."
     "Mit diesem Gedanken schlafe ich ein."
     
@@ -93,7 +93,7 @@ label zwei_laura_stalk_entscheid:
     
     "Stimme" "%(berndName)s."
     "Stimme" "Wach auf!"
-    "Ich öffne die Augen, in der Erwartung %(sisName)s oder meine Mutter zu sehen aber..."
+    "Ich öffne die Augen, in der Erwartung %(sisName)s oder meine Mutter zu sehen, aber..."
     
     scene bg knastkeller
     with fade
@@ -128,7 +128,7 @@ label zwei_laura_stalk_entscheid:
     sis "Das kann ich nicht."
     b "Was soll denn das?"
     "So sehr ich auch an zerre und ziehe, ich kann mich nicht befreien."
-    sis "Das bringt nicht."
+    sis "Das bringt nichts."
     sis "Du wirst hier nicht rauskommen, wenn du nicht das tust, was ich von dir verlange."
     "Ich spüre wie mein Puls steigt."
     b "Mach mich los!"
@@ -137,21 +137,97 @@ label zwei_laura_stalk_entscheid:
     b "Und das wäre?"
     sis "Ich will, dass du mir zuhörst."
     sis "Ich möchte dir nur eine kleine Geschichte erzählen."
+    sis "Wirst du mir zuhören?"
     
     menu:
         ""
+        
         "In Ordnung. Ich höre zu.":
-            #BUTTERGOTT
-            #braucht noch dialog
-            pass
+            b "Von mir aus."
+            b "Ich höre dir zu. {w}Wenn du mir versprichst, dass du mich danach los machst."
+            sis "Also gut."
+            sis "Dieser fuhr mit seiner Familie in den Urlaub."
+            sis "Als sie ankamen, wollte er sofort an den großen Strand zu den anderen Kindern."
+            sis "Er wollte mit ihnen spielen."
+            sis "Der Vater jedoch verbat dem Sohne an den großen Strand zu gehen."
+            sis "Das Kind durfte nur an den kleinen Strand abseits des großen Strandes."
+            sis "Nach anfänglichem Schmollen hatte der Junge aber doch eine Menge Spaß mit den wenigen anderen Kindern am kleinen Strand."
+            sis "Auch die Eltern hatten Spaß."
+            sis "Es war eine schöne Zeit für die Familie."
+            sis "Doch dies sollte sich bald ändern."
+            sis "\"Aus rasestischen Grunden geschlossen - Die Stadtverwaltung\" stand auf dem Schild, das er eines Tages erblickte."
+            sis "Der Strand wurde geschlossen."
+            sis "Der Vater erlaubte ihm daraufhin mit den anderen Kindern am großen Strand zu spielen."
+            sis "Nach einer Weile merkte der Junge aber, dass er nicht mehr so viel Spaß am grosen Strand hatte wie noch vor Kurzem am kleinen Strand."
+            sis "Die Eltern hatten jedoch weiterhin jede Menge Spaß."
+            sis "Ein paar Tage später wurde ein riesiger Krebs an den Strand gespült."
+            sis "Der Junge wollte mit dem Krebs spielen."
+            sis "Plötzlich schnappte der Krebs nach dem Kind und es fing an zu bluten."
+            sis "Der Junge fiel in Ohnmacht."
+            sis "Der Krebs hörte jedoch nicht mehr auf."
+            sis "Und so kam es, dass der Junge starb."
+            sis "Der Krebs war Schuld am Tod des Jungen."
+            b "Und was willst du mir damit jetzt sagen?"
+            sis "Du wirst es verstehen, wenn die Zeit reif ist."
+       
         "Nein! Mach mich los!":
-            sis "Du willst deiner Schwester nicht zuhören?"
+            b "Nein!"
+            b "Und jetzt mach mich los, verdammt nochmal."
+            "Langsam kommt sie auf mich zu."
+            sis "Du bist nicht in der Lage, mir irgendwelche Befehle zu geben."
+            sis "Ich frage dich noch einmal."
+            sis "Wirst du mir zuhören?"
             b "Nein!"
             sis "Schade."
+            "Sie kommt noch näher."
+            
+            show laura knife
+            with dissolve
+            #Bild existiert noch nicht
+            
+            "EIN MESSER?"
             sis "Dann habe ich wohl keine andere Wahl."
-            sis "Es tut mir Leid, %(berndName)s."
-            #BUTTERGOTT
-            #BILD von Laura mit Messer
+            "Sie holt weit aus..."
+            #-----------------------------------------------
+            if persistent.wieherbuhSprache is 0:
+                "Leb wohl, schnöde Welt."
+            if persistent.wieherbuhSprache is 1:
+                "Sayonara, asamashii sekai."
+            if persistent.wieherbuhSprache is 2:
+                "{=jp}さよなら、 浅ましい 世界。{/=jp}"
+            #-----------------------------------------------
+            "Ich schließe meine Augen und lass es auf mich zukommen."
+            
+            scene black
+            with dissolve
+            
+            play sound "sounds/iit.wav"
+            #Sound existiert noch nicht            
+            
+            "Es tut gar nicht weh."
+            "Und es ist dunkel."
+            "Bin ich etwa schon in der Hölle?"
+            
+            sis "Du kannst aufstehen."
+            "%(sisName)s?"
+            sis "Mach die Augen auf."
+            "Langsam öffne ich meine Augen."
+            
+            sis "Leb wohl."
+                        
+            play music m_kanashimi
+            
+            play sound "sounds/iit.wav"
+            #Sound existiert noch nicht
+            
+            sis "Du Mistkerl."
+            sis "Du denkst doch nur daran, {w}dich selbst glücklich zu machen!"
+            $ sisNameKurz = stringShorten(sisName,3)
+            b "%(sisNameKurz)s..."
+            $ sisNameEnde = stringEnde(sisName,2)
+            b "...%(sisNameEnde)s..."
+
+    stop music
     
     scene bg keller_aus
     with flash
