@@ -232,7 +232,7 @@ label eins:
             "Warum müssen die jetzt beide hier rumstehen?"
             "Das ist MEIN Keller!"
             
-            show sis pissed
+            show laura pissed
             with dissolve
             
             sis "Dann geh' ich halt!"
@@ -1891,7 +1891,7 @@ label eins_sisAbholen:
     b "Zwiebeln auch."
     "Salih" "drai oiro funfzisch dann bittä"
     "Ich gebe ihm das Geld."
-    $ geld -= 3,50
+    $ geld -= 3.50
     "Salih" "döner dauerd noch minude ja?"
     b "Ja, ist ok."
 
@@ -2255,7 +2255,7 @@ label eins_sisAbholenZuerst:
     b "Ja..."
     b "Zwiebeln auch."
     "Salih" "drai oiro funfzisch dann bittä"
-    $ geld -= 3,5
+    $ geld -= 3.50
     "Ich gebe ihm das Geld."
     "Salih" "döner dauerd noch minude ja?"
     b "Ja, ist ok."
@@ -2403,7 +2403,7 @@ label eins_sisAbholenZuerst:
     sis "Banane, Schoko und Stracciatella."
     "Salih" "Hier, bitte sehr."
     "Salih" "Das macht dann 1,50 Euro."
-    $ geld -= 1,50
+    $ geld -= 1.50
     "Das ist zwar mein letztes Geld, aber was tut man nicht alles für seine kleine Schwester."
     b "Hier."
     "Salih" "Dankeschön."

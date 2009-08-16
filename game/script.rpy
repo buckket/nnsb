@@ -66,7 +66,7 @@ init python:
             base=persistent))
             
             
-    namenListe = ["Bernd","Name","Rot","Blau","Marc-Oliver","Kim","Kevin"] #hier brauchen wir mehr
+    defaultNamenListe = ["Name","Rot","Blau","Marc-Oliver","Kim","Kevin"] #hier brauchen wir mehr
 
 init:
     #Wichtige Storyflags:
@@ -206,7 +206,10 @@ label namenFrage:
 
 label namenGeben:
 
+    $ namenListe = defaultNamenListe
+
     $ nameEins = random.choice(namenListe)
+    $ namenListe.remove(nameEins)
     $ nameZwei = random.choice(namenListe)
 
     menu:
