@@ -120,28 +120,28 @@ init:
         
     #Musik
     $ m_bernd = "music/bernd_theme.ogg" #Draußen, Keller
-    $ m_wohnung = "music/bernd_wohnung.mp3" #Wohnung, Treppenhaus
+    $ m_wohnung = "music/bernd_wohnung.ogg" #Wohnung, Treppenhaus
     $ m_laura = "music/laura_theme.ogg" #Schwester
-    $ m_shop = "music/shop.mp3" #Supermarkt
-    $ m_anja = "music/anja_theme.mp3" #Anja und ihr Zimmer
-    $ m_anjaWohnung = "music/anja_wohnung.mp3" #Anjas Wohnung, außer ihrem Zimmer
-    $ m_pyscho = "music/psycho.mp3" #Psychosachen
-    $ m_traurig = "music/ronery.mp3" #traurige Stellen
-    $ m_drama = "music/sad.mp3" #ebenfalls traurige Stellen
-    $ m_date = "music/date.mp3" #Dates usw.
-    $ m_schulweg = "music/schulweg.mp3" #Schulweg usw.
+    $ m_shop = "music/shop.ogg" #Supermarkt
+    $ m_anja = "music/anja_theme.ogg" #Anja und ihr Zimmer
+    $ m_anjaWohnung = "music/anja_wohnung.ogg" #Anjas Wohnung, außer ihrem Zimmer
+    $ m_pyscho = "music/psycho.ogg" #Psychosachen
+    $ m_traurig = "music/ronery.ogg" #traurige Stellen
+    $ m_drama = "music/sad.ogg" #ebenfalls traurige Stellen
+    $ m_date = "music/date.ogg" #Dates usw.
+    $ m_schulweg = "music/schulweg.ogg" #Schulweg usw.
     $ m_donerladen = "music/donerladen.ogg"
-    $ m_spannung = "music/exciting.mp3" #Spannung usw.
-    $ m_rennen = "music/run_fast.mp3" #Action
-    $ m_yasminStalk = "music/yasmin_stalkerbernd.mp3" #Stalkerbernd-Theme
-    $ m_yasmin = "music/yasmin_theme.mp3" #Yasmin
-    $ m_yasminWohnung = "music/yasmin_wohnung.mp3" # Yasmins Wohnung (sie wohnt alleine...)
-    $ m_traum = "music/traum.mp3" #für Bernds Animeträume und seinen vielen Waifus
-    $ m_battle = "music/battle.mp3" #u. a. bisher für die Spinnenszene, weil ich noch keine bessere BGM fand,
-    $ m_treffen = "music/Treffen, das niemals stattfinden sollte.mp3" #siehe Folge 1 von Sayonara Zetsubou Sensei, genau so etwas...
+    $ m_spannung = "music/exciting.ogg" #Spannung usw.
+    $ m_rennen = "music/run_fast.ogg" #Action
+    $ m_yasminStalk = "music/yasmin_stalkerbernd.ogg" #Stalkerbernd-Theme
+    $ m_yasmin = "music/yasmin_theme.ogg" #Yasmin
+    $ m_yasminWohnung = "music/yasmin_wohnung.ogg" # Yasmins Wohnung (sie wohnt alleine...)
+    $ m_traum = "music/traum.ogg" #für Bernds Animeträume und seinen vielen Waifus
+    $ m_battle = "music/battle.ogg" #u. a. bisher für die Spinnenszene, weil ich noch keine bessere BGM fand,
+    $ m_treffen = "music/Treffen, das niemals stattfinden sollte.ogg" #siehe Folge 1 von Sayonara Zetsubou Sensei, genau so etwas...
     #Irgendwie fehlt aber noch das passende Lied für die Laura-Spinnen-Szene
-    $ m_cafe = "music/cafe.mp3" #falls Bernd mal mit einem Mädchen in ein Café geht
-    $ m_kanashimi = "music/insert_kanashimi.mp3" #Insert-Song für Abstechszenen
+    $ m_cafe = "music/cafe.ogg" #falls Bernd mal mit einem Mädchen in ein Café geht
+    $ m_kanashimi = "music/insert_kanashimi.ogg" #Insert-Song für Abstechszenen
     
     #namen
     $ berndName = "Bernd"
