@@ -882,7 +882,6 @@ label anja_anfang:
     
     scene bg tuere
     with fade
-    #Bild existiert noch nicht
     
     "Ich stehe nun vor ihrer Türe."
     "Ich will anklopfen, doch meine Hand stoppt ein paar Zentimeter vor der Türe."
@@ -1010,7 +1009,6 @@ label anja_anfang:
 
     scene bg tuere
     with fade
-    #Bild fehlt noch
 
     show anja neutral
     with dissolve
@@ -1127,6 +1125,7 @@ label anja_anfang:
     "Da bleibe ich lieber bei mai waifus."
     "Hach, Lynette..."
     #Bild "traumkueche.jpg", aber mit kleiner, weißer Umrandung, um anzuzeigen, dass es nur ein Traum ist
+    #Stepmania
     
     scene bg traumkueche
     with fade
@@ -1956,7 +1955,6 @@ label bernd_anja_tuere:
 
     scene bg tuere
     with fade
-    #Bild existiert noch nicht
     
     "Irgendwie habe ich kein gutes Gefühl."
     "Ich sollte einfach wieder gehen."
@@ -2028,7 +2026,6 @@ label bernd_anja_tuere:
     
     scene bg anjas_wohnung
     with fade
-    #Bild existiert noch nicht
     
     show anja neutral
     with dissolve
@@ -2182,8 +2179,6 @@ label bernd_anja_tuere:
         "{=jp}楽しい！{/=jp}"
     #-----------------------------------------------
     "Ich weine innerlich vor Freude."
-    
-    #---------------------------------------------------
     bw "Deine Milch."
     b "Was ist damit?"
     bw "Du hast sie noch nicht getrunken."
@@ -2208,10 +2203,11 @@ label bernd_anja_tuere:
     bw "Ach, was soll's."
     bw "Dann bringe ich die Milch halt hierhin."
 
+    hide anja
+
     $ renpy.pause(2.0)
     
-    play sound "sounds/anjas_klingelton.wav"
-    #Sound existiert noch nicht
+    play sound "music/anja_handy.mp3"
     
     "Was ist das?"
     "Ist das ihr Handy?"
@@ -2305,7 +2301,6 @@ label bernd_anja_tuere:
     
     scene bg anjas_wohnung
     with fade
-    #Bild existiert noch nicht
     
     "Sie zieht sich an."
     bw "So, %(berndName)s."
@@ -2345,6 +2340,7 @@ label bernd_anja_tuere:
     "QUALITÄTSNASEN!"
     
     #jump anja_drei
+    jump ende
 
 label bernd_kapzwei_grillen:
 
