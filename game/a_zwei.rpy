@@ -1496,6 +1496,7 @@ label anja_anfang:
             "Im Gegenteil."
             "Irgendwie finde ich das sogar ziemlich gut."
             "Naja..."
+            jump anja_weiter
             
         "ist irgendwie süß. NICHT!":
             $ anjaZuYasmin = False
