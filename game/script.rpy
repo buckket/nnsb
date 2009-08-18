@@ -183,6 +183,7 @@ label skipTo: #namen des labels eingeben -> springen
         "Springen":
             $ skipToLabel = renpy.input("Name des labels?") or "namenFrage"
             if renpy.has_label(skipToLabel):
+                $ renpy.music.stop()
                 $ renpy.jump(skipToLabel)
             else:
                 "Label nicht gefunden."
