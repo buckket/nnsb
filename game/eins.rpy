@@ -146,7 +146,7 @@ label eins:
             sis "Ist doch sowieso nur ein dummer Aberglaube!"
             "Sie will es mir wohl nicht erzählen..."
             b "Ist es dir peinlich oder warum willst du es mir nicht sagen?"
-            show laura emb_surprised
+            show laura surprised_drop
             with dissolve
             sis "Peinlich?"
             show laura embarrassed
@@ -827,7 +827,7 @@ label eins:
     b "Ja."
     b "Ganz ehrlich."
     "Sie legt ihren Kopf an meine Schulter."
-    show laura sadsmile
+    show laura sad_smile
     with dissolve
     sis "Ich hab dich gern, %(berndName)s."
     "Hey!"
@@ -1493,8 +1493,8 @@ label eins_treffenBerndf:
     "Sie schlägt ihr Matheheft auf."
     sis "Wir sollen das hier ausrechnen."
     "Sie zeigt auf eine Aufgabe."
-    b "sin(&#945;) = 1"
-    b "Berechne &#945;."
+    b "sin(α) = 1"
+    b "Berechne α."
     "Mal nachdenken..."
     
     menu:
@@ -2054,8 +2054,8 @@ label eins_sisAbholen:
     sis "Das tust du oft."
     sis "Aber wenn du mal ein Versprechen hältst, ist das etwas besonderes."
     b "Hey!"
-    b "Was soll das heissen!"
-    "... aber sie rennt bereits vorraus."
+    b "Was soll das heißen!"
+    "... aber sie rennt bereits voraus."
     b "Warte doch...!"
     
     scene black
