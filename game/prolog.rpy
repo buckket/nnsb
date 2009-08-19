@@ -457,11 +457,11 @@ label prolog_EinkaufenLinks:
         
     
 label prolog_EinkaufenWLAN:
-    b "W-LAN Adapter haben die hier sicher nicht..."
+    b "WLAN-Adapter haben die hier sicher nicht..."
     "Obwohl ich nur leise vor mich hin gemurmelt habe, hat mich wohl jemand gehört."
     u"Verkäuferin" "Doch, haben wir. Zweite Reihe, drittes Regal."
     b "Äh... ja."
-    "Tatsächlich finde ich dort einen W-LAN Adapter für nur 15 Euro."
+    "Tatsächlich finde ich dort einen WLAN-Adapter für nur 15 Euro."
     $ geld -= 15
     "Das muss fürs Erste reichen."
     "Hauptsache raus hier."
