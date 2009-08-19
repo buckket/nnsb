@@ -1,3 +1,9 @@
+#Inhaltsverzeichnis:
+#label zwei = Eingangslabel für Kap. 2, entscheidet, auf welcher Route Bernd nun weitermacht
+#label zwei_laura_stalk_entscheid = Bernd träumt von Laura mit Messer
+#label zwei_email_erinnerung = menu für Wechsel auf Anja-Route
+#label laura_anja_mail = Wechsel auf Anja-Route
+#label zwei_weiter_entscheid = statt Wechsel auf Anja-Route bleibt man auf der Laura-Route, Telefonstreich bei Laura und Y bricht ein
 
 #--------------------------------------------------------------------------------------------------#
 #Dieser kleine Codeabschnitt entscheidet, ob Bernd auf die Anja- oder die Laura-/Yasminroute kommt.#
@@ -192,7 +198,7 @@ label zwei_laura_stalk_entscheid:
             if persistent.wieherbuhSprache is 0:
                 "Leb wohl, schnöde Welt."
             if persistent.wieherbuhSprache is 1:
-                "Sayonara, asamashii sekai."
+                "Sayonara, asamashii Sekai."
             if persistent.wieherbuhSprache is 2:
                 "{=jp}さよなら、 浅ましい 世界。{/=jp}"
             #-----------------------------------------------
@@ -366,7 +372,7 @@ label zwei_laura_stalk_entscheid:
 
 label zwei_email_erinnerung:
     "Die E-Mail!"
-    "Sofort öffne meine alten Mails."
+    "Sofort öffne ich meine alten Mails."
     
     scene bg desktop_hilfe
     with dissolve
