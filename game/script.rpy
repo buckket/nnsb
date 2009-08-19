@@ -163,6 +163,7 @@ init:
     $ anjaOffer = 0
     $ lauraRoute = 0
     $ yanKennen = 0 #bestimmt, ob Bernd Yasmins Namen kennt
+    $ stalker_eins = 0
     
     #andere stats
     $ geld = 0
