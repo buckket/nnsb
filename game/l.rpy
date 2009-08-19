@@ -301,6 +301,7 @@ label zwei_laura:#Beginn der "echten" Laura-Story, einzige Linie, die zu Lauras 
     "Ich bin einfach nur ihr netter, großer Bruder."
     "Nichts weiter."
     "..."
+    
     "OK, jetzt geht es mir besser."
     "Wenigstens zittere ich nicht mehr so sehr."
     "Ich schraube den Deckel ab und gebe etwas von der Salbe auf meinen Finger."
@@ -308,13 +309,43 @@ label zwei_laura:#Beginn der "echten" Laura-Story, einzige Linie, die zu Lauras 
     b "Du..."
     b "Du musst schon deinen Schlafanzug aufmachen und dich hinlegen..."
     b "...sonst kann ich dich nicht einreiben."
-    sis "Äh... ok."
-    "Sie legt sich auf den Rücken und öffnet die Knöpfe ihres Schlafanzugs."
-    "..."
-    #was würde ich dafür geben, hier ein bildschirmfüllendes CG von dieser situation zu haben ;_;
-    #...ist das nun schon KiPo?
-    #Ruegenwalder-Bernd: Nö.
     
+    show laura surprised
+    with dissolve
+    
+    sis "Äh..."
+    sis "OK."
+    sis "Aber bitte nicht so fest."
+    "Sie legt sich auf den Rücken und öffnet langsam die Knöpfe ihres Schlafanzugs."
+    "Der erste Knopf."    
+    "Ich muss schlucken."
+    "Ich hab doch noch nie ein nacktes Mädchen in der Realität gesehen."
+    "Auf einem Bild, ja."
+    "In einem Video, ja."
+    "Auch in einem Hentai."
+    "Aber in der Realität?"
+    "Sie öffnet den zweiten Knopf."
+    "Reiß dich zusammen, %(berndName)s."
+    "Sie ist nur deine Schwester."
+    sis "Geht's dir nicht gut, Bernd?"
+    b "D-D-Doch."
+    b "Alles in Ordnung."
+    sis "Ich kann das auch alleine machen, wenn du willst."
+    b "N-Nein, das ist es nicht."
+    sis "Wenn du meinst..."
+    "Der dritte Knopf."
+    "Nun sind alle Knöpfe offen."
+    "In wenigen Sekunden liegt ein Mädchen nackt vor mir."
+    "Es ist zwar nur meine Schwester...{w}aber trotzdem ein Mädchen!"
+    sis "Sei ganz zärtlich, ok?"
+    b "O-OK."
+    "Ist das hier ein Eroge?"
+    "Quatsch."
+    "Aber ich fühle mich gerade wie ein Protagonist in einem Eroge."
+    
+    scene cg laura_nackt
+    with dissolve
+    #weiterschreiben
     
 label zwei_laura_nichtMedizin:
     "Unmöglich!"
