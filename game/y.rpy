@@ -1,3 +1,11 @@
+#Inhaltsverzeichnis:
+#label yasmin_polizei = Bernd will Polizei anrufen, Yasmin flieht, Laura hält ihn davon ab, Übergang zur Bernd-Route
+#label yasmin_anfang = Yasmin-Route, sie schauen gemeinsam Lucky Star
+#label yasmin_befragung_eins = Bernd fragt Yasmin aus 
+#label yasmin_befragung_zwei = Bernd fragt Yasmin aus 
+#label yasmin_befragung_drei = Bernd fragt Yasmin aus, sie schauen am Ende Lucky Star
+#label yasmin_zwei_derMorgenDanach = Was nach der Lucky Star-Nacht passiert, Frühstück etc.
+
 init:
     #bilder, die noch gebraucht werden
     #  yasmin ohne kapuze, aber mit mantel
