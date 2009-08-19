@@ -380,18 +380,12 @@ label zwei_laura_nichtMedizin:
     #hoho Entscheidungen über Entscheidungen!
     menu:
         "Ich sollte %(wBerndName)s eine Mail schreiben.":
-            jump zwei_laura_mail
+            jump zwei_email_erinnerung
         "Ich sollte im IRC-Channel suchen.":
             jump zwei_laura_irc
         "Ich sollte einfach was anderes machen.":
             jump zwei_laura_weiter
             
-label zwei_laura_mail: #Bernd schreibt eine E-Mail an Anja
-#Er entschuldigt sich dafür, dass er nicht gekommen ist.
-#Sie verabreden sich erneut. -> Übergang Anja Route
-#Eventuell noch eine Möglichkeit zu Laura zurückzukommen.
-    pass
-    
 label zwei_laura_irc: #Bernd geht in den IRC-Kanal und trifft dort auf die Mods.
 #Das dortige Gespräch führt dazu, dass Bernd sich entweder mit dem General trifft (T-Route) oder auf eigene Faust loszieht um KC zu retten (B-Route)
     pass
