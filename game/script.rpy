@@ -55,7 +55,12 @@ init python:
         for filePath in filesInImages:
             if os.path.isdir(imagesPath + filePath):
                 loadImagesFromDir("images/" + filePath)
-            
+    
+    #diese funktion zeigt eine TL-Note mit text an
+    def tlnote(text):
+        ui.frame(background=Solid((0,0,0,128)),xminimum=0.3,yminimum=0.1,xpos=0.5,xanchor='center',ypos=0.01)
+        ui.text(text,xanchor='center',yanchor='center',ypos=0.5,xpos=0.5,drop_shadow=(1,1))
+    
     config.preferences['prefs_left'].append(
         _Preference(
             "Japanisch",
