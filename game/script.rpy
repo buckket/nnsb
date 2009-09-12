@@ -147,6 +147,7 @@ init:
     #Irgendwie fehlt aber noch das passende Lied für die Laura-Spinnen-Szene
     $ m_cafe = "music/cafe.ogg" #falls Bernd mal mit einem Mädchen in ein Café geht
     $ m_kanashimi = "music/insert_kanashimi.ogg" #Insert-Song für Abstechszenen
+    $ m_heul = "music/;_;.ogg" #;_;
     
     #WICHTIG: Handy-Klingeltöne bitte nicht registrieren, die sind zwar in dem Ordner drin, werden aber mit dem Sound-Befehl abgerufen
     

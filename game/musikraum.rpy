@@ -63,7 +63,7 @@ init python:
     tracks.addTrack("Nein, nicht das Messer, NICHT DAS MESSER!!", "music/psycho.ogg")
     tracks.addTrack("Er kommt!", "music/rugenwalder.ogg")
     tracks.addTrack("Renn schneller", "music/run_fast.ogg")
-    tracks.addTrack(";_;", "music/sad.ogg")
+    tracks.addTrack("Warum ist dieses Lied eigentlich noch dabei?", "music/sad.ogg")
     tracks.addTrack("Wie kam ich zur Schule?", "music/schulweg.ogg")
     tracks.addTrack("Schon wieder Jamba", "music/anja_handy.ogg")
     tracks.addTrack("Kaufe das Hyrule-Schild, stelle fest, dass man es kurz danach umsonst bekommt", "music/shop.ogg")
@@ -72,6 +72,7 @@ init python:
     tracks.addTrack("Stalk, stalk [drei Punkte am Ende der Zeile]", "music/yasmin_stalkerbernd_theme.ogg")
     tracks.addTrack("[drei Punkte in diesem Feld]", "music/yasmin_theme.ogg")
     tracks.addTrack("[drei Punkte am Anfang der Zeile] Wohnung", "music/yasmin_wohnung.ogg") 
+    tracks.addTrack(";_;", "music/;_;.ogg")
     
     def set_playing_(track):
         if track < 0:
