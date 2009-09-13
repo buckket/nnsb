@@ -413,8 +413,7 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
             "Soll ich abwarten bis sie sich beruhigt?"
             "Sie wird spätestens heute Abend wieder zu Hause sein."
             
-            stop music
-            with fadeout 0.4
+            stop music fadeout 0.4
             
             menu:
                 "Ich..."
@@ -1022,8 +1021,6 @@ label eins_streit_mit_aussprache:
     
     show laura happy
     with dissolve
-    
-    sis 
     
     sis "Deine Freundin..."
     "Ist sie jetzt gekommen, um sich doch über mich lustig zu machen?"
