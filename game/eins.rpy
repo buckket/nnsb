@@ -47,7 +47,7 @@
 
 label eins:    
     
-    stop music fadeout 1.0
+    stop music fadeout 1.0 #Kapitel 1
 
     scene splash splash_eins
     with gradientTrans
@@ -69,7 +69,7 @@ label eins:
     menu:
         " "
         
-        "OK, ich steh' auf.":
+        "OK, ich steh' auf.": #Aufstehen
             $ maLove += 5
             b "OK, ich steh' auf."
             "Scheiße, ich hab 'ne Morgenlatte."
@@ -84,7 +84,7 @@ label eins:
             "Ich setze mich vorsichtig hin und achte darauf, dass die Bettdecke keine verräterischen Falten wirft."
             "Meine Mutter scheint nichts gemerkt zu haben."
         
-        "Lass mich schlafen!":
+        "Lass mich schlafen!": #Schlafen
             $ maLove -= 5
             b "Lass mich schlafen!"
             ma "Komm, %(berndName)s, jetzt stell dich nicht so an."
@@ -100,7 +100,7 @@ label eins:
             "Jetzt ist sie sauer..."
            
     
-    "Genau im richtigen Moment kommt %(sisName)s rein."
+    "Genau im richtigen Moment kommt %(sisName)s rein." #Laura kommt rein
     
     play sound "sounds/door_1.wav"
     
@@ -114,7 +114,7 @@ label eins:
     menu:
         " "
         
-        "Guten Morgen, %(sisName)s.":
+        "Guten Morgen, %(sisName)s.": #Guten Morgen
             $ sisLove += 5
             b "Guten Morgen, %(sisName)s."
             "Na toll."
@@ -186,7 +186,7 @@ label eins:
             menu:
                 " "
                 
-                "Kondome.":
+                "Kondome.": #Kondome
                 
                     $ mitbringen = "kondome"
                     
@@ -207,7 +207,7 @@ label eins:
                     b "Hey, war doch nur Spaß!"
                     "Sie hört mich schon nicht mehr."
                 
-                "Gummibärchen.":
+                "Gummibärchen.": #Gummibärchen
                     
                     $ mitbringen = "gummi"
                     
@@ -226,7 +226,7 @@ label eins:
             "So."
             "Jetzt aber."
          
-        "Geh' weg, Nervensäge.":
+        "Geh' weg, Nervensäge.": #Geh weg
             $ sisLove -= 5
             b "Geh' weg, Nervensäge!"
             "Warum müssen die jetzt beide hier rumstehen?"
@@ -251,7 +251,7 @@ label eins:
             
             stop music fadeout 0.4
             
-    "Endlich bin ich allein und kann in Ruhe fappieren."
+    "Endlich bin ich allein und kann in Ruhe fappieren." #Bernd fappiert
     
     play music m_bernd
     
@@ -398,8 +398,8 @@ label eins:
     "Naja, wenigstens kann ich dann jetzt endlich Strike with Cheese gucken."
     
     play sound "sounds/door_1.wav"
-    
-    "Ich will die Datei öffnen, als ich höre, wie sich die Wohnungstür öffnet."
+    #ma und sis kommen nach Hause
+    "Ich will die Datei öffnen, als ich höre, wie sich die Wohnungstür öffnet." 
     ma "%(berndName)s, wir sind wieder da!"
     "Na toll."
     "Das ging schnell."
@@ -409,11 +409,11 @@ label eins:
     menu:
         " "
         
-        "Klar!":
+        "Klar!": #Helfen
             $ maLove += 5
             b "OK, bin schon auf dem Weg!"
         
-        "Haha, als ob!":
+        "Haha, als ob!": #Als ob
             $ maLove -= 5
             b "Warum ich?"
             ma "%(berndName)s!!"
@@ -421,7 +421,7 @@ label eins:
             b "In Ordnung. Ich komme ja schon."
         
         
-    "Ich stehe auf und gehe nach oben."
+    "Ich stehe auf und gehe nach oben." #Bernd hilft
     
     stop music fadeout 0.4
     
@@ -540,7 +540,7 @@ label eins:
     
     stop music fadeout 0.4
     
-    b "Was zum...?!"
+    b "Was zum...?!" #Bernds Daten auf KC
     
     #hier den bildschirm mit dem kc thread einblenden
     
@@ -924,7 +924,7 @@ label eins:
     
     menu:
         " "
-        "Ich gehe hin.":
+        "Ich gehe hin.": #Treffen
             "Was hab ich schon zu verlieren...?"
             "Ich gehe einfach hin."
             "Ich sehe auf die Uhr."
@@ -956,12 +956,36 @@ label eins:
             
             menu:
                 " "
-                "OK. Ich gehe.":
-                    $ anjaTreffen = 0
-                "Nein, ich gehe nicht.":
-                    $ anjaTreffen = 1
-        "Ich bin doch nicht blöd.":
-            $ anjaTreffen = 0
+                "OK. Ich gehe.": #Laura abholen
+                    b "OK."
+                    b "Ich geh' ja schon."
+                    ma "Gut."
+                    ma "Beeil dich."
+                    "Ich packe alles zusammen und gehe nach oben."
+                    jump eins_sisAbholen
+                    
+                "Nein, ich gehe nicht.": #Treffen mit Anja
+                    b "Nein."
+                    b "Ich habe doch gesagt, dass ich eine Verabredung habe."
+                    ma "Du willst doch nur deine Schwester nicht abholen!"
+                    b "Nein, verdammt!"
+                    b "Ich muss jetzt los, sonst komme ich zu spät."
+                    ma "Was soll ich mit dir nur machen?"
+                    "Sie verlässt das Zimmer."
+                    "Ich stehe auf und überlege, was ich alles brauche."
+                    "Handy, Schlüssel, Geld."
+                    "Moment..."
+                    "Mein Geld ist weg."
+                    "Naja, das kann ich nachher suchen."
+                    "Ich werde es unterwegs nicht brauchen."
+                    "Schnell packe ich alles zusammen und gehe nach oben."
+                    
+                    scene black
+                    with fade
+                    
+                    jump eins_treffenBerndf
+                    
+        "Ich bin doch nicht blöd.": #nicht Treffen
             "Ha, wieso sollte ich da hingehen?"
             b "Ich hab wirklich Besseres zu tun."
             
@@ -979,842 +1003,15 @@ label eins:
             ma "Das wird dich nicht daran hindern deine Schwester abzuholen."
             ma "Geh' schon!"
             b "OK, OK."
-            #jump eins_sisAbholen
-    if anjaTreffen == 1:
-        b "Nein."
-        b "Ich habe doch gesagt, dass ich eine Verabredung habe."
-        ma "Du willst doch nur deine Schwester nicht abholen!"
-        b "Nein, verdammt!"
-        b "Ich muss jetzt los, sonst komme ich zu spät."
-        ma "Was soll ich mit dir nur machen?"
-        "Sie verlässt das Zimmer."
-        "Ich stehe auf und überlege, was ich alles brauche."
-        "Handy, Schlüssel, Geld."
-        "Moment..."
-        "Mein Geld ist weg."
-        "Naja, das kann ich nachher suchen."
-        "Ich werde es unterwegs nicht brauchen."
-        "Schnell packe ich alles zusammen und gehe nach oben."
-        
-        scene black
-        with fade
-        
-        jump eins_treffenBerndf
-        
-    if anjaTreffen == 0:
-        b "OK."
-        b "Ich geh' ja schon."
-        ma "Gut."
-        ma "Beeil dich."
-        "Ich packe alles zusammen und gehe nach oben."
-        jump eins_sisAbholenZuerst
-        
-label eins_treffenBerndf:
-    scene bg zuhause_draussen
-    with fade
-    
-    play music m_wohnung
-    
-    b "Wo lang jetzt...?"
-    "Ich kenn mich hier ja überhaupt nicht aus."
-    b "Zuerst mal zur nächsten, großen Straße."
-    "Ich biege um die Ecke."
-    "Eine alte Frau kommt mir entgegen."
-    "Die könnte ich nach dem Weg fragen."
-    "Ich gehe auf sie zu."
-    "Als sie mich bemerkt, sieht sie mich an, aber ich drehe den Kopf weg und gehe an ihr vorbei."
-    "Ich kann nichtmal jemanden nach dem Weg fragen."
-    "Erbärmlich."
-    "Ich gehe die Straße runter und blicke am Ende nach links und rechts."
-    "Rechts ist eine Sackgasse, aber links scheint es auf eine größere Straße zuzugehen."
-    "Also da lang."
-    "Warum bin ich eigentlich nochmal losgegangen?"
-    "Als würde dort ernsthaft ein Bernd auf mich warten, damit ich ihm helfe, Krautchan zu retten."
-    "Das ist absurd."
-    "In Gedanken versunken, laufe ich fast auf die Straße."
-    "Zum Glück merke ich rechtzeitig, dass der Fußweg hier zu Ende ist."
-    "Ich sehe mich um."
-    b "OK."
-    b "Das war leichter als gedacht."
-    "In der Ferne sehe ich den Fernsehturm."
-    "Wenn ich mich richtig erinnere, ist der direkt am Alexanderplatz."
-    b "Also da lang..."
-    
-    scene black
-    with fade
-    
-    "Einige Minuten später..."
-    
-    scene bg alexanderplatz_eins
-    with fade
-    
-    b "Das ging schneller als ich dachte."
-    "Jetzt muss ich warten."
-    "Ich sehe auf die Uhr."
-    "Genau zwei Minuten vor zwei."
-    "Nirgendwo eine Spur von Bernd."
-    "Aber der Platz ist groß."
-    b "Am besten laufe ich ein wenig herum."
-    
-    scene bg alexanderplatz_zwei
-    with fade
-    
-    "Jetzt ist es schon fünf Minuten nach zwei."
-    "Wahrscheinlich hat mich Bernd doch nur verarscht und lacht sich jetzt tot."
-    b "Scheiße."
-    "Fünf Minuten warte ich noch, dann gehe ich."
-    "Sicher sitzt er irgendwo an einer Ecke und macht grade Fotos."
-    "Gab es hier nicht auch eine Live Webcam?"
-    "Wahrscheinlich beobachtet mich schon ganz Krautchan."
-    "Ich könnte versuchen, mich zu verstecken."
-    "Zwischen den Menschen falle ich sicher nicht so auf, wie wenn ich alleine hier herumstehe."
-    "..."
-    "Wieso sind hier überhaupt so viele Leute?"
-    "Haben die kein Zuhause?"
-    "Was hier teilweise für Gestalten rumlaufen..."
-    "Schrecklich."
-    "Was wollen die alle h-"
-    
-    show anja neutral
-    with flash
-    
-    hide anja neutral
-    with dissolve
-    
-    b "Das war doch..."
-    "Es war nur ein kurzer Augenblick, aber irgendwo in der Menge habe ich sie gesehen..."
-    "Das Mädchen aus dem Supermarkt."
-    "...aber warum sollte sie hier sein?"
-    "Warum gerade jetzt?"
-    "Ich schaue mich um, aber sie ist nirgends zu sehen."
-    b "Wo ist sie hin?"
-    "Da."
-    "Sie ist in einer großen Menschenmenge."
-    "Ein ganzes Stück weit weg, aber sie kommt in meine Richtung."
-    "Oder ist sie das nicht?"
-    "Ich gehe auf sie zu."
-    "Was denke ich mir dabei?"
-    "Will ich sie ansprechen?"
-    "Das traue ich mich nicht."
-    "Niemals."
-    "Nur noch wenige Meter trennen uns."
-    "Jetzt kann ich sie erkennen."
-    "Das ist sie ganz sicher."
-    
-    show anja neutral
-    with flash
-    
-    "Ich gehe an ihr vorbei und sehe sie an."
-    "Nur keine Aufmerksamkeit erregen."
-    "Sie dreht sich zu mir um."
-    "Scheiße, jetzt hat sie mich bemerkt."
-    "Ich hätte sie nicht so anstarren dürfen."
-    "Schnell wende ich mich ab."
-    
-    u"Mädchen" "%(berndName)s?"
-    
-    play music m_anja
-    
-    "Was...?"
-    "Meint sie mich?"
-    "Unmöglich."
-    u"Mädchen" "Hey, %(berndName)s!"
-    "Ich spüre eine Hand auf meiner Schulter und zucke zusammen."
-    b "Was...?"
-    "Woher kennt sie meinen Namen?"
-    "Was soll das...?"
-    u"Mädchen" "Du bist doch %(berndName)s, oder?"
-    "Ich nicke verwirrt."
-    u"Mädchen" "Na also."
-    u"Mädchen" "Komm mit."
-    u"Mädchen" "Wir gehen irgendwo hin, wo wir reden können."
-    "Ich folge ihr."
-    
-    scene bg alexanderplatz_drei
-    with fade
-    
-    show anja neutral
-    with dissolve
-    
-    u"Mädchen" "Hier sind weniger Leute."
-    u"Mädchen" "Das ist besser zum Reden."
-    u"Mädchen" "Gut, dass du gekommen bist, %(berndName)s."
-    b "Ich..."
-    "Wovon redet sie?"
-    
-    show anja surprised
-    with dissolve
-    
-    u"Mädchen" "Ah!"
-    u"Mädchen" "Ich habe mich ja noch gar nicht vorgestellt!"
-    
-    show anja neutral
-    with dissolve
-    
-    u"Mädchen" "Ich bin %(wBerndName)s."
-    bw "Ich habe dir die E-Mail geschickt."
-    bw "Deshalb bist du hier, oder?"
-    "Was zum...?"
-    "SIE ist der Bernd, der mir die Mail geschickt hat?"
-    "Das ergibt keinen Sinn."
-    "Verwundert sehe ich sie an."
-    bw "Nicht?"
-    bw "Hast du meine Mail nicht bekommen?"
-    if berndName != "Bernd":
-        bw "Aber du bist doch ein Bernd, oder?"
-    else:
-        bw "Aber du bist doch Stalkerbernds neuestes Opfer, oder?"
-    "Ich nicke."
-    b "J... ja."
-    b "Ich bin wegen der E-Mail hier aber..."
-    
-    show anja surprised
-    with dissolve
-    
-    bw "Ah!"
-    bw "Jetzt versteh' ich!"
-    bw "Du bist überrascht, dass ich ein Mädchen bin, richtig?"
-    
-    show anja neutral
-    with dissolve
-    
-    b "Äh... ja."
-    bw "Hihi."
-    bw "Hätte ich das geschrieben, wärst du sicher nicht gekommen, oder?"
-    "Sie hat recht."
-    "Ich kann immer noch nicht glauben, dass sie ein Bernd ist."
-    "Ich dachte immer, es gäbe keine Frauen im Internet."
-    bw "War ja klar."
-    bw "Du bist ein typischer Bernd."
-    "Macht sie sich über mich lustig?"
-    bw "Tut mir Leid."
-    bw "Ich wollte dich nicht beleidigen oder so."
-    "Anscheinend kann sie meine Gedanken lesen."
-    bw "Ich brauche dich schließlich noch."
-    "Sie braucht mich?"
-    "Wofür?"
-    b "Was meinst du...?"
-    bw "Na wegen Krautchan!"
-    "Ach so wegen Krautchan."
-    "Das erklärt..."
-    "...nichts."
-    bw "Wenn wir nichts unternehmen wird Krautchan untergehen!"
-    "Was labert die denn da?"
-    "Sind ALLE Frauen verrückt im Kopf?"
-    b "Was redest du v-"
-    
-    show anja surprised
-    with dissolve
-    
-    bw "OH!"
-    bw "Ich muss nach Hause!"
-    
-    "Was zum...?"
-    
-    show anja neutral
-    with dissolve
-    
-    bw "%(berndName)s."
-    b "Ja?"
-    bw "Wir treffen uns morgen wieder hier."
-    bw "Um die gleiche Zeit."
-    bw "Bis dann."
-    
-    hide blond
-    with dissolve
-    
-    "Sie rennt zur Straßenbahn."
-    "Bevor ich merke, was passiert ist, ist sie schon weg."
-    
-    stop music fadeout 0.4
-    
-    "Was sollte das?"
-    "Morgen um die gleiche Zeit?"
-    "Was glaubt sie, wer sie ist?"
-    "Kommandiert mich hier herum."
-    "Verwirrt trete ich den Heimweg an."
-    
-    scene black
-    with fade
-    
-    scene bg keller
-    with fade
-    
-    play music m_bernd
-    
-    "Zu Hause angekommen lasse ich mich auf meine Matratze fallen."
-    "Noch einmal lasse ich mir die Geschehnisse des heutigen Tages durch den Kopf gehen."
-    "Stalkerbernd hat meinen Namen, meine E-Mail Adresse und ein Foto von mir gepostet."
-    "Ein Bernd hat mir daraufhin einen Hilferuf geschickt."
-    "Am vereinbarten Treffpunkt traf ich das Mädchen aus dem Supermarkt."
-    "Es stellt sich heraus, dass sie der Bernd mit dem Hilferuf ist."
-    "Sie will, dass ich ihr helfe, Krautchan zu retten."
-    b "..."
-    b "wat"
-    "Das ergibt alles keinen Sinn."
-    "Je mehr ich darüber nachdenke, desto mehr tut mir der Kopf weh."
-    b "Nicht schon wieder..."
-    b "Vielleicht sollte ich was essen..."
-    "Ich beschließe in die Küche zu gehen."
-    
-    scene bg kueche
-    with fade
-    
-    play music m_wohnung
-    
-    "Ich öffne die Kühlschranktür."
-    b "OH MEIN GOTT!"
-    b "Das ist doch...!"
-    b "Nichts."
-    "Der Kühlschrank ist leer."
-    "Ich höre, wie die Wohnungstür aufgemacht wird."
-    ma "%(berndName)s! Wir sind wieder da!"
-    ma "Bist du hier?"
-    "Ich gehe in den Flur."
-    
-    scene bg wohnung_innen
-    with fade
-    
-    b "Ja."
-    b "Wo wart ihr?"
-    ma "Ich war deine Schwester abholen."
-    ma "Du wolltest ja anscheinend nicht."
-    ma "Jetzt hängst du doch hier rum?"
-    ma "Das muss aber ein kurzes Treffen gewesen sein."
-    b "War es."
-    
-    show laura happy
-    with dissolve
-    
-    sis "Hallo, %(berndName)s."
-    b "Hi."
-    
-    hide laura happy
-    with dissolve
-    
-    ma "Ich will, dass du %(sisName)s zum Einkaufen mitnimmst."
-    ma "Der Kühlschrank ist leer."
-   
-    b "Ich will aber ni-"
-    
-    show laura happy
-    with dissolve
-    
-    sis "OK!"
-    sis "Komm, %(berndName)s!"
-    "Sie nimmt meinen Arm und versucht mich nach draußen zu ziehen."
-    b "Na gut, ich komm ja schon..."
-    
-    scene bg zuhause_draussen
-    with fade
-    
-    if supermarkt == "":
-        $ supermarkt = "Aldi"
-    
-    "Wir gehen in Richtung %(supermarkt)s."
-    
-    show laura neutral
-    with dissolve
-    
-    sis "Sag mal %(berndName)s..."
-    b "Ja?"
-    sis "Wieso hast du mich heute nicht von der Schule abgeholt?"
-    "Oh Mann."
-    "Wie erklär' ich ihr das?"
-    b "Ich... äh..."
-    sis "Du hattest wieder keine Lust, oder?"
-    b "Nein!"
-    b "Das stimmt gar nicht!"
-    sis "Ich wusste es."
-    sis "Du bist hoffnungslos, %(berndName)s."
-    
-    show laura happy
-    with dissolve
-    
-    sis "Aber ich hab dich trotzdem lieb!"
-    "Sie hält immer noch meinen Arm fest."
-    sis "Morgen kommst du mich abholen, ja?"
-    "Erwartungsvoll sieht sie mich an."
-    
-    menu:
-        " "
-        "Auf jeden Fall!":
-            $ sisLove += 15
-            $ anjaTreffen2 = -1
-            sis "Ich werde auf dich warten."
-            sis "...und wehe du kommst nicht."
-            b "Was dann?"
-            sis "Das wirst du schon sehen..."
-            sis "...und es wird dir nicht gefallen."
-            b "Was meinst..."
-            sis "Schau!"
-            sis "Wir sind da."
-        "Das kann ich nicht versprechen.":
-            $ sisLove -= 15
-            $ anjaTreffen2 = 0
-            sis "Wie immer..."
-            sis "Na wenigstens bist du ehrlich."
-            sis "Ich hab von jemandem wie dir auch nichts anderes erwartet."
-            b "Von jemandem wie mir?"
-            b "Was soll das denn heißen?"
-            sis "Das wirst du schon noch herausfinden."
-            sis "Schau!"
-            sis "Wir sind da."
-            
-    scene bg supermarkt
-    with fade
-    
-    play music m_shop
-    
-    b "Was sollen wir nochmal einkaufen?"
-    
-    show laura neutral
-    with dissolve
-    
-    sis "Hm..."
-    
-    show laura happy
-    with dissolve
-    
-    sis "Keine Ahnung!"
-    "Großartig..."
-    b "Naja..."
-    b "Kaufen wir halt Butter und Rügenwalder."
-    
-    show laura neutral
-    with dissolve
-    
-    sis "Sicher, dass wir nicht mehr brauchen?"
-    b "Nein, aber was sollen wir machen?"
-    sis "Ich könnte Mama anrufen."
-    sis "Ich hab' mein Handy dabei."
-    b "Du hast ein Handy?"
-    show laura happy
-    with dissolve
-    sis "Klar hab ich eins!"
-    b "Na dann, ruf sie an."
-    show laura neutral
-    with dissolve
-    sis "OK."
-    "Sie zieht ein rosafarbenes Handy aus der Tasche."
-    "Geschickt klickt sie sich durch das Menü bis sie die Nummer gefunden hat."
-    "Wieso hat die in ihrem Alter schon ein Handy?"
-    "Ist das normal heutzutage?"
-    sis "Hallo Mama, ich bin's."
-    sis "Wir haben vergessen dich zu fragen, was wir einkaufen sollen."
-    sis "..."
-    sis "OK."
-    sis "Sonst noch was?"
-    sis "..."
-    sis "Alles klar!"
-    show laura happy
-    with dissolve
-    sis "Bis gleich!"
-    "Sie legt auf."
-    show laura neutral
-    with dissolve
-    sis "Sie sagt, dass wir auch noch Milch und Brot brauchen."
-    "Also Milch, Butter, Brot und Rügenwalder."
-    b "OK."
-    b "Dann besorgen wir das schnell und danach gehen wir nach Hause."
-    sis "OK."
-    hide laura neutral
-    with dissolve
-    "Nachdem wir alles gefunden haben, gehen wir zur Kasse."
-    "Vor uns ist eine ältere Frau, die langsam einen Artikel nach dem anderen auf's Band legt."
-    "Die Kassiererin ist sichtlich genervt."
-    "Warum kaufen alte Leute immer so viel ein und brauchen dann eine halbe Stunde an der Kasse?"
-    show laura neutral
-    with dissolve
-    sis "%(berndName)s?"
-    b "Was denn?"
-    sis "Bekomm' ich eine Packung Kaugummi?"
-    b "Nein, die sind zu teuer."
-    sis "Aber ich bezahl' es von meinem Taschengeld!"
-    sis "Ich geb' es dir zu Hause wieder!"
-    sis "Ganz bestimmt!"
-    "Hm..."
-    b "Na gut, nimm dir eine Packung."
-    show laura happy
-    with dissolve
-    sis "Danke, %(berndName)s."
-    
-    scene black
-    with fade
-    
-    "Eine halbe Stunde später..."
-    b "Endlich wieder zu Hause."
-    
-    stop music fadeout 1.0
-    
-    scene bg keller
-    with fade
-    
-    play music m_bernd
-    
-    b "Mal schauen, ob der Faden mit meinen Daten noch auf /b/ ist..."
-    scene bg keller_kc
-    with dissolve
-    "..."
-    b "Nichts."
-    b "Glück gehabt."
-    "Es scheint, als wäre wirklich nichts weiter passiert..."
-    "Bernd ist wohl wirklich völlig unfähig."
-    
-    #BUTTERGOTT MEHR DIALOG HIER
-    
-    play sound "sounds/door_1.wav"
-    show laura neutral
-    with dissolve
-    
-    sis "%(berndName)s?"
-    "Was denn nun schon wieder?"
-    "Kann ich nicht einmal im Keller meine Ruhe haben?"
-    b "Was willst du?"
-    sis "Ich wollte nur fragen, ob du mir bei den Hausaufgaben helfen kannst..."
-    "Als ob ich sonst nichts zu tun hätte."
-    "Oh warte..."
-    "Ich habe sonst nichts zu tun."
-    b "Na gut."
-    b "Welches Fach denn?"
-    sis "Mathematik."
-    b "Na dann zeig doch mal her..."
-    "Sie sieht sich um."
-    sis "Hast du hier einen Stuhl?"
-    sis "Im Sitzen kann man es besser erklären, oder?"
-    b "Ich hol' dir eben einen von oben."
-    "Ich will aufstehen, aber sie kommt mir zuvor."
-    sis "Nicht nötig, %(berndName)s."
-    sis "Ich kann ja hier sitzen."
-    "Bevor ich etwas erwidern kann, klettert sie auf meinen Schoß."
-    b "..."
-    sis "Also."
-    sis "Schau hier..."
-    "Sie schlägt ihr Matheheft auf."
-    sis "Wir sollen das hier ausrechnen."
-    "Sie zeigt auf eine Aufgabe."
-    b "sin(α) = 1"
-    b "Berechne α."
-    "Mal nachdenken..."
-    
-    menu:
-        "Das ist..."
-        
-        "90°":
-            b "Ich bin mir ziemlich sicher, dass es 90° sind."
-            $ sisFrage = "richtig"
-        "0°":
-            b "Das müssten 0° sein."
-            $ sisFrage = "falsch"
-        "Globalisierung":
-            b "Das ist ganz sicher Globalisierung."
-            sis "Sicher?"
-            b "Sicher."
-            $ sisFrage = "richtigFalsch"
-    
-    show laura happy
-    with dissolve
-    
-    sis "OK, danke %(berndName)s!"
-    sis "Jetzt krieg ich sicher eine gute Note."
-    b "Kein Problem."
-    sis "Ach so..."
-    b "Ja?"
-    "Was denn noch?"
-    sis "Hier ist das Geld für die Kaugummis."
-    sis "Ich hab dir ja versprochen, dass ich es dir zurückgebe."
-    "Wow."
-    "Daran habe ich gar nicht mehr gedacht."
-    b "Äh... danke."
-    sis "Bis morgen, %(berndName)s."
-    b "Ja."
-    b "Bis morgen."
-    
-    hide laura happy
-    with dissolve
-    
-    b "Schon wieder so spät... ich lauer noch ein wenig auf /b/ und gehe dann schlafen."
-    
-    #random event
-    
-    scene black
-    with fade
-    
-    "Am nächsten Morgen..."
-    
-    ma "%(berndName)s?"
-    ma "Willst du nicht langsam mal aufstehen?"
-    
-    b "Wie spät ist es denn?"
-    
-    ma "Schon 13 Uhr."
-    
-    scene bg keller_aus
-    with flash
-    
-    b "WAS!?"
-    b "Ich wollte mich doch heute eventuell wieder mit %(wBerndName)s treffen."
-    "Scheiße."
-    "Jetzt hab' ich es laut gesagt."
-    
-    ma "Wer ist %(wBerndName)s?"
-    ma "Deine imaginäre Freundin?"
-    ma "Mach dich nicht lächerlich."
-    
-    if(anjaTreffen2 == -1):
-        jump eins_sisAbholen_promise
-    
-    ma "Wirst du heute endlich deine Schwester abholen oder muss ich das wieder machen?"
-    "Wieso soll ich das immer machen?"
-    "Kann sie nicht einsehen, dass ich andere Dinge zu tun habe."
-    
-    menu:
-        ""
-        "Ich mach das schon.":
-            b "Ich mach das schon."
-            ma "Na dann beeil dich mal lieber."
             b "OK."
-            jump eins_sisAbholen
-        "Ich habe wieder eine Verabredung.":
-            b "Nein, ich habe wieder eine Verabredung."
-            ma "Was soll ich nur mit dir machen...?"
-            "Sie verlässt das Zimmer."
-    
-    "Ich mache mich fertig, um mich mit %(wBerndName)s zu treffen."
-    
-    stop music fadeout 1.0
-    
-    scene bg zuhause_draussen
-    with fade
-    
-    "Dieses Mal sollte der Weg leichter zu finden sein."
-    "Tatsächlich, ich weiß noch genau, wo es lang geht."
-    
-    scene bg alexanderplatz_drei
-    with fade
-    
-    "Als ich ankomme wartet %(wBerndName)s bereits auf mich."
-    show anja neutral
-    with dissolve
-    
-    play music m_anja
-    
-    bw "Hey, %(berndName)s."
-    b "H- Hi."
-    bw "..."
-    b "..."
-    "Spannendes Gespräch."
-    bw "...und?"
-    b "Was?"
-    bw "Na... wie gehts dir so?"
-    b "Hm..."
-    b "Ja."
-    bw "Du bist ja nicht sehr gesprächig..."
-    "Komm endlich zur Sache."
-    b "..."
-    b "Du wolltest mir erklären, warum du meine Hilfe brauchst."
-    bw "Ja."
-    bw "Also..."
-    bw "Um es auf den Punkt zu bringen:"
-    bw "Wir müssen Krautchan retten."
-    "Krautchan retten."
-    "Soso."
-    b "Aha."
-    b "Warte... was?"
-    bw "Krautchan ist nicht mehr das, was es mal war."
-    b "Du meinst die Neuschwuchteln."
-    b "Die stören doch kaum noch."
-    bw "Nein."
-    bw "Wie erkläre ich das am besten..."
-    bw "Krautchan wurde übernommen."
-    b "lolwas?"
-    "Wer würde denn Krautchan übernehmen?"
-    "4chan?"
-    "Oder ein anderes Imageboard?"
-    bw "Der Server wurde beschlagnahmt."
-    bw "Krautchan..."
-    bw "...ist bereits tot."
-    b "Was zum...?"
-    "Server beschlagnahmt."
-    "Von der Polizei?"
-    "Warum das denn?"
-    "Kinderpornografie?"
-    "Wohl kaum..."
-    bw "Die genauen Einzelheiten kenne ich auch nicht."
-    bw "Ich weiß nur, dass der Server eines Morgens von der Polizei beschlagnahmt wurde."
-    bw "Wir sind die Einzigen, die Krautchan retten können, %(berndName)s."
-    bw "Deshalb brauch ich deine Hilfe."
-    bw "Du bist der Einzige, dem ich vertrauen kann."
-    b "..."
-    "Was soll das?"
-    "Sie trollt mich doch nur."
-    "Ich wusste es von Anfang an."
-    "Aber wie kann ich mir sicher sein?"
-    "..."
-    "Aha!"
-    b "Aber Krautchan ist doch noch online?"
-    b "0/10"
-    b "Offensichtlicher Troll ist offensichtlich."
-    "Der habe ich's gezeigt."
-    "So leicht lasse ich mich nicht trollen."
-    bw "Es scheint, als wäre Krautchan noch online, ja."
-    bw "Aber die Realität sieht anders aus."
-    b "Was soll das heissen?"
-    "Willkommen in der Matrix oder was wird das hier?"
-    bw "Die Seite wird von der Polizei benutzt um Bernds zu überwachen."
-    bw "Es ist eine Falle!"
-    "Oho!"
-    "Totale Überwachung!"
-    "So was glaubt doch kein Mensch."
-    b "Wieso sollte ich dir das glauben?"
-    b "Die Admins hätten doch schon längst-"
-    bw "Die Admins?"
-    bw "Tsaryu ist nach Japan ausgewandert."
-    bw "Shaky wird von der Polizei verfolgt und ist nach Mexiko geflohen."
-    bw "dergeneral ist untergetaucht."
-    bw "Krautchan ist definitiv tot."
-    "Da ist was dran..."
-    "In letzter Zeit gab es auf KC wenig sichtbare Aktivität von Seiten der Mods."
-    b "...und woher willst du das alles wissen?"
-    bw "..."
-    bw "Du vertraust mir nicht?"
-    "Wieso sollte ich?"
-    b "Bernd, das ist lächerlich!"
-    b "Das klingt doch alles völlig absurd."
-    bw "Hm..."
-    bw "Ich habe mir wohl den falschen Bernd ausgesucht."
-    bw "Ich kann also nicht auf deine Hilfe zählen?"
-    b "Nicht, wenn du mir nicht erklärst, was das alles zu bedeuten hat."
-    bw "Wenn ich es wüsste, würde ich es dir erklären."
-    bw "Es liegt an uns, das herauszufinden."
-    "Klingt wie der Plot eines schlechten Action-Adventures."
-    bw "Wir müssen den Verantwortlichen finden und Krautchan retten!"
-    b "Das ergibt doch alles keinen Sinn..."
-    bw "Entweder du glaubst mir oder du glaubst mir nicht."
-    bw "Was nun?"
-    "So, %(berndName)s."
-    "Jetzt musst du dich entscheiden."
-    
-    menu:
-        "Ich..."
-        
-        "...glaube ihr.       ":
-            $ friendLove += 10
-            jump eins_accept_fBernd
-        "...glaube ihr. NICHT.":
-            $ friendLove -= 5
-            jump eins_refuse_fBernd
-            
-label eins_accept_fBernd:
-    $ anjaAccept = 1
-    $ anjaRoute = 1
+            b "Ich geh' ja schon."
+            ma "Gut."
+            ma "Beeil dich."
+            "Ich packe alles zusammen und gehe nach oben."
+            jump eins_sisAbholen #eins_laura.rpy
 
-    b "Das klingt zwar alles sehr merkwürdig aber..."
-    b "Ich glaube dir."
-    "Tue ich das?"
-    bw "Gut."
-    bw "Wir haben keine Zeit zu verlieren."
-    bw "Wie gehen wir vor?"
-    "Das fragt sie mich?"
-    b "Woher soll ich das wissen?"
-    b "Es war doch deine Idee."
-    bw "Also gut dann..."
-    bw "Versuch' so viele Informationen wie möglich zu finden."
-    bw "Bleib' am besten zu Hause und benutze das INTERNET."
-    "Das kann ich wenigstens."
-    bw "Ich werde mich ein wenig umhören..."
-    bw "Soziale Interaktion liegt mir wohl besser als dir."
-    "Das merkt sie aber früh."
-    b "In Ordnung."
-    b "Ich werde sehen, was ich tun kann."
-    bw "OK."
-    bw "Dann sehen wir uns demnächst."
-    bw "Ich werde dir eine E-Mail schreiben, wenn ich was herausfinde."
-    b "Einverstanden."
-    bw "Bis dann."
-    b "OK..."
-    "Sie bricht zur Straßenbahnhaltestelle auf."
-    hide anja neutral
-    with dissolve
-    b "Am besten gehe ich nach Hause."
-   
-    stop music fadeout 0.4
-   
-    #random event
-    
-    scene black
-    with fade
-    
-    "Später am Abend..."
-    
-    scene bg keller
-    with fade
-    
-    play music m_bernd
-    
-    "Ich setze mich vor meinen Rechner."
-    b "Informationen sammeln..."
-    b "Wo fange ich da an?"
-    "Krautchan."
-    "Wo sonst?"
-    "www.krautchan.net"
-    "..."
-    "..."
-    b "Warum dauert das so lange?"
-    "Ah..."
-    "Endlich lä-"
-    "404"
-    "File not found."
-    b "Krautchan ist..."
-    b "...tatsächlich offline."
-    
-    scene black
-    with fade
-    
-    stop music fadeout 0.4
-    
-    #kapitel 2
-    
-    jump eins_ende
-    
-label eins_refuse_fBernd:
-    $ anjaAccept = 0
-    $ anjaRoute = 0
-    b "Ich kann das irgendwie nicht glauben."
-    b "Das ist doch völliger Unsinn."
-    bw "Aber %(berndName)s!"
-    bw "An wen soll ich mich sonst wenden?"
-    bw "Bitte!"
-    bw "Hilf mir!"
-    menu:
-        "..."
-        "OK.":
-            $ friendLove += 10
-            jump eins_accept_fBernd
-        "Nein.":
-            $ friendLove -= 10
-            b "Tut mir Leid, aber ich denke, ich gehe besser."
-            
-    "Ohne ein weiteres Wort zu sagen, drehe ich mich um und gehe."
-    hide anja neutral
-    with dissolve
-    
-    bw "%(berndName)s!!"
-    bw "Du kannst mich doch nicht im Stich lassen!"
-    
-    "Doch."
-    "Das kann ich."
-    "Verarschen kann ich mich nämlich selbst."
-    
-    stop music fadeout 0.4
-    
-    scene black
-    with fade
-    
-    "Wieder zu Hause..."
-    
-    jump eins_krautchanOff
-    
+#-------------AB HIER GILT:---------------------#
+#------------ BRAUCHEN WIR DAS?? ---------------#    
 label eins_sisAbholen_promise:
     $ lauraRoute = 1
     ma "Du hast versprochen deine Schwester abzuholen."
@@ -1836,234 +1033,6 @@ label eins_sisAbholen_promise:
     b "In Ordnung..."
     b "Ich gehe."
     "Ich packe meine sieben Sachen und mache mich auf den Weg."
-    
-label eins_sisAbholen:
-
-    scene bg zuhause_hausflur
-    with fade
-    
-    "Ich sollte mich mal langsam aber sicher auf den Weg machen."
-    "Sonst muss ich gleich so hetzen."
-    "Aber noch habe ich ja Zeit."
-    
-    scene bg schulweg1
-    with fade
-    
-    play music m_schulweg
-    
-    "Noch zwanzig Minuten, bis die Schule vorbei ist und bis ich da bin brauche ich noch knapp eine viertel Stunde."
-    "Gut, dass meine Mutter mir rechtzeitig Bescheid gesagt hat, sonst wäre ich nie pünktlich gekommen."
-    "...und wer weiss, was %(sisName)s dann mit mir gemacht hätte."
-    
-    scene bg schulweg2
-    with fade
-    
-    "Puh, das ist weiter als ich dachte."
-    "Ich sehe mich um."
-    "Irgendwie habe ich das Gefühl, dass ich einen Umweg gegangen bin."
-    "Und..."
-    "Ich hätte jetzt *wirklich* Lust auf einen Döner."
-    "Auf der anderen Straßenseite sehe ich einen Dönerladen."
-    "Die scheint es hier an jeder Straßenecke zu geben."
-    "Naja, mir soll es Recht sein."
-    
-    scene bg donerladen
-    with fade
-    
-    play music m_donerladen
-    
-    show salih neutral
-    with dissolve
-    
-    "Salih" "Hallo."
-    b "Hallo."
-    b "Einen Döner bitte."
-    "Salih" "nomal oda schicken?"
-    b "Normal... bitte."
-    "Salih" "welches sosse?"
-    b "Äh... Knoblauchsoße."
-    "Salih" "mit alle?"
-    b "Ja."
-    "Salih" "Auch sviebel?"
-    b "Bitte?"
-    "Salih" "sviebel"
-    b "Ja..."
-    b "Zwiebeln auch."
-    "Salih" "drai oiro funfzisch dann bittä"
-    "Ich gebe ihm das Geld."
-    $ geld -= 3.50
-    "Salih" "döner dauerd noch minude ja?"
-    b "Ja, ist ok."
-
-    hide salih neutral
-    with dissolve
-
-    "Wieso können die nicht mal jemanden einstellen, der ordentlich Deutsch redet?"
-    "Hier braucht man ja zum Bestellen länger als die Zubereitung dauert."
-    "Macht nichts, ich bin noch gut in der Zeit."
-    "Solange ich pünktlich bin, ist alles ok."
-    "Ich sehe mich nach dem Dönerverkäufer um, aber der ist nirgendwo zu sehen."
-    "Seltsam..."
-    "Irgendwie kommt er mir bekannt vor."
-    "Wo treibt der sich denn rum?"
-    "Der soll mal lieber meinen Döner machen, sonst komme ich zu spät."
-    "5 Minuten vergehen, bevor er zurückkommt und endlich anfängt zu arbeiten."
-    "Faules Pack."
-    "Ich sehe auf die Uhr."
-    "Noch bin ich pünktlich, aber wenn der sich noch mehr Zeit lässt, wird %(sisName)s mich umbringen."
-    "Ich will gar nicht daran denken..."
-    
-    stop music fadeout 2.0
-    
-    scene black
-    with fade
-    
-    "Später..."
-    
-    scene bg schulweg2
-    with fade
-    
-    play music m_schulweg
-    
-    b "OH SCHEI-"
-    b "In 5 Minuten ist die Schule vorbei."
-    b "Der Typ hat 10 Minuten für einen einzigen Döner gebraucht."
-    b "Inkompetentes Pack."
-    "Jetzt muss ich mich richtig beeilen..."
-    "Ich renne in Richtung Schule."
-    "Aber moment..."
-    "Wo IST die Schule?"
-    "Ich bleibe stehen und sehe mich um."
-    "Wunderbar."
-    "Ich habe mich verlaufen."
-    "Frustriert beisse ich in meinen Döner."
-    "Wo jetzt hin?"
-    "Mal überlegen..."
-    "Ich habe keine Ahnung, aus welcher Richtung ich gekommen bin."
-    "Wieso hat das echte Leben keine Minimap?"
-    "Da fällt mir ein, dass ich einen Stadtplan dabei habe."
-    "Den hatte ich ja extra für diesen Fall eingesteckt."
-    "Ich krame den Stadtplan raus und klappe ihn auf."
-    "Nach einigen Sekunden weiss ich, wo ich lang muss."
-    "Ich falte den Plan wieder zusammen und sprinte los."
-    "Meinen Döner habe ich zum Glück schon aufgegessen, was das Rennen um einiges erleichtert."
-    "Ich biege nach links ab."
-    "Da vorne ist ihre Schule."
-    "Endspurt ist angesagt."
-    "Völlig außer Atem erreiche ich den Schulhof."
-    
-    scene bg schulhof
-    with fade
-    
-    stop music fadeout 0.4
-    
-    "Schon zehn Minuten zu spät."
-    "Sie wird mich umbringen wollen."
-    "Da hinten steht sie."
-    
-    show laura sad
-    with dissolve
-    
-    sis "Da bist du ja endlich!"
-    b "Entschuldigung, %(sisName)s."
-    b "Es..."
-    "Ich schnappe nach Luft."
-    b "...ging nicht früher."
-    b "Du musstest doch nicht lange warten, oder?"
-    sis "Doch."
-    sis "Alle meine Freundinnen sind schon nach Hause gegangen."
-    sis "Nur ich stehe hier noch."
-    b "T- Tut mir Leid."
-    "Gleich passiert es..."
-    
-    show laura crying
-    with dissolve
-    
-    sis "Wieso bist du immer so gemein zu mir?!"
-    sis "Du magst mich nicht, stimmts?"
-    sis "Du hasst mich!"
-    
-    b "Stimmt doch gar nicht!"
-    b "Natürlich mag ich dich."
-    b "Ich bin doch dein großer Bruder."
-    "Hauptsache sie hört auf zu weinen..."
-    "Ich hasse es, wenn sie weint."
-    
-    show laura sad
-    with dissolve
-    
-    sis "..."
-    sis "Du magst mich wirklich?"
-    
-    b "Ja."
-    b "Und wenn du jetzt aufhörst zu weinen, kauf ich dir ein Eis."
-    "...wenn ich noch genug Geld habe."
-    
-    show laura happy
-    with dissolve
-    
-    sis "OK!"
-    "Das war einfach..."
-    b "Na dann."
-    b "Gehen wir."
-    
-    scene bg schulweg1
-    with fade
-    
-    play music m_schulweg
-    
-    "Irgendwo war hier doch ein Eiswagen..."
-    "Ah! Da ist er."
-    
-    scene bg eiswagen
-    with fade
-    
-    show salih neutral
-    with dissolve
-    
-    "Salih" "Guten Tag."
-    "Salih" "Was darf's denn sein?"
-    "Den kenn ich doch..."
-    
-    show salih neutral at right
-    with move
-    
-    show laura neutral at left
-    with dissolve
-    
-    sis "3 Kugeln bitte."
-    "Salih" "Im Becher oder im Hörnchen?"
-    sis "Hörnchen."
-    "Salih" "Und welche Sorten?"
-    sis "Banane, Schoko und Stracciatella."
-    "Salih" "Hier, bitte sehr."
-    "Salih" "Das macht dann 1,80 Euro."
-    "Das ist zwar mein letztes Geld, aber was tut man nicht alles für seine kleine Schwester."
-    b "Hier."
-    "Salih" "Dankeschön."
-    "Salih" "Schönen Tag noch."
-    
-    hide salih neutral
-    with dissolve
-    
-    show laura happy at center
-    with move
-    
-    sis "Danke, %(berndName)s."
-    b "Hey, ich habs doch versprochen."
-    sis "Das tust du oft."
-    sis "Aber wenn du mal ein Versprechen hältst, ist das etwas besonderes."
-    b "Hey!"
-    b "Was soll das heißen!"
-    "... aber sie rennt bereits voraus."
-    b "Warte doch...!"
-    
-    scene black
-    with fade
-    
-    "Endlich wieder zu Hause..."
-    
-    jump eins_krautchanOff
 
 label eins_krautchanOff:
     scene bg keller
@@ -3202,7 +2171,9 @@ label eins_sisAbholenZuerst:
     stop music fadeout 0.4
     
     jump eins_ende
-    
+#bis hier
+
+
 label eins_ende:
 
     scene black

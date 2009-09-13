@@ -51,6 +51,5 @@ init:
             ui.text("%s:%d" % (filename, line),
                     xpos=1022, xanchor=1.0, ypos = 752,
                     size=14)
-            
         # Append the overlay function to the list of overlay functions. 
         config.overlay_functions.append(overlay)
