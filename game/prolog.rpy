@@ -465,7 +465,7 @@ label prolog_EinkaufenWLAN:
     $ geld -= 15
     "Das muss fürs Erste reichen."
     "Hauptsache raus hier."
-    "So schnell es geht gehe zur Kasse und bezahlen."
+    "So schnell es geht gehe ich zur Kasse und bezahle."
     b "Ich sollte mich wirklich beeil-"
     
     stop music
@@ -482,7 +482,7 @@ label prolog_EinkaufenWLAN:
     "Verdammt."
     "Jetzt hab ich ein Mädchen umgelaufen."
     "Warum passiert so was immer mir?"
-    b "Al-alles in Ord-Ordnung?"
+    b "Al-alles in O-Ordnung?"
     
     show anja surprised_n
     with dissolve
@@ -496,7 +496,7 @@ label prolog_EinkaufenWLAN:
     with dissolve
     
     "Verdammt."
-    "Die sieht auch noch geil aus."
+    "Die sieht auch noch gut aus."
     "Wieso immer ich?"
     u"Mädchen" "Meine Brille...?"
     "Ihre Brille liegt auf dem Boden."
@@ -530,7 +530,7 @@ label prolog_EinkaufenWLAN:
     "Mann, war das peinlich."
     "Typisch für jemanden wie mich."
     "Ich kann einfach nicht mit Frauen umgehen."
-    "Genau deswegen werde ich als Jungfrau sterben."
+    "Und genau deswegen werde ich auch als Jungfrau sterben."
     "Ich seufze und trete den Weg nach Hause an."
     
     jump prolog_abend
