@@ -380,10 +380,7 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
             play music m_heul
             
             $ tlnote("Notiz: Laura tut mir leid ;_;.")
-            #interne Info nur für dich, Step: Ich lass die Notiz stehen, um zu schauen, ob ein Betatester den Fehler findet
-            #bitte bei Einbau diese Notiz löschen
             b "...ich gebe auch zu, dass ich dich hasse."
-
         
             show laura crying
             with dissolve
