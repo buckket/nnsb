@@ -217,7 +217,11 @@ label zwei_laura_medizinBekommen:
     "Schließlich muss ich ihr ja nur die Brust einreiben."
     "Ist ja nicht so, als würde ich irgendwas anderes mit ihr machen."
     "Schließlich ist sie meine Schwester."
-    
+
+
+#---------------------------------------------------------------
+#Stepmania Stepmania Stepmania
+
     scene bg lauraszimmer
     with gradientTransReverse
     
@@ -237,7 +241,11 @@ label zwei_laura_medizinBekommen:
     b "Ich denke nicht, dass du..."
     "Zu spät."
     "Sie ist schon aus dem Bett geklettert."
-    #happy
+    
+    show laura happy
+    with dissolve
+    #Bild mit Pyjama?
+    
     sis "Siehst du?"
     sis "Alles kein Probl-"
     
@@ -309,7 +317,6 @@ label zwei_laura_medizinBekommen:
     
     sis "Äh..."
     sis "OK."
-    sis "Aber bitte nicht so fest."
     "Sie legt sich auf den Rücken und öffnet langsam die Knöpfe ihres Schlafanzugs."
     "Der erste Knopf."    
     "Ich muss schlucken."
@@ -322,24 +329,78 @@ label zwei_laura_medizinBekommen:
     "Reiß dich zusammen, %(berndName)s."
     "Sie ist nur deine Schwester."
     sis "Geht's dir nicht gut, Bernd?"
-    b "D-D-Doch."
+    b "D-{w}Doch."
     b "Alles in Ordnung."
     sis "Ich kann das auch alleine machen, wenn du willst."
     b "N-Nein, das ist es nicht."
     sis "Wenn du meinst..."
     "Der dritte Knopf."
     "Nun sind alle Knöpfe offen."
-    "In wenigen Sekunden liegt ein Mädchen nackt vor mir."
+    "In wenigen Sekunden liegt ein Mädchen vor mir. {w}In einem Bett. {w}Nackt."
     "Es ist zwar nur meine Schwester...{w}aber trotzdem ein Mädchen!"
     sis "Sei ganz zärtlich, ok?"
     b "O-OK."
     "Ist das hier ein Eroge?"
     "Quatsch."
-    "Aber ich fühle mich gerade wie ein Protagonist in einem Eroge."
+    "Aber ich fühle mich gerade wie ein Protagonist in einem Eroge."    
     
     scene cg laura_nackt
     with dissolve
-    #weiterschreiben
+    #auf CG wartend erst einmal:
+    
+    scene bg lauraszimmer
+    with fade
+    
+    #show laura krank
+    #with dissolve
+    
+    "Ich fahre mit vier Fingern meiner rechten Hand durch die Dose Vaporub."
+    "Langsam führe ich meine Hand zu %(sisName)ss Brust."
+    "Mir wird jetzt schon ganz anders."
+    "Ich lege meine Hand sanft auf ihre Brust."
+    "Sie zuckt etwas zusammen."
+    sis "Es ist so kalt, %(berndName)s."
+    "Ich lasse meine Hand nach rechts gleiten."
+    "Dann lasse ich meine Hand nach links gleiten."
+    "Immer wieder lasse ich meine Hand kreisen..."
+    "Es macht mich glücklich zu wissen, dass es %(sisName)s wegen mir besser ge{nw}"
+    sis "AUA!"
+    sis "Du tust mir weh."
+
+    #show laura nackt_pissed
+    #with dissolve
+
+    sis "Ich hab doch gesagt, dass du nicht so drücken sollst."
+    b "Ent-Entschuldigung."
+    "Es ist so falsch...{w}aber ich finde das irgendwie erregend."
+    "Ich nehme noch ein bisschen Vaporub, um es dann auf ihrer Brust zu verteilen."
+    
+    $ renpy.pause(1.5)
+    
+    #play sound "sounds/stöhn.mp3"
+    #Sollen wir wirklich einen Sound bringen?
+    #Ich hätte einen passenden Sound parat...
+    
+    "Ich bin an ihre rechte Brustwarze gekommen."
+    b "Ah, ah, tut mir leid."
+    sis "Was tut dir leid?"
+    b "Äh...{w}nichts."
+    sis "Du bist komisch. {w}Anders als sonst. {w}Geht es dir wirklich gut?"
+    b "J-ja, na-natürlich."
+    "...{w}hart...{w}ihre Brustwarze war hart."
+    "Wenn ich nur daran denke...{w}wird noch was ganz Anderes hart."
+    #alternativ: "Wenn ich nur daran denke...{w}hoffentlich bemerkt sie die Beule in meiner Hose nicht."
+    
+    $ renpy.pause(1.5)
+
+    "Lange halte ich das nicht mehr aus."
+    #hier kann ich mindestens noch 25 Zeilen zu dieser Situation schreiben, obiger Text ist insgesamt ausbaufähig und ein anschließendes Fappieren seitens Bernd ist nicht auszuschließen, was noch mal ein paar Zeilen bringt
+    
+    sis "Ha~."
+    "
+#Stepmania Stepmania Stepmania
+#---------------------------------------------------------------
+
     
 label zwei_laura_nichtMedizin:
     "Unmöglich!"
