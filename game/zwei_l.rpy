@@ -453,7 +453,7 @@ label zwei_laura_medizinBekommen:
     b "Ja?"
     sis "Gute Nacht, %(berndName)s."
     b "Gute Nacht."
-    "Ich schließe die Türe.
+    "Ich schließe die Türe."
     
     scene bg wohnung_innen
     with fade

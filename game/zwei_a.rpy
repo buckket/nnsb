@@ -209,7 +209,7 @@ label zwei_anja:
         "Nicht wissend, aus welcher Richtung das Geräusch kam, schaue ich aus Reflex nach..."
         
         "...links.":
-            $ reflex = links
+           $ reflex = links
            "Doch da ist nichts."        
            "Ich schaue nach rechts."
         
