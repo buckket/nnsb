@@ -7,7 +7,6 @@
 #label eins_sisAbholen = Abholen der Schwester am zweiten Tag nach Berndtreffen
 #label eins_krautchanOff = Krautchan geht off
 #label eins_sisAbholenZuerst = Abholen der Schwester am ersten und zweiten Tag + Stalking
-#label eins_ende = Sprung zu Kapitel 2
 
 
 #Stats:
@@ -1009,9 +1008,3 @@ label eins:
             ma "Beeil dich."
             "Ich packe alles zusammen und gehe nach oben."
             jump eins_sisAbholen #eins_laura.rpy
-
-label eins_ende:
-
-    scene black
-    with fade
-    jump zwei

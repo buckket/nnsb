@@ -209,7 +209,7 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
     bw "Um die gleiche Zeit."
     bw "Bis dann."
     
-    hide blond
+    hide anja neutral
     with dissolve
     
     "Sie rennt zur Straßenbahn."
@@ -849,7 +849,7 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
 
             sis "Vielleicht sollte ich doch mitgehen."
             
-            show laura embarassed
+            show laura embarrassed
             with dissolve
             
             sis "Immerhin hab ich es unserer Mutter versprochen."
@@ -1573,10 +1573,6 @@ label eins_refuse_fBernd:
     
 label eins_krautchanOffBernd:
     "Ich setze mich vor meinen Rechner." #Krautchan off
-    b "Informationen sammeln..."
-    b "Wo fange ich da an?"
-    "Krautchan."
-    "Wo sonst?"
     "www.krautchan.net"
     "..."
     "..."
@@ -1586,6 +1582,6 @@ label eins_krautchanOffBernd:
     "404"
     "File not found."
     b "Krautchan ist..."
-    b "...tatsächlich offline."
+    b "...offline."
     
     jump zwei_bernd #Kapitel 2 - Bernd

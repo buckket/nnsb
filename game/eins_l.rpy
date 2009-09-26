@@ -1135,7 +1135,7 @@ label eins_laura_nachhauseweg:
     "Sie nervt mich doch sonst nur wieder."
     "Mir gefällt diese Stille."
     
-    scene bg black
+    scene black
     with fade
     
     "Wenig später..."

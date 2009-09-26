@@ -335,7 +335,7 @@ label zwei_yasmin_einbruch:
     "Es ist hoffnungslos."
     "Ich muss mir wohl ein Leben ohne Krautchan aufbauen..."
     "Vielleicht wird ja doch noch was aus mir."
-        "Gibt es denn wirklich nichts, was ich tun kann?"
+    "Gibt es denn wirklich nichts, was ich tun kann?"
     "Vielleicht sollte ich raus und ein bisschen frische Luft schnappen..."
     "Eine Runde um den Block zu gehen wird mir gut tun."
     
@@ -486,7 +486,7 @@ label zwei_yasmin_einbruch:
     scene bg schulweg1
     with fade
     
-    show laura angry
+    show laura mad
     with dissolve
     
     "Ich bin also mit %(sisName)s im Schlepptau auf dem Rückweg von der Schule nach Hause."
@@ -499,7 +499,7 @@ label zwei_yasmin_einbruch:
     scene bg zuhause_draussen
     with fade
     
-    show laura angry
+    show laura mad
     with dissolve
     
     sis "%(berndName)s!"
@@ -529,7 +529,7 @@ label zwei_yasmin_einbruch:
             b "Du bist doch selbst Schuld."
             sis "W... was?"
     
-            show laura angry_talk
+            show laura mad_talk
             with dissolve
     
             sis "Jetzt willst du mir die Schuld in die Schuhe schieben, oder was?"
@@ -1014,15 +1014,6 @@ label zwei_yasmin_geschnappt:
     "...aber ist das nicht egal?"
     "Sie ist bei mir eingebrochen."
     "Mehrmals."
-    
-    menu:
-    
-        "Ich sollte die Polizei rufen!":
-            jump yasmin_polizei
-      
-        "Ich werde sie erst befragen.":
-            "Vielleicht hatte sie ja einen guten Grund."
-  
     b "Warum bist du bei mir eingebrochen?"
     u"Mädchen" "..."
     b "Warum hast du mich verfolgt?"
@@ -1072,17 +1063,7 @@ label zwei_yasmin_geschnappt:
     "Ist das nur Show?"
     "Will sie mich auf den Arm nehmen?"
     "Nur um dann einen überraschenden Fluchtversuch zu starten?"
-    "Oder ist es echt?"
-    
-    menu:
-        
-        "Ich rufe jetzt die Polizei!":
-            jump yasmin_polizei
-       
-        "Ich habe Mitleid mit ihr.":
-            "...vielleicht sollte ich sie einfach noch ein wenig hier behalten."
-            "Ich muss mehr über sie herausfinden."
-    
+    "Oder ist es echt?"    
     yan "*schluchz*"
     b "Beruhig dich doch erst mal!"
     b "Ich werde schon nicht die Polizei rufen."
