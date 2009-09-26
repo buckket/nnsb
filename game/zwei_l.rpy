@@ -298,7 +298,7 @@ label zwei_laura_medizinBekommen:
     "Ich kann kaum die Dose aus der Packung nehmen, so sehr zittere ich."
     "Beruhig dich, %(berndName)s."
     "Sie ist deine Schwester."
-    "Es ist nichts schlimmes."
+    "Es ist nichts Schlimmes."
     "Ich gebe ihr nur Medizin, damit sie wieder gesund wird."
     "Ich bin einfach nur ihr netter, großer Bruder."
     "Nichts weiter."
@@ -338,6 +338,7 @@ label zwei_laura_medizinBekommen:
     "Nun sind alle Knöpfe offen."
     "In wenigen Sekunden liegt ein Mädchen vor mir. {w}In einem Bett. {w}Nackt."
     "Es ist zwar nur meine Schwester...{w}aber trotzdem ein Mädchen!"
+    "Das ist das erste Mal, dass ich meine Schwester so sehe."
     sis "Sei ganz zärtlich, ok?"
     b "O-OK."
     "Ist das hier ein Eroge?"
@@ -359,11 +360,32 @@ label zwei_laura_medizinBekommen:
     "Mir wird jetzt schon ganz anders."
     "Ich lege meine Hand sanft auf ihre Brust."
     "Sie zuckt etwas zusammen."
-    sis "Es ist so kalt, %(berndName)s."
-    "Ich lasse meine Hand nach rechts gleiten."
+    
+    #show laura krank geschlossene Augen nach oben gezogenene Schultern
+    #with dissolve
+    #bester Bildname jemals
+    
+    "Vor Schreck ziehe ich meine Hand zurück."
+    
+    #show laura krank
+    #with dissolve
+    
+    sis "Nein...{w}du darfst weitermachen..."
+    sis "Ich hab mich nur erschreckt, weil es so kalt ist, %(berndName)s."
+    b "{size=6}O-O-O-OK.{/size}"
+    sis "Hm? {w}Hast du was gesagt?"
+    "Ich schüttel mit dem Kopf."
+    "Ich trau mich noch nicht mal mehr richtig zu sprechen."
+    "Ich lege meine rechte Hand wieder auf ihre Brust."
+    "Sie zuckt wieder leicht zusammen."
+    "Ich bewege meine Hand nach rechts."
+    "%(sisName)ss Brust ist so warm."    
     "Dann lasse ich meine Hand nach links gleiten."
-    "Immer wieder lasse ich meine Hand kreisen..."
-    "Es macht mich glücklich zu wissen, dass es %(sisName)s wegen mir besser ge{nw}"
+    "Und meine Hand ist kalt."
+    "Das ist sicher unangenehm für sie."
+    "Bald wird es ihr wieder besser gehen."
+    "Es passt einfach nicht zu ihr im Bett zu liegen und nichts zu tun."
+    "Es macht mich glücklich zu wissen, dass es %(sisName)s besse{nw}"
     sis "AUA!"
     sis "Du tust mir weh."
 
@@ -372,32 +394,73 @@ label zwei_laura_medizinBekommen:
 
     sis "Ich hab doch gesagt, dass du nicht so drücken sollst."
     b "Ent-Entschuldigung."
-    "Es ist so falsch...{w}aber ich finde das irgendwie erregend."
+    "Das ist so falsch..."
     "Ich nehme noch ein bisschen Vaporub, um es dann auf ihrer Brust zu verteilen."
     
     $ renpy.pause(1.5)
     
-    #play sound "sounds/stöhn.mp3"
+    play sound "sounds/stöhn.mp3"
     #Sollen wir wirklich einen Sound bringen?
-    #Ich hätte einen passenden Sound parat...
-    
-    "Ich bin an ihre rechte Brustwarze gekommen."
-    b "Ah, ah, tut mir leid."
-    sis "Was tut dir leid?"
-    b "Äh...{w}nichts."
-    sis "Du bist komisch. {w}Anders als sonst. {w}Geht es dir wirklich gut?"
-    b "J-ja, na-natürlich."
-    "...{w}hart...{w}ihre Brustwarze war hart."
-    "Wenn ich nur daran denke...{w}wird noch was ganz Anderes hart."
-    #alternativ: "Wenn ich nur daran denke...{w}hoffentlich bemerkt sie die Beule in meiner Hose nicht."
-    
-    $ renpy.pause(1.5)
-
-    "Lange halte ich das nicht mehr aus."
-    #hier kann ich mindestens noch 25 Zeilen zu dieser Situation schreiben, obiger Text ist insgesamt ausbaufähig und ein anschließendes Fappieren seitens Bernd ist nicht auszuschließen, was noch mal ein paar Zeilen bringt
     
     sis "Ha~."
-    "
+    "Ich bin an ihre rechte Brustwarze gekommen."
+    b "Ah...{w}T-t-tut mir l-lei-leid."
+    sis "Was tut dir leid?"
+    b "Äh...{w}ni-nichts."
+    sis "Du bist komisch. {w}Anders als sonst. {w}Geht es dir wirklich gut?"
+    b "J-ja, na-natürlich."
+    "Ich bin gerade bestimmt knallrot."
+    "Aber es ist nicht meine Schuld..."
+    "...{w}hart...{w}es war hart."
+    "Wenn ich nur daran denke..."
+    "Lange halte ich das nicht mehr aus."
+    "Wann sind die 5 Minuten endlich vorbei?"
+    "Ich mache das doch jetzt schon eine Ewigkeit."
+    
+    $ renpy.pause (1.0)
+    
+    b "F-fer-fertig."
+    b "D-du kannst dich wie-wieder anzie-hen."
+    sis "OK."
+    "Sie knöpft ihren Schlafanzug wieder zu."
+    sis "%(berndName)s?"
+    b "J-ja?"
+    sis "Du hattest kalte Hände."
+    sis "Bist du krank?"
+    sis "Habe ich dich vielleicht angesteckt?"
+    b "Nein!"
+    sis "Geht es dir wirklich gut?"
+    b "J-ja!"
+    sis "OK."
+        
+    #show laura krank happy
+    #with dissolve
+    
+    sis "Danke, %(berndName)s!"
+    b "..."
+    "Ich packe die Dose wieder in die Verpackung, stehe auf und gehe aus dem Zimmer."
+    "Ich öffne die Türe und gehe in den Flur."
+    
+    scene bg wohnung_innen
+    with fade
+    
+    sis "%(berndName)s?"
+    "Was ist denn jetzt noch?"    
+    
+    scene bg lauraszimmer
+    with fade
+    
+    b "Ja?"
+    sis "Gute Nacht, %(berndName)s."
+    b "Gute Nacht."
+    "Ich schließe die Türe.
+    
+    scene bg wohnung_innen
+    with fade
+    
+    #Bernd geht erstmal kalt duschen
+    #das darfst du aber wieder schreiben, Step
+    
 #Stepmania Stepmania Stepmania
 #---------------------------------------------------------------
 

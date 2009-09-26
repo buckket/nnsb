@@ -42,7 +42,6 @@ label zwei_anja:
     #with dissolve
     #Bild existiert noch nicht
     #Ginga Ale
-    #HAHA, ICH KOMMENTIERTE ES RAUS!!111
     
     ma "Wie war denn das Treffen?"
     b "Wie soll es schon gewesen sein?"
@@ -210,13 +209,14 @@ label zwei_anja:
         "Nicht wissend, aus welcher Richtung das Geräusch kam, schaue ich aus Reflex nach..."
         
         "...links.":
-    
-       "Doch da ist nichts."        
-       "Ich schaue nach rechts."
+            $ reflex = links
+           "Doch da ist nichts."        
+           "Ich schaue nach rechts."
         
         "...rechts.":
-        "Doch da ist nichts."
-        "Ich schaue nach links."   
+            $ reflex = rechts
+            "Doch da ist nichts."
+            "Ich schaue nach links."   
 
     "Wieder nichts."
     "Stimme" "HIIIIILLLLLLLFFFFFFFEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!"
@@ -358,30 +358,8 @@ label zwei_anja:
     "Ich suche meine Sachen zusammen, um sie mit ins Bad zu nehmen und sie nach dem Duschen direkt anziehen zu können."
     "Boxershorts, Socken, T-Shirt."
     "Ich kann die gleiche Hose wie gestern anziehen."
+    "Die trage ich ja erst eine Woche."
     "Die Spinne hat zu viel Zeit gekostet."
-    "Die Spinne..."
-    "Da gab es doch mal Jemanden.
-    
-    
-    menu:
-        " "
-        
-        "Die Spinne?":
-            $ spinne = 1
-            "Randombernd!"
-            "Er hat tierische Angst vor Spinnen."
-            "..."
-        
-        "Die Spinne!":
-            $ spinne = 2
-            "Kum0!"
-            "Die Spinne höchstpersönlich."
-            #Initial D / Wangan Midnight
-            #weiterschreiben
-            #menu?
-            #GSB GSB GSB
-    
-
     "Ich sollte mich lieber beeilen bevor noch mehr Zeit verloren geht."
     
     scene bg badezimmer
@@ -1403,7 +1381,7 @@ label zwei_anja:
     "Ich schaue nicht genug Animeserien."
     "Jetzt habe ich nichts mehr zum Schauen."
     "So langweilig."
-    "Vielleicht sollte ich nach auf nicodouga lauern."
+    "Vielleicht sollte ich auf nicodouga lauern."
 
     scene black
     with fade
@@ -1700,8 +1678,7 @@ label bernd_anja_besprechung:
     bw "weissnichlol."
     
     #show anja smiling
-    #with dissolve <- Lass ich hier absichtlich stehen, der Effekt wird aber nicht benötigt...
-    #sonst baut das nachher jemand ein und sagt "GSB hat das vergessen"
+    #with dissolve
     
     $ renpy.pause(1.0)
     "Stille."
@@ -1931,6 +1908,10 @@ label bernd_anja_besprechung:
     "QUALITÄTSNASEN!"
 
     #Hier kommt nun der Test...
+    
+    
+    
+    
     #den kann man aber auch schon oben erwähnen
 
     
