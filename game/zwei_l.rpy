@@ -458,6 +458,11 @@ label zwei_laura_medizinBekommen:
     #Bernd geht erstmal kalt duschen
     #das darfst du aber wieder schreiben, Step
     
+    "Meine Knie geben zitternd nach und ich sinke vor der Tür zusammen."
+    "Ich kann eigentlich nicht glauben, dass das wirklich passiert ist."
+    "..."
+    #diese szene brauchen wir doch eigentlich gar nicht, wieso schreibe ich hier grade?
+    
 #Stepmania Stepmania Stepmania
 #---------------------------------------------------------------
 
@@ -467,6 +472,81 @@ label zwei_laura_nichtMedizin:
     "Ich kann das einfach nicht..."
     "Ich sollte es einfach vergessen."
     "Am besten gehe ich wieder nach Unten."
-    #weiterschreiben
+    
+    scene bg keller_aus
+    with fade
+    
+    "...ob ich es hätte machen sollen?"
+    "Nein."
+    "Das hätte ich sowieso nicht durchgezogen."
+    "Ich sollte lieber mal nach Krautchan schauen."
+    
+    scene bg keller
+    with dissolve
+    
+    play sound "sounds/boot.wav"
+    
+    "..."
+    "Immer noch offline."
+    "Was habe ich auch anderes erwartet."
+    "Kann ich denn gar nichts tun?"
+    "Ohne Krautchan ist das Leben langweilig."
+    "Ich glaube, ich gehe erst mal duschen."
+    
+    scene bg wohnung_innen
+    with fade
+    
+    "Vielleicht sollte ich doch mal bei Laura reinschauen..."
+    "..."
+    "...nein, lieber nicht."
+    "Ich gehe jetzt erst mal duschen."
+    
+    scene bg badezimmer
+    with fade
+    
+    play sound "sounds/dusche.wav"
+    
+    "Das tut gut."
+    "Endlich habe ich mal einen Moment, um ruhig über alles nachzudenken."
+    
+    play sound "sounds/knock2.wav"
+    
+    $berndNameCaps = berndName.upper()
+    ma "KOMM AUS DER DUSCHE RAUS, %(berndNameCaps)s!"
+    "Oh, verflucht!"
+    ma "ICH BIN WIEDER DA UND BRAUCH DICH MAL EBEN!"
+    "Ich stelle das Wasser ab und steige aus der Dusche."
+    b "Ich komme gleich!"
+    "Schnell trockne ich mich ab und ziehe mich an."
+    "Die kann was erleben."
+    "Mich einfach so aus der Dusche zu holen..."
+    "Ich öffne die Tür."
+    ma "%(berndName)s!"
+    ma "Hast du Laura ihre Medizin gegeben?"
+    "Ich wusste es."
+    b "Äh... nein."
+    b "Habe ich vergessen."
+    ma "Interessiert dich deine Schwester denn gar nicht?"
+    b "Nicht wirklich."
+    ma "War ja klar."
+    ma "Dann gebe ich ihr die Medizin und du gehst zur Apotheke und besorgst das hier."
+    "Sie drückt mir ein Rezept in die Hand."
+    ma "Das habe ich grade vom Arzt geholt."
+    ma "Laura braucht das."
+    ma "Und jetzt geh."
+    b "Darf ich wenigstens vorher..."
+    ma "Nein!"
+    ma "Du gehst."
+    ma "Jetzt."
+    "Naja, ich habe eh nichts anderes zu tun."
+    "Vielleicht kann ich ja dabei einen klaren Gedanken fassen..."
+    
+    jump zwei_laura_medizinHolen
+    
     
 #nun noch ein Event mit Bernd und Laura und dann kommt general-chan zu Besuch! ^_^
+
+
+
+label zwei_laura_medizinHolen:
+    
