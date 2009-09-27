@@ -283,7 +283,7 @@ label eins_treffenBerndf:
     ma "Ich will, dass du %(sisName)s zum Einkaufen mitnimmst."
     ma "Der Kühlschrank ist leer."
    
-    b "Ich will aber ni-"
+    b "Ich will aber ni-{nw}"
     
 #$ eins_streit = 1 => Bernd läuft Laura hinterher und dankt ihr nachher
 #$ eins_streit = 2 => Bernd läuft Laura hinterher und dankt ihr nachher NICHT
@@ -1510,7 +1510,7 @@ label eins_accept_fBernd:
     
     stop music fadeout 0.4
     
-    jump zwei_anja #Kapitel 2 - Anja
+    jump zwei_anja
     
 label eins_refuse_fBernd:
     $ anjaAccept = 0

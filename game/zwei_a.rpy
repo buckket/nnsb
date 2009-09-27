@@ -158,12 +158,7 @@ label zwei_anja:
     "AH{w}-HAH!"
     "%(wBerndName)s..."
     "Hach..."
-    "Jetzt fehlt mir nur noch ein bisschen Touhou und dann ist mein Abend gerettet."
-    
-    scene bg black
-    with fade
-    
-    #hier könnte ich ein Random-Touhou-Lied einbauen
+
     #GSB GSB GSB
     #Noch eine Szene für den Abend schreiben
 
@@ -1380,7 +1375,6 @@ label zwei_anja:
         "Forrest Gump.":
             $ film = "Gump"
             pass
-        
         
         "Bill und Ted's verrückte Reise durch die Zeit.":
             $ film = "Bill und Ted"
