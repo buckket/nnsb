@@ -550,3 +550,131 @@ label zwei_laura_nichtMedizin:
 
 label zwei_laura_medizinHolen:
     
+    scene bg keller
+    with fade
+    
+    "Ich hole mein Portemonnaie, {w}schaue rein {w}und stelle fest, dass ich kein Geld mehr habe."
+    "Toll, jetzt muss ich erst noch nach Geld fragen."
+    "Ich gehe in Lauras Zimmer."
+    
+    scene bg lauraszimmer
+    with fade
+    
+    b "Mama?"
+
+    #show mutter sauer #at left
+    #with dissolve    
+
+    ma "Was? {w}Du bist immer noch nicht weg?"
+    b "Nein."
+
+    #show laura krank at right
+    #with dissolve
+    
+    #sis "%(berndName)s?"
+    #sis "Bist du es?"
+    #b "Ja."
+    #"Ihr scheint es wirklich schlecht zu gehen."
+    #ma "Sieh nur, was du angerichtet hast."
+    #ma "Jetzt ist sie wieder wach."
+    ma "Wieso bist du noch nicht weg?"
+    b "Ich hab kein Geld."
+    ma "Mensch, %(berndName)s."
+    "Meine Mutter rennt an mir vorbei in die Küche."
+    "Ich folge ihr."
+    
+    scene bg kueche
+    with fade
+    
+    #show mutter sauer
+    #with dissolve
+    
+    ma "Hier hast du 25 Euro."
+    $ geld += 25
+    ma "Und jetzt geh endlich."
+    b "OK, OK. {w}Ich geh ja schon."
+    "Meine Mutter spurtet zurück in %(sisName)ss Zimmer."
+    "Nachdem ich die 25 Euro in mein Portemonnaie gesteckt habe, ziehe ich meine Jacke und meine Schuhe an."
+    
+    scene black
+    with fade
+    
+    scene bg zuhause_draussen
+    with fade
+    
+    "Wo ist jetzt eine Apotheke?"
+    "Ich glaub, ich hab letztens eine gesehen."
+    "Aber wo?"
+    "Hmm...{w}so oft war ich ja nicht draußen..."
+    "Das war als ich...{w}als ich %(sisName)s abholte."
+    "Ich muss einfach nur ihren Schulweg gehen."
+    
+    scene bg schulweg1
+    with fade
+    
+    "Wenn ich so darüber nachdenke...{w}ich ging in Berlin bisher nur für %(sisName)s aus der Wohnung."
+    "Unglaublich. {w}Was man nicht alles für seine kleine Schwester tut."
+    
+    scene bg apotheke_aussen
+    with fade
+    
+    "Ah, da ist die Apotheke ja."
+    "Zur Sicherheit greife ich noch einmal nach dem Rezept."
+    "Es ist da."
+    "Und nochmal nach meinem Portemonnaie."
+    "Es ist da."
+    "Wenn jetzt irgendwas gefehlt hätte, wäre es sowieso zu spät gewesen."
+    
+    scene bg apotheke
+    with fade
+    
+    "Ein Glück."
+    "Kaum jemand ist hier."
+    "Eine Schlange hätte mir gerade noch gefehlt."
+    "Ich gehe an einen Schalter."
+    
+    show salih neutral
+    with dissolve
+    
+    "Hmm...den kenn ich doch!"
+    "Aber woher nur?"
+    
+    b "Äh...{w}Hallo."
+    "Salih" "Guten Tag."
+    "Salih" "Wie kann ich Ihnen weiterhelfen?"
+    b "Ich..{w}ähm...{w}hier."    
+    "Salih" "Oh, ein Rezept?" 
+    "Salih" "Einen Moment bitte."
+    "Woher kenn ich den jetzt bloß?"
+    ".{w}.{w}.{w}hmm{w}.{w}.{w}."
+    "!"
+    "Das ist doch der Eisverkäufer von letztens!"
+    "Salih" "Das wäre dann ein Mal Mucosolvan und ein Mal Sinupret."
+    "Salih" "Das macht zusammen 17,58 Euro."
+    "Warum sind Medikamente eigentlich so teuer?"
+    "Sollen die nicht der allgemeinen Bevölkerung helfen?"
+    "Ich greife nach dem 20-Euro-Schein, den meine Mutter mir gab."
+    "Salih" "Vielen Dank."
+    "Salih" "Hier ist Ihr Rückgeld."
+    $ geld -= 17.58
+    #Bernd hat nun noch 7,42 Euro übrig
+    "Ich packe das Geld in meine Geldbörse und greife nach der Tüte, in der die Medikamente sind."
+    "Salih" "Vielen Dank und gute Besserung!"
+    b "Ja ja."
+    "Ich verlasse die Apotheke."
+
+    scene bg apotheke_aussen
+    with fade
+    
+    "Ich geh lieber direkt nach Hause."
+    
+    scene bg schulweg1
+    with fade
+    
+    play music m_lauraende
+
+    "Aus der Ferne höre ich einen Straßenmusiker..."
+    
+    jump ende
+    
+    stop music fadeout 0.4

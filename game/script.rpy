@@ -148,6 +148,7 @@ init:
     $ m_cafe = "music/cafe.ogg" #falls Bernd mal mit einem Mädchen in ein Café geht
     $ m_kanashimi = "music/insert_kanashimi.ogg" #Insert-Song für Abstechszenen
     $ m_heul = "music/;_;.ogg" #;_;
+    $ m_lauraende = "music/lauraende.ogg"
     
     #WICHTIG: Handy-Klingeltöne bitte nicht registrieren, die sind zwar in dem Ordner drin, werden aber mit dem Sound-Befehl abgerufen
     

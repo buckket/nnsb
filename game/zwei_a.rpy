@@ -164,6 +164,10 @@ label zwei_anja:
 
     scene black
     with fade
+    
+    jump spinne
+
+label spinne:
 
     "Am darauffolgenden Tag..."
     
@@ -342,6 +346,10 @@ label zwei_anja:
     sis "Danke, %(berndName)s."
     "Ich gehe wieder in meinen Keller."
     
+    jump nach_spinne
+    
+label nach_spinne:    
+    
     scene bg keller_aus
     with dissolve
     
@@ -515,7 +523,10 @@ label zwei_anja:
     "Ja, ganz enorm."
     "Ich bin bereit."
     "Jederzeit."
+    jump anja_besuch
     
+label anja_besuch:
+
     scene bg treppenhaus
     with fade
             
@@ -763,7 +774,10 @@ label zwei_anja:
     "Ich hatte ja noch nie was mit Mädchen am Hut."
     "Da bleibe ich lieber bei mai waifus."
     "Hach, Lynette..."
+    jump traum
     
+label traum:
+
     scene bg traumkueche
     with fade
     
@@ -1081,6 +1095,10 @@ label zwei_anja:
     $ renpy.pause(1)
 
 #-------- hier erstmal ein Trennstrich, um die beiden Szenen voneinander unterscheiden zu können
+
+    jump a_bei_b
+    
+label a_bei_b:
 
     "Stimme" "He, %(berndName)s."
 
@@ -1460,15 +1478,22 @@ label zwei_anja:
     "Mein PC ist zu schlecht für Spiele."
     "Und nur Anime und Manga ist langweilig."    
     
-    menu:
-        "Ich sollte..."
-        
-        "doch zu %(wBerndName)s gehen.":
-            jump bernd_anja_besprechung
-        
+#    menu:
+ #       "Ich sollte..."
+  #      
+   #     "doch zu %(wBerndName)s gehen.":
+    #        jump bernd_anja_besprechung
+     #   
+#
+ #       "mir einen Job suchen.":
+  #          jump bernd_kapzwei_grillen
 
-        "mir einen Job suchen.":
-            jump bernd_kapzwei_grillen
+#menu wieder einbauen, wenn Bild vom Doktor vorhanden
+#GSB GSB GSB
+
+    "Ich sollte doch zu %(wBerndName)s gehen." 
+
+    jump bernd_anja_besprechung
 
 label bernd_anja_besprechung:
 
