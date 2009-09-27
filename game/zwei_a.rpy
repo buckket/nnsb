@@ -1879,15 +1879,29 @@ label bernd_anja_besprechung:
     "Sie rennt die Treppe runter."
     "Ich sollte auch nach Hause gehen."
     "Hier rumstehen bringt mir nichts."
-    
+    "Langsam steige ich die Treppen hinab."
+   
     scene black
     with fade
     
-    scene bg keller_aus
+    scene bg zuhause_hausflur
     with fade
     
-    "Ich schau erstmal einen Animu."
+    "Ich trete in unsere Wohnung ein, als plötzlich..."
     
+    "Stimme" "HALT! {w}KEINE BEWEGUNG! {w}HÄNDE HOCH!"
+    "Wer, wie, wo, was?"
+    "Verwirrt schaue ich mich um."
+    "Stimme" "ICH HAB GESAGT \"KEINE BEWEGUNG\"!"
+    
+    play sound "sounds/schuss.wav"
+    #Sound existiert noch nicht
+    
+    #Step
+    #Hier ein Bild mit Blutflecken
+    
+    b "Hil...{w}fe..."
+        
     jump ende
 
 
