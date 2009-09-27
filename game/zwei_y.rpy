@@ -175,9 +175,11 @@ label zwei_yasmin_Anfang:
             scene black
             with dissolve
             
-            play sound "sounds/iit.wav"
-            #Sound existiert noch nicht            
-            
+            #play sound "sounds/iit.wav"
+            #Sound existiert noch nicht 
+            #nicht mit dem Sound von unten verwechseln
+            #Bernd wird hier von Laura befreit           
+
             "Es tut gar nicht weh."
             "Und es ist dunkel."
             "Bin ich etwa schon in der Hölle?"
@@ -191,8 +193,11 @@ label zwei_yasmin_Anfang:
                         
             play music m_kanashimi
             
-            play sound "sounds/iit.wav"
+            #play sound "sounds/iit.wav"
             #Sound existiert noch nicht
+            #nicht mit dem Sound von oben verwechseln
+            #Sound, wie Laura das Messer in Bernd hineinrammt
+            #wer die letzte Folge von School Days gesehen hat, weiß, welchen Sound ich meine
             
             sis "Du Mistkerl."
             sis "Du denkst doch nur daran, {w}dich selbst glücklich zu machen!"

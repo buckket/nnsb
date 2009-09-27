@@ -75,10 +75,7 @@ label zwei_anja:
     b "Ach, lass mich doch in Ruhe."
     b "Ich geh schlafen."
     b "Gute Nacht."
-    "Ich gehe genervt eilig zurück in meinen Keller."
-    #Kann man den Satz irgendwie umstellen, sodass er besser klingt?
-    #Adjektiv am Anfang des Satzes setzen schafft es nicht...
-
+    "Genervt eile ich zurück in meinen Keller."
 
     scene bg keller_aus
     with fade
@@ -110,7 +107,6 @@ label zwei_anja:
     "Warum brach sie die beiden Treffen sonst nach kurzer Zeit ab?"
     "Sie ist doch auch nur ein Bernd."
     "Das heißt, sie kann im wirklichen Leben auch nicht allzu beschäftigt sein."
-    #Kommt hier ein Komma nach "Das heißt" oder wird das weggelassen?
     "Sie will, dass ich bei ihr vorbeikomme."
     "Sie wartet auf mich."
     "Bestimmt."
@@ -184,7 +180,7 @@ label zwei_anja:
     "Ich würde am liebsten noch ein bisschen weiterschlafen."
     "Aber ich wollte heute ja %(wBerndName)s besuchen."
     "Ich gähne nochmal und strecke mich dabei."
-    "Ich reibe mir durch die Augen"
+    "Ich reibe mir durch die Augen."
 
     scene bg keller
     with fade
@@ -209,12 +205,12 @@ label zwei_anja:
         "Nicht wissend, aus welcher Richtung das Geräusch kam, schaue ich aus Reflex nach..."
         
         "...links.":
-           $ reflex = links
+           $ reflex = "links"
            "Doch da ist nichts."        
            "Ich schaue nach rechts."
         
         "...rechts.":
-            $ reflex = rechts
+            $ reflex = "rechts"
             "Doch da ist nichts."
             "Ich schaue nach links."   
 
@@ -255,8 +251,7 @@ label zwei_anja:
     "Einfacher gesagt als getan."
     b "Ich geh eben einen Schuh holen."
     b "Ich bin gleich wieder da."
-    sis "Du...{w}Du willst mich alleine lassen?"
-    "MIT DEM RIESENVIECH DA?"
+    sis "Du...{w}Du willst mich alleine lassen? {w}MIT DEM RIESENVIECH DA?"
     b "Ich bin jeden Moment wieder zurück."
     b "So lange musst du noch durchhalten."
 
@@ -665,7 +660,7 @@ label zwei_anja:
     with dissolve
 
     b "..."
-    bw "HAL-LO?"
+    bw "HALLLLLLLLLLLO?"
     bw "Jemand da?"
     b "..."
     bw "Na ja, komm' erstmal rein."
@@ -746,12 +741,6 @@ label zwei_anja:
     "Warum habe ich die paar Folgen eigentlich noch?"
     "Es gibt nur einen guten Charakter..."
     "Löschen."
-    "Gundam 00?"
-    "Langweilig."
-    "Akagi?"
-    "Nein."
-    "Was ist nur aus mir geworden?"
-    "Selbst auf Akagi habe ich keine Lust."    
     "Ich werfe mich auf's Bett."
     "Ich kann mich einfach nicht auf andere Gedanken bringen."
     "Ich muss immer wieder an vorhin denken."
@@ -1184,7 +1173,6 @@ label zwei_anja:
             scene bg keller
             with fade
         
-        
         "Lass mich in Ruhe.":
             $ malove -=5
             b "Kannst du mich nicht einmal damit in Ruhe lassen?"
@@ -1217,8 +1205,6 @@ label zwei_anja:
     "Oh, schon die elfte Folge."
     "Bald ist der Anime vorbei."
     "Schade irgendwie."
-    "Lynette ist so moe."
-    "Sie ist mai waifu."
     
     scene black
     with fade
@@ -1378,17 +1364,51 @@ label zwei_anja:
     "Mal schauen, ob schon ein Faden darüber auf Krautcha-"
     "Verdammt."
     "Was mache ich denn nun?"
-    "Ich schaue nicht genug Animeserien."
+    "Ich schaue nicht genug Serien."
     "Jetzt habe ich nichts mehr zum Schauen."
+    "Ich habe jetzt kein Krautchan mehr."
     "So langweilig."
-    "Vielleicht sollte ich auf nicodouga lauern."
-
+    "Was mache ich denn jetzt?"
+    "Ich könnte mal wieder einen Film schauen."
+    "Aber welchen?"
+    "Ich öffne meine Partition, auf der meine ganzen Filme gespeichert sind."
+    "Viel Auswahl habe ich ja nicht."
+    "Hmm..."
+    menu:
+        "Ich schaue..."
+        
+        "Forrest Gump.":
+            $ film = "Gump"
+            pass
+        
+        
+        "Bill und Ted's verrückte Reise durch die Zeit.":
+            $ film = "Bill und Ted"
+            pass
+        
+        "Wayne's World.":
+            $ film = "Wayne"
+            pass
+        
+        "Jay und Silent Bob schlagen zurück.":
+            $ film = "Silent Bob"
+            pass
+            
+        "Detroit Metal City.":
+            $ film = "DMC"
+            pass   
+          
     scene black
     with fade
-    
-    #Was schreibe ich hier?
-    #GSB GSB GSB
 
+    $ renpy.pause(2.0)
+
+    scene bg keller
+    with fade
+    
+    "War zwar gut...{w}aber wenn es nicht 2D ist, ist es nicht das Gleiche."
+    "..."
+    "So öde."
     "Ich geh schlafen."
     
     scene black
@@ -1401,41 +1421,6 @@ label zwei_anja:
     
     "Hmm..."
     "Hmmmm....."
-    "Aigis."
-    "Deine Hände..."
-    "Ahhhh~"
-    "Bitte..."
-    "Nimm ihn in den Mund!"
-    
-    $ renpy.pause(0.5)
-    
-    "Mit Sack!"
-    
-    $ renpy.pause(0.5)
-    
-    "Der muss stinken!"
-    
-    $ renpy.pause(0.5)
-    
-    "Aigis."
-    "Das ist so schön."
-    "Deine Lippen..."
-    "so weich."
-    "Ahhhh~"
-    "Ahhhhhhhh~"
-    "Ohhhhh~"
-    #diese Szene hat ein -_- verdient, nein, sogar zwei -_-
-    #GSB GSB GSB
- 
-    scene bg keller_aus
-    with dissolve
-    
-    "Hach, das war so gut."
-    "Wenn ich das doch nur wirklich erleben dürfte."
-    "Ich bin so ronery."
-    "Ich kenne keine Mädche-"
-    "Moment."
-    "Andererseits..."
     "Sollte ich %(wBerndName)s wirklich glauben?"
     "Sollte ich wirklich zu ihr gehen?"
     "Sie könnte auch ein guter Troll sein."
@@ -1470,7 +1455,7 @@ label zwei_anja:
     "Ich öffne meinen Internetbrowser."
     "Wie immer drücke ich automatisch Strg + L und tippe dann \"kr\" ein."
     "Dann drücke ich mit der Pfeiltaste einen runter und drücke Enter."
-    "Es lädt nor-"    
+    "Es lädt nor-{nw}"    
     "404."
     "Verdammt."
     "Ich hätte nie gedacht, dass ich das jemals sagen werde."
@@ -1527,24 +1512,26 @@ label bernd_anja_besprechung:
     
     "Irgendwie habe ich kein gutes Gefühl."
     "Ich sollte einfach wieder gehen."
-    
-    if anja_zwei:
-        "Wieso kneife ich bei sowas immer?"
-        "...weil ich ein Bernd bin."
-        "Sie ist aber auch nur ein Bernd."
-        "Und wir wollen nur Krautchan retten."
-        "Mehr gibt es da nicht."
-        "Ich sollte einfach klopfen."
+    "Wieso kneife ich bei sowas immer?"
+    "...weil ich ein Bernd bin."
+    "Sie ist aber auch nur ein Bernd."
+    "Und wir wollen nur Krautchan retten."
+    "Mehr gibt es da nicht."
+    "Ich sollte einfach klopfen."
         
-    else:
-        "Moment."
-        "Dann kommt sie nachher einfach wieder in meinen Keller."
-        "Bei meinem Glück kommt sie genau dann rein, während ich fappiere."
-        "Ich sollte einfach klopfen."    
-        "Ich bin ein Bernd."
-        "Sie ist ein Bernd."
-        "Wir wollen Krautchan retten."
-        "Mehr gibt es da nicht."
+#    else:
+ #       "Moment."
+  #      "Dann kommt sie nachher einfach wieder in meinen Keller."
+   #     "Bei meinem Glück kommt sie genau dann rein, während ich fappiere."
+    #    "Ich sollte einfach klopfen."    
+     #   "Ich bin ein Bernd."
+      #  "Sie ist ein Bernd."
+       # "Wir wollen Krautchan retten."
+        #"Mehr gibt es da nicht."
+
+#wird erstmal nur rauskommentiert, ich weiß nicht, was ich mir damals dabei dachte, dass so zu lösen
+#oben stand if anja_zwei:
+#GSB GSB GSB
     
     play sound "sounds/knock.wav"
     
@@ -1677,8 +1664,8 @@ label bernd_anja_besprechung:
     b "Aber wie?"
     bw "weissnichlol."
     
-    #show anja smiling
-    #with dissolve
+    show anja smiling
+    with dissolve
     
     $ renpy.pause(1.0)
     "Stille."
@@ -1731,22 +1718,15 @@ label bernd_anja_besprechung:
     bw "Und was willst du wissen?"
     b "Ich möchte einfach gern' wissen, wie alt du bist."
     bw "Unzulässige Information."
-    b "Du..."
-    b "Moeblobb!"
+    b "Du...{w}duuuuu..."
     b "Yuki ist sowieso überlegen."
     bw "Yuki ist doch nur eine modifizierte Rei."
     b "Eine Rei ist auch fein."
     $ renpy.pause(1.0)
     "Oh wow. Das ist das erste Mal, dass ich mit einer Person in der Realität über Anime rede."
-    #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Ich bin so glücklich!"
-    if persistent.wieherbuhSprache is 1:
-        "Tanoshii!"
-    if persistent.wieherbuhSprache is 2:
-        "{=jp}楽しい！{/=jp}"
-    #-----------------------------------------------
-    "Ich weine innerlich vor Freude."
+    "Es ist das erste Mal, dass ich offen sprechen kann."
+    "Ich muss mich nicht verstecken."
+    "Ich bin so glücklich! {w}Ich weine innerlich vor Freude."
     bw "Deine Milch."
     b "Was ist damit?"
     bw "Du hast sie noch nicht getrunken."
@@ -1800,14 +1780,7 @@ label bernd_anja_besprechung:
     bw "Hier."
     "Ich nehme das Glas in meine rechte Hand."
     bw "Gibt es einen Grund, warum du doch in die Küche gekommen bist?"
-    #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        b "Nicht wirklich."
-    if persistent.wieherbuhSprache is 1:
-        "Betsu ni."
-    if persistent.wieherbuhSprache is 2:
-        "{=jp}別に。{/=jp}"
-    #-----------------------------------------------
+    b "Nicht wirklich."
     "Ich nehme einen Schluck von der Milch."
     "Dieses Gefühl."
     "Es fühlt sich so gut an."
@@ -1895,30 +1868,8 @@ label bernd_anja_besprechung:
     with fade
     
     "Ich schau erstmal einen Animu."
-    "Die ersten paar Folgen von Akagi sind fertig."
-    #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Genau nach Plan."
-    if persistent.wieherbuhSprache is 1:
-        "Keikaku doori!"
-    if persistent.wieherbuhSprache is 2:
-        "{=jp}計画通り。{/=jp}"
-    #-----------------------------------------------
-    "AKAGI!"
-    "QUALITÄTSNASEN!"
-
-    #Hier kommt nun der Test...
-    
-    
-    
-    
-    #den kann man aber auch schon oben erwähnen
-
     
     jump ende
-
-
-
 
 
 label bernd_kapzwei_grillen:

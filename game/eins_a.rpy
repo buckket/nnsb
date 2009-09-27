@@ -1,4 +1,4 @@
-label eins_treffenBerndf: #Bernd trifft sich mit Anja
+label eins_treffenBerndf:
     scene bg zuhause_draussen
     with fade
     
@@ -319,9 +319,6 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
     "Oh Mann."
     "Wie erklär' ich ihr das?"
     b "Ich... äh..."
-    
-    #GSB GSB GSB
-    #----------------------------------------------------------------
     sis "Du hattest wieder keine Lust, oder?"
     b "Nein."
     
@@ -391,8 +388,8 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
             sis "Immer wenn ich dich fragte, ob du mit mir spielst..."
             sis "Nie hattest du Zeit für mich."
             
-            show laura vonhinten
-            with dissolve
+            #show laura vonhinten
+            #with dissolve
             #Bild existiert noch nicht
             #Ginga Ale
             
@@ -422,9 +419,6 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
                     scene bg alexanderplatz_eins
                     with fade
                     
-                    play sound "sounds/keuchen.wav"
-                    #Sound existiert noch nicht
-                    
                     "Mann, bin ich fertig."
                     "Sie ist zwar nicht so untrainiert wie ich es bin."
                     "Aber sie ist kleiner und jünger."
@@ -450,18 +444,11 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
                     
                     "Irgendwo hier muss sie doch sein."
                     "Ich hab sie hierhin rennen sehen."
-                    
-                    #Darf ich hier eine kleine Variante von Laura einbauen?
-                    #Dürfte nicht allzu schwer werden, denn man müsste ja nur ein Laura-Bild skalieren und dann Folgendes schreiben
-                    #show laura vonhinten at center
-                    #with dissolve
-
                     "Ah!"
                     "Da hinten."
                     "Ich sehe sie."
                     "Ich hole noch einmal tief Luft{w} und renne dann los."
                     b "{size=60}%(sisName)s!!{/size}"
-                    #Wie schrieb ich groß?
                     "Ich bin schon fast bei ihr."
                     
                     show laura surprised_drop
@@ -604,8 +591,8 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
                     sis "Ohhhhh."
                     b "Ja, du kannst dich jetzt ruhig über mich lustig machen."
                     
-                    show laura suspicious
-                    with dissolve
+                    #show laura suspicious
+                    #with dissolve
                     #Bild existiert noch nicht
                     #Ginga Ale
                     
@@ -622,10 +609,13 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
                     b "Nein."
                     b "Sie ist mir egal."
                     
-                    show laura suspicious
-                    with dissolve
+                    #show laura suspicious
+                    #with dissolve
                     #Bild existiert noch nicht
                     #Ginga Ale
+                    
+                    show laura neutral
+                    with dissolve
                     
                     sis "Warum triffst du dich dann mit ihr?"
                     sis "Warum ist sie dann wichtiger als seine kleine Schwester von der Schule abzuholen?"                    
@@ -664,7 +654,6 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
                     
                     ma "Hallo, ihr beiden."
                     "Oder auch doch."
-                    #Sagt man das so?
                     ma "Wo habt ihr die Einkäufe?"
                     ma "Habt ihr die schon weggeräumt."
                     b "Nein."
@@ -842,7 +831,6 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
             b "Bist du dir da sicher?"
             sis "Ja."
             b "Aber ich bin mir sicher, dass %(supermarkt)s nun auch...{w}ähm...{w}ähm...{w}Gummibärchen hat!"
-            #Ne, Sutepu-chan, Sutepu-chan, hast du eine bessere Süßigkeit für Laura parat?
 
             show laura surprised_drop
             with dissolve
@@ -965,11 +953,6 @@ label eins_treffenBerndf: #Bernd trifft sich mit Anja
             with dissolve
             
             "Sie nimmt sich eine Packung Erdbeer-Kaugummis und legt sie auf's Band."
-    
-    
-    #GSB GSB GSB
-    #----------------------------------------------------------------
- 
 
     scene black
     with fade
@@ -1226,14 +1209,14 @@ label eins_streit_ohne_aussprache:
     "Es hat keinen Sinn."
     "Ich kann das nicht."
     
-    scene cg laura_tuer
-    with fade
+    #scene cg laura_tuer
+    #with fade
     #Bild existiert noch nicht
     #Ginga Ale
 
     #In diesem CG sieht man eine leicht geöffnete Tür und eine mit einem Auge herauslugende Laura
     #ähnlich wie http://img3.imageshack.us/img3/3193/konbanwa.jpg
-    #nur, dass Laura hier weinen muss oder aber rote Augen haben (ihr wisst, wie ich das meine)
+    #nur, dass Laura hier weinen muss oder aber rote Augen hat (ihr wisst, wie ich das meine)
         
     "!"
     "Sie hat die Tür geöffnet."
@@ -1454,10 +1437,10 @@ label eins_streit_tag_darauf:
     menu:
         "Ich..."
         
-        "...glaube ihr.": #Ich glaube ihr
+        "...glaube ihr.":
             $ friendLove += 10
             jump eins_accept_fBernd
-        "...glaube ihr. NICHT.": #...glaube ihr nicht
+        "...glaube ihr. NICHT.":
             $ friendLove -= 5
             jump eins_refuse_fBernd
             
@@ -1496,8 +1479,6 @@ label eins_accept_fBernd:
    
     stop music fadeout 0.4
    
-    #random event
-    
     scene black
     with fade
     
@@ -1508,7 +1489,7 @@ label eins_accept_fBernd:
     
     play music m_bernd
      
-    "Ich setze mich vor meinen Rechner." #Krautchan off
+    "Ich setze mich vor meinen Rechner."
     b "Informationen sammeln..."
     b "Wo fange ich da an?"
     "Krautchan."
@@ -1529,8 +1510,6 @@ label eins_accept_fBernd:
     
     stop music fadeout 0.4
     
-    #kapitel 2
-    
     jump zwei_anja #Kapitel 2 - Anja
     
 label eins_refuse_fBernd:
@@ -1544,10 +1523,10 @@ label eins_refuse_fBernd:
     bw "Hilf mir!"
     menu:
         "..."
-        "OK.": #doch, schon.
+        "OK.":
             $ friendLove += 10
             jump eins_accept_fBernd
-        "Nein.": #Wirklich nicht.
+        "Nein.":
             $ friendLove -= 10
             b "Tut mir Leid, aber ich denke, ich gehe besser."
             
@@ -1572,7 +1551,7 @@ label eins_refuse_fBernd:
     jump eins_krautchanOffBernd
     
 label eins_krautchanOffBernd:
-    "Ich setze mich vor meinen Rechner." #Krautchan off
+    "Ich setze mich vor meinen Rechner."
     "www.krautchan.net"
     "..."
     "..."

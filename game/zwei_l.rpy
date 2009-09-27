@@ -399,9 +399,6 @@ label zwei_laura_medizinBekommen:
     
     $ renpy.pause(1.5)
     
-    play sound "sounds/stöhn.mp3"
-    #Sollen wir wirklich einen Sound bringen?
-    
     sis "Ha~."
     "Ich bin an ihre rechte Brustwarze gekommen."
     b "Ah...{w}T-t-tut mir l-lei-leid."
