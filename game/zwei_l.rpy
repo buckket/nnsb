@@ -206,9 +206,10 @@ label zwei_laura_medizinBekommen:
     "Sie ist immerhin meine Schwester."
     #entscheidung abhängig von sisLove aaaaaaw :3
     #entscheidung außerdem abhängig davon, ob H-szenen aktiv sind
-    $ sisLove = 70 #test
-    if sisLove < 60 or hentaiEin == False:
-        jump zwei_laura_nichtMedizin
+    #$ sisLove = 70 #test
+  
+    #if sisLove < 60 or hentaiEin == False:
+    jump zwei_laura_nichtMedizin
     "Ja."
     "Sie ist nur meine Schwester."
     "Es ist überhaupt nichts dabei."
