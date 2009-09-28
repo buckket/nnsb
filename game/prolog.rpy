@@ -126,7 +126,6 @@ label prolog:
     "Sie grinst siegessicher."
 
     ma "Ach, komm schon! So schlimm wird es nicht sein."
-    ma "Es ist doch nur für ein paar Wochen."
     ma "Wir bringen deinen Computer nach unten, dann wirst du dich gleich wie zu Hause fühlen"
     
     play music m_bernd

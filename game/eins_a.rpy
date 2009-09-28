@@ -1,4 +1,5 @@
 label eins_treffenBerndf:
+   
     scene bg zuhause_draussen
     with fade
     
@@ -102,7 +103,7 @@ label eins_treffenBerndf:
     
     u"Mädchen" "%(berndName)s?"
     
-    play music m_anja
+    play music m_anja fadein 0.4
     
     "Was...?"
     "Meint sie mich?"
@@ -348,8 +349,6 @@ label eins_treffenBerndf:
     "Sie ist doch sonst nicht so."
     "Sie hat wohl ihre Tage."
     "Ich lass die mal reden."
-    #Bin nicht zufrieden damit, aber sowas in der Art muss da stehen, damit Bernd sich auch direkt wieder vor der Schuld drückt
-    #außerdem wird darauf jetzt angespielt
     sis "Und jetzt denkst du dir gerade, dass ich heute nur einen schlechten Tag hatte."
     "Woher...?"
     sis "Ich kenn dich, %(berndName)s."
@@ -376,7 +375,6 @@ label eins_treffenBerndf:
             
             play music m_heul
             
-            $ tlnote("Notiz: Laura tut mir leid ;_;.")
             b "...ich gebe auch zu, dass ich dich hasse."
         
             show laura crying
