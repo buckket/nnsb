@@ -125,6 +125,10 @@ init -1 python hide:
     style.say_dialogue.size = 24
     style.say_thought.size = 24
     style.say_thought.italic = True
+    
+    style.nvl_window.xpadding = 100
+    style.nvl_window.ypadding = 100
+    style.nvl_dialogue.size = 19
 
     #########################################
     ## This lets you change the placement of the main menu.

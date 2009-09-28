@@ -122,6 +122,7 @@ init:
     $ sis = DynamicCharacter("sisName", color="#ff5555")
     $ bw = DynamicCharacter("wBerndName", color="#00dd00")
     $ yan = DynamicCharacter("yanName", color="#ff00ff")
+    $ nvlc = Character(None, kind=nvl)
         
     #Musik
     $ m_bernd = "music/bernd_theme.ogg" #Draußen, Keller
