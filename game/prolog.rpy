@@ -59,27 +59,27 @@ label prolog:
     scene black
     with gradientTrans
 
-
-    "\"Aufwachen, %(berndName)s!\""
+    "Stimme" "...fstehen!"
     
+    "Eine Stimme weckt mich aus meinem unruhigen Schlaf."
+
     scene bg zuhause_draussen
-    with fade
+    with flash
 
     play music m_bernd
 
-    "Eine Stimme weckte mich aus meinem unruhigen Schlaf."
-    "Das Auto ist stehen geblieben, also sind wir da."
-    b "Sind wir da, Mama?"
-    #AE = Die gleiche Person sagt erst "Wir sind da" und fragt direkt im nächsten Satz "Sind wir da?" <-- Logik?
+    "Das Auto ist stehen geblieben."
+    b "Lass mich schlafen."
     
-    #show mutter
+    #show mutter neutral
     #Bild für Mutter existiert noch nicht
-    #AE
+    #Ginga Ale
     
-    ma "Ja, steh auf! Wir schauen uns die neue Wohnung an!"
+    ma "Nein, steh auf! Wir schauen uns die neue Wohnung an!"
     "Neue Wohnung?"
-    "Langsam kommt die Erinnerung wieder."
-    #AE = Er weiß, dass er da ist, weiß aber nicht mehr, wo er ist...Fasteh ich nicht.
+    b "Sind wir denn schon da?"
+    ma "Ja, und jetzt steh endlich auf."
+
     "Wir sind heute nach Berlin umgezogen."
 
     scene bg zuhause_hausflur
@@ -92,7 +92,7 @@ label prolog:
 
     "Als wir durch die Tür kommen, läuft meine kleine Schwester bereits aufgeregt im Flur umher."
 
-    play music m_laura
+    play music m_laura fadein 0.3
 
     show laura happy
     with dissolve
@@ -103,16 +103,15 @@ label prolog:
     b "Du musst im Keller schlafen."
     "Ich ärgere meine Schwester gerne mit so was."
     
-    show laura happy at right
-    with move
+    #show laura happy at right
+    #with move
     
     #show mutter at left
     #Bild existiert noch nicht
-    #AE
+    #Ginga Ale
 
     ma "Eigentlich..."
     ma "...bist du es, der im Keller schlafen muss, %(berndName)s."
-
 
     stop music fadeout 0.4
 
@@ -148,9 +147,9 @@ label prolog:
     
     play music m_wohnung
     
-    #mutter einblenden
-    #Bild existiert noch nicht
-    #AE
+    #show mutter neutral
+    #with dissolve
+    #Ginga Ale
     
     ma "%(berndName)s! Wie siehst du denn aus?!"
     "Ich schaue an mir herunter."
@@ -169,16 +168,13 @@ label prolog:
         
         "Ja, ich sollte auf sie hören.":
             jump prolog_duschen
+            
         "Nein, die Alte kann mich mal!":
             jump prolog_dreckig
     
 label prolog_duschen:
     $ maLove += 5
     $ sisLove +=5
-    stop music
-    
-    scene black
-    with fade
     
     "Widerwillig gehe ich ins Bad, ziehe mich aus und steige unter die Dusche."
     
@@ -187,14 +183,14 @@ label prolog_duschen:
     
     b "Wieso muss ich überhaupt mit?"
     b "Kann sie die Nachbarn nicht alleine begrüßen?"
-    b "Soll sie doch %(sisName)s mitneh-"
+    b "Soll sie doch %(sisName)s mitneh-{nw}"
     
     play sound "sounds/door_1.wav"
     
     show laura neutral
     with dissolve
     
-    sis "Hey, %(berndName)s. Hast du mein-"
+    sis "Hey, %(berndName)s. Hast du mein-{nw}"
     
     show laura surprised
     with dissolve
@@ -203,10 +199,10 @@ label prolog_duschen:
     "Ich hatte doch abgeschlossen."
     "Sie starrt weiter."
     b "Raus mit dir!"
-    b "Sofort!"
+    b "SOFORT!"
     b "Was fällt dir ein hier einfach reinzuplatzen?!"
     
-    play music m_laura
+    play music m_laura fadein 0.3
     
     show laura happy
     with dissolve
@@ -233,9 +229,9 @@ label prolog_duschen:
     
     play music m_wohnung
     
-    #show mutter
-    #Bild existiert noch nicht
-    #AE
+    #show mutter neutral
+    #with dissolve
+    #Ginga Ale
     
     b "Muss ich wirklich mit?"
     ma "Ja, %(berndName)s!"
@@ -245,10 +241,9 @@ label prolog_duschen:
     
     #show mutter at left
     #with move
-    #Bild existiert noch nicht
-    #AE
+    #Ginga Ale
     
-    show laura happy at right
+    show laura happy #at right
     with dissolve
     
     sis "Ja, Mama!"
@@ -269,12 +264,12 @@ label prolog_duschen:
     
     ma "Los, %(sisName)s, wir gehen und stellen uns den neuen Nachbarn vor."
     
-    show laura neutral at right
+    show laura neutral #at right
     with dissolve
     
     sis "OK!"
     
-    show laura happy at right
+    show laura happy #at right
     with dissolve
     
     sis "Du schuldest mir was, %(berndName)s!"
@@ -287,16 +282,16 @@ label prolog_duschen:
     
     #hide mutter
     #with dissolve
-    #AE
+    #Ginga Ale
     
     "Die Beiden verlassen die Wohnung."
     b "Ich sollte mich auch auf den Weg machen."
     
-    stop music
+    $ Spardose = 0
     
     scene black
     with fade
-    
+      
     jump prolog_Einkaufen
     
 label prolog_dreckig:
@@ -313,10 +308,9 @@ label prolog_dreckig:
     
     #show mutter at left
     #with move
-    #Bild existiert noch nicht
-    #AE
-    
-    show laura happy at right
+    #Ginga Ale
+        
+    show laura happy #at right
     with dissolve
     
     sis "Genau!"
@@ -326,8 +320,7 @@ label prolog_dreckig:
     
     #hide mutter
     #with dissolve
-    #Bild existiert noch nicht
-    #AE
+    #Ginga Ale
     
     "Die Beiden verlassen die Wohnung."
     b "Na toll."
@@ -353,6 +346,8 @@ label prolog_nimmGeld:
     
     $ geld += 25
     
+    $Spardose = 0
+    
     jump prolog_Einkaufen
     
 label prolog_nimmGeldNicht:
@@ -377,13 +372,11 @@ label prolog_suchSpardose:
     b "Na gut, dann mal los."
     "Ich durchsuche am besten zuerst die Kartons unten im Keller."
     
-    stop music
+    play music m_bernd
     
     scene bg keller
     with fade
-    
-    #AE = Musik? BGM?
-    
+        
     b "Hm... in diesem Karton ist sie nicht."
     "Also ein Anderer."
     "Wieso habe ich überhaupt so viele Kartons?"
@@ -397,6 +390,7 @@ label prolog_suchSpardose:
     "Es wird schon spät, ich sollte besser losgehen."
     
     $ geld += 20
+    $ Spardose = 1
     
     jump prolog_Einkaufen
     
@@ -407,31 +401,39 @@ label prolog_nimmGeldDoch:
     $ maLove -= 10
     $ prolog_GeldGenommen = 1
     
+    $Spardose = 0
+    
     jump prolog_Einkaufen
     
 label prolog_Einkaufen:
 
-   play music m_bernd
+    if Spardose == 1:
+        play music m_wohnung
+        pass
+    
+    else:
+        pass
    
-   scene bg zuhause_draussen
-   with fade
    
-   "Ich verlasse das Haus und sehe mich um."
-   "Toll. Ich soll einkaufen gehen und habe keine Ahnung, wo ich bin, oder wo der nächste Supermarkt ist."
-   b "Na super..."
+    scene bg zuhause_draussen
+    with fade
    
-   menu:
-       "Egal. Ich gehe nach..."
+    "Ich verlasse das Haus und sehe mich um."
+    "Toll. Ich soll einkaufen gehen und habe keine Ahnung, wo ich bin, oder wo der nächste Supermarkt ist."
+    b "Na super..."
+   
+    menu:
+        "Egal. Ich gehe nach..."
        
-       "...links.":
-           $ supermarkt = "Aldi"
+        "...links.":
+            $ supermarkt = "Aldi"
            
-           jump prolog_EinkaufenLinks
+            jump prolog_EinkaufenLinks
        
-       "...rechts.":
-           $ supermarkt = "Lidl"
+        "...rechts.":
+            $ supermarkt = "Lidl"
            
-           jump prolog_EinkaufenRechts
+            jump prolog_EinkaufenRechts
            
 label prolog_EinkaufenLinks:
     "Spontan gehe ich nach links."
@@ -453,20 +455,23 @@ label prolog_EinkaufenLinks:
     "Ich habe keine Ahnung."
     "Ich nehme ein Paket Deutsche Markenbutter und mache mich auf den Weg zur Kasse."
    
-    jump prolog_EinkaufenWLAN
-        
+    jump prolog_EinkaufenWLAN       
     
 label prolog_EinkaufenWLAN:
     b "WLAN-Adapter haben die hier sicher nicht..."
     "Obwohl ich nur leise vor mich hin gemurmelt habe, hat mich wohl jemand gehört."
-    u"Verkäuferin" "Doch, haben wir. Zweite Reihe, drittes Regal."
+    
+    show salih neutral
+    with dissolve
+    
+    "Salih" "Doch, haben wir. Zweite Reihe, drittes Regal."
     b "Äh... ja."
     "Tatsächlich finde ich dort einen WLAN-Adapter für nur 15 Euro."
     $ geld -= 15
     "Das muss fürs Erste reichen."
     "Hauptsache raus hier."
     "So schnell es geht gehe ich zur Kasse und bezahle."
-    b "Ich sollte mich wirklich beeil-"
+    b "Ich sollte mich wirklich beeil-{nw}"
     
     stop music
     
@@ -487,9 +492,9 @@ label prolog_EinkaufenWLAN:
     show anja surprised_n
     with dissolve
     
-    play music m_anja
+    play music m_anja fadein 0.3
     
-    u"Mädchen" "Äh... ja."
+    u"Mädchen" "Ähm...ja."
     u"Mädchen" "Alles bestens."
     
     show anja neutral_n
@@ -508,7 +513,7 @@ label prolog_EinkaufenWLAN:
     
     u"Mädchen" "Oh, danke."
     b "..."
-    u"Mädchen" "Tut mir wirklich Leid."
+    u"Mädchen" "Tut mir wirklich leid."
     "Was?"
     "Das war doch meine Schuld."
     b "Ähm... kein Problem."
@@ -527,7 +532,7 @@ label prolog_EinkaufenWLAN:
    
     "Sie dreht sich um und geht."
     "Ich verlasse den Laden."
-    "Mann, war das peinlich."
+    "Man, war das peinlich."
     "Typisch für jemanden wie mich."
     "Ich kann einfach nicht mit Frauen umgehen."
     "Und genau deswegen werde ich auch als Jungfrau sterben."
@@ -575,6 +580,10 @@ label prolog_abend:
     $ renpy.pause(1.5)
     
     "Wie ich diese Stimme vermisst habe..."
+    
+    scene bg keller
+    with fade    
+    
     "www.krautchan.net"
     "Enter."
     
