@@ -46,7 +46,7 @@
 
 label eins:    
     
-    stop music fadeout 1.0 #Kapitel 1
+    stop music fadeout 1.0
 
     scene splash splash_eins
     with gradientTrans
@@ -68,10 +68,10 @@ label eins:
     menu:
         " "
         
-        "OK, ich steh' auf.": #Aufstehen
+        "OK, ich steh' auf.":
             $ maLove += 5
             b "OK, ich steh' auf."
-            "Scheiße, ich hab 'ne Morgenlatte."
+            "Verdammt, ich hab 'ne Morgenlatte."
             "Wenn meine Mutter die sieht, gibt sie wieder 'nen blöden Kommentar ab."
             "Ich muss irgendwie Zeit rausschinden."
             b "Wie spät ist es denn?"
@@ -83,13 +83,13 @@ label eins:
             "Ich setze mich vorsichtig hin und achte darauf, dass die Bettdecke keine verräterischen Falten wirft."
             "Meine Mutter scheint nichts gemerkt zu haben."
         
-        "Lass mich schlafen!": #Schlafen
+        "Lass mich schlafen!":
             $ maLove -= 5
             b "Lass mich schlafen!"
             ma "Komm, %(berndName)s, jetzt stell dich nicht so an."
             b "Lass mich in Ruhe, ich will noch schlafen."
             ma "%(berndName)s, du stehst jetzt gefälligst auf, oder es setzt was."
-            "Scheiße, ich hab 'ne Morgenlatte."
+            "Verdammt, ich hab 'ne Morgenlatte."
             "Wenn meine Mutter die sieht, gibt sie wieder 'nen blöden Kommentar ab."
             "Ich muss irgendwie Zeit rausschinden."
             b "Wie spät ist es denn?"
@@ -99,21 +99,21 @@ label eins:
             "Jetzt ist sie sauer..."
            
     
-    "Genau im richtigen Moment kommt %(sisName)s rein." #Laura kommt rein
+    "Genau im richtigen Moment kommt %(sisName)s rein.{nw}"
     
     play sound "sounds/door_1.wav"
     
     show laura happy
     with dissolve
     
-    play music m_laura
+    play music m_laura fadein 0.3
     
     sis "Guten Morgen, %(berndName)s."
     
     menu:
         " "
         
-        "Guten Morgen, %(sisName)s.": #Guten Morgen
+        "Guten Morgen, %(sisName)s.":
             $ sisLove += 5
             b "Guten Morgen, %(sisName)s."
             "Na toll."
@@ -126,30 +126,36 @@ label eins:
             "Gute Frage."
             b "Wieso willst du das wissen?"
             "Was soll ich schon geträumt haben?"
-            "Was Jemand, der in meinem Alter noch Jungfrau ist, wohl jede Nacht träumt."
+            "Was Jemand, der in meinem Alter noch Jungfrau ist, wohl jede Nacht träumt..."
+            
             show laura neutral
             with dissolve
+            
             sis "Nur so."
-            sis "Man sagt, dass das, was man in der ersten Nacht in einer neuen Wohnung träumt, in Erfüllung geht."
-            "Davon hab' ich noch nie gehört."
-            "Wer denkt sich so was aus?"
-            b "Tja, vielleicht hast du Recht."
             b "Was hast DU denn heute Nacht geträumt?"
+            
             show laura embarrassed
             with dissolve
+            
             sis "Ach..."
             sis "...nichts Besonderes."
             b "Sag schon!"
+            
             show laura happy
             with dissolve
-            sis "Ist doch sowieso nur ein dummer Aberglaube!"
+            
+            sis "Das ist ein Geheimnis."
             "Sie will es mir wohl nicht erzählen..."
             b "Ist es dir peinlich oder warum willst du es mir nicht sagen?"
+            
             show laura surprised_drop
             with dissolve
+            
             sis "Peinlich?"
+            
             show laura embarrassed
             with dissolve
+            
             sis "W- wieso das denn?"
             sis "Was soll ich denn Peinliches träumen?"
             b "Da könnte ich dir einige Beispiele nennen."
@@ -171,7 +177,7 @@ label eins:
             stop music fadeout 0.4
             
             b "Endlich sind sie weg."
-            b "Dann kann ich jetzt ja in Ruhe fap-"
+            b "Dann kann ich jetzt ja in Ruhe fap-{nw}"
             
             play sound "sounds/door_1.wav"
             
@@ -185,10 +191,8 @@ label eins:
             menu:
                 " "
                 
-                "Kondome.": #Kondome
-                
+                "Kondome.":
                     $ mitbringen = "kondome"
-                    
                     b "Kondome."
                     b "Da haben wir beide was von."
                     
@@ -206,12 +210,13 @@ label eins:
                     b "Hey, war doch nur Spaß!"
                     "Sie hört mich schon nicht mehr."
                 
-                "Gummibärchen.": #Gummibärchen
-                    
+                "Gummibärchen.":
                     $ mitbringen = "gummi"
-                    
                     b "Ich hätte mal wieder Lust auf Gummibärchen."
-                    b "Da haben wir auch beide was von."
+                    b "Da haben wir beide was von."
+                    
+                    show laura happy
+                    with dissolve
                     
                     sis "Oh, ja!"
                     sis "Dann bis gleich, %(berndName)s!"
@@ -225,7 +230,7 @@ label eins:
             "So."
             "Jetzt aber."
          
-        "Geh' weg, Nervensäge.": #Geh weg
+        "Geh' weg, Nervensäge.":
             $ sisLove -= 5
             b "Geh' weg, Nervensäge!"
             "Warum müssen die jetzt beide hier rumstehen?"
@@ -250,13 +255,13 @@ label eins:
             
             stop music fadeout 0.4
             
-    "Endlich bin ich allein und kann in Ruhe fappieren." #Bernd fappiert
+    "Endlich bin ich allein und kann in Ruhe fappieren."
     
     play music m_bernd
     
     "Seit einem Monat denke ich immer an das Mädchen aus dem Supermarkt."
     
-    "Warum musste sie auch so geil aussehen?"
+    "Warum musste sie auch so gut aussehen?"
     "Die würde ich auch ungewaschen lecken."
     "(Nur sie müsste sich vorher waschen.)"
     "Ich fange an wild zu fappieren."
@@ -264,7 +269,6 @@ label eins:
     ma "%(berndName)s, wir sind dann jetzt weg."
     ma "Kommst du gleich hoch und frühstückst?"
     b "Ja, ich komme gleich!"
-    
     "Die Wohnungstür fällt ins Schloss."
     "Ob ich sie wohl jemals wiedersehen werde?"
     "Wahrscheinlich wohnt sie ganz hier in der Nähe."
@@ -276,9 +280,9 @@ label eins:
     "Hey..."
     "Das könnte sogar funktionieren."
     "...oder auch nicht."
-    "Ich werde sie wohl niemals wiederseh-"
+    "Ich werde sie wohl niemals wiederseh-{nw}"
     
-    stop music
+    $ renpy.music.set_volume(0.0, .5, channel="music")
     
     scene bg keller_aus
     with flash
@@ -289,10 +293,13 @@ label eins:
     
     scene bg keller_aus
     with damnSlowFlash
-    $ renpy.pause()
+    $ renpy.pause(0.5)
     
     "Ich kam."
     "Erschöpft lasse ich mich auf's Bett fallen."
+    
+    $ renpy.music.set_volume(1.0, .5, channel="music")
+    
     "Ich glaub', ich bin verliebt."
     "Dabei dachte ich immer..."
     "...Bernd braucht keine Liebe."
@@ -300,8 +307,6 @@ label eins:
     play sound "sounds/error.wav"        
     
     "Ein Signalton befördert mich unsanft aus meinen Gedanken."
-    
-    play music m_bernd
     
     "Oh, scheint als wäre ein Download fertig."
     "Ich zieh' mir meine Unterhose hoch und sehe nach."
@@ -316,17 +321,13 @@ label eins:
     "Monatsanfang, frische Unterwäsche."
     "Ich gehe nach oben und ins Bad."
     
-    scene bg badezimmer
+    scene black
     with fade
 
-    play sound "sounds/dusche.wav"
-    
-    $ renpy.pause(8)
-    #evtl. ist das zu lang
-    #muss ich überhaupt ein renpy.pause machen
-    #Stepmania-Bernd
-
     play music m_wohnung
+    
+    scene bg badezimmer
+    with fade    
 
     b "So, fertig geduscht."
 
@@ -339,15 +340,18 @@ label eins:
 
     b "Mal gucken, was so im Kühlschrank ist."
     "Ich öffne die Kühlschranktür."
+    
+    stop music fadeout 0.2
+    
     $ renpy.music.play ("music/rugenwalder.ogg", channel=7, loop=False, fadeout=None, synchro_start=False, fadein=0, tight=False, if_changed=False)
+    $ renpy.music.queue(["sounds/omnomnom.mp3"], loop=True)
+
     b "OH MEIN GOTT!"
     b "Das ist doch...!"
     b "RÜGENWALDER TEEWURST!"
     b "DIE MIT DER MÜHLE!"
     b "Wie viele nehm' ich denn?"
     b "ALLE!"
-    
-    play sound "sounds/omnomnom.mp3"
     
     $ renpy.pause(5)
 
@@ -356,6 +360,7 @@ label eins:
 
     b "Hm..."
     b "Lecker."
+    
     stop music fadeout 0.5
 
     b "So, endlich kann ich Strike with Cheese schauen."
@@ -374,7 +379,7 @@ label eins:
     b "DIE RESET-TASTE..."
     b "WO IST DIE RESET-TASTE!?"
     b "STARTE {w}DAS {w}VERDAMMTE {w}BETRIEBSSYSTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEM!"
-    
+
     show bg keller_aus
     
     $ renpy.pause(3.0)
@@ -384,20 +389,22 @@ label eins:
     $ renpy.pause(2.0)
     
     show bg keller
-    with dissolve
     
     b "Geht doch..."
     "Ich brauche wirklich mal einen neuen PC."
     "Dieses alte Teil ist wirklich zu nichts mehr gut."
     "Andauernd stürzt das Ding ab."
-    #BUTTERGOTT hier noch eine zeile
+    "Erstmal auf Krautchan..."
+
+    scene bg keller_kc
+    
     "Auf /b/ scheint wieder nichts los zu sein."
     "Krautchan saugt in letzter Zeit ziemlich."
     "Warum nur?"
-    "Naja, wenigstens kann ich dann jetzt endlich Strike with Cheese gucken."
+    "Na ja, wenigstens kann ich dann jetzt endlich Strike with Cheese gucken."
     
     play sound "sounds/door_1.wav"
-    #ma und sis kommen nach Hause
+
     "Ich will die Datei öffnen, als ich höre, wie sich die Wohnungstür öffnet." 
     ma "%(berndName)s, wir sind wieder da!"
     "Na toll."
@@ -408,21 +415,21 @@ label eins:
     menu:
         " "
         
-        "Klar!": #Helfen
+        "Klar!":
             $ maLove += 5
             b "OK, bin schon auf dem Weg!"
         
-        "Haha, als ob!": #Als ob
+        "Haha, als ob!":
             $ maLove -= 5
             b "Warum ich?"
-            ma "%(berndName)s!!"
-            ma "Du kommst jetzt sofort hoch und hilfst deiner Schwester beim Tragen!"
+            $ berndNameCaps = berndName.upper()
+            ma "%(berndNameCaps)s!"
+            ma "DU KOMMST JETZT SOFORT HOCH UND HILFST DEINER SCHWESTER BEIM TRAGEN!"
             b "In Ordnung. Ich komme ja schon."
         
-        
-    "Ich stehe auf und gehe nach oben." #Bernd hilft
+    "Ich stehe auf und gehe nach oben."
     
-    stop music fadeout 0.4
+    play music m_wohnung
     
     scene bg zuhause_hausflur
     with fade
@@ -465,11 +472,11 @@ label eins:
             sis "Bitte."
         
         if mitbringen == "kondome":
-            show laura neutral
+
+            show laura blush
             with dissolve
             
             sis "Hier..."
-            
             "Sie hat eine Packung Kondome in der Hand."
             "Hätte nicht gedacht, dass sie das tatsächlich macht."
             
@@ -508,7 +515,9 @@ label eins:
     
     scene bg desktop_a
     with dissolve
-       
+    
+    $ renpy.pause(2.5)
+    
     "Kein Faden."
     "Dann mach' ich halt einen auf..."
     "..."
@@ -519,6 +528,8 @@ label eins:
     "Heutzutage ist eh jede Stadt gleich."
     "Es ist völlig egal, wo man wohnt."
     "Mal sehen, was so los ist auf /b/."
+
+    $ renpy.pause(2.5)
     
     scene bg desktop_b
     with dissolve
@@ -539,9 +550,10 @@ label eins:
     
     stop music fadeout 0.4
     
-    b "Was zum...?!" #Bernds Daten auf KC
+    b "Was zum...?!"
     
     #hier den bildschirm mit dem kc thread einblenden
+    #Stepmania???
     
     "Ungläubig sehe ich auf den Bildschirm."
     b "Das..."
@@ -550,15 +562,19 @@ label eins:
     "Und noch einmal."
     "Kein Zweifel."
     "Das..."
-    b "Das sind ja MEINE Daten!"
+    "Das sind ja MEINE Daten!"
     "Scheiße."
     "Wo hat der die her?"
-    "Ich bin doch gerade erst hier eingezogen?"
+    "Ich bin doch gerade erst hier eingezogen!"
     "Wie kommt der da überhaupt dran?"
     "Das war's."
     "Ich kann eigentlich gleich grillen gehen."
     "In einer Stunde stehen hier bestimmt 20 Bernds vor der Tür."
     b "Was mach ich nur...!?"
+    
+    #hier könnte man noch einbauen, wie Bernd erst verzweifelt auf dem Bett liegt
+    #GSB
+    
     "Zuerst mal meine E-Mails abrufen..."
     
     scene bg desktop_email
@@ -585,14 +601,12 @@ label eins:
     scene bg desktop_hilfe
     with dissolve
     
-    #hier die email einblenden
-    
     "Ich brauche deine Hilfe..."
     "...Krautchan nicht mehr geben."
     "Treffen morgen um 14 Uhr..."
     "...Alexanderplatz."
     
-    b "Verarschen kann ich mich alleine!"
+    b "Schlechter Witz!"
     "Wenn man jemanden mit so was reinlegen will, sollte man sich wenigstens eine halbwegs glaubwürdige Geschichte ausdenken."
     "Bei so einer Nachricht würde doch niemand reagieren."
     "Andererseits..."
@@ -601,8 +615,7 @@ label eins:
     "...und mich lächerlich machen?"
     "Nein, danke!"
     "So tief bin ich noch nicht gesunken."
-    #BUTTERGOTT mehr
-    "Scheiße, ich hab Kopfschmerzen."
+    "Verdammt, ich hab Kopfschmerzen."
     "Ich lege mich besser kurz hin."
     
     scene black
@@ -736,7 +749,6 @@ label eins:
     "Meine Mutter."
     
     show bg keller
-    #with Dissolve(2.0)
     with noisetrans
     
     play music m_bernd
@@ -761,7 +773,7 @@ label eins:
     ma "...hoffe ich."
     "Nichts Ernsthaftes?"
     "Ich kann meine Hand nicht bewegen."
-    "Naja, ich kann mit beiden Händen fappieren, also ist es so schlimm nicht."
+    "Na ja, ich kann mit beiden Händen fappieren, also ist es so schlimm nicht."
     ma "Ich hab' dir Pflaster drauf gemacht."
     ma "In ein paar Tagen ist das wieder ok."
     ma "Sei froh, dass es nur die Hand ist und kein Auge."
@@ -784,30 +796,37 @@ label eins:
     "Das wird meine Mutter mit dem Essen sein."
     "Ich setze mich aufrecht auf meine Matratze."
     "Überraschenderweise ist es %(sisName)s, die das Zimmer betritt."
+    
     show laura neutral
     with dissolve
+    
     b "Was machst du denn hier?"
     b "Müsstest du nicht schon längst schlafen?"
     "Sie setzt sich neben mich auf die Matratze."
+    
     show laura embarrassed
     with dissolve
+    
     sis "Aber..."
     sis "...ich hab' mir solche Sorgen um dich gemacht, dass ich nicht schlafen konnte."
     b "Dummkopf."
     b "Um mich musst du dir keine Sorgen machen."
     b "Ich halte so was doch aus."
+    
     show laura sad
     with dissolve
+    
     sis "Aber..."
     sis "...ich hatte so Angst, dass dir was Schlimmes passiert ist und..."
     "Oh Mann."
     "Gleich heult sie los."
+    
     show laura crying
     with dissolve
+    
     sis "...versprich mir, dass du so was nie wieder machst!"
     "Wenn meine Mutter jetzt reinkommt, glaubt sie wieder, ich wäre Schuld."
-    "Naja..."
-    "...bin ich ja auch indirekt."
+    "Eigentlich...{w}bin ich das ja auch indirekt."
     b "Hör auf zu weinen."
     b "Dafür bist du doch schon viel zu alt."
     sis "Versprich es mir erst!"
@@ -826,21 +845,27 @@ label eins:
     b "Ja."
     b "Ganz ehrlich."
     "Sie legt ihren Kopf an meine Schulter."
+    
     show laura sad_smile
     with dissolve
+    
     sis "Ich hab dich gern, %(berndName)s."
     "Hey!"
     "So viel körperliche Nähe bin ich nicht gewohnt!"
-    b "D- Du solltest jetzt wirklich schlafen gehen."
+    b "D-Du solltest jetzt wirklich schlafen gehen."
     b "Ich brauche meine Ruhe."
+    
     show laura happy
     with dissolve
+    
     sis "OK!"
     sis "Gute Nacht, %(berndName)s!"
     b "Schlaf gut."
     "Sie dreht sich um und läuft die Treppe nach oben."
+    
     hide laura happy
     with dissolve
+    
     "Manchmal ist sie total nervig und manchmal total nett."
     "Ich verstehe sie einfach nicht."
     "Sind alle kleinen Schwestern so?"
@@ -893,8 +918,6 @@ label eins:
     scene bg keller
     with fade
    
-    play music m_bernd
-   
     "Als ich aufwache, sehe ich auf die Uhr."
     "Es ist bereits 13 Uhr."
     "Ich habe lange geschlafen."
@@ -923,12 +946,11 @@ label eins:
     
     menu:
         " "
-        "Ich gehe hin.": #Treffen
+        "Ich gehe hin.":
             "Was hab ich schon zu verlieren...?"
             "Ich gehe einfach hin."
             "Ich sehe auf die Uhr."
             b "Noch 45 Minuten..."
-            stop music fadeout 0.4
             
             play sound "sounds/door_1.wav"
             
@@ -955,15 +977,16 @@ label eins:
             
             menu:
                 " "
-                "OK. Ich gehe.": #Laura abholen
+                "OK. Ich gehe.":
                     b "OK."
                     b "Ich geh' ja schon."
                     ma "Gut."
                     ma "Beeil dich."
                     "Ich packe alles zusammen und gehe nach oben."
+                    
                     jump eins_sisAbholen
                     
-                "Nein, ich gehe nicht.": #Treffen mit Anja
+                "Nein, ich gehe nicht.":
                     b "Nein."
                     b "Ich habe doch gesagt, dass ich eine Verabredung habe."
                     ma "Du willst doch nur deine Schwester nicht abholen!"
@@ -984,8 +1007,8 @@ label eins:
                     
                     jump eins_treffenBerndf
                     
-        "Ich bin doch nicht blöd.": #nicht Treffen
-            "Ha, wieso sollte ich da hingehen?"
+        "Ich bin doch nicht blöd.":
+            "Wieso sollte ich da hingehen?"
             b "Ich hab wirklich Besseres zu tun."
             
             play sound "sounds/door_1.wav"
@@ -996,7 +1019,7 @@ label eins:
             ma "Ich möchte, dass du %(sisName)s von der Schule abholst, %(berndName)s."
             b "Muss ich?"
             ma "Ja."
-            "Scheiße."
+            "Verdammt."
             b "Ich bin aber verletzt."
             ma "Deine Hand?"
             ma "Das wird dich nicht daran hindern deine Schwester abzuholen."
@@ -1007,4 +1030,5 @@ label eins:
             ma "Gut."
             ma "Beeil dich."
             "Ich packe alles zusammen und gehe nach oben."
-            jump eins_sisAbholen #eins_laura.rpy
+           
+            jump eins_sisAbholen

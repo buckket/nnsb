@@ -356,7 +356,7 @@ label prolog_nimmGeldNicht:
     "Vielleicht kann ich ja noch woanders etwas auftreiben."
     "Ich denke nach."
     "Vielleicht ist noch etwas in meiner Spardose."
-    "Aber die unter den ganzen Sachen zu finden dürfte nicht einfachen werden."
+    "Aber die unter den ganzen Sachen zu finden dürfte nicht einfach werden."
     "In welchem Karton könnte sie sein..?"
     
     menu:
