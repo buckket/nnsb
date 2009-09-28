@@ -632,7 +632,7 @@ label anja_besuch:
     "Sie will mich nur ausnutzen."
     "Typisch Frau."
 
-    show yasmin embarassed at left
+    show yasmin embarrassed at left
     with dissolve
 
     u"Mädchen" "Oh, hi."

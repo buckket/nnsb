@@ -1654,7 +1654,7 @@ label yasmin_zwei_derMorgenDanach:
     "%(yanName)s sitzt neben mir im Bett."
     "Wieso sitzt sie da?"
     
-    show yasmin embarrased
+    show yasmin embarrassed
     with dissolve
     
     yan "Aber..."
@@ -1697,7 +1697,7 @@ label yasmin_zwei_derMorgenDanach:
     yan "Ich müsste eben mal... nach oben."
     "Hä?"
     b "Was denn?"
-    show yasmin embarrased
+    show yasmin embarrassed
     with dissolve
     yan "Naja, ich muss eben mal... {w=1}für kleine Mädchen."
     "Oh, jetzt verstehe ich, was sie meint."
@@ -1864,7 +1864,7 @@ label yasmin_zwei_derMorgenDanach:
     
     show laura neutral at center
     with move
-    show yasmin embarrased at rightedge
+    show yasmin embarrassed at rightedge
     with fastMove
     
     "Blitzschnell weicht sie aus und versteckt sich hinter meinem Rücken."
@@ -1905,7 +1905,7 @@ label yasmin_zwei_derMorgenDanach:
     "Sie hat es völlig falsch verstanden."
     "Aber Hauptsache sie ist weg."
     
-    show yasmin embarrased at center
+    show yasmin embarrassed at center
     with move
     
     yan "...ich sollte lieber gehen."
