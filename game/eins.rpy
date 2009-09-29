@@ -913,7 +913,7 @@ label eins:
     "...Tag..."
     "..."
     
-    "Später..."
+    "Am nächsten Tag..."
     
     scene bg keller
     with fade

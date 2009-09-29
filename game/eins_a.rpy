@@ -1289,8 +1289,7 @@ label eins_streit_ohne_aussprache:
     
     jump eins_streit_tag_darauf
     
-    
-jump eins_streit_nicht:
+label eins_streit_nicht:
     
     play sound "sounds/door_1.wav"
     
@@ -1308,7 +1307,7 @@ jump eins_streit_nicht:
     show sis pissed
     with dissolve
     
-    sis "Aber...{nw}
+    sis "Aber...{nw}"
     b "Kein \"Aber\". Ich sagte, du sollst es behalten."
     
     show sis mad
