@@ -10,8 +10,12 @@ label zwei_laura_anfang:
     "Wenn ich morgen früh aufwache, ist alles wieder so wie früher."
     "Mit diesem Gedanken schlafe ich ein."
     
+    $ renpy.music.set_volume(0.0, .5, channel="music")
+    
     scene black
     with fade
+    
+    $ renpy.music.set_volume(1.0, .5, channel="music")
     
     "Am nächsten Morgen war Krautchan noch immer nicht zu erreichen."
     
@@ -32,6 +36,8 @@ label zwei_laura_anfang:
     
     scene bg kueche
     with fade
+    
+    play music m_wohnung
     
     "Meine Mutter sitzt natürlich schon in der Küche und trinkt ihren Kaffee."
     ma "So früh schon wach, %(berndName)s?"
@@ -73,6 +79,7 @@ label zwei_laura_anfang:
             ma "Gut."
             ma "Die Tasse steht da."
             jump zwei_laura_tee
+       
         "Wieso sollte ich denn?":
             $ sisLove -= 10
             b "Wieso sollte ich denn?"
@@ -87,6 +94,8 @@ label zwei_laura_tee:
     
     scene bg lauraszimmer
     with fade
+    
+    #HIER FEHLT NOCH BGM
     
     b "Hey, %(sisName)s."
     b "Bist du wach?"
@@ -152,20 +161,25 @@ label zwei_laura_tee:
     "Krautchan ist sicher schon wieder online."
     "Aber vorher gehe ich in die Küche und hole mir meine andere Scheibe Toastbrot."
     
+    play music m_wohnung fadein 0.6
+    
     jump zwei_laura_medizinBekommen
    
    
 label zwei_laura_keinTee:
     "Ich schnappe mir mein zweites Toastbrot und gehe wieder runter."
     
+    $ renpy.music.set_volume(0.0, .5, channel="music")
+    
     scene bg keller
     with fade
     
     "Krautchan ist immer noch off."
     "Langsam wird mir das zu bunt."
-    #hier brauch ich noch text <3
     "Irgendwie habe ich noch immer Hunger..."
     "...ich gehe mir lieber noch was holen."
+    
+    $ renpy.music.set_volume(1.0, .5, channel="music")
     
     jump zwei_laura_medizinBekommen
 
@@ -225,6 +239,8 @@ label zwei_laura_medizinBekommen:
 
     scene bg lauraszimmer
     with gradientTransReverse
+    
+    #HIER FEHLT NOCH BGM
     
     b "Bist du wach, %(sisName)s?"
     #kranke laura
@@ -477,6 +493,8 @@ label zwei_laura_nichtMedizin:
     scene bg keller_aus
     with fade
     
+    play music m_bernd
+    
     "...ob ich es hätte machen sollen?"
     "Nein."
     "Das hätte ich sowieso nicht durchgezogen."
@@ -496,6 +514,8 @@ label zwei_laura_nichtMedizin:
     
     scene bg wohnung_innen
     with fade
+    
+    play music m_wohnung
     
     "Vielleicht sollte ich doch mal bei Laura reinschauen..."
     "..."
@@ -546,7 +566,6 @@ label zwei_laura_nichtMedizin:
     
     
 #nun noch ein Event mit Bernd und Laura und dann kommt general-chan zu Besuch! ^_^
-
 
 
 label zwei_laura_medizinHolen:
@@ -619,6 +638,8 @@ label zwei_laura_medizinHolen:
     scene bg apotheke_aussen
     with fade
     
+    #HIER FEHLT NOCH BGM
+    
     "Ah, da ist die Apotheke ja."
     "Zur Sicherheit greife ich noch einmal nach dem Rezept."
     "Es ist da."
@@ -663,6 +684,8 @@ label zwei_laura_medizinHolen:
     "Salih" "Vielen Dank und gute Besserung!"
     b "Ja ja."
     "Ich verlasse die Apotheke."
+
+    stop music fadeout 0.4
 
     scene bg apotheke_aussen
     with fade

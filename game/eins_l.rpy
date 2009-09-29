@@ -1,5 +1,6 @@
-    
 label eins_sisAbholen:
+
+    stop music fadeout 0.3
 
     scene bg zuhause_hausflur
     with fade
@@ -11,7 +12,7 @@ label eins_sisAbholen:
     scene bg schulweg1
     with fade
     
-    play music m_schulweg
+    play music m_schulweg fadein 0.2
     
     "Noch zwanzig Minuten, bis die Schule vorbei ist und bis ich da bin brauche ich noch knapp eine viertel Stunde."
     "Gut, dass meine Mutter mir rechtzeitig Bescheid gesagt hat, sonst wäre ich nie pünktlich gekommen."
@@ -32,7 +33,7 @@ label eins_sisAbholen:
     scene bg donerladen
     with fade
     
-    play music m_donerladen
+    play music m_donerladen fadein 0.3
     
     show salih neutral
     with dissolve
@@ -85,7 +86,7 @@ label eins_sisAbholen:
     scene bg schulweg2
     with fade
     
-    play music m_schulweg
+    play music m_schulweg fadein 0.2
     
     b "OH SCHEI-"
     b "In 5 Minuten ist die Schule vorbei."
@@ -118,6 +119,8 @@ label eins_sisAbholen:
     with fade
     
     stop music fadeout 0.4
+    
+    #HIER FEHLT NOCH BGM
     
     "Schon zehn Minuten zu spät."
     "Sie wird mich umbringen wollen."
@@ -172,7 +175,7 @@ label eins_sisAbholen:
     scene bg schulweg1
     with fade
     
-    play music m_schulweg
+    play music m_schulweg fadein 0.2
     
     "Irgendwo war hier doch ein Eiswagen..."
     "Ah! Da ist er."
@@ -215,7 +218,7 @@ label eins_sisAbholen:
     sis "Danke, %(berndName)s."
     b "Hey, ich habs doch versprochen."
     sis "Das tust du oft."
-    sis "Aber wenn du mal ein Versprechen hältst, ist das etwas besonderes."
+    sis "Aber wenn du mal ein Versprechen hältst, ist das etwas Besonderes."
     sis "...apropos Versprechen."
     b "Hm?"
     "Was will sie nun schon wieder?"
@@ -234,9 +237,11 @@ label eins_sisAbholen:
         "OK, ich verspreche es.":
             b "In Ordnung."
             b "Ich verspreche es."
+           
             show laura happy
             with dissolve
-            sis "Juhu!"
+            
+            sis "JUCHU!"
             sis "Ich werde auf dich warten, %(berndName)s, aber nicht lange."
             sis "Wehe dir, wenn du zu spät kommst."
             show laura neutral
@@ -248,14 +253,15 @@ label eins_sisAbholen:
             sis "Eben."
             "Was soll das heißen?"
             sis "Los, beeilen wir uns."
+            
             jump eins_sisEinkaufen
             
         "Nein, ich kann nicht.":
             b "Ich weiß nicht, ob ich morgen Zeit habe."
             
-    show laura mad
+    show laura pissed
     with dissolve
-    #hier wird sie sauer
+
     sis "%(berndName)s..."
     sis "...wieso kannst du nicht ein einziges Mal wirklich nett zu mir sein?"
     b "Ich kann doch nichts dafür, dass..."
@@ -281,13 +287,13 @@ label eins_sisAbholen:
     b "..."
     b "Das stimmt doch gar nicht..."
     sis "Du willst es also nicht zugeben..."
-    #das ganze endet damit, dass sie ihm sagt...
-    sis "%(berndName)s..."
-    sis "...ich hasse dich!"
-    #oder sowas ähnliches? GSB FRAGEN <3
-    #und dann abhaut
+    sis "%(berndName)s...{w}ich hasse dich!"
+    
+    play music m_heul
+    
     hide laura mad
     with dissolve
+    
     "Sie dreht sich um und rennt los."
     b "Warte!"
     "...ich kann sie sowieso nicht einholen."
@@ -784,7 +790,7 @@ label eins_sisEinkaufen:
     scene bg supermarkt
     with fade
     
-    play music m_shop
+    play music m_shop fadein 0.3
     
     b "Was sollen wir nochmal einkaufen?"
     
@@ -862,13 +868,13 @@ label eins_sisEinkaufen:
     scene black
     with fade
     
+    stop music fadeout 1.0
+    
     jump eins_laura_hausaufgabenHelfen
 
 label eins_laura_hausaufgabenHelfen: #Hausaufgaben helfen
     "Eine halbe Stunde später..."
     b "Endlich wieder zu Hause."
-    
-    stop music fadeout 1.0
     
     scene bg keller
     with fade
@@ -966,8 +972,12 @@ label eins_laura_hausaufgabenHelfen: #Hausaufgaben helfen
     "Nachdem ich mich kurz durch alle wichtigen Boards gelesen habe, beschließe ich, dass es Schlafenszeit ist."
     "Morgen steht mir wieder ein normaler, langweiliger Tag bevor..."
     
+    $ renpy.music.set_volume(0.0, .5, channel="music")
+
     scene black
     with fade
+    
+    $ renpy.music.set_volume(1.0, .5, channel="music")
     
     #Am nächsten Morgen
     "Am nächsten Morgen..."
@@ -993,11 +1003,13 @@ label eins_laura_hausaufgabenHelfen: #Hausaufgaben helfen
     b "Ich hab' es ihr versprochen."
     ma "Na dann beeil' dich mal lieber."
     ma "Du weißt, dass sie es hasst, wenn man zu spät kommt."
-    b "Jaja."
+    b "Ja ja."
     "Hektisch ziehe ich mich an, packe alles ein und mache mich auf den Weg."
     
     scene bg zuhause_draussen
     with fade
+    
+    play music m_wohnung
     
     "Jetzt muss ich mich aber beeilen."
     "Der Weg ist ziemlich weit, vor allem zu Fuß, und viel Zeit habe ich nicht mehr."
@@ -1025,6 +1037,7 @@ label eins_laura_hausaufgabenHelfen: #Hausaufgaben helfen
     
     if sisFrage is not None:
         jump eins_laura_nachhauseweg
+    
     else:
         jump eins_laura_globalisierung
 
@@ -1034,6 +1047,8 @@ label eins_laura_nachhauseweg:
     show laura surprised
     with dissolve
     
+    play music m_laura fadein 0.3
+    
     sis "...was machst du denn hier?"
     b "Hast du es vergessen?"
     b "Ich hab dir versprochen, dass ich dich abhole."
@@ -1041,7 +1056,7 @@ label eins_laura_nachhauseweg:
     
     show laura happy
     with dissolve
-    
+        
     sis "Wow... ich bin echt überrascht!"
     sis "Ich hätte nicht gedacht, dass du wirklich kommst."
     sis "Du bist ja sonst immer so unzuverlässig."
@@ -1127,6 +1142,8 @@ label eins_laura_nachhauseweg:
         
     scene bg schulweg2
     with fade
+    
+    play music m_wohnung fadein 0.2
     
     "Es ist so ruhig."
     "Sie redet doch sonst über alles Mögliche."
@@ -1216,6 +1233,8 @@ label eins_laura_globalisierung:
     scene bg schule_innen_1
     with fade
     
+    #HIER FEHLT NOCH BGM
+    
     "Hm..."
     "Ich war hier noch nie drin."
     "Wo ist ihr Klassenraum?"
@@ -1235,7 +1254,9 @@ label eins_laura_globalisierung:
     "Ihr Lehrer?"
     "Ich gehe hin."
     
-    #laura weinend
+    show laura crying #at left
+    with dissolve
+    
     #lehrer wütend
     #with dissolve
     
@@ -1250,8 +1271,8 @@ label eins_laura_globalisierung:
     "Lehrer" "Wer sind Sie denn?"
     "Oh, er hat mich bemerkt..."
     
-    #laura überrascht
-    #with dissolve
+    show laura surprised #at left
+    with dissolve
     
     sis "%(berndName)s!"
     sis "Was machst du denn hier?"
@@ -1264,14 +1285,14 @@ label eins_laura_globalisierung:
     "Lehrer" "Oh."
     b "Ich bin hier um sie abzuholen."
     
-    #laura happy
-    #with dissolve
+    show laura happy #at left
+    with dissolve
     
     "Lehrer" "Wie passend."
     "Lehrer" "Wir haben grade über Sie gesprochen."
     
-    #laura traurig
-    #with dissolve
+    show laura sad #at left
+    with dissolve
     
     b "Das habe ich mitbekommen."
     "Lehrer" "Dann wissen Sie, worum es geht?"
@@ -1294,8 +1315,8 @@ label eins_laura_globalisierung:
     "Lehrer" "Ich denke icht, dass \"Globalisierung\" eine akzeptable Antwort ist, und habe Grund zur Annahme, dass Sie versucht haben, Ihre Schwester reinzulegen."
     "Lehrer" "Das verurteile ich."
     
-    #laura überrascht
-    #with dissolve
+    show laura surprised #at left
+    with dissolve
     
     sis "Aber..."
     b "Lass mich das regeln."
@@ -1315,7 +1336,7 @@ label eins_laura_globalisierung:
     "Lehrer" "Tut mir Leid, aber ich unterrichte Wirtschaftslehre nicht."
     "Perfekt."
     "Ich habe seinen Schwachpunkt entdeckt."
-    "Lehrer mögen zu ihrem Spezialgebiet eine Menge wissen, aber sobald man sie auf etwas anderes anspricht haben sie keine Ahnung."
+    "Lehrer mögen zu ihrem Spezialgebiet eine Menge wissen, aber sobald man sie auf etwas anderes anspricht, haben sie keine Ahnung."
     "Nicht, dass ich Ahnung von Wirtschaft hätte, aber das muss er ja nicht wissen."
     b "Nun... lassen Sie mich erklären."
     "Lehrer" "Ich sehe nicht, wie uns das in dieser Situation weiterbringen könnte."
@@ -1355,15 +1376,19 @@ label eins_laura_globalisierung:
     "Lehrer" "Ich werde dem auf jeden Fall nachgehen!"
     "Lehrer" "Wenn Sie mich nun entschuldigen würden?"
     "Er dreht sich um und geht in einen Klassenraum."
+    
+    #hide lehrer
+    #with dissolve
+    
+    show laura happy
+    with move
+    
     sis "..."
     sis "Wow."
     "Dem hab ich es gezeigt."
     sis "Wie hast du das gemacht, %(berndName)s?"
     "Tja... wie habe ich das gemacht?"
     b "Gut, würde ich behaupten."
-    
-    #laura happy
-    #with dissolve
     sis "..."
     sis "Wow."
     "Dem hab ich es gezeigt."
@@ -1386,6 +1411,8 @@ label eins_laura_globalisierung:
 
 label eins_laura_wiederZuhause:
 
+    stop music fadeout 0.4
+
     scene black
     with fade
     
@@ -1394,7 +1421,7 @@ label eins_laura_wiederZuhause:
     scene bg keller
     with fade
     
-    stop music fadeout 0.4
+    play music m_bernd    
     
     b "Jetzt erstmal auf Krautchan."
     "Da war ich lange genug nicht mehr."
