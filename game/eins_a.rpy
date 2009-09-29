@@ -792,6 +792,7 @@ label eins_treffenBerndf:
                     
                     
                         "Nein.":
+                            $ kaugummi = 0
                             "Nein."
                             "Ich sollte es sein lassen."
                             "Warum sollte ich derjenige sein, der nachgibt?"

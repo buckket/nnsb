@@ -1187,7 +1187,7 @@ label a_bei_b:
             with fade
         
         "Lass mich in Ruhe.":
-            $ malove -=5
+            $ maLove -=5
             b "Kannst du mich nicht einmal damit in Ruhe lassen?"
             ma "Jetzt sei doch nicht so, %(berndName)s."
             "Ich nehme mir mein Essen und gehe wortlos wieder zurück in meinen Keller."
