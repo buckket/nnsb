@@ -831,7 +831,7 @@ label eins_treffenBerndf:
             sis "Ja."
             b "Aber ich bin mir sicher, dass %(supermarkt)s nun auch...{w}ähm...{w}ähm...{w}Gummibärchen hat!"
 
-            show laura surprised_drop
+            show laura surprised
             with dissolve
 
             sis "Vielleicht sollte ich doch mitgehen."
@@ -849,7 +849,6 @@ label eins_treffenBerndf:
             b "Ich hab's ja verstanden."
             "Typisch %(sisName)s."
             "Sie ist ja soooo berechenbar."
-            "Meine kleine Tsundere."
             b "Wir sollten uns mit dem Einkaufen beeilen."
             sis "OK."
   
@@ -871,12 +870,11 @@ label eins_treffenBerndf:
             b "Keine Ahnung!"
             b "Ich dachte, du wüsstest das."
             
-            show laura mad
-            with dissolve
+            #show laura mad
+            #with dissolve
             
             sis "Großartig..."
             sis "Dich kann man auch für Nichts gebrauchen."
-            "*tsun tsun*"
             b "Naja..."
             b "Kaufen wir halt Butter und Rügenwalder."   
             sis "Sicher, dass wir nicht mehr brauchen?"
@@ -895,7 +893,7 @@ label eins_treffenBerndf:
             with dissolve
             
             sis "Hallo Mama, ich bin's."
-            sis "Wir haben vergessen dich zu fragen, was wir einkaufen sollen."
+            sis "Wir wissen nicht, was wir einkaufen sollen."
             sis "..."
             sis "OK."
             sis "Sonst noch was?"
@@ -910,7 +908,7 @@ label eins_treffenBerndf:
             sis "Sie sagt, dass wir auch noch Milch und Brot brauchen."
             "Also Milch, Butter, Brot und Rügenwalder."
             b "OK."
-            b "Dann besorgen wir das schnell und danach gehen wir nach Hause."
+            b "Dann besorgen wir das schnell und gehen dann nach Hause."
             sis "Ja."
           
             hide laura mad
@@ -930,7 +928,7 @@ label eins_treffenBerndf:
             b "Willst du Kaugummis?"
             sis "Nein."
             b "Wirklich nicht?"
-            sis "Nein."
+            sis "Nein!"
             b "Sicher?"
             sis "Ja."
             b "Nun stell dich nicht so an."
@@ -974,8 +972,10 @@ label eins_treffenBerndf:
     play music m_bernd
     
     b "Mal schauen, ob der Faden mit meinen Daten noch auf /b/ ist..."
+   
     scene bg keller_kc
     with dissolve
+   
     "..."
     b "Nichts."
     b "Glück gehabt."
@@ -984,6 +984,9 @@ label eins_treffenBerndf:
     
     if eins_streit in (1,2):
         jump eins_streit_mit_aussprache
+        
+    elif eins_streit == 5:
+        jump eins_streit_nicht
     
     else:
         jump eins_streit_ohne_aussprache    
@@ -1223,7 +1226,7 @@ label eins_streit_ohne_aussprache:
     "!"
     "Sie hat die Tür geöffnet."
     sis "Hm?"
-    b "{size=6}E-e-es tut...{/size}"
+    b "{size=8}E-e-es tut...{/size}"
     sis "Was sagst du da?"
     sis "Ich kann dich nicht verstehen."
     b "{size=10}T-tut mir l-...{/size}"
@@ -1285,8 +1288,45 @@ label eins_streit_ohne_aussprache:
     stop music
     
     jump eins_streit_tag_darauf
-
-
+    
+    
+jump eins_streit_nicht:
+    
+    play sound "sounds/door_1.wav"
+    
+    show laura neutral
+    with dissolve
+    
+    sis "%(berndName)s?"
+    "Was will die denn jetzt schon wieder?."
+    b "Ja?" 
+    sis "Hier. {w}Das Geld."
+    b "Welches Geld?"
+    sis "Das Geld für die Kaugummis? {w}Nimm es{nw}"
+    b "Behalt' es. Ich sagte, ich schenke dir die Kaugummis."
+    
+    show sis pissed
+    with dissolve
+    
+    sis "Aber...{nw}
+    b "Kein \"Aber\". Ich sagte, du sollst es behalten."
+    
+    show sis mad
+    with dissolve
+    
+    sis "Du bist wirklich unmöglich."
+    
+    "Sie geht wieder aus dem Keller und knallt die Türe zu."
+    
+    hide laura pissed
+    with dissolve
+    
+    "Was war das denn jetzt gerade für eine Aktion?"
+    "Na ja, was soll's."
+    "Ich lauer noch ein wenig auf Krautchan und gehe dann schlafen."
+    
+    jump eins_streit_tag_darauf
+    
 label eins_streit_tag_darauf:
     
     scene black
