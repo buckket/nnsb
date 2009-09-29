@@ -61,7 +61,10 @@ label zwei_yasmin_Anfang:
     "Es wird schon nichts Schlimmes passieren..."
     "Hier unten ist es so dunkel, dass er sowieso nicht reingucken kann."
     "Mit diesem Gedanken schlafe ich ein."
-    
+
+    jump zwei_yasmin_lauraTraum
+
+label zwei_yasmin_lauraTraum:    
     scene black
     with fade
 
@@ -155,43 +158,45 @@ label zwei_yasmin_Anfang:
             sis "Schade."
             "Sie kommt noch näher."
             
-            show laura knife
-            with dissolve
+            #ab hier nicht in demo
+            
+            #show laura knife
+            #with dissolve
             #Bild existiert noch nicht
             
-            "EIN MESSER?"
-            sis "Dann habe ich wohl keine andere Wahl."
-            "Sie holt weit aus..."
+            #"EIN MESSER?"
+            #sis "Dann habe ich wohl keine andere Wahl."
+            #"Sie holt weit aus..."
             #-----------------------------------------------
-            if persistent.wieherbuhSprache is 0:
-                "Leb wohl, schnöde Welt."
-            if persistent.wieherbuhSprache is 1:
-                "Sayonara, asamashii Sekai."
-            if persistent.wieherbuhSprache is 2:
-                "{=jp}さよなら、 浅ましい 世界。{/=jp}"
+            #if persistent.wieherbuhSprache is 0:
+            #    "Leb wohl, schnöde Welt."
+            #if persistent.wieherbuhSprache is 1:
+            #    "Sayonara, asamashii Sekai."
+            #if persistent.wieherbuhSprache is 2:
+            #    "{=jp}さよなら、 浅ましい 世界。{/=jp}"
             #-----------------------------------------------
-            "Ich schließe meine Augen und lass es auf mich zukommen."
+            #"Ich schließe meine Augen und lass es auf mich zukommen."
             
-            scene black
-            with dissolve
+            #scene black
+            #with dissolve
             
             #play sound "sounds/iit.wav"
             #Sound existiert noch nicht 
             #nicht mit dem Sound von unten verwechseln
             #Bernd wird hier von Laura befreit           
 
-            "Es tut gar nicht weh."
-            "Und es ist dunkel."
-            "Bin ich etwa schon in der Hölle?"
+            #"Es tut gar nicht weh."
+            #"Und es ist dunkel."
+            #"Bin ich etwa schon in der Hölle?"
             
-            sis "Du kannst aufstehen."
-            "%(sisName)s?"
-            sis "Mach die Augen auf."
-            "Langsam öffne ich meine Augen."
+            #sis "Du kannst aufstehen."
+            #"%(sisName)s?"
+            #sis "Mach die Augen auf."
+            #"Langsam öffne ich meine Augen."
             
-            sis "Leb wohl."
+            #sis "Leb wohl."
                         
-            play music m_kanashimi
+            #play music m_kanashimi
             
             #play sound "sounds/iit.wav"
             #Sound existiert noch nicht
@@ -199,13 +204,65 @@ label zwei_yasmin_Anfang:
             #Sound, wie Laura das Messer in Bernd hineinrammt
             #wer die letzte Folge von School Days gesehen hat, weiß, welchen Sound ich meine
             
-            sis "Du Mistkerl."
-            sis "Du denkst doch nur daran, {w}dich selbst glücklich zu machen!"
-            $ sisNameKurz = stringShorten(sisName,3)
-            b "%(sisNameKurz)s..."
-            $ sisNameEnde = stringEnde(sisName,2)
-            b "...%(sisNameEnde)s..."
-
+            #sis "Du Mistkerl."
+            #sis "Du denkst doch nur daran, {w}dich selbst glücklich zu machen!"
+            #$ sisNameKurz = stringShorten(sisName,3)
+            #b "%(sisNameKurz)s..."
+            #$ sisNameEnde = stringEnde(sisName,2)
+            #b "...%(sisNameEnde)s..."
+            
+            #BIS HIER
+            #demoversion
+            
+            "Was hat sie vor?"
+            "In diesem Moment..."
+            
+            scene black
+            show splash slash_horizontal
+            with flash
+            
+            scene black
+            with fade
+            "Eine einzige Bewegung... {w}viel zu schnell... {w}ich kann ihr nicht folgen."
+            
+            show splash slash_vertikal
+            with flash
+            
+            scene black
+            with fade
+            
+            "Ein stechender Schmerz in der Brust."
+            
+            show splash blood_blur
+            with None
+            
+            scene black
+            show splash blood
+            with dissolve
+            
+            "Blut?"
+            "...mein Blut?"
+            "Mir ist plötzlich so kalt..."
+            "...ich beginne zu verstehen."
+            
+            show splash blood_blur
+            with dissolve
+            
+            show splash blood
+            with dissolve
+            
+            "Meine Kraft schwindet langsam."
+            "Viel Zeit bleibt nicht mehr."
+            
+            scene black
+            with dissolve
+            
+            "Ich schließe die Augen und falle."
+            
+            $renpy.pause(2.0)
+            
+            
+            #ende demoversion
     stop music
     
     scene bg keller_aus
