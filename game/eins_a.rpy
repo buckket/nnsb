@@ -63,7 +63,7 @@ label eins_treffenBerndf:
     "Haben die kein Zuhause?"
     "Was hier teilweise für Gestalten rumlaufen..."
     "Schrecklich."
-    "Was wollen die alle h-"
+    "Was wollen die alle h-{nw}"
     
     show anja neutral
     with flash
@@ -191,7 +191,7 @@ label eins_treffenBerndf:
     bw "Wenn wir nichts unternehmen wird Krautchan untergehen!"
     "Was labert die denn da?"
     "Sind ALLE Frauen verrückt im Kopf?"
-    b "Was redest du v-"
+    b "Was redest du v-{nw}"
     
     show anja surprised
     with dissolve
@@ -335,7 +335,7 @@ label eins_treffenBerndf:
     sis "Wenn du wenigstens jetzt ehrlich zu mir wärst..."
     sis "...aber du versuchst dich lieber herauszureden."    
     b "Aber..."
-    sis "Kein Aber."
+    sis "Kein \"Aber\"."
     sis "Du warst schon immer so."
     sis "Wenn du einen Fehler gemacht hast, hast du Anderen die Schuld gegeben."
     "Ist das wirklich noch..."
@@ -1579,8 +1579,6 @@ label eins_accept_fBernd:
     
     scene black
     with fade
-    
-    stop music fadeout 0.4
     
     jump zwei_anja
     

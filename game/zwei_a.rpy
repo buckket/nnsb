@@ -37,6 +37,8 @@ label zwei_anja:
 
     scene bg kueche
     with fade
+    
+    play music m_wohnung
 
     #show mutter neutral
     #with dissolve
@@ -79,6 +81,8 @@ label zwei_anja:
 
     scene bg keller_aus
     with fade
+    
+    play music m_bernd
 
     "Was soll ich jetzt nur tun?"
     "Ob sie wohl Recht hatte?"
@@ -165,6 +169,8 @@ label zwei_anja:
     scene black
     with fade
     
+    $ renpy.music.set_volume(0.0, .5, channel="music")
+    
     jump spinne
 
 label spinne:
@@ -173,6 +179,8 @@ label spinne:
     
     scene bg keller_blur
     with fade
+
+    $ renpy.music.set_volume(1.0, .5, channel="music")
 
     "*gähn*"
     "Ich bin noch so müde."
@@ -187,9 +195,15 @@ label spinne:
     "Ich bin so müde."
     "Ich setze mich aufrecht auf mein Bett."
     "Ich hätte doch nicht so lang wach bleiben sollen."
-    "*gähn*. {w}Aber daran lässt sich auch nichts mehr ändern."
+    "Aber daran lässt sich {w}*gääääääääääääääähn* {w}auch nichts mehr ändern."
     "Ich stehe auf."
-    "Mit hängenden Armen schlurfe ich ins Badezimmer als plötzlich..."
+    
+    stop music fadeout 0.4
+    
+    show bg kellertreppe
+    with fade
+    
+    "Mit hängenden Armen schlurfe ich aus meinem Kel-{nw}"
 
     play sound "sounds/hit_1.wav"
     #Sound noch nicht vorhanden
@@ -223,6 +237,8 @@ label spinne:
     with fade
 
     "Ich sehe Laura kreischend auf einem Stuhl stehen."
+
+    #HIER FEHLT NOCH BGM
 
     sis "IIIIIIIIIIIIIIIIIIIHHHHHHHHHHHHHHHHHHHHHHHH!!"
 
@@ -353,6 +369,8 @@ label nach_spinne:
     scene bg keller_aus
     with dissolve
     
+    play music m_bernd
+    
     "Ich suche meine Sachen zusammen, um sie mit ins Bad zu nehmen und sie nach dem Duschen direkt anziehen zu können."
     "Boxershorts, Socken, T-Shirt."
     "Ich kann die gleiche Hose wie gestern anziehen."
@@ -362,6 +380,8 @@ label nach_spinne:
     
     scene bg badezimmer
     with dissolve
+    
+    play music m_wohnung
     
     "Ich ziehe mich aus und stelle mich auf die Waage."
     "Verdammt."
@@ -469,6 +489,8 @@ label nach_spinne:
             
             scene bg keller_aus
             with dissolve
+            
+            $ renpy.music.set_volume(0.0, .5, channel="music")
         
             "Ich trockne mich ab und ziehe mich dann an."
                     
@@ -485,6 +507,9 @@ label nach_spinne:
                         
             scene bg keller_aus
             with dissolve
+            
+            $ renpy.music.set_volume(0.0, .5, channel="music")
+
             #-----------------------------------------------
             "Einmal kalt duschen und man möchte nicht mehr."
             if persistent.wieherbuhSprache is 0:
@@ -501,6 +526,8 @@ label nach_spinne:
     
     scene bg wohnung_innen
     with fade
+    
+    $ renpy.music.set_volume(1.0, .5, channel="music")
 
     "Ich gehe nochmal alles durch."
     "Sicher ist sicher."
@@ -523,6 +550,7 @@ label nach_spinne:
     "Ja, ganz enorm."
     "Ich bin bereit."
     "Jederzeit."
+   
     jump anja_besuch
     
 label anja_besuch:
@@ -598,6 +626,8 @@ label anja_besuch:
     "Verdammt."
     "Was mache ich denn jetzt?"
     
+    stop music fadeout 0.4
+    
     show yasmin surprised
     with dissolve
 
@@ -613,6 +643,8 @@ label anja_besuch:
 
     show anja neutral at right
     with dissolve
+    
+    play music m_anjaWohnung fadein 0.2
 
     bw "Hallo, %(berndName)s."
     b "..."
@@ -705,9 +737,11 @@ label anja_besuch:
     "Nein."
     "Ich öffne die Türe."
 
+    stop music fadeout 0.3
+
     scene bg wohnung_innen
     with fade
-
+    
     "Ich ziehe meine Schuhe aus."
     "Dann gehe ich direkt in meinen Keller."
 
@@ -722,6 +756,8 @@ label anja_besuch:
 
     scene bg keller_aus
     with fade
+    
+    play music m_bernd
  
     "Ich werfe erstmal meinen Rechner an."
 
@@ -774,6 +810,7 @@ label anja_besuch:
     "Ich hatte ja noch nie was mit Mädchen am Hut."
     "Da bleibe ich lieber bei mai waifus."
     "Hach, Lynette..."
+    
     jump traum
     
 label traum:
@@ -1089,6 +1126,8 @@ label traum:
     "Erica" "Hach..."
     "Lynette" "Hach..."
     
+    stop music fadeout 0.3
+    
     scene black
     with fade
     
@@ -1104,6 +1143,8 @@ label a_bei_b:
 
     scene bg keller_blur
     with fade
+    
+    play music m_bernd
     
     "Stimme" "Aufstehen."
     b "Jaja."
@@ -1151,6 +1192,8 @@ label a_bei_b:
     scene bg kueche
     with fade
    
+    play music m_wohnung
+   
     ma "Oh, %(berndName)s."
     ma "Wie war es bei %(wBerndName)s?"
     b "Nicht das schon wieder."
@@ -1182,9 +1225,6 @@ label a_bei_b:
             "Sie hat ja keine Ahnung."
             b "..."
             "Ohne ein weiteres Wort zu sagen gehe ich wieder zurück in meinen Keller."
-            
-            scene bg keller
-            with fade
         
         "Lass mich in Ruhe.":
             $ maLove -=5
@@ -1192,11 +1232,12 @@ label a_bei_b:
             ma "Jetzt sei doch nicht so, %(berndName)s."
             "Ich nehme mir mein Essen und gehe wortlos wieder zurück in meinen Keller."
             
-            scene bg keller
-            with fade
-            
-            "So, endlich habe ich wieder meine Ruhe."
+    scene bg keller
+    with fade
     
+    play music m_bernd
+        
+    "So, endlich habe ich wieder meine Ruhe."
     "Ich setze mich vor meinen Rechner."
     
     scene bg desktop_none
@@ -1244,6 +1285,8 @@ label a_bei_b:
     
     show anja neutral
     with dissolve
+    
+    play music m_anja fadein 0.3
     
     bw "Oh, hai."
     b "wat"
@@ -1352,6 +1395,8 @@ label a_bei_b:
     b "..."
     "Sie dreht sich um und geht aus dem Keller raus."
     
+    play music m_bernd fadein 0.2
+    
     "Sie macht die Tür hinter sich zu."
     "Etwas, das meine Mutter nie macht, wenn sie aus dem Keller rausgeht."    
     "Ich wende mich wieder dem Bildschirm zu."
@@ -1385,6 +1430,7 @@ label a_bei_b:
     "Ich öffne meine Partition, auf der meine ganzen Filme gespeichert sind."
     "Viel Auswahl habe ich ja nicht."
     "Hmm..."
+    
     menu:
         "Ich schaue..."
         
@@ -1421,6 +1467,8 @@ label a_bei_b:
     "So öde."
     "Ich geh schlafen."
     
+    $ renpy.music.set_volume(0.0, .5, channel="music")
+    
     scene black
     with fade
     
@@ -1428,6 +1476,8 @@ label a_bei_b:
     
     scene bg keller_aus_blur
     with fade
+    
+    $ renpy.music.set_volume(1.0, .5, channel="music")
     
     "Hmm..."
     "Hmmmm....."
@@ -1441,6 +1491,8 @@ label a_bei_b:
     
     "Dann kann ich jetzt erstmal ins Badezimmer gehen."
     
+    $ renpy.music.set_volume(0.0, .5, channel="music")
+    
     scene black
     with fade
     
@@ -1450,6 +1502,8 @@ label a_bei_b:
     
     scene bg keller
     with fade
+    
+    $ renpy.music.set_volume(1.0, .5, channel="music")
     
     "Oh."
     "Schon hochgefahren?"
@@ -1524,6 +1578,8 @@ label bernd_anja_besprechung:
     scene black
     with fade
     
+    play music m_wohnung fadein 0.3
+    
     scene bg tuere
     with fade
     
@@ -1588,6 +1644,8 @@ label bernd_anja_besprechung:
     
     show anja neutral
     with dissolve
+    
+    play music m_anja fadein 0.3
     
     bw "Oh, hai."
     b "Jaja."
@@ -1768,29 +1826,36 @@ label bernd_anja_besprechung:
     bw "Ach, was soll's."
     bw "Dann bringe ich die Milch halt hierhin."
 
-    hide anja
+    hide anja neutral
+    with dissolve
 
     $ renpy.pause(2.0)
     
-    play sound "music/anja_handy.ogg"
+    stop music
     
+    $ renpy.music.queue(["music/anja_handy.ogg"], loop=True)
+
+    "!"    
     "Was ist das?"
     "Ist das ihr Handy?"
     "Soll ich ihr das Handy bringen?"
     "Soll ich einfach hier sitzen bleiben?"
-    "Das mache ich."
-    "Ich warte erstmal."
+    "Das mache ich. {w} Ich warte erstmal."
     "Sie wird ja sowieso gleich wieder hier sein."
     
     $ renpy.pause(1.0)
     "Langsam halte ich das nicht mehr aus."
     "Dann gehe ich halt in die Küche."
     
+    stop music
+    
     scene bg anja_kueche
     with fade
     
     show anja smiling
     with dissolve
+    
+    play music m_anja fadein 0.3
     
     bw "Oh."
     bw "Dann muss ich dir die Milch ja gar nicht bringen."
@@ -1804,7 +1869,9 @@ label bernd_anja_besprechung:
     "So erfrischend."
     "Ich liebe kalte Milch."
     
-    play sound "sounds/telefon.wav"
+    stop music
+    
+    $ renpy.music.queue(["sounds/telefon.wav"], loop=True)
     
     "Plötzlich geht das Telefon."    
     "%(wBerndName)s läuft zum Telefon."
@@ -1812,15 +1879,17 @@ label bernd_anja_besprechung:
     bw "Was ist denn?"
     b "Dein..."
     bw "Mein was?"
-        
-    play sound "sounds/telefon.wav"
-    
     b "Dein Handy ging gerade."
     bw "Oh."
     bw "Danke, %(berndName)s."
     "Nun schaut %(wBerndName)s auf das Display des Telefons."
     bw "Oh, es ist nur meine Mutter."
     "Dann nimmt sie den Hörer ab."
+    
+    stop music
+    
+    play music m_anja fadein 0.3
+    
     bw "Ja, Mama?"
     "Moment."
     "Hat sie mir gerade gedankt?"
@@ -1845,7 +1914,7 @@ label bernd_anja_besprechung:
     bw "Sorry, %(berndName)s."
     bw "Ich muss jetzt einkaufen gehen."
     bw "Lass uns morgen nochmal reden."
-    "Ich könnte ihr ja anbieten, dass ich ihr hel-"
+    "Ich könnte ihr ja anbieten, dass ich ihr hel-{nw}"
     "OH WARTE!"
     "Wieso bin ich eigentlich so gut drauf?"
     b "OK."
@@ -1885,9 +1954,9 @@ label bernd_anja_besprechung:
     scene bg zuhause_hausflur
     with fade
     
-    "Ich trete in unsere Wohnung ein, als plötzlich..."
+    "Ich trete in unsere Wohnung ein.{nw}"
     
-    "Stimme" "HALT! {w}KEINE BEWEGUNG! {w}HÄNDE HOCH!"
+    "Stimme" "HALT! {w}HÄNDE HOCH! {w}KEINE BEWEGUNG!"
     "Wer, wie, wo, was?"
     "Verwirrt schaue ich mich um."
     "Stimme" "ICH HAB GESAGT \"KEINE BEWEGUNG\"!"
