@@ -621,12 +621,14 @@ label eins:
     scene black
     with fade
     
+    $ renpy.music.set_volume(0.0, .5, channel="music")
+    
     "Zwei Stunden später..."
     
     scene bg keller
     with fade
     
-    play music m_bernd
+    $ renpy.music.set_volume(1.0, .5, channel="music")
     
     "Das scheint nicht geholfen zu haben."
     "Im Gegenteil."
@@ -902,16 +904,19 @@ label eins:
     "Ich überlege, ob ich noch auf Krautchan gehen soll, aber verwerfe den Gedanken schnell wieder."
     "Erstmal brauche ich jetzt Schlaf."
     "Nachdem ich das letzte Würstchen gegessen habe, schalte ich den Monitor aus und lege mich hin."
-    
-    scene black
-    with fade
-    
     "Was wohl aus dieser Sache mit dem Treffen wird..."
     "...ich habe immer noch keine Ahnung ob ich hingehen soll."
     "Vielleicht schlafe ich auch einfach..."
     "...den ganzen..."
     "...Tag..."
     "..."
+    
+    $ renpy.music.set_volume(0.0, .5, channel="music")
+        
+    scene black
+    with fade
+
+    $ renpy.music.set_volume(1.0, .5, channel="music")
     
     "Am nächsten Tag..."
     

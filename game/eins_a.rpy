@@ -290,10 +290,7 @@ label eins_treffenBerndf:
 #$ eins_streit = 2 => Bernd läuft Laura hinterher und dankt ihr nachher NICHT
 #$ eins_streit = 3 => Bernd wartet bis Laura sich beruhigt hat und bringt ihr Kaugummis mit
 #$ eins_streit = 4 => Bernd wartet bis Laura sich beruhigt hat und bringt ihr KEINE Kaugummis mit
-#unterschiedliche Variablen habe ich nicht hinbekommen, da u. U. dem System eine Variable nicht bekannt ist und dann abstürzt
-#und ich wollte nicht immer eins_hinterherlaufen_danken = 0 und in der nächsten Zeile dann
-#eins_hinterherlaufen_nicht_danken = 1 etc. schreiben
-
+#$ eins_streit = 5 => Bernd und Laura haben KEINEN Streit
 
     show laura happy
     with dissolve
@@ -351,6 +348,9 @@ label eins_treffenBerndf:
     "Ich lass die mal reden."
     sis "Und jetzt denkst du dir gerade, dass ich heute nur einen schlechten Tag hatte."
     "Woher...?"
+    
+    stop music fadeout 0.4
+    
     sis "Ich kenn dich, %(berndName)s."
     sis "Gib doch einfach zu, dass du mich nicht abholen wolltest."
     sis "Gib doch einfach zu, dass ich dir egal bin."
@@ -410,6 +410,8 @@ label eins_treffenBerndf:
             menu:
                 "Ich..."
                 
+                #HIER FEHLT NOCH BGM
+                
                 "...laufe ihr hinterher.":
                     "Ich laufe ihr besser hinterher."
                     "Und ich sollte mich lieber beeilen."
@@ -457,6 +459,9 @@ label eins_treffenBerndf:
                     show laura mad_talk
                     with dissolve
                     
+                    
+                    #HIER FEHLT NOCH BGM
+                    
                     sis "Lass mich los!"
                     "Sie fuchtelt wie wild mit ihren Armen rum."
                     b "Nein."
@@ -502,6 +507,8 @@ label eins_treffenBerndf:
                     b "Jetzt versteh es doch endlich mal."
                     b "Ich hasse weder dich, noch unsere Mutter."
                     
+                    #HIER FEHLT NOCH BGM
+                    
                     show laura sad
                     with dissolve
                     
@@ -535,6 +542,8 @@ label eins_treffenBerndf:
                     
                     show laura happy
                     with dissolve
+                    
+                    play music m_laura fadein 0.3
                     
                     sis "Hihi."
                     #Ich hätte hier gerne ein CG davon, wie Laura Bernds Arm umklammert
@@ -612,7 +621,7 @@ label eins_treffenBerndf:
                     #Bild existiert noch nicht
                     #Ginga Ale
                     
-                    show laura neutral
+                    show laura pissed
                     with dissolve
                     
                     sis "Warum triffst du dich dann mit ihr?"
@@ -640,13 +649,17 @@ label eins_treffenBerndf:
                     b "Ich hab keine Ahnung."
                     b "Ich lass es auf mich zukommen."
                     
+                    stop music fadeout 0.4
+                    
                     scene bg wohnung_innen
                     with fade
                     
+                    play music m_wohnung
+                    
                     "Anscheinend ist meine Mutter gerade nicht da."
                     
-                    show mutter
-                    with dissolve
+                    #show mutter
+                    #with dissolve
                     #Bild existiert noch nicht
                     #Ginga Ale
                     
@@ -736,12 +749,16 @@ label eins_treffenBerndf:
                             sis "Darum macht mich das irgendwie glücklich."                            
                             $ eins_streit = 1
                             
+                            stop music
                         
                         "Nein.":
                             $ eins_streit = 2
+                            stop music
                     
                 
                 "...warte bis sie sich beruhigt hat.":
+                    play music m_wohnung
+                
                     $ sisLove -=5
                     "Ich sollte erst einmal einkaufen gehen."
                     "Um %(sisName)s kann ich mich später noch kümmern."
@@ -789,6 +806,7 @@ label eins_treffenBerndf:
                             "Ich schätze sie aber als eine Person ein, die Erdbeergeschmack mag."
                             "Ich lege noch eine Packung Erdbeer-Kaugummis auf's Band."
                             $ eins_streit = 3
+                            stop music fadeout 0.3
                     
                     
                         "Nein.":
@@ -802,6 +820,7 @@ label eins_treffenBerndf:
                             "Ich darf nicht nachgeben."
                             "Sie soll sich entschuldigen."
                             $ eins_streit = 4
+                            stop music fadeout 0.3
 
 
         "Aber das stimmt doch gar nicht!":
@@ -953,7 +972,8 @@ label eins_treffenBerndf:
             
             $ eins_streit = 5
             
-
+            stop music fadeout 0.3
+            
     scene black
     with fade
     
@@ -963,8 +983,6 @@ label eins_treffenBerndf:
     else:
         "Eine halbe Stunde später..."
         b "Endlich wieder zu Hause."
-    
-    stop music fadeout 1.0
     
     scene bg keller
     with fade
@@ -991,7 +1009,6 @@ label eins_treffenBerndf:
     else:
         jump eins_streit_ohne_aussprache    
     
-    
 label eins_streit_mit_aussprache:
     
     play sound "sounds/door_1.wav"
@@ -1006,6 +1023,8 @@ label eins_streit_mit_aussprache:
     
     show laura happy
     with dissolve
+    
+    play music m_laura fadein 0.3
     
     sis "Deine Freundin..."
     "Ist sie jetzt gekommen, um sich doch über mich lustig zu machen?"
@@ -1067,6 +1086,8 @@ label eins_streit_mit_aussprache:
     sis "Idiot."
     "Sie geht aus dem Zimmer und knallt die Türe zu."
     
+    stop music fadeout 0.3
+
     hide laura pissed
     with dissolve
     
@@ -1079,13 +1100,15 @@ label eins_streit_mit_aussprache:
     
 label eins_streit_ohne_aussprache:
 
-    show mutter boese
-    with dissolve
+    #show mutter boese
+    #with dissolve
     #Bild existiert noch nicht
     #Ginga Ale
     
     $ berndNameCaps = berndName.upper()
     ma "{size=24}%(berndNameCaps)s!{/size}"
+    
+    #HIER FEHLT NOCH BGM
     
     "Urghs."
     "Ich zucke aufgrund der lauten Stimme zusammen."
@@ -1144,8 +1167,8 @@ label eins_streit_ohne_aussprache:
                     ma "{size=20}ODER ES SETZT WAS!{/size}"
                     b "Und was wäre das?"
                     
-                    show mutter hochnaesig
-                    with dissolve
+                    #show mutter hochnaesig
+                    #with dissolve
                     #Bild exisitiert noch nicht
                     #Ginga Ale
                     
@@ -1166,6 +1189,8 @@ label eins_streit_ohne_aussprache:
                     
     scene bg wohnung_innen
     with fade
+    
+    play music m_heul
         
     sis "*schluchz*"
     "Oh, Mann."
@@ -1261,8 +1286,6 @@ label eins_streit_ohne_aussprache:
     
     "Ich werfe mich auf mein Bett."
     
-    play music m_traurig
-
     "Verdammt."
     if kaugummi == 1:
         "Ich hole die Kaugummipackung, die ich für %(sisName)s kaufte, aus der Hosentasche."
@@ -1285,7 +1308,7 @@ label eins_streit_ohne_aussprache:
     "Ich werde niemals eine Freundin haben."
     "Weinend schlafe ich ein..."    
     
-    stop music
+    stop music fadeout 0.3
     
     jump eins_streit_tag_darauf
     
@@ -1295,6 +1318,8 @@ label eins_streit_nicht:
     
     show laura neutral
     with dissolve
+    
+    play music m_laura fadein 0.3
     
     sis "%(berndName)s?"
     "Was will die denn jetzt schon wieder?."
@@ -1320,6 +1345,8 @@ label eins_streit_nicht:
     hide laura pissed
     with dissolve
     
+    stop music fadeout 0.3
+    
     "Was war das denn jetzt gerade für eine Aktion?"
     "Na ja, was soll's."
     "Ich lauer noch ein wenig auf Krautchan und gehe dann schlafen."
@@ -1332,6 +1359,8 @@ label eins_streit_tag_darauf:
     with fade
     
     "Am nächsten Morgen..."
+    
+    play music m_bernd
     
     ma "%(berndName)s?"
     ma "Willst du nicht langsam mal aufstehen?"
@@ -1360,8 +1389,8 @@ label eins_streit_tag_darauf:
     "Sie verlässt das Zimmer."
     
     "Ich mache mich fertig, um mich mit %(wBerndName)s zu treffen."
-    
-    stop music fadeout 1.0
+
+    play music m_wohnung fadein 0.4
     
     scene bg zuhause_draussen
     with fade
@@ -1376,7 +1405,7 @@ label eins_streit_tag_darauf:
     show anja neutral
     with dissolve
     
-    play music m_anja
+    play music m_anja fadein 0.3
     
     bw "Hey, %(berndName)s."
     b "H- Hi."
@@ -1479,9 +1508,12 @@ label eins_streit_tag_darauf:
         
         "...glaube ihr.":
             $ friendLove += 10
+            
             jump eins_accept_fBernd
+        
         "...glaube ihr. NICHT.":
             $ friendLove -= 5
+            
             jump eins_refuse_fBernd
             
 label eins_accept_fBernd:
