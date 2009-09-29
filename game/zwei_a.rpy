@@ -226,7 +226,7 @@ label spinne:
 
     sis "IIIIIIIIIIIIIIIIIIIHHHHHHHHHHHHHHHHHHHHHHHH!!"
 
-    show laura scared
+    show laura crying #scared
     with dissolve
     #Bild fehlt noch
     #Ginga Ale
@@ -1204,8 +1204,6 @@ label a_bei_b:
     
     "Was nun?"
     "Mal schauen..."
-    "Spiele?"
-    "Nicht beim Abendessen."
     "Internet?"
     "Nein."
     "Ohne KC ist das Internet so fad."
@@ -1441,7 +1439,7 @@ label a_bei_b:
     "Ich stehe auf und setze mich an meinen PC."
     "Dann schalte ich den Computer an."
     
-    "Dann kann ich jetzt erstmal auf Badezimmer gehen."
+    "Dann kann ich jetzt erstmal ins Badezimmer gehen."
     
     scene black
     with fade
@@ -1774,7 +1772,7 @@ label bernd_anja_besprechung:
 
     $ renpy.pause(2.0)
     
-    play sound "music/anja_handy.mp3"
+    play sound "music/anja_handy.ogg"
     
     "Was ist das?"
     "Ist das ihr Handy?"

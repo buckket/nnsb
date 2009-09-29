@@ -165,11 +165,11 @@ label eins_treffenBerndf:
     bw "Jetzt versteh' ich!"
     bw "Du bist überrascht, dass ich ein Mädchen bin, richtig?"
     
-    show anja neutral
+    show anja doppelpunkt_drei
     with dissolve
     
-    b "Äh... ja."
     bw "Hihi."
+    b "Äh... ja."
     bw "Hätte ich das geschrieben, wärst du sicher nicht gekommen, oder?"
     "Sie hat recht."
     "Ich kann immer noch nicht glauben, dass sie ein Bernd ist."
@@ -361,7 +361,7 @@ label eins_treffenBerndf:
     "Was soll ich ihr antworten?"
     
     menu:
-        "Was soll ich ihr antworten?"
+        " "
         
         "Ja, ich gebe es zu.":
             $ sisLove -= 20
@@ -861,8 +861,8 @@ label eins_treffenBerndf:
             sis "%(berndName)s?"
             b "Ja?"
     
-            show laura fragezeichen
-            with dissolve
+            #show laura fragezeichen
+            #with dissolve
             #Bild existiert noch nicht
             #Ginga Ale
     
@@ -952,6 +952,9 @@ label eins_treffenBerndf:
             with dissolve
             
             "Sie nimmt sich eine Packung Erdbeer-Kaugummis und legt sie auf's Band."
+            
+            $ eins_streit = 5
+            
 
     scene black
     with fade
@@ -1276,7 +1279,6 @@ label eins_streit_ohne_aussprache:
     "Ich gehe nicht auf Partys."
     "Ich mache nichts Anderes außer im Keller zu sitzen und zu lauern."
     "Ich werde niemals Freunde haben."
-    $ tlnote("Notiz: So ronery.")
     "Ich werde niemals eine Freundin haben."
     "Weinend schlafe ich ein..."    
     
