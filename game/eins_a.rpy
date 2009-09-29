@@ -1627,7 +1627,7 @@ label eins_krautchanOffBernd:
     "..."
     b "Warum dauert das so lange?"
     "Ah..."
-    "Endlich lä-"
+    "Endlich lä-{nw}"
     "404"
     "File not found."
     b "Krautchan ist..."

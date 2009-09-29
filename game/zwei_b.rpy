@@ -5,7 +5,7 @@ label zwei_bernd:
     "Sicher doch nur, weil mal wieder irgendwer getrollt hat."
     "Amoklauf oder so."
     "Das war bisher immer so."
-    "Es ist sicherlich nichts ernstes."
+    "Es ist sicherlich nichts Ernstes."
     "Wieso sollte es auch?"
     "Nein."
     "Morgen ist alles wieder ok."
@@ -15,6 +15,8 @@ label zwei_bernd:
         #tür auf
         show laura happy
         with dissolve
+        
+        play music m_laura fadein 0.3
     
         sis "Hey, %(berndName)s."
         b "Was willst du?"
@@ -44,12 +46,15 @@ label zwei_bernd:
         hide laura pissed
         with vpunch
         
+        play music m_bernd fadein 0.3
+        
         "Warum knallt sie dauernd die Tür?"
         "Ich verstehe es nicht..."
         "Egal."
         "Mal gucken, ob Krautchan schon wieder da ist."
         "..."
         "Nein."
+        
     "Seit wann ist es wohl schon down?"
     "Heute morgen ging es noch."
     "Das muss während des Treffens mit dieser Anja passiert sein."
@@ -72,6 +77,8 @@ label zwei_bernd:
         #tür auf
         show laura happy
         with dissolve
+        
+        play music m_laura fadein 0.3
         
         sis "Ich bringe dir dein Essen, %(berndName)s."
         "Was zum...?"
@@ -130,8 +137,7 @@ label zwei_bernd:
         
         sis "Tja..."
         sis "...das habe ich gekocht!"
-        "Was?"
-        "Laura kann kochen?"
+        "Was? {w}Laura kann kochen?"
         sis "Überrascht?"
         b "Nicht wirklich."
         
@@ -163,10 +169,13 @@ label zwei_bernd:
         hide laura happy
         with dissolve
         
+        play music m_bernd fadein 0.3
+        
     "...und was mache ich jetzt?"
     "Irgendwie kann ich nicht den ganzen Tag herumsitzen und warten, bis Krautchan wiederkommt."
     "...wenn es überhaupt jemals zurückkommt."
     "Ich sollte..."
+    
     menu:
         "...einfach abwarten. Das wird schon wieder.":
             "Das wird sich schon von selbst wieder richten."
@@ -213,6 +222,8 @@ label zwei_bernd_ende:
     
     nvl clear
     
+    #HIER FEHLT NOCH BGM
+    
     nvlc "Riss das Blech vom Fenster runter, und herein stolziert' - oh Wunder!"
     nvlc "Ein gewalt'ger, hochbejahrter Rabe schwirrend zu mir her;"
     nvlc "Flog, mit mächt'gen Flügelstreichen, ohne Gruß und Dankeszeichen,"
@@ -257,5 +268,3 @@ label zwei_bernd_ende:
     nvlc "Und laut rief er: \"Halt die Fresse!\""
     
     nvl clear
-    
-    
