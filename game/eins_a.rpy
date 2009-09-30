@@ -397,7 +397,7 @@ label eins_treffenBerndf:
             "Sie dreht sich um und..."            
             sis "Ich hasse dich auch!"
             
-            play sound "sounds/laura_rennt.wav"
+            #play sound "sounds/laura_rennt.wav"
             #Sound existiert noch nicht
             
             "...rennt weg."

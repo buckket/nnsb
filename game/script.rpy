@@ -153,6 +153,7 @@ init:
     $ m_rabe = "music/rabe.ogg"
     $ m_schule = "music/schule.ogg" #in der Schule
     $ m_krank = "music/krank.ogg" #kranke Laura
+    $ m_liebe = "music/liebe.ogg" #LIEBE <3
     
     #WICHTIG: Handy-Klingeltöne bitte nicht registrieren, die sind zwar in dem Ordner drin, werden aber mit dem Sound-Befehl abgerufen
     
