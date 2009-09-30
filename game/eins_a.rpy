@@ -458,7 +458,7 @@ label eins_treffenBerndf:
                     show laura mad_talk
                     with dissolve
                     
-                    play music m_sad fadein 0.2
+                    play music m_drama fadein 0.2
                     
                     sis "Lass mich los!"
                     "Sie fuchtelt wie wild mit ihren Armen rum."
@@ -669,8 +669,8 @@ label eins_treffenBerndf:
                     ma "Ja?"
                     b "Also eigentlich waren wir..."
                     
-                    show mutter at left
-                    with move
+                    #show mutter at left
+                    #with move
                     #Bild existiert noch nicht
                     #Ginga Ale                    
                 
@@ -679,8 +679,8 @@ label eins_treffenBerndf:
                 
                     sis "Wir waren nicht einkaufen."
                     
-                    show mutter boese at left
-                    with dissolve
+                    #show mutter boese at left
+                    #with dissolve
                 
                     ma "Wieso nicht?"
                     
@@ -695,8 +695,8 @@ label eins_treffenBerndf:
                     "Ich höre, wie unsere Mutter tief durchatmet."
                     "Jetzt wird mir wieder die Schuld gegeben, dass wir nicht einkaufen waren."
                     
-                    show mutter smile at left
-                    with dissolve
+                    #show mutter smile at left
+                    #with dissolve
                     
                     ma "Dann werde ich wohl gleich noch einkaufen müssen."
                     "Ich hab's geah- {w}Warte, was?"
@@ -707,10 +707,9 @@ label eins_treffenBerndf:
                     b "OK."
                     
                     scene bg kueche
-                    with fade
                     
                     show laura neutral
-                    with dissolve
+                    with fade
                     
                     sis "Der Bananenshake ist wirklich lecker."
                     b "Ich..."
@@ -868,6 +867,7 @@ label eins_treffenBerndf:
             sis "OK."
   
             scene bg supermarkt
+            show laura neutral
             with fade
     
             play music m_shop
@@ -879,14 +879,15 @@ label eins_treffenBerndf:
             #with dissolve
             #Bild existiert noch nicht
             #Ginga Ale
+            
     
             sis "Was sollen wir nochmal einkaufen?"
     
             b "Keine Ahnung!"
             b "Ich dachte, du wüsstest das."
             
-            #show laura mad
-            #with dissolve
+            show laura mad
+            with dissolve
             
             sis "Großartig..."
             sis "Dich kann man auch für Nichts gebrauchen."
@@ -1195,8 +1196,10 @@ label eins_streit_ohne_aussprache:
     "Vielleicht sollte ich einfach warten, bis sie sich beruhigt hat."
     "Ich drehe mich um, doch in dem Moment..."
     
-    show mutter boese
-    with flash
+    #watwat
+    
+    #show mutter boese
+    #with flash
     
     "Verdammt."
     sis "*schluchz*"
@@ -1226,8 +1229,10 @@ label eins_streit_ohne_aussprache:
     b "OK, dann..."
     "Wieder drehe ich mich um {w}und wieder sehe ich..."
     
-    show mutter boese
-    with flash
+    #watwat
+    
+    #show mutter boese
+    #with flash
     
     "Mist."
     b "{size=6}T-tut mi-mir...{/size}"
@@ -1263,8 +1268,8 @@ label eins_streit_ohne_aussprache:
     b "Ent...schuldi...gung."
     "Ich drehe mich um und will gehen."
              
-    show mutter boese
-    with dissolve
+    #show mutter boese
+    #with dissolve
     #Bild existiert noch nicht
     #Ginga Ale
              
@@ -1325,13 +1330,13 @@ label eins_streit_nicht:
     sis "Das Geld für die Kaugummis? {w}Nimm es{nw}"
     b "Behalt' es. Ich sagte, ich schenke dir die Kaugummis."
     
-    show sis pissed
+    show laura pissed
     with dissolve
     
     sis "Aber...{nw}"
     b "Kein \"Aber\". Ich sagte, du sollst es behalten."
     
-    show sis mad
+    show laura mad
     with dissolve
     
     sis "Du bist wirklich unmöglich."
@@ -1366,8 +1371,8 @@ label eins_streit_tag_darauf:
     scene bg keller_aus
     with flash
     
-    show mutter neutral
-    with dissolve
+    #show mutter neutral
+    #with dissolve
     
     b "WAS!?"
     b "Schon so spät?"

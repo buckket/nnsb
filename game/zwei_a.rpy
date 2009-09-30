@@ -2057,8 +2057,8 @@ label bernd_kapzwei_grillen:
     sis "Ich..."
     "Ich gebe meiner Mutter und dem Arzt eine Handbewegung, dass sie rausgehen sollen."
      
-    hide doc
-    with dissolve
+    #hide doc
+    #with dissolve
        
     show laura crying
     with dissolve

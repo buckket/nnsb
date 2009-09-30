@@ -269,7 +269,7 @@ label zwei_laura_medizinBekommen:
     scene bg lauraszimmer
     with vpunch
     
-    #fall-sound
+    play sound "sounds/hit_1.wav"
     
     b "%(sisName)s!"
     "Schnell bücke ich mich zu ihr runter."

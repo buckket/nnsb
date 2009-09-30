@@ -473,7 +473,7 @@ label eins:
         
         if mitbringen == "kondome":
 
-            show laura blush
+            show laura embarrassed
             with dissolve
             
             sis "Hier..."
