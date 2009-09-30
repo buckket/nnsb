@@ -131,7 +131,7 @@ init:
     $ m_shop = "music/shop.ogg" #Supermarkt
     $ m_anja = "music/anja_theme.ogg" #Anja und ihr Zimmer
     $ m_anjaWohnung = "music/anja_wohnung.ogg" #Anjas Wohnung, außer ihrem Zimmer
-    $ m_pyscho = "music/psycho.ogg" #Psychosachen
+    $ m_psycho = "music/psycho.ogg" #Psychosachen
     $ m_traurig = "music/ronery.ogg" #traurige Stellen
     $ m_drama = "music/sad.ogg" #ebenfalls traurige Stellen
     $ m_date = "music/date.ogg" #Dates usw.
@@ -139,7 +139,7 @@ init:
     $ m_donerladen = "music/donerladen.ogg"
     $ m_spannung = "music/exciting.ogg" #Spannung usw.
     $ m_rennen = "music/run_fast.ogg" #Action
-    $ m_yasminStalk = "music/yasmin_stalkerbernd.ogg" #Stalkerbernd-Theme
+    $ m_yasminStalk = "music/yasmin_stalkerbernd_theme.ogg" #Stalkerbernd-Theme
     $ m_yasmin = "music/yasmin_theme.ogg" #Yasmin
     $ m_yasminWohnung = "music/yasmin_wohnung.ogg" # Yasmins Wohnung (sie wohnt alleine...)
     $ m_traum = "music/traum.ogg" #für Bernds Animeträume und seinen vielen Waifus

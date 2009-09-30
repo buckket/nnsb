@@ -3,6 +3,8 @@ label zwei_yasmin_Anfang:
     scene bg keller_aus
     with fade
     
+    play music m_bernd
+    
     "Ich liege auf meinem Bett und starre die Decke an."
     "Krautchan ist offline."
     "Was mach ich denn nun?"
@@ -24,6 +26,8 @@ label zwei_yasmin_Anfang:
     "Aber heute nicht."
     "Merkwürdig."
     "Vielleicht bilde ich mir das auch nur ein."
+    
+    stop music
     
     play sound "sounds/schraube.wav"
     
@@ -214,6 +218,13 @@ label zwei_yasmin_lauraTraum:
             #BIS HIER
             #demoversion
             
+            $ renpy.music.set_volume(0.5, .5, channel="music")
+            play music m_kanashimi
+            #eventuell die ganze szene lang?
+            
+            #eventuell wird Bernd belohnt, wenn er sich die geschichte anhört
+            # KISU? :3            
+            
             "Was hat sie vor?"
             "In diesem Moment..."
             
@@ -257,16 +268,20 @@ label zwei_yasmin_lauraTraum:
             scene black
             with dissolve
             
+            stop music
+            
             "Ich schließe die Augen und falle."
             
             $renpy.pause(2.0)
             
+            $renpy.music.set_volume(1.0,.5,channel="music")
             
             #ende demoversion
-    stop music
     
     scene bg keller_aus
     with flash
+    
+    play music m_bernd
     
     b "Was zum?!"
     "Durch das wenige Sonnenlicht, das durch mein Fenster fällt, geweckt, setze ich mich aufrecht auf's Bett."
@@ -361,6 +376,7 @@ label zwei_yasmin_lauraTraum:
             "Ich klicke auf /b/ - Random und fange an zu lauern..."
             scene black
             with fade
+            stop music
             "Eine Woche später..."
             scene bg gameover_vierkanal
             with fade
@@ -404,6 +420,8 @@ label zwei_yasmin_einbruch:
     scene bg zuhause_draussen
     with fade
     
+    play music m_wohnung
+    
     "Ich verlasse das Haus und gehe um die Ecke."
     "Hier habe ich Stalkerbernd getroffen."
     "Mein Blick wandert nach unten zu meinem Kellerfenster."
@@ -415,8 +433,14 @@ label zwei_yasmin_einbruch:
     "Er hatte ja kein Nachtsichtgerät oder so was."
     "Ich biege um die Ecke."
     "Um irgendetwas persönliches von mir zu bekommen, müsste er schon einbrechen."
+    
+    stop music
+    
     "Moment mal...!"
     "Ich renne zurück zum Fenster und bücke mich runter."
+    
+    play music m_psycho
+    
     "Zu meinem Entsetzen bestätigt sich meine Vermutung."
     "Die Schraube, die ich unten gefunden hatte, stammt von meinem Fenster."
     "Eine fehlt."
@@ -471,6 +495,9 @@ label zwei_yasmin_einbruch:
     "Es klingelt."
     "Sie hat ihr Handy also an."
     "..."
+    
+    stop music
+    
     sis "Ja?"
     b "Hi, %(sisName)s. Ich bin es."
     sis "%(berndName)s?"
@@ -509,6 +536,9 @@ label zwei_yasmin_einbruch:
     "Ich bin um 10 Uhr aufgestanden, also ist sie schon mindestens eine halbe Stunde weg."
     "So lange braucht sie sonst nie."
     "In diesem Moment öffnet sich die Wohnungstür."
+    
+    play music m_wohnung
+    
     ma "%(berndName)s?"
     ma "Was machst du denn hier oben?"
     "Sie hat zwei Plastiktüten in der Hand."
@@ -538,6 +568,8 @@ label zwei_yasmin_einbruch:
     ma "Aber ich werde mich sicherlich nicht beschweren."
     "Lachend geht sie in die Küche."
     
+    stop music fadeout 0.5
+    
     scene black
     with fade
     
@@ -546,10 +578,13 @@ label zwei_yasmin_einbruch:
     "Jetzt musste sie jemand abholen, und dieser jemand war ich."
     
     scene bg schulweg1
-    with fade
+    #with fade
     
     show laura mad
-    with dissolve
+    with fade
+    
+    play music m_drama
+    #hier fehlt passende musik
     
     "Ich bin also mit %(sisName)s im Schlepptau auf dem Rückweg von der Schule nach Hause."
     "Bisher haben wir kein Wort gesprochen."
@@ -631,6 +666,9 @@ label zwei_yasmin_einbruch:
             sis "Geht doch."
             "Anscheinend hat das gereicht, um sie wieder fröhlich zu stimmen."
             "In diesem Moment klingelt ihr Handy."
+            
+            play music m_laura
+            
             sis "Oh!"
             sis "Das ist meine Freundin."
             sis "Wir wollten uns ja heute treffen."
@@ -652,7 +690,9 @@ label zwei_yasmin_einbruch:
     "Die Schraube fehlt immer noch."
     "Das sollte ich wohl oder übel mal beheben."
     "Ich drehe mich um und will reingehen, als mir etwas ins Auge sticht."
-  
+    
+    stop music fadeout 0.5
+    
     scene bg lieferwagen
     with fade
   
@@ -667,6 +707,8 @@ label zwei_yasmin_einbruch:
   
     scene bg wohnung_innen
     with wooshTrans
+    
+    play music m_wohnung
   
     "%(sisName)s hat natürlich schon alles erklärt."
     b "...und?"
@@ -707,9 +749,13 @@ label zwei_yasmin_einbruch:
   
     scene black
     with wooshTrans
+    
+    stop music fadeout 0.5
   
     scene bg keller
     with wooshTrans
+    
+    play music m_bernd
   
     "Unten angekommen, sehe ich aus dem Fenster."
   
@@ -761,6 +807,8 @@ label zwei_yasmin_einbruch:
   
     scene bg wohnung_innen
     with fade
+    
+    play music m_wohnung fadein 0.5
  
     ma "Ah, %(berndName)s!"
     ma "Du kommst grade richtig."
@@ -781,6 +829,7 @@ label zwei_yasmin_einbruch:
     ma "Essen wir lieber."
     scene black
     with fade
+    stop music fadeout 0.5
     "Nach dem Essen kam auch irgendwann %(sisName)s nach Hause und hat vom Treffen mit ihrer Freundin erzählt."
     "Ich ging nach unten und verbrachte den Rest des Tages damit, alte Spiele nochmal durchzuspielen und schaute ab und zu nach Krautchan."
     "An der 404-Seite hatte sich den ganzen Tag über nichts geändert, also gab ich auf und ging ins Bett."
@@ -842,6 +891,7 @@ label zwei_yasmin_einbruch:
     "Ist er wieder gegangen?"
     "Nein..."
     "Ich spüre ihn neben meinem Bett."
+    play music m_yasminStalk fadein 0.5
     "Er ist verdammt leise."
     "Ich öffne die Augen nur ein wenig, und sehe ihn."
 
@@ -1016,6 +1066,9 @@ label zwei_yasmin_einbruch:
             
 label zwei_yasmin_geschnappt:
     "Stalkerbernd" "Stalkerbernd?"
+    
+    stop music fadeout 0.5
+    
     "!"
     "Es hat gesprochen."
     "Stalkerbernd" "Wer soll das sein?"
@@ -1027,6 +1080,8 @@ label zwei_yasmin_geschnappt:
     
     show yasmin stalker_shy
     with dissolve
+    
+    play music m_yasmin
     
     "Wow."
     "Ich habe mit allem gerechnet, aber damit nicht."
@@ -1233,6 +1288,8 @@ label yasmin_befragung_eins:
             "Ich sag lieber nichts."
             b "Bin gleich wieder da."
             
+            $renpy.music.set_volume(0.5,0.5,channel="music")
+            
             scene bg kueche
             with fade
             
@@ -1244,7 +1301,12 @@ label yasmin_befragung_eins:
             "Ich sollte mich lieber beeilen."
             "Hastig fülle ich zwei Gläser und begebe mich so schnell es geht wieder nach unten."
             
+            $renpy.music.set_volume(1.0,0.5,channel="music")
+
+            
             scene bg keller_aus
+            
+
             
             show yasmin stalker_neutral
             with fade
@@ -1366,6 +1428,8 @@ label yasmin_befragung_drei:
              b "Ich warne dich zum letzen Mal!"
              yan "..."
     
+    play music m_psycho
+    
     b "{size=32}Verdammt!{/size}"
     
     show yasmin stalker_surprised
@@ -1414,6 +1478,8 @@ label yasmin_befragung_drei:
     
     hide yasmin stalker_embarrased
     with dissolve
+    
+    stop music fadeout 0.5
     
     show laura neutral
     with dissolve
@@ -1487,6 +1553,9 @@ label yasmin_befragung_drei:
     b "Also...?"
     b "Weswegen grinst du so?"
     yan "..."
+    
+    play music m_yasmin
+    
     yan "...deine... {w=1}Bettwäsche."
     "Meine Bettwäsche?"
     "Was ist daran so besonders?"
@@ -1657,6 +1726,7 @@ label yasmin_befragung_drei:
     "Jetzt habe ich sie."
     b "Gut!"
     "Mit einem Doppelklick starte ich die erste Folge von Lucky Star."
+    #stop music fadeout 0.5
     "Ich setze mich auf's Bett und genieße den Vorspann."
     b "Jetzt steh da nicht so rum."
     b "Setz dich!"
@@ -1676,6 +1746,8 @@ label yasmin_befragung_drei:
     "...aber hauptsache sie ist noch da."
     "Irgendwie werde ich noch alles aus ihr rausquetschen."
     
+    stop music fadeout 0.5
+    
     scene black
     with fade
     
@@ -1688,6 +1760,8 @@ label yasmin_zwei_derMorgenDanach:
     
     scene bg keller
     with fade
+    
+    play music m_bernd
     
     b "Mhm..."
     "Nanu, wie spät ist es?"
@@ -1703,7 +1777,9 @@ label yasmin_zwei_derMorgenDanach:
     scene bg keller
     show yasmin happy
     with fade
-   
+    
+    #HIER FEHLT NOCH BGM
+    
     yan "Guten Morgen, %(berndName)s."
     b "Oh, guten Morgen, %(yanName)s."
     "..."
@@ -1880,7 +1956,7 @@ label yasmin_zwei_derMorgenDanach:
     "Irgendwie muss ich es ihr jetzt sagen."
     "Wenn ich noch länger warte, überlege ich es mir vielleicht."
     "Ich atme tief durch."
-    #hier muss dann die musik stoppen
+    stop music fadeout 0.5
     "Also jetzt oder nie!"
     show yasmin neutral
     with dissolve
@@ -1897,9 +1973,12 @@ label yasmin_zwei_derMorgenDanach:
     yan "Es gibt eine ganz simple Erklärung für alles."
     yan "Ich..."
     
+    play sound "sounds/hit_1.wav"
+    
     scene bg keller
     show yasmin neutral
     with vpunch
+
     
     show laura neutral at Position(xpos=0.0,xanchor="right")
     with None
@@ -1907,6 +1986,8 @@ label yasmin_zwei_derMorgenDanach:
     show yasmin surprised at right
     show laura happy at left
     with move
+    
+    play music m_laura
     
     sis "Hey, %(berndName)s!"
     "Oh, verflucht!"
@@ -1999,5 +2080,8 @@ label yasmin_zwei_derMorgenDanach:
     
     scene black
     with dissolve
+    
+    #OK HIER IST SCHLUSS
+    jump ende
     
     jump drei_yasmin
