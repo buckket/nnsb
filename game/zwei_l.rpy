@@ -638,7 +638,7 @@ label zwei_laura_medizinHolen:
     scene bg apotheke_aussen
     with fade
     
-    #HIER FEHLT NOCH BGM
+    play music m_wohnung
     
     "Ah, da ist die Apotheke ja."
     "Zur Sicherheit greife ich noch einmal nach dem Rezept."
@@ -669,8 +669,7 @@ label zwei_laura_medizinHolen:
     "Salih" "Einen Moment bitte."
     "Woher kenn ich den jetzt bloß?"
     ".{w}.{w}.{w}hmm{w}.{w}.{w}."
-    "!"
-    "Das ist doch der Eisverkäufer von letztens!"
+    "Keine Ahnung."
     "Salih" "Das wäre dann ein Mal Mucosolvan und ein Mal Sinupret."
     "Salih" "Das macht zusammen 17,58 Euro."
     "Warum sind Medikamente eigentlich so teuer?"
@@ -695,10 +694,9 @@ label zwei_laura_medizinHolen:
     scene bg schulweg1
     with fade
     
+    
     play music m_lauraende
 
     "Aus der Ferne höre ich einen Straßenmusiker..."
     
     jump ende
-    
-    stop music fadeout 0.4

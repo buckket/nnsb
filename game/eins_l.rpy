@@ -303,6 +303,8 @@ label eins_sisAbholen:
     "Naja, damit muss ich mich später auseinandersetzen."
     "Zuerst muss ich noch einkaufen..."
     
+    stop music fadeout 0.3
+    
     scene black
     with fade
     
@@ -310,6 +312,8 @@ label eins_sisAbholen:
     
     scene bg keller
     with fade
+    
+    play music m_bernd
     
     "Natürlich kriegte ich eine Menge Ärger, als ich wieder da war."
     "Aber morgen ist das eh wieder vergessen."
@@ -372,6 +376,8 @@ label eins_sisAbholen:
     "Schließlich ist es schon spät."
     "...nur noch ein Mal auf /b/ gucken..."
     
+    $ renpy.music.set_volume(0.0, .5, channel="music")
+    
     scene black
     with fade
 
@@ -379,6 +385,8 @@ label eins_sisAbholen:
     
     scene bg keller_blur
     with fade
+    
+    $ renpy.music.set_volume(1.0, .5, channel="music")
     
     b "Ugh..."
     b "Wie spät ist es?"
@@ -425,6 +433,8 @@ label eins_sisAbholen:
     scene black
     with fade
     
+    stop music fadeout 0.2
+    
     $ renpy.pause(1.0)
     
     scene bg schulweg1
@@ -441,6 +451,10 @@ label eins_sisAbholen:
     "Es ist unheimlich still."
     "Zu still."
     "..."
+    
+    play music m_yasminStalk fadein 0.2
+
+    
     "...und ich werde das Gefühl nicht los, dass mich jemand von irgendwo beobachtet."
     "..."
     "Ach was, ich bin nur paranoid wie immer."
@@ -455,6 +469,7 @@ label eins_sisAbholen:
         
         "...drehe ich mich um.":
             "Ich werde mich umdrehen und mich ihm stellen."
+            
             "Mein ganzer Körper ist angespannt."
             "Nur nicht die Nerven verlieren..."
             "Jetzt!"
@@ -556,6 +571,8 @@ label eins_sisAbholen:
             "*gesichtspalme*"
             "Ich schaue auf die Uhr."
             
+    stop music fadeout 0.3
+            
     "Verdammt."
     "Nur noch 3 Minuten!"
     "Das schaffe ich ja nie!"
@@ -598,6 +615,8 @@ label eins_sisAbholen:
     
     scene bg keller_aus
     with fade
+    
+    play music m_bernd
 
     "Ich habe mich extra leise in den Keller geschlichen."
     "Hoffentlich haben sie es nicht mitbekommen."
@@ -682,8 +701,12 @@ label eins_sisAbholen:
     "Das ist kein Dreck."
     "Das ist das Fenstergitter, was sich im Monitor spiegelt."
     "Obwohl man das eigentlich nicht Fenster nennen kann."
+    
     "Moment mal..."
-    "...!"
+    "!"
+    
+    play music m_yasminStalk fadein 0.2
+    
     "In der Spiegelung kann ich es deutlich erkennen."
     "Da ist jemand vor'm Fenster."
     "Ich wusste es doch!"
@@ -754,6 +777,8 @@ label eins_sisAbholen:
     
     scene bg keller_aus
     with fade
+    
+    play music m_bernd fadein 0.3
 
     "Wenigstens habe ich jetzt erstmal meine Ruhe."
     "Ein Blick zum Fenster bestätigt das."

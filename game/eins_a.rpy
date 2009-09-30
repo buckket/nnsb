@@ -391,6 +391,9 @@ label eins_treffenBerndf:
             #Bild existiert noch nicht
             #Ginga Ale
             
+            hide laura crying
+            with dissolve
+            
             "Sie dreht sich um und..."            
             sis "Ich hasse dich auch!"
             
@@ -405,12 +408,8 @@ label eins_treffenBerndf:
             "Soll ich abwarten bis sie sich beruhigt?"
             "Sie wird spätestens heute Abend wieder zu Hause sein."
             
-            stop music fadeout 0.4
-            
             menu:
                 "Ich..."
-                
-                #HIER FEHLT NOCH BGM
                 
                 "...laufe ihr hinterher.":
                     "Ich laufe ihr besser hinterher."
@@ -459,7 +458,6 @@ label eins_treffenBerndf:
                     show laura mad_talk
                     with dissolve
                     
-                    
                     #HIER FEHLT NOCH BGM
                     
                     sis "Lass mich los!"
@@ -506,8 +504,6 @@ label eins_treffenBerndf:
                     b "NEIN!"
                     b "Jetzt versteh es doch endlich mal."
                     b "Ich hasse weder dich, noch unsere Mutter."
-                    
-                    #HIER FEHLT NOCH BGM
                     
                     show laura sad
                     with dissolve
@@ -1190,7 +1186,7 @@ label eins_streit_ohne_aussprache:
     scene bg wohnung_innen
     with fade
     
-    play music m_heul
+    play music m_heul fadein 0.3
         
     sis "*schluchz*"
     "Oh, Mann."
