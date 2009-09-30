@@ -222,7 +222,7 @@ label zwei_bernd_ende:
     
     nvl clear
     
-    #HIER FEHLT NOCH BGM
+    play music m_rabe fadein 0.3
     
     nvlc "Riss das Blech vom Fenster runter, und herein stolziert' - oh Wunder!"
     nvlc "Ein gewalt'ger, hochbejahrter Rabe schwirrend zu mir her;"

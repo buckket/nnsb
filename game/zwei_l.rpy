@@ -95,7 +95,7 @@ label zwei_laura_tee:
     scene bg lauraszimmer
     with fade
     
-    #HIER FEHLT NOCH BGM
+    play music m_krank fadein 0.2
     
     b "Hey, %(sisName)s."
     b "Bist du wach?"
@@ -240,7 +240,7 @@ label zwei_laura_medizinBekommen:
     scene bg lauraszimmer
     with gradientTransReverse
     
-    #HIER FEHLT NOCH BGM
+    play music m_krank fadein 0.2
     
     b "Bist du wach, %(sisName)s?"
     #kranke laura

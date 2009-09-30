@@ -1778,7 +1778,7 @@ label yasmin_zwei_derMorgenDanach:
     show yasmin happy
     with fade
     
-    #HIER FEHLT NOCH BGM
+    play music m_yasmin fadein 0.2
     
     yan "Guten Morgen, %(berndName)s."
     b "Oh, guten Morgen, %(yanName)s."

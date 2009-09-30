@@ -238,7 +238,7 @@ label spinne:
 
     "Ich sehe Laura kreischend auf einem Stuhl stehen."
 
-    #HIER FEHLT NOCH BGM
+    play music m_spannung fadein 0.3
 
     sis "IIIIIIIIIIIIIIIIIIIHHHHHHHHHHHHHHHHHHHHHHHH!!"
 
@@ -1964,8 +1964,9 @@ label bernd_anja_besprechung:
     play sound "sounds/schuss.wav"
     #Sound existiert noch nicht
     
-    #Step
-    #Hier ein Bild mit Blutflecken
+    scene black
+    show splash blood
+    with dissolve
     
     b "Hil...{w}fe..."
         

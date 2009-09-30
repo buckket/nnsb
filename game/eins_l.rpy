@@ -120,14 +120,14 @@ label eins_sisAbholen:
     
     stop music fadeout 0.4
     
-    #HIER FEHLT NOCH BGM
-    
     "Schon zehn Minuten zu spät."
     "Sie wird mich umbringen wollen."
     "Da hinten steht sie."
     
     show laura sad
     with dissolve
+    
+    play music m_drama fadein 0.2
     
     sis "Da bist du ja endlich!"
     b "Entschuldigung, %(sisName)s."
@@ -1258,7 +1258,7 @@ label eins_laura_globalisierung:
     scene bg schule_innen_1
     with fade
     
-    #HIER FEHLT NOCH BGM
+    play music m_schule fadein 0.2
     
     "Hm..."
     "Ich war hier noch nie drin."
