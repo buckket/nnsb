@@ -980,7 +980,7 @@ label zwei_yasmin_einbruch:
     "Notfalls kann ich dann immer noch eingreifen."
     "Er setzt sich an meinen Rechner."
     "Naja, da kommt er nicht rein."
-    "Mein Password ist so siche-"
+    "Mein Passwort ist so siche-{nw}"
     "Er ist drin."
     "Ich kann es nicht wirklich glauben, aber über seine Schulter sehe ich eindeutig mein Wallpaper."
     "Er hat mein Passwort geknackt."
