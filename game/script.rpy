@@ -182,11 +182,12 @@ init:
     $ supermarkt = ""
     $ mitbringen = "nichts"
     
-    $ show_editor_button = True
+    $ show_editor_button = False
     $ hentaiEin = False
     
 # Neues Spiel startet hier
 label start:
+	stop music
     jump namenGeben
             
 
