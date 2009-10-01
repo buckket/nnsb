@@ -48,8 +48,8 @@ label eins:
     
     stop music fadeout 1.0
 
-    scene splash splash_eins
-    with gradientTrans
+    #scene splash splash_eins
+    #with gradientTrans
 
     $ renpy.pause(5.0)
 

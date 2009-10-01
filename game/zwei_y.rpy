@@ -1046,7 +1046,7 @@ label zwei_yasmin_einbruch:
             "Nur ein kleines Stück den Kopf drehen, damit ich den Monitor sehen kann."
             "Vielleicht durchsucht er meine Dateien, oder installiert irgendeinen Virus?"
             "Plötzlich holt er einen kleinen Kasten unter dem Mantel hervor."
-            "Eine Externe Festplatte, die er per USB anschließt."
+            "Eine externe Festplatte, die er per USB anschließt."
             "Ich nutze den kurzen Moment, um mich ein wenig zu drehen, so dass ich den Monitor sehen kann."
             "Er macht ein Backup meiner Daten, um dann zu Hause alles in Ruhe durchzugehen."
             "Clever."
@@ -1062,8 +1062,10 @@ label zwei_yasmin_einbruch:
             "Ich bekomme keine Luft mehr."
             "Nicht in der Lage, den Reflex weiter zu unterdrücken, platzt es aus mir heraus."
             "Tränen schießen mir in die Augen, während ich hustend nach Luft schnappe."
+            
             scene black
             with dissolve
+            
             "Jetzt ist alles zu spät."
             "Er hat mich bemerkt und wird mich umbringen oder so was."
             "Er darf ja keine Spuren hinterlassen."
@@ -1071,12 +1073,16 @@ label zwei_yasmin_einbruch:
             "Ich warte, aber es passiert nichts."
             "Warum passiert nichts?"
             "Will er mich nicht irgendwie loswerden oder so?"
+            
             scene bg keller_blur
             with dissolve
+            
             "Ich kann nichts erkennen."
             "Mit der Hand wische ich mir die Tränen aus den Augen."
+            
             scene bg keller
             with wooshTrans
+            
             "..."
             "Er ist weg."
             "Einfach verschwunden."
@@ -1087,7 +1093,9 @@ label zwei_yasmin_einbruch:
             scene black
             with fade
      
-            jump zwei_yasmin_bad_end #brauch ich noch
+            jump ende
+     
+            #jump zwei_yasmin_bad_end #brauch ich noch
             #spiel muss hier irgendwie enden
             
             

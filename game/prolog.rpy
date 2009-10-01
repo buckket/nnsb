@@ -51,10 +51,10 @@ label prolog:
 
     stop music
 
-    scene splash splash_prolog
-    with gradientTrans
+    #scene splash splash_prolog
+    #with gradientTrans
 
-    $ renpy.pause(5.0)
+    #$ renpy.pause(5.0)
 
     scene black
     with gradientTrans
