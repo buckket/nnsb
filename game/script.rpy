@@ -71,7 +71,7 @@ init python:
             base=persistent))
             
             
-    defaultNamenListe = ["Name","Rot","Blau","Marc-Oliver","Kim","Kevin"] #hier brauchen wir mehr
+    defaultNamenListe = ["Name","Rot","Blau","Marc-Oliver","Kim","Kevin","Naruto","Billy","John","Horst"] #hier brauchen wir mehr
 
 init:
     #Wichtige Storyflags:

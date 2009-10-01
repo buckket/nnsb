@@ -655,8 +655,8 @@ label zwei_laura_medizinHolen:
     "Eine Schlange hätte mir gerade noch gefehlt."
     "Ich gehe an einen Schalter."
     
-    show salih neutral
-    with dissolve
+    #show salih neutral
+    #with dissolve
     
     "Hmm...den kenn ich doch!"
     "Aber woher nur?"

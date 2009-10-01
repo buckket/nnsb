@@ -35,8 +35,8 @@ label eins_sisAbholen:
     
     play music m_donerladen fadein 0.3
     
-    show salih neutral
-    with dissolve
+    #show salih neutral
+    #with dissolve
     
     "Salih" "Hallo."
     b "Hallo."
@@ -58,8 +58,8 @@ label eins_sisAbholen:
     "Salih" "döner dauerd noch minude ja?"
     b "Ja, ist ok."
 
-    hide salih neutral
-    with dissolve
+    #hide salih neutral
+    #with dissolve
 
     "Wieso können die nicht mal jemanden einstellen, der ordentlich Deutsch redet?"
     "Hier braucht man ja zum Bestellen länger als die Zubereitung dauert."
@@ -183,17 +183,17 @@ label eins_sisAbholen:
     scene bg eiswagen
     with fade
     
-    show salih neutral
-    with dissolve
+    #show salih neutral
+    #with dissolve
     
     "Salih" "Guten Tag."
     "Salih" "Was darf's denn sein?"
     "Den kenn ich doch..."
     
-    show salih neutral at right
-    with move
+    #show salih neutral at right
+    #with move
     
-    show laura neutral at left
+    show laura neutral #at left
     with dissolve
     
     sis "3 Kugeln bitte."
@@ -209,8 +209,8 @@ label eins_sisAbholen:
     "Salih" "Dankeschön."
     "Salih" "Schönen Tag noch."
     
-    hide salih neutral
-    with dissolve
+    #hide salih neutral
+    #with dissolve
     
     show laura happy at center
     with move
