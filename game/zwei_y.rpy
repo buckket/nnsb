@@ -127,7 +127,7 @@ label zwei_yasmin_lauraTraum:
             b "Von mir aus."
             b "Ich höre dir zu. {w}Wenn du mir versprichst, dass du mich danach los machst."
             sis "Also gut."
-            sis "Dieser fuhr mit seiner Familie in den Urlaub."
+            sis "Es war einmal ein Junge, der fuhr mit seiner Familie in den Urlaub."
             sis "Als sie ankamen, wollte er sofort an den großen Strand zu den anderen Kindern."
             sis "Er wollte mit ihnen spielen."
             sis "Der Vater jedoch verbat dem Sohne an den großen Strand zu gehen."
@@ -150,6 +150,29 @@ label zwei_yasmin_lauraTraum:
             sis "Der Krebs war Schuld am Tod des Jungen."
             b "Und was willst du mir damit jetzt sagen?"
             sis "Du wirst es verstehen, wenn die Zeit reif ist."
+            b "Aha..."
+            "Ich verstehe nichts."
+            sis "%(berndName)s..."
+            show laura happy
+            with dissolve
+            sis "Danke, dass du mir zugehört hast."
+            show laura embarrassed
+            with dissolve
+            sis "Dafür, dass du so lange ausgehalten hast, bekommst du eine Belohnung."
+            "Was hat sie nun vor?"
+            "Sie kommt näher..."
+            b "Laura... {w}was wird das?"
+            "Sie krabbelt auf meinen Schoß."
+            "Ihr Gesicht kommt immer näher."
+            b "Laura..."
+            sis "Beruhig dich, %(berndName)s."
+            sis "Mach die Augen zu..."
+            "Ich schließe die Augen und..."
+            scene black
+            with dissolve
+            "...sie küsst mich."
+            
+            $renpy.pause(2.0)
        
         "Nein! Mach mich los!":
             b "Nein!"
@@ -228,6 +251,8 @@ label zwei_yasmin_lauraTraum:
             "Was hat sie vor?"
             "In diesem Moment..."
             
+            play sound "sounds/messer.wav"
+            
             scene black
             show splash slash_horizontal
             with flash
@@ -235,6 +260,8 @@ label zwei_yasmin_lauraTraum:
             scene black
             with fade
             "Eine einzige Bewegung... {w}viel zu schnell... {w}ich kann ihr nicht folgen."
+
+            play sound "sounds/messer.wav"
             
             show splash slash_vertikal
             with flash
@@ -268,9 +295,9 @@ label zwei_yasmin_lauraTraum:
             scene black
             with dissolve
             
-            stop music
-            
             "Ich schließe die Augen und falle."
+
+            stop music fadeout 2.0
             
             $renpy.pause(2.0)
             
