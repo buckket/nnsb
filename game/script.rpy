@@ -30,7 +30,7 @@ init python:
         return s[len(s)-last:len(s)]
         
     if persistent.wieherbuhSprache is None:
-        persistent.wieherbuhSprache = 2
+        persistent.wieherbuhSprache = 0
     
     #Bilder laden
     #diese Funktion lädt alle Bilder aus einem gegeben Ordner

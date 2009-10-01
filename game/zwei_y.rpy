@@ -1203,8 +1203,8 @@ label zwei_yasmin_geschnappt:
     yan "..."
     yan "Ich..."
     
-    show yasmin stalker_cry #braucht noch besseres bild für wenn sie RICHTIG heult
-    with dissolve
+    #show yasmin stalker_cry #braucht noch besseres bild für wenn sie RICHTIG heult
+    #with dissolve
     
     yan "...es tut mir so Leid!"
     yan "*schluchz*"
@@ -1218,8 +1218,8 @@ label zwei_yasmin_geschnappt:
     b "Ich werde schon nicht die Polizei rufen."
     b "Allerdings musst du mir schon erklären, was es mit dieser ganzen Sache auf sich hat."
     
-    show yasmin stalker_cry
-    with dissolve
+    #show yasmin stalker_cry
+    #with dissolve
     
     yan "..."
     b "Nun?"

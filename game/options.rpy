@@ -179,7 +179,7 @@ init -1 python hide:
     
     ## Musikraum:
     
-    config.main_menu.insert(3, ("Musikraum", "music_room", "True"))
+    #config.main_menu.insert(3, ("Musikraum", "music_room", "True"))
     
 
     ## Set this to False if the game does not have voicing.
