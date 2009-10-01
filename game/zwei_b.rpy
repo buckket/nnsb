@@ -204,21 +204,21 @@ label zwei_bernd_ende:
     "Ob ich das Gitter einfach rausnehmen kann?"
     "Ich greife nach dem Gitter und ziehe mit meinem ganzen Gewicht."
     
-    #show bg rabe
-    #with dissolve
+    show bg rabe
+    with dissolve
     
-    #hide bg rabe
-    #with flash
+    hide bg rabe
+    with flash
     
-    #$ renpy.pause(0.5)
+    $ renpy.pause(0.5)
     
-    #scene black
-    #with fade
+    scene black
+    with fade
     
-    #$ renpy.pause(2.0)
+    $ renpy.pause(2.0)
     
-    #scene bg keller
-    #with fade
+    scene bg keller
+    with fade
     
     nvl clear
     
