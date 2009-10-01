@@ -182,7 +182,7 @@ init:
     $ supermarkt = ""
     $ mitbringen = "nichts"
     
-    $ show_editor_button = Falseo
+    $ show_editor_button = False
     $ hentaiEin = False
     
 # Neues Spiel startet hier
