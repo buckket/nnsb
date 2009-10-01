@@ -6,7 +6,7 @@
 init:
 
     # This lets us control if the editor button is shown or not.
-    $ show_editor_button = True
+    $ show_editor_button = False
     
     python hide:
         

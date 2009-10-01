@@ -1092,12 +1092,9 @@ label zwei_yasmin_einbruch:
      
             scene black
             with fade
-     
+ 
             jump ende
-     
-            #jump zwei_yasmin_bad_end #brauch ich noch
-            #spiel muss hier irgendwie enden
-            
+
             
 label zwei_yasmin_geschnappt:
     "Stalkerbernd" "Stalkerbernd?"

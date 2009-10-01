@@ -12,7 +12,7 @@ init python:
     style.slow = Style(style.say_thought)
     style.slow.slow_cps = 30
     
-    config.log = "debuglog.txt"
+    #onfig.log = "debuglog.txt"
     
     #diverse funktionen
 
@@ -187,7 +187,7 @@ init:
     
 # Neues Spiel startet hier
 label start:
-    #jump namenFrage
+    jump namenGeben
             
 
 label skipTo: #namen des labels eingeben -> springen

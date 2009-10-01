@@ -233,7 +233,7 @@ label zwei_bernd_ende:
     
     nvl clear
     
-    nvlc "Und trotz meiner Trauer brauchte er dahin mich, daß ich lachte,"
+    nvlc "Und trotz meiner Trauer brachte er dahin mich, daß ich lachte,"
     nvlc "So gesetzt und gravitätisch herrscht' auf meinem Bildschirm er."
     nvlc "\"Ob auch alt und nah dem Grabe,\" sprach ich, \"bist kein feiger Knabe,"
     nvlc "Grimmer, glattgeschor'ner Rabe, der Du kamst vom Schattenheer -"
