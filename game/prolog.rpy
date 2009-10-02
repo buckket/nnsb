@@ -460,8 +460,8 @@ label prolog_EinkaufenWLAN:
     b "WLAN-Adapter haben die hier sicher nicht..."
     "Obwohl ich nur leise vor mich hin gemurmelt habe, hat mich wohl jemand gehört."
     
-    show salih neutral
-    with dissolve
+    #show salih neutral
+    #with dissolve
     
     "Salih" "Doch, haben wir. Zweite Reihe, drittes Regal."
     b "Äh... ja."
