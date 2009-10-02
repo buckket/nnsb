@@ -145,7 +145,6 @@ init:
     $ m_traum = "music/traum.ogg" #für Bernds Animeträume und seinen vielen Waifus
     $ m_battle = "music/battle.ogg" #u. a. bisher für die Spinnenszene, weil ich noch keine bessere BGM fand,
     $ m_treffen = "music/Treffen, das niemals stattfinden sollte.ogg" #siehe Folge 1 von Sayonara Zetsubou Sensei, genau so etwas...
-    #Irgendwie fehlt aber noch das passende Lied für die Laura-Spinnen-Szene
     $ m_cafe = "music/cafe.ogg" #falls Bernd mal mit einem Mädchen in ein Café geht
     $ m_kanashimi = "music/insert_kanashimi.ogg" #Insert-Song für Abstechszenen
     $ m_heul = "music/;_;.ogg" #;_;
