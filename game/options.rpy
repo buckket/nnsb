@@ -9,6 +9,8 @@
 
 init -1 python hide:
 
+    import random
+
     ## Should we enable the use of developer tools? This should be
     ## set to False before the game is released, so the user can't
     ## cheat using developer tools.
@@ -77,7 +79,7 @@ init -1 python hide:
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "title.png",
+        mm_root = "images/" + random.choice(("title_laura.png","title_anja.png","title_stalker.png")),
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
