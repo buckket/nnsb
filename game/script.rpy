@@ -2,7 +2,7 @@
 
 init python:
     import os
-    import random
+    from random import choice
  
     fastFade = Fade(.2, 0, .2, color="#000")
     flash = Fade(.1, 0, .3, color="#fff")
@@ -37,9 +37,12 @@ init python:
     style.slow = Style(style.say_thought)
     style.slow.slow_cps = 30    
     
-    style.mm_root.background = anim.TransitionAnimation("images/title_laura.png", 5.0, slowDissolve,"images/title_stalker.png", 5.0, slowDissolve,"images/title_anja.png", 5.0, slowDissolve)
+    style.mm_root.background = anim.TransitionAnimation(
+        "images/title_laura.png", 15.0, slowDissolve,
+        "images/title_stalker.png", 15.0, slowDissolve,
+        "images/title_anja.png", 15.0, slowDissolve)
     
-    #onfig.log = "debuglog.txt"
+    #config.log = "debuglog.txt"
     
     #diverse funktionen
 
@@ -251,9 +254,9 @@ label namenGeben:
 
     $ namenListe = defaultNamenListe
 
-    $ nameEins = random.choice(namenListe)
+    $ nameEins = choice(namenListe)
     $ namenListe.remove(nameEins)
-    $ nameZwei = random.choice(namenListe)
+    $ nameZwei = choice(namenListe)
 
     menu:
         "Wie ist dein Name?"
