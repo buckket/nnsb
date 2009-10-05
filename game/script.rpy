@@ -2,7 +2,7 @@
 
 init python:
     import os
-    from random import choice
+    from random import choice, shuffle
  
     fastFade = Fade(.2, 0, .2, color="#000")
     flash = Fade(.1, 0, .3, color="#fff")
@@ -36,11 +36,14 @@ init python:
     
     style.slow = Style(style.say_thought)
     style.slow.slow_cps = 30    
+
+    menuImages = ["images/title_laura.png","images/title_stalker.png","images/title_anja.png"]
+    shuffle(menuImages)
     
     style.mm_root.background = anim.TransitionAnimation(
-        "images/title_laura.png", 15.0, slowDissolve,
-        "images/title_stalker.png", 15.0, slowDissolve,
-        "images/title_anja.png", 15.0, slowDissolve)
+        menuImages[0], 10.0, slowDissolve,
+        menuImages[1], 10.0, slowDissolve,
+        menuImages[2], 10.0, slowDissolve)
     
     #config.log = "debuglog.txt"
     
