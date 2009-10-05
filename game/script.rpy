@@ -37,7 +37,7 @@ init python:
     style.slow = Style(style.say_thought)
     style.slow.slow_cps = 30    
     
-    style.mm_root.background = anim.TransitionAnimation("images/title_laura.png", 5.0, slowDissolve,"images/title_stalker.png", 5.0, slowDissolve,"images/title_anja.png", 5.0, dissolve)
+    style.mm_root.background = anim.TransitionAnimation("images/title_laura.png", 5.0, slowDissolve,"images/title_stalker.png", 5.0, slowDissolve,"images/title_anja.png", 5.0, slowDissolve)
     
     #onfig.log = "debuglog.txt"
     

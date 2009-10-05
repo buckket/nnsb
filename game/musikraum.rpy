@@ -66,7 +66,7 @@ init python:
     tracks.addTrack("Globalisierung", "music/schule.ogg")
     tracks.addTrack("Ich wähle dich, Schuh!", "music/battle.ogg")
     tracks.addTrack("Träume sind sooo toll", "music/traum.ogg")
-    tracks.addTrack(Lauer meer", "music/rabe.ogg")    
+    tracks.addTrack("Lauer meer", "music/rabe.ogg")    
     tracks.addTrack("Ich sterbe fast vor Anspannung...fast", "music/exciting.ogg")
     tracks.addTrack("Nein, nicht das Messer, NICHT DAS MESSER!!", "music/psycho.ogg")    
     tracks.addTrack("Stalk, stalk [drei Punkte am Ende der Zeile]", "music/yasmin_stalkerbernd_theme.ogg")
