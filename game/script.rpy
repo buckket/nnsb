@@ -30,6 +30,7 @@ init python:
     rightedge = Position(xpos=1.0,xanchor="center")
  
     config.font_replacement_map["DejaVuSans.ttf", False, True] = ("DejaVuSans-Oblique.ttf", False, False)
+    config.window_icon = "../laura-anja-icon 128x128.png"
     style.jp = Style(style.say_thought)
     style.jp.font = "mikachan.ttf"
     style.jp.italic = False
