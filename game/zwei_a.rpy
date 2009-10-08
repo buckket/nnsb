@@ -445,7 +445,7 @@ label nach_spinne:
             "Mein Herz fängt an zu klopfen."
             "Sie haucht mir etwas ins Ohr..."
             $ berndNameUpper = berndName.upper()
-            sis "%(berndNameUpper)s, ICH MUSS AUF KLO!"
+            sis "%(berndNameUpper)s, ICH MUSS AUF'S KLO!"
             "Was?"
             "Verdammt."
             

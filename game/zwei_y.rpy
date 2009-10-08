@@ -139,7 +139,7 @@ label zwei_yasmin_lauraTraum:
             sis "\"Aus rasestischen Grunden geschlossen - Die Stadtverwaltung\" stand auf dem Schild, das er eines Tages erblickte."
             sis "Der Strand wurde geschlossen."
             sis "Der Vater erlaubte ihm daraufhin mit den anderen Kindern am großen Strand zu spielen."
-            sis "Nach einer Weile merkte der Junge aber, dass er nicht mehr so viel Spaß am grosen Strand hatte wie noch vor Kurzem am kleinen Strand."
+            sis "Nach einer Weile merkte der Junge aber, dass er nicht mehr so viel Spaß am großen Strand hatte wie noch vor Kurzem am kleinen Strand."
             sis "Die Eltern hatten jedoch weiterhin jede Menge Spaß."
             sis "Ein paar Tage später wurde ein riesiger Krebs an den Strand gespült."
             sis "Der Junge wollte mit dem Krebs spielen."

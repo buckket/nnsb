@@ -708,7 +708,7 @@ label eins:
     "Merkwürdig."
     "Liegt wahrscheinlich an den Kopfschmerzen."
     "Langsam und vorsichtig steige ich die Stufen hinab."
-    "Meine Kopf fühlt sich an, als würde er 20 Kilo wiegen."
+    "Mein Kopf fühlt sich an, als würde er 20 Kilo wiegen."
     
     stop music fadeout 0.4
     
