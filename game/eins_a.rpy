@@ -1623,8 +1623,8 @@ label eins_refuse_fBernd:
     
 label eins_krautchanOffBernd:
 
-	scene bg keller
-	with fade
+    scene bg keller
+    with fade
 
     "Ich setze mich vor meinen Rechner."
     "www.krautchan.net"
