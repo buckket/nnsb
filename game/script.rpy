@@ -156,6 +156,7 @@ init:
     $ sis = DynamicCharacter("sisName", color="#ff5555")
     $ bw = DynamicCharacter("wBerndName", color="#00dd00")
     $ yan = DynamicCharacter("yanName", color="#ff00ff")
+    $ e = Character("Eich")
     $ nvlc = Character(None, kind=nvl)
         
     #Musik
@@ -187,6 +188,7 @@ init:
     $ m_schule = "music/schule.ogg" #in der Schule
     $ m_krank = "music/krank.ogg" #kranke Laura
     $ m_liebe = "music/liebe.ogg" #LIEBE <3
+    $ m_eich  = "music/pokemon_eich.mp3"
     
     #WICHTIG: Handy-Klingeltöne bitte nicht registrieren, die sind zwar in dem Ordner drin, werden aber mit dem Sound-Befehl abgerufen
     
@@ -217,6 +219,11 @@ init:
     
     $ show_editor_button = False
     $ hentaiEin = False
+    
+    #fragebogen
+    $ f_anime = 0
+    $ f_figuren = 0
+    $ f_lauern = 0
     
 # Neues Spiel startet hier
 label start:
@@ -256,6 +263,14 @@ label namenFrage:
 
 label namenGeben:
 
+    show eich normal at Position(ypos=0.5,yanchor=0.5)
+    with fade
+    
+    play music m_eich
+    
+    "Mann" "Hallo, willkommen in der Welt der Pokémon!"
+    "Mann" "Mein Name ist Eich und man nennt mich den Pokémonprofessor."
+    e "Wie lautet dein Name?"
     $ namenListe = defaultNamenListe
 
     $ nameEins = choice(namenListe)
@@ -263,7 +278,7 @@ label namenGeben:
     $ nameZwei = choice(namenListe)
 
     menu:
-        "Wie ist dein Name?"
+        #"Wie ist dein Name?"
         
         "Bernd":
             $ berndName = "Bernd"
@@ -294,7 +309,87 @@ label namenGeben:
     #with dissolve
     
     #"OK, das war schon alles."
-    "Viel Spaß, %(berndName)s!"
+    
+    e "Richtig, %(berndName)s. Es lag mir auf der Zunge."
+    e "Nun, %(berndName)s, ich würde gern einiges über dich wissen, bevor dein Abenteuer beginnt."
+    e "Bist du bereit, mir ein paar Fragen zu beantworten?"
+    e "Wenn nicht, hast du Pech gehabt, denn du musst."
+    e "Kommen wir also zu Frage 1."
+    menu:
+        e "Schaust du Anime, und wenn ja, wieviele hast du bisher vollständig gesehen?"
+        "Keine.":
+            $ f_anime = 0
+        "Unter 10.":
+            $ f_anime = 1
+        "10-20":
+            $ f_anime = 2
+        "20-50":
+            $ f_anime = 3
+        "Über 50":
+            $ f_anime = 4
+    e "Hm... interessant."
+    e "Kommen wir zu Frage 2."
+    if f_anime > 0:
+        menu:
+            e "Besitzt du Animefiguren, und wenn ja, wieviele?"
+            "Keine.":
+                $ f_figuren = 0
+            "Eine.":
+                $ f_figuren = 1
+            "2-5.":
+                $ f_figuren = 2
+            "6-10":
+                $ f_figuren = 3
+            "11-20":
+                $ f_figuren = 4
+            "Mehr als 20.":
+                $ f_figuren = 5
+        e "In Ordnung."
+        e "Nächste Frage."
+    menu:
+        e "Wie lange lauerst du pro Tag auf Krautchan?"
+        "< 1 Stunde":
+            $ f_lauern = 0
+        "1-2 Stunden":
+            $ f_lauern = 1
+        "2-4 Stunden":
+            $ f_lauern = 2
+        "4-8 Stunden":
+            $ f_lauern = 3
+        "8-16 Stunden":
+            $ f_lauern = 4
+        "24 Stunden":
+            $ f_lauern = 5
+    
+    e "Gut, weiter im Text..."
+    menu:
+        e "Bist du noch Jungfrau?"
+        "Ja.":
+            pass
+        "Ja.":
+            pass
+        "Ja.":
+            pass
+            
+    e "Ja, das dachte ich mir schon."
+    e "Also weiter."
+    e "Keine Angst, es dauert nicht mehr lange."
+    e "Eigentlich möchte ich nur noch eins von dir wissen."
+    e "%(berndName)s."
+    e "Ich habe hier drei Pokémon, und du darfst dir eines von ihnen aussuchen."
+    #hier ein besseres menü
+    menu:
+        e "Nun, welches soll es sein?"
+        "Glumanda":
+            $ f_poke = "Glumanda"
+        "Schiggy":
+            $ f_poke = "Schiggy"
+        "Bisasam":
+            $ f_poke = "Bisasam"
+            
+    e "%(f_poke)s, eine gute Wahl!"
+    e "Nun, %(berndName)s..."
+    e "...dein Abenteuer in der Welt der Pokémon erwartet dich!"
     $ berndNameCaps = berndName.upper()
     jump prolog
 
