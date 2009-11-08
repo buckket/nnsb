@@ -35,6 +35,11 @@ init python:
     style.jp.font = "mikachan.ttf"
     style.jp.italic = False
     
+    style.jpmenu = Style(style.menu_choice)
+    style.jpmenu.font = "mikachan.ttf"
+    style.jpmenu.italic = False
+    style.jpmenu.color = (210,210,210,255)
+    
     style.slow = Style(style.say_thought)
     style.slow.slow_cps = 30    
 
@@ -366,31 +371,38 @@ label namenGeben:
         e "Bist du noch Jungfrau?"
         "Ja.":
             pass
-        "Ja.":
+        "Oui.":
             pass
-        "Ja.":
+        "Si.":
             pass
-            
+        "{=jpmenu}はい。{/=jpmenu}":
+            pass
+        "{=jpmenu}是.{/=jpmenu}":
+            pass    
     e "Ja, das dachte ich mir schon."
     e "Also weiter."
     e "Keine Angst, es dauert nicht mehr lange."
     e "Eigentlich möchte ich nur noch eins von dir wissen."
     e "%(berndName)s."
     e "Ich habe hier drei Pokémon, und du darfst dir eines von ihnen aussuchen."
-    #hier ein besseres menü
-    menu:
-        e "Nun, welches soll es sein?"
-        "Glumanda":
-            $ f_poke = "Glumanda"
-        "Schiggy":
-            $ f_poke = "Schiggy"
-        "Bisasam":
-            $ f_poke = "Bisasam"
-            
+    #hier ein besseres menu
+    e "Nun, welches soll es sein?"
+    python:
+        ui.vbox(xfill=True,yfill=True,xalign=0.5)
+        ui.hbox(xalign=0.5,yalign=0.5)
+        ui.imagebutton("images/eich/bisa.png", "images/eich/bisa_g.png", xpadding=10, clicked=ui.returns("Bisasam"))
+        ui.imagebutton("images/eich/glumanda.png", "images/eich/glumanda_g.png", xpadding=10, clicked=ui.returns("Glumanda"))
+        ui.imagebutton("images/eich/schiggy.png", "images/eich/schiggy_g.png", xpadding=10, clicked=ui.returns("Schiggy"))
+        ui.close()
+        ui.close()
+        f_poke = ui.interact()
     e "%(f_poke)s, eine gute Wahl!"
     e "Nun, %(berndName)s..."
     e "...dein Abenteuer in der Welt der Pokémon erwartet dich!"
     $ berndNameCaps = berndName.upper()
+    scene black
+    with fade
+    $ renpy.pause(2.0)
     jump prolog
 
 label ende: 
