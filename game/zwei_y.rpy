@@ -2113,7 +2113,7 @@ label yasmin_zwei_derMorgenDanach:
     scene black
     with dissolve
     
-    #OK HIER IST SCHLUSS
-    jump ende
+    #OK HIER GEHT ES WEITER
+    #jump ende
     
     jump drei_yasmin

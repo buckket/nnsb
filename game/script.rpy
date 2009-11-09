@@ -385,7 +385,6 @@ label namenGeben:
     e "Eigentlich möchte ich nur noch eins von dir wissen."
     e "%(berndName)s."
     e "Ich habe hier drei Pokémon, und du darfst dir eines von ihnen aussuchen."
-    #hier ein besseres menu
     e "Nun, welches soll es sein?"
     python:
         ui.vbox(xfill=True,yfill=True,xalign=0.5)
