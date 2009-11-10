@@ -271,33 +271,48 @@ label namenFrage:
 
 label namenGeben:
 
-    image browserfenster = os_browserfenster()
+    $ mouse_visible = False
+
+    image browserfenster = os_browserfenster(site="a")
     image bg_image = os_BG()
     scene bg_image
     show browserfenster at xyCenter
+    show ui cursor at xyCenter
     with fade
     
-    "OMG"
+    "Cool, mein neuer Desktop!"
+    "Sogar mit Cursor."
+    show ui cursor at Position(xpos=400,ypos=60,yanchor=0.0)
+    with move
     
+    "Wusch!"
+    show ui cursor at Position(xpos=340,ypos=5,yanchor=0.0)
     show browserfenster at Position(yalign=0.0,xalign=0.0)
     with move
-    show browserfenster at Position(yalign=0.0,xalign=1.0)
-    with move
-    show browserfenster at Position(yalign=1.0,xalign=0.0)
-    with move
-    show browserfenster at Position(yalign=1.0,xalign=1.0)
-    with move
-    show browserfenster at xyCenter
-    with move
     
-    "watwat"
-    
-    image mailfenster = os_mailread(text="Haikus are easy\nbut sometimes they dont make sense\nrefridgerator")
-
-    show mailfenster at xyCenter
+    "Wow, ich kann sogar Fenster bewegen!"
+    "Naja, mal die Mails abrufen."
+    image mailfenster = os_mailbox(mailliste=[["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"]])
+    show mailfenster at Position(xpos=500,ypos=300,xanchor=0.0,yanchor=0.0)
     with None
     
-    "omg?"
+    "Was ist das denn?"
+    hide ui cursor
+    with None
+    show ui cursor at Position(xpos=340,ypos=5,yanchor=0.0)
+    with None
+    show ui cursor at Position(xpos=600,ypos=305,xanchor=0.0,yanchor=0.0)
+    with move
+    
+    "Was ist denn hier passiert?"
+    show ui cursor at Position(xpos=600,ypos=600,xanchor=0.0,yanchor=0.0)
+    with move
+    
+    "Komisch."
+    "HALT"
+    "POKEMONZEIT"
+    
+    $ mouse_visible = True
     
     scene black
 

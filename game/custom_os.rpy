@@ -15,11 +15,43 @@ init python:
         text_infoFeld = Text("Betreff: "+betreff+"\nvon: "+absender+"\nan: "+empfaenger,size=9,color="#000") #infotext erzeugen
         text_mailText = Text(text,size=10,color="#000") #mailinhalt erzeugen
         
-        resultDisp = LiveComposite((520,394), #größe des mailbgs
-                                   (0  ,0  ),background, #bg anzeigen
-                                   (17 ,4  ),text_titel, #titeltext
-                                   (23, 24 ),text_infoFeld, #infotext
-                                   (23, 67 ),text_mailText) #mailinhalt
+        
+        
+        resultList = [(520,394),(0,0),background,(17,4),text_titel,(23,24),text_infoFeld,(23,67),text_mailText]
+        
+        resultDisp = apply(LiveComposite,resultList)
+        
+        return resultDisp
+
+    def os_mailbox(titel="KC Mail",postfach="unbekannt",mails="0",ungelesen="0",mailliste=list()):
+        #mailliste ist eine liste aus listen mit je vier dingensen
+        #[betreff,von,uhrzeit,gelesen]
+        background = im.Image("images/ui/os/mailfenster.png") #bild laden
+        text_titel = Text(titel,size=8,color="#000") #titeltext erzeugen
+        text_infoFeld = Text("Postfach von: "+postfach+"\nE-Mails: "+mails+"\ndavon ungelesen: "+ungelesen,size=9,color="#000") #infotext erzeugen
+        #text_mailText = Text(text,size=10,color="#000") #mailinhalt erzeugen
+        
+        resultList = [(520,394),(0,0),background,(17,4),text_titel,(23,24),text_infoFeld]
+        
+        mailDispList = [(484,305)]
+        
+        print len(mailliste)
+        
+        for i in range(len(mailliste)):
+            for j in range(len(mailliste[i])):
+                if j == 0:
+                    xval = 0
+                elif j == 1:
+                    xval = 250
+                else:
+                    xval = 400
+                mailDispList += [(xval,i*14),Text(mailliste[i][j],size=9,color="#000")]
+        
+        mailDisp = apply(LiveComposite,mailDispList)
+        
+        resultList += [(23,67),mailDisp]
+        
+        resultDisp = apply(LiveComposite,resultList)
         
         return resultDisp
         
@@ -31,11 +63,9 @@ init python:
             site_image = Solid((0,0,0,0))
         else:
             site_image = im.Image("images/ui/os/browser_"+site+".png")
-            
-        resultDisp = LiveComposite((925,664), #größe des fensters
-                                   (0  ,0  ),background, #bg anzeigen
-                                   (17 ,4  ),text_titel, #titeltext
-                                   (171,27 ),text_url, #urltext
-                                   (22 ,68 ),site_image) #bild
-                                   
+
+        resultList = [(925,664),(0,0),background,(17,4),text_titel,(171,27),text_url,(22,68),site_image]
+         
+        resultDisp = apply(LiveComposite,resultList)
+         
         return resultDisp
