@@ -153,6 +153,7 @@ init:
     $ rightoffscren = Position(xpos=1.0,xanchor="left")
     $ leftedge = Position(xpos=0.0,xanchor="center")
     $ rightedge = Position(xpos=1.0,xanchor="center")
+    $ xyCenter = Position(xalign=0.5,yalign=0.5)
 
 
     # charaktere
@@ -225,6 +226,8 @@ init:
     $ show_editor_button = False
     $ hentaiEin = False
     
+    $ bgfilename = "images/ui/os/bg.png"
+    
     #fragebogen
     $ f_anime = 0
     $ f_figuren = 0
@@ -267,6 +270,36 @@ label namenFrage:
             jump prolog
 
 label namenGeben:
+
+    image browserfenster = os_browserfenster()
+    image bg_image = os_BG()
+    scene bg_image
+    show browserfenster at xyCenter
+    with fade
+    
+    "OMG"
+    
+    show browserfenster at Position(yalign=0.0,xalign=0.0)
+    with move
+    show browserfenster at Position(yalign=0.0,xalign=1.0)
+    with move
+    show browserfenster at Position(yalign=1.0,xalign=0.0)
+    with move
+    show browserfenster at Position(yalign=1.0,xalign=1.0)
+    with move
+    show browserfenster at xyCenter
+    with move
+    
+    "watwat"
+    
+    image mailfenster = os_mailread(text="Haikus are easy\nbut sometimes they dont make sense\nrefridgerator")
+
+    show mailfenster at xyCenter
+    with None
+    
+    "omg?"
+    
+    scene black
 
     show eich normal at Position(ypos=0.5,yanchor=0.5)
     with fade
