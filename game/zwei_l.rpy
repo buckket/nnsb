@@ -695,8 +695,4 @@ label zwei_laura_medizinHolen:
     with fade
     
     
-    play music m_lauraende
-
-    "Aus der Ferne höre ich einen Straßenmusiker..."
-    
-    jump ende
+    #hier muss es weitergehen mit laura drei!

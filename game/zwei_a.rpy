@@ -1954,23 +1954,12 @@ label bernd_anja_besprechung:
     scene bg zuhause_hausflur
     with fade
     
+    
+    
     "Ich trete in unsere Wohnung ein.{nw}"
     
-    "Stimme" "HALT! {w}HÄNDE HOCH! {w}KEINE BEWEGUNG!"
-    "Wer, wie, wo, was?"
-    "Verwirrt schaue ich mich um."
-    "Stimme" "ICH HAB GESAGT \"KEINE BEWEGUNG\"!"
-    
-    play sound "sounds/schuss.wav"
-    #Sound existiert noch nicht
-    
-    scene black
-    show splash blood
-    with dissolve
-    
-    b "Hil...{w}fe..."
-        
-    jump ende
+    # GSB GSB GSB
+    # hier muss es weitergehen
 
 
 label bernd_kapzwei_grillen:

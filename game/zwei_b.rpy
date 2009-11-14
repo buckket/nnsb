@@ -181,8 +181,8 @@ label zwei_bernd:
             "Das wird sich schon von selbst wieder richten."
             "Hat es bisher ja immer."
             
-            jump zwei_bernd_ende
-            
+            #jump zwei_bernd_ende
+            #STEPMANIA STEPMANIA STEPMANIA            
             
         "...etwas unternehmen! Wer, wenn nicht ich?":
             jump zwei_bernd_kc_retten
@@ -191,8 +191,9 @@ label zwei_bernd_kc_retten:
     "Diese Ungewissheit macht mich fertig!"
     "Ich muss es wissen."
     "Irgenwas muss ich doch tun können."
+    #STEPMANIA STEPMANIA STEPMANIA
     
-label zwei_bernd_ende:
+label zwei_bernd_ende: #ich lass das mal drin für die lachz :3
     scene bg keller
     with fade
     #test
