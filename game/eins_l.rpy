@@ -370,7 +370,7 @@ label eins_sisAbholen:
     "Sie verlässt das Zimmer widerwillig."
     "Endlich weiterlauern..."
     "...wie gut, dass ich Krautchan habe."
-    "Mein Tag wäre sonst ziemlich einseitig." #lolwas xD
+    "Mein Tag wäre sonst ziemlich einseitig."
     "Oh, ein \"Gute Nacht\"-Faden."
     "...vielleicht ist das eine gute Idee."
     "Schließlich ist es schon spät."
@@ -598,15 +598,6 @@ label eins_sisAbholen:
     "Nach 15 Minuten gehe ich nach Hause."
     "Das wird richtig Ärger geben..."
     "...ich kann froh sein, wenn ich meinen Internetzugang behalten darf."
-    
-    
-    #------------------------------------
-    #Bernd kommt wieder nach Hause
-    #und sieht Stalkerbernd vor seinem Fenster
-    #er verfolgt ihn, kriegt ihn aber nicht
-    #Krautchan geht offline
-    #und sprung auf Kapitel 2 mit Yasminroute
-    
     
     scene black
     with fade

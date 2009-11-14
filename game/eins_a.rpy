@@ -1196,8 +1196,6 @@ label eins_streit_ohne_aussprache:
     "Vielleicht sollte ich einfach warten, bis sie sich beruhigt hat."
     "Ich drehe mich um, doch in dem Moment..."
     
-    #watwat
-    
     #show mutter boese
     #with flash
     
@@ -1228,8 +1226,6 @@ label eins_streit_ohne_aussprache:
     sis "ERST MUSST DU DICH {w}*schluchz* {w}ENTSCHULDIGEN!"
     b "OK, dann..."
     "Wieder drehe ich mich um {w}und wieder sehe ich..."
-    
-    #watwat
     
     #show mutter boese
     #with flash

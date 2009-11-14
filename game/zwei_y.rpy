@@ -611,7 +611,6 @@ label zwei_yasmin_einbruch:
     with fade
     
     play music m_drama
-    #hier fehlt passende musik
     
     "Ich bin also mit %(sisName)s im Schlepptau auf dem Rückweg von der Schule nach Hause."
     "Bisher haben wir kein Wort gesprochen."
@@ -683,7 +682,7 @@ label zwei_yasmin_einbruch:
             "Hätte ich sie nicht angerufen, wäre das nie passiert."
             "Aber entschuldigen..."
             "Naja, bringe ich es halt hinter mich."
-            b "{size=-12}'Tschuldigung.{/size}" #geiler effekt imho
+            b "{size=-12}'Tschuldigung.{/size}"
             sis "Ich kann dich nicht hören."
             b "{size=-8}Entschuldigung.{/size}"
             sis "Ich hab es leider immer noch nicht verstanden."
@@ -1961,8 +1960,6 @@ label yasmin_zwei_derMorgenDanach:
     "In den Händen trägt sie ein Tablett."
     "Der sonst muffige Keller füllt sich mit dem Geruch frischer Brötchen."
     yan "Ich hab uns Frühstück gemacht."
-    #KAWAII! (''° ω°)
-    #Yasmin ist Bernds waifu!!
     b "..."
     #fragezeichenmächen
     yan "Hast du etwa keinen Hunger?"
