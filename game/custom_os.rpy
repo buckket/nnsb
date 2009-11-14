@@ -49,7 +49,7 @@ init python:
         
         mailDisp = apply(LiveComposite,mailDispList)
         
-        resultList += [(23,67),mailDisp]
+        resultList += [(23,65),mailDisp]
         
         resultDisp = apply(LiveComposite,resultList)
         

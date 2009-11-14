@@ -99,6 +99,94 @@ init python:
     def tlnote(text):
         ui.frame(background=Solid((0,0,0,128)),xminimum=0.3,yminimum=0.1,xpos=0.5,xanchor='center',ypos=0.01)
         ui.text(text,xanchor='center',yanchor='center',ypos=0.5,xpos=0.5,drop_shadow=(1,1))
+    
+    #diese funktion generiert alle OS-Bilder neu, wegen background-wechsel usw.
+    def refreshOS():
+        #hintergrund
+        bgImage = os_BG()
+        renpy.image(('bg','desktop_none'),bgImage)
+        
+        #/a/
+        uiImage_a = os_browserfenster(titel="KC Web - /a/ - Anime & Manga",url="http://www.krautchan.net/a/",site="a")
+        renpy.image(('ui','a'),uiImage_a)
+        
+        #/b/
+        uiImage_b = os_browserfenster(titel="KC Web - /b/ - Chaos",url="http://www.krautchan.net/b/",site="b")
+        renpy.image(('ui','b'),uiImage_b)
+        
+        #email 2
+        emailListe2 = [["Geh grillen","Grill-Bernd","vor 2 Minuten",0],
+        ["MEIN SACK MEIN SACK MEIN SACK","Bernd Säge","vor 4 Minuten",0],
+        ["Mara ist sooooo süß!","Aslan","vor 10 Minuten",0],
+        ["xD","Loserbernd","vor 30 Minuten",0],
+        ["^^","Loserbernd","vor 30 Minuten",0],
+        ["T_T","Loserbernd","vor 30 Minuten",0],
+        ["lol owned","Stalkerbernd","vor 4 Stunden",0],
+        ["Originaler Inhalt","Krautbernd","vor 12 Stunden",0],
+        ["Beendigung Ihrer Nazigoldmitgliedschaft","premium@krautchan.net","vor 16 Stunden",0],
+        ["UND MANGA","Mangabernd","vor 22 Stunden",0],
+        ["ICH LIEBE ANIME","Animebernd","vor 23 Stunden",0],
+        ["Mensch, Bernd","schnuffel90@googlemail.com","gestern",0],
+        ["HAHA, OH WOW","Lauer mehr","gestern",0],
+        ["Neues Passwort für ein Krautwiki-Benutzerkonto","imp@schuchtel.net","gestern",0],
+        ["Trolle trollen trollend Trolle trollende Trolle","Trollbernd","gestern",0],
+        ["<kein Betreff>","Neubiene","gestern",0],
+        ["Jetzt Penispillen bestellen!","kim@penis.de","gestern",0],
+        ["Hallo Bernd!","GSB","gestern",0],
+        ["lol internet","noko","gestern",0],
+        ["penispenispenispenis","xenu-chan","gestern",0],
+        ["HILFE","schnuffel90@googlemail.com","gestern",0],
+        ["Bestellen Sie billig Viagra! Hier klicken!","BILLIG VIAGRA","gestern",0]]
+        #print "max %s emails" % len(emailListe2)
+        uiImage_email_2 = os_mailbox(titel="KC Mail",postfach="pyscho_kc@hotmail.de",mails="9025",ungelesen="24",mailliste=emailListe2)
+        renpy.image(('ui','email_2'),uiImage_email_2)
+        
+        emailListe1 = [["Hallo Bernd","GSB","vor 10 Minuten",0],
+        ["lol internet", "noko", "vor 11 Minuten",0],
+        ["penispenispenispenis","xenu-chan","vor 14 Minuten",0],
+        ["HILFE","schnuffel90@googlemail.com","vor 15 Minuten", 0],
+        ["Bestellen Sie billig Viagra! Hier klicken!","BILLIG VIAGRA","vor 2 Stunden",0],
+        ["~~~SEXSPIELZEUGE~~~ BILLIG","BILLIG SEXSPIELZEUG","vor 7 Tagen",0],
+        ["Find freinds online! click now","FRIENDr","vor 7 Tagen",0],
+        ["generic spam mail","SPAM","vor 8 Tagen",0],
+        ["how do i got spam?","SPAM","vor 8 Tagen",0],
+        ["i dunno lol","SPAM","vor 8 Tagen",0],
+        ["Ihre Registrierung ist abgeschlossen!","premium@kautchan.net","vor 10 Tagen",0],
+        ["V_iagra","BILLIG VIAGRA","vor 2 Wochen",0],
+        ["Ihre Bestellung: Krautchan-Nazigold","premium@krautchan.net","vor 10 Tagen",0],
+        ["RE: Kündigung","Chef","vor 2 Wochen",0],
+        ["Ihre Bestellung wurde bearbeitet","amazon.de","vor 4 Wochen",0],
+        ["RE: Überweisung","Bank","vor 5 Wochen",0],
+        ["POPORUPIRUPIRUPIPIPIRUPI~~!","Dokuro-chan","vor 7 Wochen",0],
+        ["Spenden für Afrika","ab@zoc.ke","vor 1 Jahr",0],
+        ["Spenden für Afrika","be@tr.ug","vor 1 Jahr",0],
+        ["Spenden für Kautchan!","fi@ck.ja","vor 1 Jahr",0],
+        ["IMPOTENT? Hier klicken","admin@lachschon.de","vor 1 Jahr",0],
+        ["AUGEN-OP! BILLIG IM AUSLAND!","loserbernd@krautchan.net","vorgestern",0]]
+        uiImage_email_1 = os_mailbox(titel="KC Mail",postfach="pyscho_kc@hotmail.de",mails="9001",ungelesen="4",mailliste=emailListe1)
+        renpy.image(('ui','email_1'),uiImage_email_1)        
+        
+        hilfeText_2 = "Hey, Bernd!\n\nWieso kamst du heute nicht?\nIch habe extra auf dich gewartet. Du hast noch nicht mal geantwortet.\nIch werde morgen mal bei dir vorbeikommen.\nDeine Adresse habe ich ja von Krautchan.\n\nHEIL KRAUTCHAN!\n\n   Bernd"
+        uiImage_hilfe_2 = os_mailread(titel="KC Mail - Betreff: Mensch, Bernd - Absender: schnuffel90@googlemail.com",betreff="Mensch, Bernd",absender="schnuffel90@googlemail.com",empfaenger="kein Empfänger",text=hilfeText_2)
+        renpy.image(('ui','hilfe_2'),uiImage_hilfe_2)
+        
+        hilfeText_1 = "Hey, Bernd!\n\nIch habe deine Adresse von Krautchan und ich brauche deine Hilfe!\nWenn wir nichts unternehmen, wird es KC bald nicht mehr geben.\nDu musst mir helfen!\nKomm morgen um 14 Uhr zum Alexanderplatz. Da treffen wir uns.\nAm Besten irgendwo am Rand. Ich erkenne dich schon.\nStalkerbernd war ja so nett, ein Foto zu posten.\nIch hoffe, dass ich auf deine Hilfe zählen kann.\n\nHEIL KRAUTCHAN!\n\n   Bernd"
+        uiImage_hilfe_1 = os_mailread(titel="KC Mail - Betreff: HILFE - Absender: schnuffel90@googlemail.com",betreff="HILFE",absender="schnuffel90@googlemail.com",empfaenger="kein Empfänger",text=hilfeText_1)
+        renpy.image(('ui','hilfe_1'),uiImage_hilfe_1)
+        
+        bgImage_a = LiveComposite((1024,768),(0,0),bgImage,(50,60),uiImage_a)
+        renpy.image(('bg','desktop_a'),bgImage_a)
+        bgImage_b = LiveComposite((1024,768),(0,0),bgImage,(50,60),uiImage_b)
+        renpy.image(('bg','desktop_b'),bgImage_b)
+        bgImage_email_2 = LiveComposite((1024,768),(0,0),bgImage,(300,214),uiImage_email_2)
+        renpy.image(('bg','desktop_email_2'),bgImage_email_2)        
+        bgImage_email_1 = LiveComposite((1024,768),(0,0),bgImage,(300,214),uiImage_email_1)
+        renpy.image(('bg','desktop_email'),bgImage_email_1)
+        bgImage_hilfe_2 = LiveComposite((1024,768),(0,0),bgImage,(300,214),uiImage_hilfe_2)
+        renpy.image(('bg','desktop_hilfe_2'),bgImage_hilfe_2)
+        bgImage_hilfe_1 = LiveComposite((1024,768),(0,0),bgImage,(50,60),uiImage_hilfe_1)
+        renpy.image(('bg','desktop_hilfe'),bgImage_hilfe_1)
+        
         
     config.preferences['prefs_left'].append(
         _Preference(
@@ -121,8 +209,12 @@ init:
 
     #styles
     #style.say_window.background = "#f00"
+
+    $ bgfilename = "images/ui/os/bg.png"
     
     $ loadImagesFromAllDirs()
+    
+    $ refreshOS()
     
     # hintergründe
     #global
@@ -226,8 +318,6 @@ init:
     $ show_editor_button = False
     $ hentaiEin = False
     
-    $ bgfilename = "images/ui/os/bg.png"
-    
     #fragebogen
     $ f_anime = 0
     $ f_figuren = 0
@@ -271,48 +361,53 @@ label namenFrage:
 
 label namenGeben:
 
-    $ mouse_visible = False
+    #$ mouse_visible = False
 
-    image browserfenster = os_browserfenster(site="a")
-    image bg_image = os_BG()
-    scene bg_image
-    show browserfenster at xyCenter
-    show ui cursor at xyCenter
-    with fade
+    #image browserfenster = os_browserfenster(site="a")
+    #image bg_image = os_BG()
+    #scene bg_image
+    #show ui hilfe_1 at xyCenter
+    #scene bg desktop_a
+    #with fade
+    #scene bg desktop_b
+    #with fade
+    #scene bg desktop_email
+    #with fade
+    #scene bg desktop_email
+    #with fade
+    #"Cool, E-Mails!"
+    #"Sogar mit Cursor."
+    #show ui cursor at Position(xpos=400,ypos=60,yanchor=0.0)
+    #with move
     
-    "Cool, mein neuer Desktop!"
-    "Sogar mit Cursor."
-    show ui cursor at Position(xpos=400,ypos=60,yanchor=0.0)
-    with move
+    #"Wusch!"
+    #show ui cursor at Position(xpos=340,ypos=5,yanchor=0.0)
+    #show browserfenster at Position(yalign=0.0,xalign=0.0)
+    #with move
     
-    "Wusch!"
-    show ui cursor at Position(xpos=340,ypos=5,yanchor=0.0)
-    show browserfenster at Position(yalign=0.0,xalign=0.0)
-    with move
+    #"Wow, ich kann sogar Fenster bewegen!"
+    #"Naja, mal die Mails abrufen."
+    #image mailfenster = os_mailbox(mailliste=[["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"]])
+    #show mailfenster at Position(xpos=500,ypos=300,xanchor=0.0,yanchor=0.0)
+    #with None
     
-    "Wow, ich kann sogar Fenster bewegen!"
-    "Naja, mal die Mails abrufen."
-    image mailfenster = os_mailbox(mailliste=[["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"],["1","2","3"]])
-    show mailfenster at Position(xpos=500,ypos=300,xanchor=0.0,yanchor=0.0)
-    with None
+    #"Was ist das denn?"
+    #hide ui cursor
+    #with None
+    #show ui cursor at Position(xpos=340,ypos=5,yanchor=0.0)
+    #with None
+    #show ui cursor at Position(xpos=600,ypos=305,xanchor=0.0,yanchor=0.0)
+    #with move
     
-    "Was ist das denn?"
-    hide ui cursor
-    with None
-    show ui cursor at Position(xpos=340,ypos=5,yanchor=0.0)
-    with None
-    show ui cursor at Position(xpos=600,ypos=305,xanchor=0.0,yanchor=0.0)
-    with move
+    #"Was ist denn hier passiert?"
+    #show ui cursor at Position(xpos=600,ypos=600,xanchor=0.0,yanchor=0.0)
+    #with move
     
-    "Was ist denn hier passiert?"
-    show ui cursor at Position(xpos=600,ypos=600,xanchor=0.0,yanchor=0.0)
-    with move
-    
-    "Komisch."
+    #"Komisch."
     "HALT"
     "POKEMONZEIT"
     
-    $ mouse_visible = True
+    #$ mouse_visible = True
     
     scene black
 
