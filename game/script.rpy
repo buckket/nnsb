@@ -538,16 +538,19 @@ label namenGeben:
     menu:
         e "Bist du noch Jungfrau?"
         "Ja.":
-            pass
+            e "Ja, das dachte ich mir schon."
         "Oui.":
-            pass
+            e "Comme je le pensais."
         "Si.":
-            pass
+            e "Sí, me lo pensé."
         "{=jpmenu}はい。{/=jpmenu}":
-            pass
+            if persistent.wieherbuhSprache in (0,2):
+                e "{=jp}そう です、 ね？{/=jp}"
+            else:
+                e "Sou desu, ne?"
         "{=jpmenu}是.{/=jpmenu}":
-            pass    
-    e "Ja, das dachte ich mir schon."
+            e "Ich kann kein Chinesisch, ok?"    
+    
     e "Also weiter."
     e "Keine Angst, es dauert nicht mehr lange."
     e "Eigentlich möchte ich nur noch eins von dir wissen."
