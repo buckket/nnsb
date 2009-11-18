@@ -1017,9 +1017,9 @@ label traum:
     "Erica" "Ja."
     b "Sicher?"
     "Erica" "Ja."
-    #Blushbild von Lynette für maximalen Gewinn
-    #Bild existiert noch nicht
-    #ansonsten muss ich das irgendwie per Dialog darstellen
+    
+    show lynette blush at right
+    with dissolve
     
     "Erica" "Was ist denn los, Lynette?"
     "Lynette" "Das ist einfach..."
