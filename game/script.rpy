@@ -3,6 +3,9 @@
 init python:
     import os
     from random import choice, shuffle
+    
+    if persistent.resolution == None:
+        persistent.resolution = (1024,768)
  
     fastFade = Fade(.2, 0, .2, color="#000")
     flash = Fade(.1, 0, .3, color="#fff")
@@ -43,7 +46,7 @@ init python:
     style.slow = Style(style.say_thought)
     style.slow.slow_cps = 30    
 
-    menuImages = ["images/title_laura.png","images/title_stalker.png","images/title_anja.png"]
+    menuImages = ["images/title_laura_"+str(persistent.resolution[0])+".png","images/title_stalker_"+str(persistent.resolution[0])+".png","images/title_anja_"+str(persistent.resolution[0])+".png"]
     shuffle(menuImages)
     
     style.mm_root.background = anim.TransitionAnimation(
@@ -84,7 +87,18 @@ init python:
             if file.endswith(".png") or file.endswith(".jpg"): #wenn es in .png oder .jpg endet
                 theFileName = dirName[7:len(dirName)] + "/" + file[0:len(file)-4] #"images/" und die letzten vier zeichen abschneiden
                 imageName = tuple(theFileName.split("/"))#von "a/b/c" nach ('a','b','c')
-                renpy.image(imageName,thePath + file) #und ein bild draus machen
+                #renpy.image(imageName,thePath + file) #und ein bild draus machen
+                resolution = persistent.resolution
+                if resolution == None:
+                    resolution = (1024,768)
+                newImg = im.Image(thePath+file) #bild laden
+                if resolution != (1024,768):
+                    wiFac = float(int(resolution[0])/1024.0)
+                    hiFac = float(int(resolution[1])/768.0)
+                    #print (wiFac,hiFac)
+                    newImg = im.FactorScale(newImg,wiFac,hiFac,bilinear=True)
+                    #print "scaled image to %s,%s" % (1024*wiFac,768*hiFac)
+                renpy.image(imageName,newImg) #und ein bild draus machen
     
     #Diese funktion lädt ALLE Bilder
     def loadImagesFromAllDirs():  
@@ -198,6 +212,15 @@ init python:
             base=persistent))
             
             
+    config.preferences['prefs_left'].append(
+        _Preference(
+            "Auflösung",
+            "resolution",
+            [ ("800x600", (800,600), "True"),
+              ("1024x768", (1024,768), "True")],
+            base=persistent))
+            
+            
     defaultNamenListe = ["Name","Rot","Blau","Marc-Oliver","Kim","Kevin","Naruto","Billy","John","Horst"] #hier brauchen wir mehr
 
 init:
@@ -209,6 +232,8 @@ init:
 
     #styles
     #style.say_window.background = "#f00"
+    
+    #$ print persistent.resolution
 
     $ bgfilename = "images/ui/os/bg.png"
     

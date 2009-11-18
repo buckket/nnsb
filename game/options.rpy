@@ -21,6 +21,10 @@ init -1 python hide:
 
     config.screen_width = 1024
     config.screen_height = 768
+    
+    if(persistent.resolution != None):
+        config.screen_width = persistent.resolution[0]
+        config.screen_height = persistent.resolution[1]
 
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
@@ -74,7 +78,7 @@ init -1 python hide:
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
-        rounded_window = False,
+        #rounded_window = True,
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
@@ -123,6 +127,8 @@ init -1 python hide:
     ## and padding.
 
     style.window.yminimum = 200
+    #style.window.background = Frame("images/ui/window_frame.png",12,12)
+    
     style.say_label.size = 24
     style.say_dialogue.size = 24
     style.say_thought.size = 24
