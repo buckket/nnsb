@@ -135,12 +135,14 @@ label zwei_anja:
     "Und sie wird bestimmt auch irgendwo Kuscheltiere rumstehen haben."
     "Sie hat bestimmt eine Plüschfigur von {i}Hello, Kitty{/i}."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Wie süß!"
-    if persistent.wieherbuhSprache is 1:
-        "Kawaii desu, ne?"
-    if persistent.wieherbuhSprache is 2:
-        "{=jp}かわいいです、 ね。{/=jp}"
+    #if persistent.wieherbuhSprache is 0:
+    #    "Wie süß!"
+    #if persistent.wieherbuhSprache is 1:
+    #    "Kawaii desu, ne?"
+    #if persistent.wieherbuhSprache is 2:
+    #    "{=jp}かわいいです、 ね。{/=jp}"
+label wbTest:
+    $ n(wS("Wie süß!","Kawaii desu, ne?","かわいいです、 ね。"),interact=True)
     #-----------------------------------------------
     "Hat nicht jedes Mädchen heutzutage eine Figur von {i}Hello, Kitty{/i}?"
     "Und die Figur wird nach %(wBerndName)s riechen."
@@ -510,17 +512,13 @@ label nach_spinne:
             
             $ renpy.music.set_volume(0.0, .5, channel="music")
 
-            #-----------------------------------------------
-            "Einmal kalt duschen und man möchte nicht mehr."
-            if persistent.wieherbuhSprache is 0:
-                "Genau nach Plan."
+            #hier muss ich nun doch ein if benutzen :(
             if persistent.wieherbuhSprache is 1:
                 "Genau nach{nw}"
                 $ tlnote("Notiz: keikaku bedeutet Plan.")
                 extend " keikaku!"
-            if persistent.wieherbuhSprache is 2:
-                "{=jp}Genau nach 計画。{/=jp}"
-            #-----------------------------------------------
+            else:
+                $ n(wS("Genau nach Plan.","HAHA ICH BIN NUTZLOS","Genau nach 計画。"),interact=True)
 
     "Damit bin ich fertig."
     
@@ -794,12 +792,7 @@ label anja_besuch:
     "Nie kann man es ihnen recht machen."
     "Ich kenne es nicht anders."     
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "GO TO HELL, BITCHES!"
-    if persistent.wieherbuhSprache is 1:
-        "KIEUSERO, ONNA-DOMO!"
-    if persistent.wieherbuhSprache is 2:
-        "{=jp}消えうせろ、 女共！{/=jp}"
+    $ n(wS("GO TO HELL, BITCHES!","KIEUSERO, ONNA-DOMO!","消えうせろ、 女共！"),interact=True)
     #-----------------------------------------------
     "Aber sie ist eine Bernadette."
     "Und ich ein Bernd."
@@ -823,28 +816,14 @@ label traum:
     show lynette essen
     with dissolve
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Lynette" "...Meister."
-    if persistent.wieherbuhSprache is 1:
-        "Lynette" "...goshujin-sama."
-    if persistent.wieherbuhSprache is 2:
-        "Lynette" "{=jp}。。。御主人様。{/=jp}"
+    #noch eine andere version -_-
+    $ renpy.say("Lynette",wS("...Meister.","...goshujin-sama.","。。。御主人様。"))
     #-----------------------------------------------
     b "Hmm?"
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Lynette" "Guten Morgen, Meister."
-    if persistent.wieherbuhSprache is 1:
-        "Lynette" "Ohayou gozaimasu, goshujin-sama."
-    if persistent.wieherbuhSprache is 2:
-        "Lynette" "{=jp}お早うございます、　御主人様。{/=jp}"
+    $ renpy.say("Lynette",wS("Guten Morgen, Meister.","Ohayou gozaimasu, goshujin-sama.","お早うございます、　御主人様。"))
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        b "Morgen."
-    if persistent.wieherbuhSprache is 1:
-        b "Ohayou."
-    if persistent.wieherbuhSprache is 2:
-        b "{=jp}お早う。{/=jp}"
+    $ b(wS("Morgen.","Ohayou.","お早う。"),interact=True)
     #-----------------------------------------------
     "Lynette" "Ich habe Ihnen Frühstück gemacht."
     b "Aber Lynette."
@@ -853,56 +832,30 @@ label traum:
     "Lynette" "Aber ich..."
     "Lynette" "...ich..."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Lynette" "...ich koche doch so gerne, Meister."
-    if persistent.wieherbuhSprache is 1:
-        "Lynette" "...ich koche doch so gerne, goshujin-sama."
-    if persistent.wieherbuhSprache is 2:
-        "Lynette" "...ich koche doch so gerne, {=jp}御主人様。{/=jp}"
+    $ renpy.say("Lynette",wS("...ich koche doch so gerne, Meister.","...ich koche doch so gerne, goshujin-sama.","...ich koche doch so gerne, 御主人様。"))
     #-----------------------------------------------
     b "Ach, Lynette."
     b "Was soll ich nur mit dir machen."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        b "Da bleibt mir wohl nichts Anderes übrig."
-    if persistent.wieherbuhSprache is 1:
-        b "Shou ga nai yo."
-    if persistent.wieherbuhSprache is 2:
-        b "{=jp}しょうがないよ。{/=jp}"
+    $ b(wS("Da bleibt mir wohl nichts Anderes übrig.","Shou ga nai yo.","しょうがないよ。"),interact=True)
     #-----------------------------------------------
     b "Ich werde es wohl erst essen müssen."
     b "Nachher wäre es kalt."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Lynette" "Bitteschön."
-    if persistent.wieherbuhSprache is 1:
-        "Lynette" "Douzo."
-    if persistent.wieherbuhSprache is 2:
-        "Lynette" "{=jp}どうぞ。{/=jp}"
+    $ renpy.say("Lynette",wS("Bitteschön.","Douzo.","どうぞ。"))
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        b "Danke."
-    if persistent.wieherbuhSprache is 1:
-        b "Arigatou."
-    if persistent.wieherbuhSprache is 2:
-        b "{=jp}ありがとう。{/=jp}"
+    $ b(wS("Danke.","Arigatou","ありがとう。"),interact=True)
     #-----------------------------------------------
     "Ich nehme das Tablett und setze mich damit an den Tisch."
     #Bild von Lynette ohne Tablett
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        pass
+    #hier wieder ifs, weil kein deu vorhanden
     if persistent.wieherbuhSprache is 1:
         b "Itadakimasu!"
     if persistent.wieherbuhSprache is 2:
         b "{=jp}いただきます！{/=jp}"
     #-----------------------------------------------    
-    if persistent.wieherbuhSprache is 0:
-        "Lynette" "M-Meister..."
-    if persistent.wieherbuhSprache is 1:
-        "Lynette" "Ne, goshujin-sama..."
-    if persistent.wieherbuhSprache is 2:
-        "Lynette" "{=jp}ね、 御主人様。。。{/=jp}"
+    $ renpy.say("Lynette",wS("M-Meister...","Ne, goshujin-sama...","ね、 御主人様。。。"))
     #-----------------------------------------------
     b "Ja?"
     "Lynette" "Ich wollte gleich noch einkaufen gehen, aber ich habe kein Geld."
@@ -913,12 +866,7 @@ label traum:
     "Lynette" "Das ist so viel Geld."
     "Lynette" "Ist das denn wirklich in Ordnung?"
     #-----------------------------------------------    
-    if persistent.wieherbuhSprache is 0:
-        b "Natürlich ist es das."
-    if persistent.wieherbuhSprache is 1:
-        b "Atarimae sa."
-    if persistent.wieherbuhSprache is 2:
-        b "{=jp}当たり前さ。{/=jp}"
+    $ b(wS("Natürlich ist es das.","Atarimae sa.","当たり前さ。"),interact=True)
     #-----------------------------------------------
     b "Da gab es doch diese Halskette, die du unbedingt haben wolltest."
     b "Wie teuer war die noch gleich?"
@@ -927,6 +875,7 @@ label traum:
     b "Hier."
     "Lynette" "Woher wissen Sie davon?"
     b "Ich wäre nicht mit dir zusammen, wenn ich so was nicht wüsste."
+    #HIER WEITER - GSB GSB GSB
     #Bild mit blush von Lynette für maximalen Gewinn
     #-----------------------------------------------    
     if persistent.wieherbuhSprache is 0:

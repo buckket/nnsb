@@ -74,6 +74,19 @@ init python:
         if(last==0):
             last = len(s)/2
         return s[len(s)-last:len(s)]
+    
+    #wieherbuhSprache
+    #gibt abhängig von der wieherbuhSprachenoption deutsch, romaji oder kanji zurück
+    #benutzung:
+    #b "%(wieherbuhSprache("Idiot!","Baka!","バカ！"))s"
+    def wieherbuhSprache(deu,rom,jap):
+        li = [deu,rom,jap]
+        re = li[persistent.wieherbuhSprache]
+        if re == li[2]:
+            re = "{=jp}"+re+"{/=jp}"
+        return re
+        
+    wS = wieherbuhSprache
         
     if persistent.wieherbuhSprache is None:
         persistent.wieherbuhSprache = 0
@@ -265,6 +278,7 @@ init:
     $ yan = DynamicCharacter("yanName", color="#ff00ff")
     $ e = Character("Eich")
     $ nvlc = Character(None, kind=nvl)
+    $ n = Character(None)
         
     #Musik
     $ m_bernd = "music/bernd_theme.ogg" #Draußen, Keller
@@ -335,7 +349,7 @@ init:
 # Neues Spiel startet hier
 label start:
     stop music
-    jump namenGeben
+    jump skipTo
             
 
 label skipTo: #namen des labels eingeben -> springen
