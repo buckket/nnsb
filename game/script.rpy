@@ -324,7 +324,7 @@ init:
     $ supermarkt = ""
     $ mitbringen = "nichts"
     
-    $ show_editor_button = False
+    $ show_editor_button = True
     $ hentaiEin = False
     
     #fragebogen
