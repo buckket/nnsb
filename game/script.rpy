@@ -4,9 +4,6 @@ init python:
     import os
     from random import choice, shuffle
     
-    if persistent.resolution == None:
-        persistent.resolution = (1024,768)
- 
     fastFade = Fade(.2, 0, .2, color="#000")
     flash = Fade(.1, 0, .3, color="#fff")
     slowFlash = Fade(.1, 0, .5, color="#fff")
@@ -37,6 +34,13 @@ init python:
     style.jp = Style(style.say_thought)
     style.jp.font = "mikachan.ttf"
     style.jp.italic = False
+
+    style.poke = Style(style.nvl_dialogue)
+    style.poke.font = "pokemon.ttf"
+    style.poke.size = 16
+    style.poke.italic = False
+    style.poke.bold = False
+    style.poke.line_spacing = 1000000
     
     style.jpmenu = Style(style.menu_choice)
     style.jpmenu.font = "mikachan.ttf"
@@ -46,7 +50,7 @@ init python:
     style.slow = Style(style.say_thought)
     style.slow.slow_cps = 30    
 
-    menuImages = ["images/title_laura_"+str(persistent.resolution[0])+".png","images/title_stalker_"+str(persistent.resolution[0])+".png","images/title_anja_"+str(persistent.resolution[0])+".png"]
+    menuImages = ["images/title_laura.png","images/title_stalker.png","images/title_anja.png"]
     shuffle(menuImages)
     
     style.mm_root.background = anim.TransitionAnimation(
@@ -87,18 +91,7 @@ init python:
             if file.endswith(".png") or file.endswith(".jpg"): #wenn es in .png oder .jpg endet
                 theFileName = dirName[7:len(dirName)] + "/" + file[0:len(file)-4] #"images/" und die letzten vier zeichen abschneiden
                 imageName = tuple(theFileName.split("/"))#von "a/b/c" nach ('a','b','c')
-                #renpy.image(imageName,thePath + file) #und ein bild draus machen
-                resolution = persistent.resolution
-                if resolution == None:
-                    resolution = (1024,768)
-                newImg = im.Image(thePath+file) #bild laden
-                if resolution != (1024,768):
-                    wiFac = float(int(resolution[0])/1024.0)
-                    hiFac = float(int(resolution[1])/768.0)
-                    #print (wiFac,hiFac)
-                    newImg = im.FactorScale(newImg,wiFac,hiFac,bilinear=True)
-                    #print "scaled image to %s,%s" % (1024*wiFac,768*hiFac)
-                renpy.image(imageName,newImg) #und ein bild draus machen
+                renpy.image(imageName,thePath + file) #und ein bild draus machen
     
     #Diese funktion lädt ALLE Bilder
     def loadImagesFromAllDirs():  
@@ -209,15 +202,6 @@ init python:
             [ ("Aus", 0, "True"),
               ("Romaji", 1, "True"),
               ("Kanji", 2, "True") ],
-            base=persistent))
-            
-            
-    config.preferences['prefs_left'].append(
-        _Preference(
-            "Auflösung",
-            "resolution",
-            [ ("800x600", (800,600), "True"),
-              ("1024x768", (1024,768), "True")],
             base=persistent))
             
             
@@ -429,6 +413,15 @@ label namenGeben:
     #with move
     
     #"Komisch."
+    
+    #scene bg keller_aus
+    #with fade
+    #image laura claustrophobie = "images/laura/surprised_drop.png"
+    #show laura surprised_drop
+    #with dissolve
+    
+    #sis "Die Wände... sie kommen immer näher!"
+    
     "HALT"
     "POKEMONZEIT"
     
@@ -556,17 +549,48 @@ label namenGeben:
     e "Eigentlich möchte ich nur noch eins von dir wissen."
     e "%(berndName)s."
     e "Ich habe hier drei Pokémon, und du darfst dir eines von ihnen aussuchen."
+    jump pokemonwahl
+
+label pokemonwahl:
+    scene black
+    show eich normal at Position(ypos=0.5,yanchor=0.5)
+    with None
     e "Nun, welches soll es sein?"
     python:
-        ui.vbox(xfill=True,yfill=True,xalign=0.5)
-        ui.hbox(xalign=0.5,yalign=0.5)
-        ui.imagebutton("images/eich/bisa.png", "images/eich/bisa_g.png", xpadding=10, clicked=ui.returns("Bisasam"))
-        ui.imagebutton("images/eich/glumanda.png", "images/eich/glumanda_g.png", xpadding=10, clicked=ui.returns("Glumanda"))
-        ui.imagebutton("images/eich/schiggy.png", "images/eich/schiggy_g.png", xpadding=10, clicked=ui.returns("Schiggy"))
-        ui.close()
-        ui.close()
+        ui.imagebutton("images/eich/pokeball.png", "images/eich/bisa.png", xalign=0.5,yalign=0.1, clicked=ui.returns("Bisasam"))
+        ui.imagebutton("images/eich/pokeball.png", "images/eich/glumanda.png", xalign=0.2,yalign=0.7, clicked=ui.returns("Glumanda"))
+        ui.imagebutton("images/eich/pokeball.png", "images/eich/schiggy.png", xalign=0.7,yalign=0.7, clicked=ui.returns("Schiggy"))
         f_poke = ui.interact()
-    e "%(f_poke)s, eine gute Wahl!"
+
+    if f_poke == "Bisasam":
+        show eich bisa at Position(xalign=0.5,yalign=0.1)
+        with None
+        show eich bisa at Position(xalign=0.5,yalign=0.5)
+        with move
+        #pokemonz font geht net :(
+        #evtl. fixieren oder so lassen
+        #"{=poke}BISASAM\nSAMEN\nGR.    0.7m\nGEW    6.9kg\n\ Dieses Pokémon trägt von Geburt an einen Samen\n auf dem Rücken, der mit ihm keimt und wächst.{/=poke}"
+        "BISASAM\nSAMEN\nGR.    0.7m\nGEW    6.9kg\n Dieses Pokémon trägt von Geburt an einen Samen\n auf dem Rücken, der mit ihm keimt und wächst."
+    elif f_poke == "Glumanda":
+        show eich glumanda at Position(xalign=0.2,yalign=0.7)
+        with None
+        show eich glumanda at Position(xalign=0.5,yalign=0.5)
+        with move
+        "GLUMANDA\nECHSE\nGR.    0.6m\nGEW    8.5kg\n Dieses Pokémon bevorzugt heiße Lebensräume.\n Bei Regen dampft die Schwanzspitze von GLUMANDA."
+    elif f_poke == "Schiggy":
+        show eich schiggy at Position(xalign=0.7,yalign=0.7)
+        with None
+        show eich schiggy at Position(xalign=0.5,yalign=0.5)
+        with move
+        "SCHIGGY\nMINIKRÖTE\nGR.    0.5m\nGEW    9.0kg\n Nach der Geburt bildet sich auf SCHIGGYS Rücken\n ein Panzer. Es attackiert mit Sprühschaum."
+
+    e "Sicher, dass du %(f_poke)s wählen willst?"
+    menu:
+        "Ja!":
+            e "Eine gute Wahl!"
+        "Nein!":
+            jump pokemonwahl
+            
     e "Nun, %(berndName)s..."
     e "...dein Abenteuer in der Welt der Pokémon erwartet dich!"
     $ berndNameCaps = berndName.upper()

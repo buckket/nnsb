@@ -6,7 +6,7 @@
 init:
 
     # This lets us control if the editor button is shown or not.
-    $ show_editor_button = False
+    #$ show_editor_button = True
     
     python hide:
         
@@ -49,7 +49,7 @@ init:
             # The button contains this text. We can't use ui.textbutton,
             # since we want to restyle things.
             ui.text("%s:%d" % (filename, line),
-                    xpos=1022, xanchor=1.0, ypos = 752,
+                    xanchor=1.0,yanchor=1.0,xpos=1.0,ypos=1.0,
                     size=14)
         # Append the overlay function to the list of overlay functions. 
         config.overlay_functions.append(overlay)
