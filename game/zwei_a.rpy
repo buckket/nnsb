@@ -1483,20 +1483,6 @@ label bernd_anja_besprechung:
     "Mehr gibt es da nicht."
     "Ich sollte einfach klopfen."
         
-#    else:
- #       "Moment."
-  #      "Dann kommt sie nachher einfach wieder in meinen Keller."
-   #     "Bei meinem Glück kommt sie genau dann rein, während ich fappiere."
-    #    "Ich sollte einfach klopfen."    
-     #   "Ich bin ein Bernd."
-      #  "Sie ist ein Bernd."
-       # "Wir wollen Krautchan retten."
-        #"Mehr gibt es da nicht."
-
-#wird erstmal nur rauskommentiert, ich weiß nicht, was ich mir damals dabei dachte, dass so zu lösen
-#oben stand if anja_zwei:
-#GSB GSB GSB
-    
     play sound "sounds/knock.wav"
     
     $ renpy.pause(1.0)

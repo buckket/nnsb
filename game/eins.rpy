@@ -565,16 +565,20 @@ label eins:
     "Das sind ja MEINE Daten!"
     "Scheiße."
     "Wo hat der die her?"
+    "Verzweifelt lasse ich mich auf mein Bett fallen."
     "Ich bin doch gerade erst hier eingezogen!"
     "Wie kommt der da überhaupt dran?"
     "Das war's."
     "Ich kann eigentlich gleich grillen gehen."
     "In einer Stunde stehen hier bestimmt 20 Bernds vor der Tür."
-    b "Was mach ich nur...!?"
-    
-    #hier könnte man noch einbauen, wie Bernd erst verzweifelt auf dem Bett liegt
-    #GSB
-    
+    "Was mach ich nur...!?"
+    "AHHHHHHHHHHHH!"
+    $ n(wS("Ich bin verzweifelt!","ZETSUBOU SHITA!","絶望したっ!"),interact=True)
+    $ n(WS("Das Internet lässt mich verzweifeln!","NETTO SHIKAI NI ZETSUBOU SHITA!","ネット しかい に	 絶望したっ!"),interact=True)
+    #Gibt es entsprechende Kanji für "shikai" in diesem Kontext?
+    #Ich habe jetzt erst einmal Hiragana genommen...    
+    "Was mache ich denn jetzt?"
+    "Regungslos sitze ich vor dem Rechner."
     "Zuerst mal meine E-Mails abrufen..."
     
     scene bg desktop_email
