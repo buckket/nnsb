@@ -904,16 +904,6 @@ label traum:
     b "Fein."
     #-----------------------------------------------
     $ renpy.say("Erica",wS("Mann, {w}ihr seid gemein.","Mou, {w}iyashii.","もう、 {w}卑しい。"))
-    
-    #Ich lass das mal hier stehen, denn ich weiß nicht, wie sich diese Funktion bei Text-Effekten und -Formatierungen verhält.
-
-#    if persistent.wieherbuhSprache is 0:
-#        "Erica" "Mann, {w}ihr seid gemein."
-#    if persistent.wieherbuhSprache is 1:
-#        "Erica" "Mou, {w}iyashii."
-#    if persistent.wieherbuhSprache is 2:
-#        "Erica" "{=jp}もう、 卑しい。{/=jp}"
-
     #-----------------------------------------------
     $ b(wS("Mhh?","Ehhh?","えーー？"), interact=True)
     #-----------------------------------------------
