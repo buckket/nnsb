@@ -574,7 +574,7 @@ label eins:
     "Was mach ich nur...!?"
     "AHHHHHHHHHHHH!"
     $ n(wS("Ich bin verzweifelt!","ZETSUBOU SHITA!","絶望したっ!"),interact=True)
-    $ n(WS("Das Internet lässt mich verzweifeln!","NETTO SHIKAI NI ZETSUBOU SHITA!","ネット しかい に	 絶望したっ!"),interact=True)
+    $ n(WS("Das Internet lässt mich verzweifeln!","NETTO SHAKAI NI ZETSUBOU SHITA!","ネット 社会 に 絶望したっ!"),interact=True)
     #Gibt es entsprechende Kanji für "shikai" in diesem Kontext?
     #Ich habe jetzt erst einmal Hiragana genommen...    
     "Was mache ich denn jetzt?"
