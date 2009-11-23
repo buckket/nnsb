@@ -195,12 +195,7 @@ label zwei_yasmin_lauraTraum:
             #sis "Dann habe ich wohl keine andere Wahl."
             #"Sie holt weit aus..."
             #-----------------------------------------------
-            #if persistent.wieherbuhSprache is 0:
-            #    "Leb wohl, schnöde Welt."
-            #if persistent.wieherbuhSprache is 1:
-            #    "Sayonara, asamashii Sekai."
-            #if persistent.wieherbuhSprache is 2:
-            #    "{=jp}さよなら、 浅ましい 世界。{/=jp}"
+            #$ n(wS("Leb wohl, schnöde Welt.","Sayonara, asamashii Sekai.","さよなら、 浅ましい 世界。"),interact=True)
             #-----------------------------------------------
             #"Ich schließe meine Augen und lass es auf mich zukommen."
             

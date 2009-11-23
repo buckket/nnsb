@@ -816,7 +816,6 @@ label traum:
     show lynette essen
     with dissolve
     #-----------------------------------------------
-    #noch eine andere version -_-
     $ renpy.say("Lynette",wS("...Meister.","...goshujin-sama.","。。。御主人様。"))
     #-----------------------------------------------
     b "Hmm?"
@@ -875,23 +874,16 @@ label traum:
     b "Hier."
     "Lynette" "Woher wissen Sie davon?"
     b "Ich wäre nicht mit dir zusammen, wenn ich so was nicht wüsste."
-    #HIER WEITER - GSB GSB GSB
-    #Bild mit blush von Lynette für maximalen Gewinn
+    
+    show lynette blush
+    with dissolve
+    
     #-----------------------------------------------    
-    if persistent.wieherbuhSprache is 0:
-        "Lynette" "Das ist...."
-    if persistent.wieherbuhSprache is 1:
-        "Lynette" "Sonna..."
-    if persistent.wieherbuhSprache is 2:
-        "Lynette" "{=jp}そんな。。。{/=jp}"
+    $ renpy.say("Lynette",wS("Das ist....","Sonna...","そんな。。。"))
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Stimme" "Meister!"
-    if persistent.wieherbuhSprache is 1:
-        "Stimme" "Goshujin-sama!"
-    if persistent.wieherbuhSprache is 2:
-        "Stimme" "{=jp}御主人様！{/=jp}"
+    $ renpy.say("Lynette",wS("Meister!","Goshujin-sama!","御主人様！"))
     #-----------------------------------------------
+    
     "Diese Stimme..."
     "Das kann nur..."
     
@@ -902,56 +894,35 @@ label traum:
     with dissolve
     
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Erica" "Meister!"
-    if persistent.wieherbuhSprache is 1:
-        "Erica" "Goshujin-sama!"
-    if persistent.wieherbuhSprache is 2:
-        "Erica" "{=jp}御主人様！{/=jp}"
+    $ renpy.say("Erica",wS("Meister!","Goshujin-sama!","御主人様！"))
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Erica" "Morgen!"
-    if persistent.wieherbuhSprache is 1:
-        "Erica" "Ohayou!"
-    if persistent.wieherbuhSprache is 2:
-        "Erica" "{=jp}お早う！{/=jp}"
+    $ renpy.say("Erica",wS("Morgen!","Ohayou!","お早う！"))
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        b "Morgen!"
-    if persistent.wieherbuhSprache is 1:
-        b "Ohayou!"
-    if persistent.wieherbuhSprache is 2:
-        b "{=jp}お早う！{/=jp}"
+    $ b(wS("Morgen!","Ohayou!","お早う！"), interact=True)
     #-----------------------------------------------
     "Erica" "Wie befohlen bin ich nun geduscht."
     b "Fein."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Erica" "Mann, {w}ihr seid gemein."
-    if persistent.wieherbuhSprache is 1:
-        "Erica" "Mou, {w}iyashii."
-    if persistent.wieherbuhSprache is 2:
-        "Erica" "{=jp}もう、 卑しい。{/=jp}"
+    $ renpy.say("Erica",wS("Mann, {w}ihr seid gemein.","Mou, {w}iyashii.","もう、 {w}卑しい。"))
+    
+    #Ich lass das mal hier stehen, denn ich weiß nicht, wie sich diese Funktion bei Text-Effekten und -Formatierungen verhält.
+
+#    if persistent.wieherbuhSprache is 0:
+#        "Erica" "Mann, {w}ihr seid gemein."
+#    if persistent.wieherbuhSprache is 1:
+#        "Erica" "Mou, {w}iyashii."
+#    if persistent.wieherbuhSprache is 2:
+#        "Erica" "{=jp}もう、 卑しい。{/=jp}"
+
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        b "Was?"
-    if persistent.wieherbuhSprache is 1:
-        b "Nani?"
-    if persistent.wieherbuhSprache is 2:
-        b "{=jp}何？{/=jp}"
-    #Wie stellte ich ein "Hmm?" im Japanischen da?
+    $ b(wS("Mhh?","Ehhh?","えーー？"), interact=True)
     #-----------------------------------------------
     "Erica" "Ihr esst schon."
     "Lynette" "Für dich habe ich doch auch Frühstück gemacht, Erica."
     "Erica" "Ihr esst aber schon."
     "Erica" "Ihr habt ohne mich angefangen."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        b "Sorry, Erica-chan."
-    if persistent.wieherbuhSprache is 1:
-        b "Gomen, Erica-chan."
-    if persistent.wieherbuhSprache is 2:
-        b "{=jp}ごめん、 ダーリング{/=jp}"
+    $ b(wS("Sorry, Erica-chan.","Gomen, Erica-chan.","ごめん、 ダーリング。"), interact=True)
     #-----------------------------------------------
     "Erica" "Dafür musst du aber gleich was mit mir unternehmen."
     b "Hmm..."
@@ -973,12 +944,7 @@ label traum:
     "Erica" "Was ist denn los, Lynette?"
     "Lynette" "Das ist einfach..."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Lynette" "Meister!"
-    if persistent.wieherbuhSprache is 1:
-        "Lynette" "Goshujin-sama!"
-    if persistent.wieherbuhSprache is 2:
-        "Lynette" "{=jp}御主人様！{/=jp}"
+    $ renpy.say("Lynette",wS("Meister!","Goshujin-sama!","御主人様！"))
     #-----------------------------------------------
     "Lynette" "Sagen Sie doch auch mal was!"
     b "Was denn?"
@@ -989,12 +955,7 @@ label traum:
     #Bild von Erica mit --( - Gesichtsausdruck, sofern es überhaupt solch ein Bild gibt
     #Bild existiert noch nicht
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Erica" "Mann."
-    if persistent.wieherbuhSprache is 1:
-        "Erica" "Mou."
-    if persistent.wieherbuhSprache is 2:
-        "Erica" "{=jp}もう。{/=jp}"
+    $ renpy.say("Erica",wS("Mann.","Mou.","もう。"))
     #-----------------------------------------------
     "Erica" "Immer verheimlicht ihr mir irgendwas."
     "Lynette" "Aber Erica..."
@@ -1020,30 +981,16 @@ label traum:
     "Sie neigt ihren Kopf kurz nach rechts unten."
     "Dann hebt sie ihn wieder und schaut mir wieder tief in die Augen."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Erica" "Ich..."
-    if persistent.wieherbuhSprache is 1:
-        "Erica" "Ai..."
-    if persistent.wieherbuhSprache is 2:
-        "Erica" "{=jp}愛。。。{/=jp}"
+    $ renpy.say("Erica",wS("Ich...","Ai...","愛。。。"))
+    #-----------------------------------------------
     b "Ist schon gut, Erica-chan."
     b "Ich weiß genau, was du sagen willst."
     b "Du musst das nicht laut sagen, wenn du nicht willst."
     "Erica" "Aber ich habe es dir noch nie gesagt."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Erica" "Ich lie..."
-    if persistent.wieherbuhSprache is 1:
-        "Erica" "Ai shite..."
-    if persistent.wieherbuhSprache is 2:
-        "Erica" "{=jp}愛して。。。{/=jp}"
+    $ renpy.say("Erica",wS("Ich lie...","Ai shite...","愛して。。。"))
     #-----------------------------------------------    
-    if persistent.wieherbuhSprache is 0:
-        "Erica" "...be dich."
-    if persistent.wieherbuhSprache is 1:
-        "Erica" "...ru."
-    if persistent.wieherbuhSprache is 2:
-        "Erica" "{=jp}。。。る。{/=jp}"
+    $ renpy.say("Erica",wS("...be dich.","...ru.","。。。る。"))
     #-----------------------------------------------
     b "Komm her, Erica-chan."
     "Ich umarme sie und drücke sie ganz fest an mich."
@@ -1060,12 +1007,7 @@ label traum:
     "Langsam lösen wir uns wieder voneinander."
     "Dann ergreife ich Ericas Hand und halte sie fest."
     #-----------------------------------------------
-    if persistent.wieherbuhSprache is 0:
-        "Lynette" "MEISTER!"
-    if persistent.wieherbuhSprache is 1:
-        "Lynette" "GOSHUJIN-SAMA!"
-    if persistent.wieherbuhSprache is 2:
-        "Lynette" "{=jp}御主人様！{/=jp}"
+    $ renpy.say("Lynette",wS("MEISTER!","GOSHUJIN-SAMA!","御主人様！"))
     #-----------------------------------------------
     "Lynette" "Ich dachte, ich wäre..."
     b "Sorry, Lynette."
