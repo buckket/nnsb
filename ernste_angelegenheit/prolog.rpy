@@ -117,6 +117,8 @@ label prolog:
 
     "Ungläubig sehe ich meine Mutter an."
 
+	b "Jetzt mal im Ernst..."
+	ma "Ich meine es ernst."
     ma "Da dein Vater jetzt nicht mehr bei uns ist, können wir uns keine 3-Zimmer-Wohnung mehr leisten."
     ma "Und %(sisName)s ist schon 13."
     ma "Sie braucht auch mal ein eigenes Zimmer."
@@ -165,10 +167,10 @@ label prolog:
     menu:
         "Soll ich duschen gehen?"
         
-        "Ja, ich sollte auf sie hören.":
+        "Ja.":
             jump prolog_duschen
             
-        "Nein, die Alte kann mich mal!":
+        "Nein.":
             jump prolog_dreckig
     
 label prolog_duschen:
@@ -531,7 +533,7 @@ label prolog_EinkaufenWLAN:
    
     "Sie dreht sich um und geht."
     "Ich verlasse den Laden."
-    "Man, war das peinlich."
+    "Mann, war das peinlich."
     "Typisch für jemanden wie mich."
     "Ich kann einfach nicht mit Frauen umgehen."
     "Und genau deswegen werde ich auch als Jungfrau sterben."
@@ -583,21 +585,23 @@ label prolog_abend:
     scene bg keller
     with fade    
     
-    "www.krautchan.net"
+    "www.ernstchan.net"
     "Enter."
     
     scene bg keller_kc
     with dissolve
+	#Stepmania-Bernd
+	#Hier müsste ein Bild von Ernstchan auf dem Monitor zu sehen sein
     
-    "Erstmal auf /b/ gucken."
-    "Wieder nur Krebs."
+    "Mal schauen."
+    "Wieder nur Gewinn."
     "Typisch."
     
     scene bg keller
     with dissolve
 
     "Ich schließe das Browserfenster und lasse mich auf meine Matratze fallen."
-    "Nun bin ich also ein echter Bernd."
+    "Nun bin ich also ein echter Ernst."
     
     stop music fadeout 1.0
     
