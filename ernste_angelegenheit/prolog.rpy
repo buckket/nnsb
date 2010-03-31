@@ -75,7 +75,7 @@ label prolog:
     #Bild für Mutter existiert noch nicht
     #Ginga Ale
     
-    ma "Nein, steh auf! Wir schauen uns die neue Wohnung an!"
+    ma "Kontra! Steh auf! Wir schauen uns die neue Wohnung an!"
     "Neue Wohnung?"
     b "Sind wir denn ernsthaft schon da?"
     ma "Ja, und jetzt steh endlich auf."
@@ -98,7 +98,7 @@ label prolog:
     with dissolve
 
     sis "Welches ist mein Zimmer, Mama? Welches?"
-    "Wie kann sie nur so ernsthaft sein? {w}Schrecklich."
+    "Meint sie das allen Ernstes?"
     b "Du kriegst kein Zimmer."
     b "Du musst im Keller schlafen."
     "Ich ärgere meine Schwester gerne mit so was."
@@ -116,9 +116,11 @@ label prolog:
     stop music fadeout 0.4
 
     "Ernsthaft sehe ich meine Mutter an."
+	#Wie schaute ich ernsthaft?
 
     b "Jetzt mal im Ernst..."
     ma "Ich meine es ernst."
+	#"ernst" in 2 Zeilen hintereinander?
     ma "Da dein Vater jetzt nicht mehr bei uns ist, können wir uns ernsthaft keine 3-Zimmer-Wohnung mehr leisten."
     ma "Und %(sisName)s ist schon 13."
     ma "Sie braucht auch mal ein eigenes Zimmer."
@@ -126,8 +128,10 @@ label prolog:
 
     "Mein Blick wandert herüber zu meiner Schwester."
     "Sie grinst ernsthaft."
+	#Wie grinste ich ernsthaft?
 
     ma "Ach, komm schon! So ernst wird es nicht sein."
+	#Der zweite Satz passt meiner Meinung nach überhaupt nicht
     ma "Wir bringen deinen Computer nach unten, dann wirst du dich gleich wie zu Hause fühlen"
     
     play music m_bernd
@@ -139,7 +143,10 @@ label prolog:
     "Nachdem ich mich damit abgefunden hatte, dass ich im Keller leben müsste, und mein Computer aufgebaut war, sofort die nächste Enttäuschung."
     #AE = Einziger langer Satz im kompletten Spiel...soll der Satz in kleinere Sätze aufgeteilt werden?
     "Kein Internet im Keller."
-    "Das Kabel kann ich schlecht durch den Hausflur nach unten legen, also muss ich wohl ernsthaft einen Router kaufen."
+	"Ernsthaft."
+	"Kein Internet im Keller."
+	"Was soll das?"
+    "Das Kabel kann ich schlecht durch den Hausflur nach unten legen, also muss ich wohl einen Router kaufen."
     "W-LAN ist angesagt."
     "Ich gehe nach oben, um meine Mutter nach Geld zu fragen."
     
@@ -170,7 +177,7 @@ label prolog:
         "Ja.":
             jump prolog_duschen
             
-        "Nein.":
+        "Kontra!":
             jump prolog_dreckig
     
 label prolog_duschen:
@@ -184,7 +191,7 @@ label prolog_duschen:
     
     b "Wieso muss ich überhaupt mit?"
     b "Kann sie die Nachbarn nicht alleine begrüßen?"
-    b "Soll sie doch %(sisName)s mitneh-{nw}"
+    b "Soll sie doch %(sisName)s mitnehmen. {w}Ernstha-{nw}"
     
     play sound "sounds/door_1.wav"
     
@@ -211,7 +218,8 @@ label prolog_duschen:
     sis "Hihi! {w}%(berndName)s hat einen Steifen!"
     "Na toll. Das hat mir ernsthaft noch gefehlt."
     b "Hau ab!"
-    "Sie verschwindet ernst."   
+    "Sie verschwindet ernst."
+    #Wie verschwand ich ernst?	
     
     hide laura happy
     with dissolve
@@ -298,7 +306,7 @@ label prolog_duschen:
 label prolog_dreckig:
     $ maLove -= 5
     $ sisLove -= 5
-    b "Nö."
+    b "Kontra!"
     b "Ich geh' hier niemanden begrüßen!"
     b "Gib mir mal lieber Geld."
     b "Ich brauch' einen WLAN-Adapter, damit ich ins Internet kann."
@@ -337,7 +345,7 @@ label prolog_dreckig:
         "Ja. Das merkt sie nicht.":
             jump prolog_nimmGeld
             
-        "Nein. Das wäre falsch.":
+        "Kontra! Das wäre falsch.":
             jump prolog_nimmGeldNicht
     
 label prolog_nimmGeld:
@@ -366,7 +374,7 @@ label prolog_nimmGeldNicht:
         "Ja.":
             jump prolog_suchSpardose
         
-        "Nein. Ich nehme doch das Geld von meiner Mutter.":
+        "Kontra! Ich nehme doch das Geld von meiner Mutter.":
             jump prolog_nimmGeldDoch
     
 label prolog_suchSpardose:
@@ -420,7 +428,7 @@ label prolog_Einkaufen:
     with fade
    
     "Ich verlasse das Haus und sehe mich um."
-    "Toll. Ich soll einkaufen gehen und habe keine Ahnung, wo ich bin, oder wo der nächste Supermarkt ist."
+    "Toll. Ich soll einkaufen gehen und habe ernsthaft keine Ahnung, wo ich bin, oder wo der nächste Supermarkt ist."
     b "Na super..."
    
     menu:
@@ -473,7 +481,8 @@ label prolog_EinkaufenWLAN:
     "Hauptsache raus hier."
     "So schnell es geht gehe ich zur Kasse und bezahle."
     b "Ich sollte mich ernsthaft beeil-{nw}"
-    
+    #Hier würde ich das "ernsthaft" rausnehmen und statt dessen ein paar Zeilen weiter oben "ernsthaft, wie konnte er mich hören?" einfügen
+	
     stop music
     
     scene bg supermarkt
@@ -487,6 +496,7 @@ label prolog_EinkaufenWLAN:
     u"Mädchen" "Autsch..."
     "Verdammt."
     "Jetzt hab ich ernsthaft ein Mädchen umgelaufen."
+	#"ernsthaft" hier rausnehmen und unten "...so was immer mir? Ernsthaft..." einbauen.
     "Warum passiert so was immer mir?"
     b "Al-alles in O-Ordnung?"
     
@@ -502,7 +512,7 @@ label prolog_EinkaufenWLAN:
     with dissolve
     
     "Verdammt."
-    "Die sieht auch noch ernsthaft gut aus."
+    "Die sieht auch noch allen Ernstes gut aus."
     "Wieso immer ich?"
     u"Mädchen" "Meine Brille...?"
     "Ihre Brille liegt auf dem Boden."
