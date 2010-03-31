@@ -77,7 +77,7 @@ label prolog:
     
     ma "Nein, steh auf! Wir schauen uns die neue Wohnung an!"
     "Neue Wohnung?"
-    b "Sind wir denn schon da?"
+    b "Sind wir denn ernsthaft schon da?"
     ma "Ja, und jetzt steh endlich auf."
 
     "Wir sind heute nach Berlin umgezogen."
@@ -90,7 +90,7 @@ label prolog:
     scene bg wohnung_innen
     with wooshTrans
 
-    "Als wir durch die Tür kommen, läuft meine kleine Schwester bereits aufgeregt im Flur umher."
+    "Als wir durch die Tür kommen, läuft meine kleine Schwester bereits ernst im Flur umher."
 
     play music m_laura fadein 0.3
 
@@ -98,7 +98,7 @@ label prolog:
     with dissolve
 
     sis "Welches ist mein Zimmer, Mama? Welches?"
-    "Wie kann sie nur so nervig sein? {w}Schrecklich."
+    "Wie kann sie nur so ernsthaft sein? {w}Schrecklich."
     b "Du kriegst kein Zimmer."
     b "Du musst im Keller schlafen."
     "Ich ärgere meine Schwester gerne mit so was."
@@ -115,19 +115,19 @@ label prolog:
 
     stop music fadeout 0.4
 
-    "Ungläubig sehe ich meine Mutter an."
+    "Ernsthaft sehe ich meine Mutter an."
 
-	b "Jetzt mal im Ernst..."
-	ma "Ich meine es ernst."
-    ma "Da dein Vater jetzt nicht mehr bei uns ist, können wir uns keine 3-Zimmer-Wohnung mehr leisten."
+    b "Jetzt mal im Ernst..."
+    ma "Ich meine es ernst."
+    ma "Da dein Vater jetzt nicht mehr bei uns ist, können wir uns ernsthaft keine 3-Zimmer-Wohnung mehr leisten."
     ma "Und %(sisName)s ist schon 13."
     ma "Sie braucht auch mal ein eigenes Zimmer."
     ma "Da bleibt für dich nur noch der Keller."
 
     "Mein Blick wandert herüber zu meiner Schwester."
-    "Sie grinst siegessicher."
+    "Sie grinst ernsthaft."
 
-    ma "Ach, komm schon! So schlimm wird es nicht sein."
+    ma "Ach, komm schon! So ernst wird es nicht sein."
     ma "Wir bringen deinen Computer nach unten, dann wirst du dich gleich wie zu Hause fühlen"
     
     play music m_bernd
@@ -139,7 +139,7 @@ label prolog:
     "Nachdem ich mich damit abgefunden hatte, dass ich im Keller leben müsste, und mein Computer aufgebaut war, sofort die nächste Enttäuschung."
     #AE = Einziger langer Satz im kompletten Spiel...soll der Satz in kleinere Sätze aufgeteilt werden?
     "Kein Internet im Keller."
-    "Das Kabel kann ich schlecht durch den Hausflur nach unten legen, also muss ich wohl einen Router kaufen."
+    "Das Kabel kann ich schlecht durch den Hausflur nach unten legen, also muss ich wohl ernsthaft einen Router kaufen."
     "W-LAN ist angesagt."
     "Ich gehe nach oben, um meine Mutter nach Geld zu fragen."
     
@@ -157,7 +157,7 @@ label prolog:
     "Ein bisschen staubig, sonst nichts."
     b "Ist doch nur ein bisschen Staub."
     ma "Ein bisschen?!"
-    ma "Sofort unter die Dusche mit dir!"
+    ma "Sofort unter die Dusche mit dir! {w}Ernsthaft!"
     ma "Und dann ziehst du dir was Frisches an."
     ma "Wir wollen gleich die neuen Nachbarn begrüßen."
     "Die neuen Nachbarn?"
@@ -201,7 +201,7 @@ label prolog_duschen:
     "Sie starrt weiter."
     b "Raus mit dir!"
     b "SOFORT!"
-    b "Was fällt dir ein hier einfach reinzuplatzen?!"
+    b "Ernsthaft, was fällt dir ein hier einfach reinzuplatzen?!"
     
     play music m_laura fadein 0.3
     
@@ -209,9 +209,9 @@ label prolog_duschen:
     with dissolve
     
     sis "Hihi! {w}%(berndName)s hat einen Steifen!"
-    "Na toll. Das hat mir gerade noch gefehlt."
+    "Na toll. Das hat mir ernsthaft noch gefehlt."
     b "Hau ab!"
-    "Sie verschwindet kichernd."   
+    "Sie verschwindet ernst."   
     
     hide laura happy
     with dissolve
@@ -234,11 +234,11 @@ label prolog_duschen:
     #with dissolve
     #Ginga Ale
     
-    b "Muss ich wirklich mit?"
+    b "Muss ich ernsthaft mit?"
     ma "Ja, %(berndName)s!"
     ma "Ich will nicht, dass du direkt am ersten Tag wieder einen schlechten Eindruck bei den Nachbarn hinterlässt."
     b "Kannst du nicht %(sisName)s mitnehmen?"
-    b "Dafür geh' ich heute auch einkaufen."
+    b "Dafür geh' ich heute auch einkaufen. {w}Ernshaft."
     
     #show mutter at left
     #with move
@@ -249,7 +249,7 @@ label prolog_duschen:
     
     sis "Ja, Mama!"
     sis "Ich will die Nachbarn begrüßen!"    
-    ma "Hm..."
+    ma "Ernsthaft?"
     ma "In Ordnung."
     
     "Meine Mutter holt zwei Geldscheine aus der Tasche."
@@ -286,7 +286,7 @@ label prolog_duschen:
     #Ginga Ale
     
     "Die Beiden verlassen die Wohnung."
-    b "Ich sollte mich auch auf den Weg machen."
+    b "Ich sollte mich ernsthaft auf den Weg machen."
     
     $ Spardose = 0
     
@@ -325,12 +325,12 @@ label prolog_dreckig:
     
     "Die Beiden verlassen die Wohnung."
     b "Na toll."
-    b "Jetzt hab' ich kein Internet."
+    b "Jetzt hab' ich ernsthaft kein Internet."
     
     stop music
     
     "Da sehe ich es."
-    "Meine Mutter hat ihr Geld hiergelassen."
+    "Meine Mutter hat ihr Geld ernsthaft hiergelassen."
     menu:
         "Soll ich es nehmen?"
         
@@ -341,7 +341,7 @@ label prolog_dreckig:
             jump prolog_nimmGeldNicht
     
 label prolog_nimmGeld:
-    "Ohne weiter nachzudenken, nehme ich mir 25 Euro und verlasse das Haus..."
+    "Ohne weiter ernsthaft nachzudenken, nehme ich mir 25 Euro und verlasse das Haus..."
     $ maLove -= 10
     $ prolog_GeldGenommen = 1
     
@@ -472,7 +472,7 @@ label prolog_EinkaufenWLAN:
     "Das muss fürs Erste reichen."
     "Hauptsache raus hier."
     "So schnell es geht gehe ich zur Kasse und bezahle."
-    b "Ich sollte mich wirklich beeil-{nw}"
+    b "Ich sollte mich ernsthaft beeil-{nw}"
     
     stop music
     
@@ -486,7 +486,7 @@ label prolog_EinkaufenWLAN:
     
     u"Mädchen" "Autsch..."
     "Verdammt."
-    "Jetzt hab ich ein Mädchen umgelaufen."
+    "Jetzt hab ich ernsthaft ein Mädchen umgelaufen."
     "Warum passiert so was immer mir?"
     b "Al-alles in O-Ordnung?"
     
@@ -502,7 +502,7 @@ label prolog_EinkaufenWLAN:
     with dissolve
     
     "Verdammt."
-    "Die sieht auch noch gut aus."
+    "Die sieht auch noch ernsthaft gut aus."
     "Wieso immer ich?"
     u"Mädchen" "Meine Brille...?"
     "Ihre Brille liegt auf dem Boden."
@@ -590,8 +590,8 @@ label prolog_abend:
     
     scene bg keller_kc
     with dissolve
-	#Stepmania-Bernd
-	#Hier müsste ein Bild von Ernstchan auf dem Monitor zu sehen sein
+    #Stepmania-Bernd
+    #Hier müsste ein Bild von Ernstchan auf dem Monitor zu sehen sein
     
     "Mal schauen."
     "Wieder nur Gewinn."
@@ -610,4 +610,4 @@ label prolog_abend:
     
     $ renpy.pause(2.0)
     
-    jump eins
+    jump ernstchan_ende

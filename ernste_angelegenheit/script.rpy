@@ -286,35 +286,35 @@ init:
     $ m_laura = "music/laura_theme.ogg" #Schwester
     $ m_shop = "music/shop.ogg" #Supermarkt
     $ m_anja = "music/anja_theme.ogg" #Anja und ihr Zimmer
-    $ m_anjaWohnung = "music/anja_wohnung.ogg" #Anjas Wohnung, außer ihrem Zimmer
-    $ m_psycho = "music/psycho.ogg" #Psychosachen
-    $ m_traurig = "music/ronery.ogg" #traurige Stellen
-    $ m_drama = "music/sad.ogg" #ebenfalls traurige Stellen
-    $ m_date = "music/date.ogg" #Dates usw.
-    $ m_schulweg = "music/schulweg.ogg" #Schulweg usw.
-    $ m_donerladen = "music/donerladen.ogg"
-    $ m_spannung = "music/exciting.ogg" #Spannung usw.
-    $ m_rennen = "music/run_fast.ogg" #Action
-    $ m_yasminStalk = "music/yasmin_stalkerbernd_theme.ogg" #Stalkerbernd-Theme
-    $ m_yasmin = "music/yasmin_theme.ogg" #Yasmin
-    $ m_yasminWohnung = "music/yasmin_wohnung.ogg" # Yasmins Wohnung (sie wohnt alleine...)
-    $ m_traum = "music/traum.ogg" #für Bernds Animeträume und seinen vielen Waifus
-    $ m_battle = "music/battle.ogg" #u. a. bisher für die Spinnenszene, weil ich noch keine bessere BGM fand,
-    $ m_treffen = "music/Treffen, das niemals stattfinden sollte.ogg" #siehe Folge 1 von Sayonara Zetsubou Sensei, genau so etwas...
-    $ m_cafe = "music/cafe.ogg" #falls Bernd mal mit einem Mädchen in ein Café geht
-    $ m_kanashimi = "music/insert_kanashimi.ogg" #Insert-Song für Abstechszenen
-    $ m_heul = "music/;_;.ogg" #;_;
-    $ m_lauraende = "music/lauraende.ogg"
-    $ m_rabe = "music/rabe.ogg"
-    $ m_schule = "music/schule.ogg" #in der Schule
-    $ m_krank = "music/krank.ogg" #kranke Laura
-    $ m_liebe = "music/liebe.ogg" #LIEBE <3
-    $ m_eich  = "music/pokemon_eich.mp3"
+    #$ m_anjaWohnung = "music/anja_wohnung.ogg" #Anjas Wohnung, außer ihrem Zimmer
+    #$ m_psycho = "music/psycho.ogg" #Psychosachen
+    #$ m_traurig = "music/ronery.ogg" #traurige Stellen
+    #$ m_drama = "music/sad.ogg" #ebenfalls traurige Stellen
+    #$ m_date = "music/date.ogg" #Dates usw.
+    #$ m_schulweg = "music/schulweg.ogg" #Schulweg usw.
+    #$ m_donerladen = "music/donerladen.ogg"
+    #$ m_spannung = "music/exciting.ogg" #Spannung usw.
+    #$ m_rennen = "music/run_fast.ogg" #Action
+    #$ m_yasminStalk = "music/yasmin_stalkerbernd_theme.ogg" #Stalkerbernd-Theme
+    #$ m_yasmin = "music/yasmin_theme.ogg" #Yasmin
+    #$ m_yasminWohnung = "music/yasmin_wohnung.ogg" # Yasmins Wohnung (sie wohnt alleine...)
+    #$ m_traum = "music/traum.ogg" #für Bernds Animeträume und seinen vielen Waifus
+    #$ m_battle = "music/battle.ogg" #u. a. bisher für die Spinnenszene, weil ich noch keine bessere BGM fand,
+    #$ m_treffen = "music/Treffen, das niemals stattfinden sollte.ogg" #siehe Folge 1 von Sayonara Zetsubou Sensei, genau so etwas...
+    #$ m_cafe = "music/cafe.ogg" #falls Bernd mal mit einem Mädchen in ein Café geht
+    #$ m_kanashimi = "music/insert_kanashimi.ogg" #Insert-Song für Abstechszenen
+    #$ m_heul = "music/;_;.ogg" #;_;
+    #$ m_lauraende = "music/lauraende.ogg"
+    #$ m_rabe = "music/rabe.ogg"
+    #$ m_schule = "music/schule.ogg" #in der Schule
+    #$ m_krank = "music/krank.ogg" #kranke Laura
+    #$ m_liebe = "music/liebe.ogg" #LIEBE <3
+    #$ m_eich  = "music/pokemon_eich.mp3"
     
     #WICHTIG: Handy-Klingeltöne bitte nicht registrieren, die sind zwar in dem Ordner drin, werden aber mit dem Sound-Befehl abgerufen
     
     #namen
-    $ berndName = "Bernd"
+    $ berndName = "Ernst"
     $ sisName = "Laura"
     $ maName = "Dorothea"
     $ wBerndName = "Anja"
@@ -349,7 +349,7 @@ init:
 # Neues Spiel startet hier
 label start:
     stop music
-    jump skipTo
+    jump prolog
             
 
 label skipTo: #namen des labels eingeben -> springen
