@@ -51,6 +51,8 @@ label prolog:
 
     stop music
 
+    $ renpy.movie_cutscene("images/digimon.avi")
+    
     #scene splash splash_prolog
     #with gradientTrans
 
@@ -116,11 +118,11 @@ label prolog:
     stop music fadeout 0.4
 
     "Ernsthaft sehe ich meine Mutter an."
-	#Wie schaute ich ernsthaft?
+    #Wie schaute ich ernsthaft?
 
     b "Jetzt mal im Ernst..."
     ma "Ich meine es ernst."
-	#"ernst" in 2 Zeilen hintereinander?
+    #"ernst" in 2 Zeilen hintereinander?
     ma "Da dein Vater jetzt nicht mehr bei uns ist, können wir uns ernsthaft keine 3-Zimmer-Wohnung mehr leisten."
     ma "Und %(sisName)s ist schon 13."
     ma "Sie braucht auch mal ein eigenes Zimmer."
@@ -128,10 +130,10 @@ label prolog:
 
     "Mein Blick wandert herüber zu meiner Schwester."
     "Sie grinst ernsthaft."
-	#Wie grinste ich ernsthaft?
+    #Wie grinste ich ernsthaft?
 
     ma "Ach, komm schon! So ernst wird es nicht sein."
-	#Der zweite Satz passt meiner Meinung nach überhaupt nicht
+    #Der zweite Satz passt meiner Meinung nach überhaupt nicht
     ma "Wir bringen deinen Computer nach unten, dann wirst du dich gleich wie zu Hause fühlen"
     
     play music m_bernd
@@ -143,9 +145,9 @@ label prolog:
     "Nachdem ich mich damit abgefunden hatte, dass ich im Keller leben müsste, und mein Computer aufgebaut war, sofort die nächste Enttäuschung."
     #AE = Einziger langer Satz im kompletten Spiel...soll der Satz in kleinere Sätze aufgeteilt werden?
     "Kein Internet im Keller."
-	"Ernsthaft."
-	"Kein Internet im Keller."
-	"Was soll das?"
+    "Ernsthaft."
+    "Kein Internet im Keller."
+    "Was soll das?"
     "Das Kabel kann ich schlecht durch den Hausflur nach unten legen, also muss ich wohl einen Router kaufen."
     "W-LAN ist angesagt."
     "Ich gehe nach oben, um meine Mutter nach Geld zu fragen."
@@ -219,7 +221,7 @@ label prolog_duschen:
     "Na toll. Das hat mir ernsthaft noch gefehlt."
     b "Hau ab!"
     "Sie verschwindet ernst."
-    #Wie verschwand ich ernst?	
+    #Wie verschwand ich ernst?  
     
     hide laura happy
     with dissolve
@@ -482,7 +484,7 @@ label prolog_EinkaufenWLAN:
     "So schnell es geht gehe ich zur Kasse und bezahle."
     b "Ich sollte mich ernsthaft beeil-{nw}"
     #Hier würde ich das "ernsthaft" rausnehmen und statt dessen ein paar Zeilen weiter oben "ernsthaft, wie konnte er mich hören?" einfügen
-	
+    
     stop music
     
     scene bg supermarkt
@@ -496,7 +498,7 @@ label prolog_EinkaufenWLAN:
     u"Mädchen" "Autsch..."
     "Verdammt."
     "Jetzt hab ich ernsthaft ein Mädchen umgelaufen."
-	#"ernsthaft" hier rausnehmen und unten "...so was immer mir? Ernsthaft..." einbauen.
+    #"ernsthaft" hier rausnehmen und unten "...so was immer mir? Ernsthaft..." einbauen.
     "Warum passiert so was immer mir?"
     b "Al-alles in O-Ordnung?"
     

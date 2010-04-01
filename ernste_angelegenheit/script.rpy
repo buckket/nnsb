@@ -277,7 +277,7 @@ init:
     $ bw = DynamicCharacter("wBerndName", color="#00dd00")
     $ yan = DynamicCharacter("yanName", color="#ff00ff")
     $ kc = Character("K-Chan", color="#aaaacc")
-    $ ec = Character("Tja... kein Name.", color="d7cfc0")
+    $ ec = Character("E-Chan", color="d7cfc0")
     $ e = Character("Eich")
     $ nvlc = Character(None, kind=nvl)
     $ n = Character(None)
@@ -340,7 +340,7 @@ init:
     $ supermarkt = ""
     $ mitbringen = "nichts"
     
-    $ show_editor_button = True
+    $ show_editor_button = False
     $ hentaiEin = False
     
     #fragebogen
