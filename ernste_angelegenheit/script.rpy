@@ -276,6 +276,8 @@ init:
     $ sis = DynamicCharacter("sisName", color="#ff5555")
     $ bw = DynamicCharacter("wBerndName", color="#00dd00")
     $ yan = DynamicCharacter("yanName", color="#ff00ff")
+    $ kc = Character("K-Chan", color="#aaaacc")
+    $ ec = Character("Tja... kein Name.", color="d7cfc0")
     $ e = Character("Eich")
     $ nvlc = Character(None, kind=nvl)
     $ n = Character(None)

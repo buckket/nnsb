@@ -69,7 +69,7 @@ init -1 python hide:
         disabled_text = "#666666",
 
         ## The color of informational labels.
-        label = "#c2c2c2",
+        label = "#000000",
 
         ## The color of a frame containing widgets.
         frame = "#AAAACC",
@@ -185,7 +185,7 @@ init -1 python hide:
     
     ## Musikraum:
     
-    config.main_menu.insert(3, ("Musikraum", "music_room", "True"))
+    #config.main_menu.insert(3, ("Musikraum", "music_room", "True"))
     
 
     ## Set this to False if the game does not have voicing.
