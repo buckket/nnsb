@@ -612,6 +612,96 @@ label drei_yasmin_regen:
     
     scene black
     with fade
+
+label drei_yasmin_rauswurf:
     
     #nun wir bernd rausgeworfen und zieht bei yasmin ein
     #kawaii desu ne? ^_^
+    
+    scene bg zuhause_draussen_dunkel
+    with fade
+    
+    "Völlig durchnässt stehen wir endlich vor der Haustür."
+    "Ich habe mir grade sicher eine Erkältung geholt."
+    "Verzweifelt versuche ich, die Tür zu öffnen, aber der Schlüssel rutscht immer wieder ab."
+    "Dieses verdammte..."
+    show yasmin stalker_neutral
+    with dissolve
+    yan "Sag mal %(berndName)s..."
+    b "Was denn?"
+    yan "...standen diese Kisten hier vorher auch schon?"
+    "Tatsächlich stehen vor der Haustür ein paar Pappkartons, teilweise durchnässt vom Regen."
+    yan "Wer stellt denn Pappkartons raus in den Regen? {w}Wem die wohl gehören?"
+    "Ich weiß es."
+    b "Das... {w}sind meine."
+    show yasmin stalker_surprised
+    with dissolve
+    yan "Was?"
+    "Wieso steht mein ganzer Besitz vor der Haustür im Regen?"
+    yan "Wer hat die denn hier hingestellt?"
+    b "Keine Ahnung."
+    show yasmin stalker_neutral
+    with dissolve
+    yan "Schau mal hier..."
+    "Auf einem Karton liegt ein zusammengefalteter Zettel."
+    yan "Der ist an dich, %(berndName)s."
+    "Ich befürchte schlimmes, während ich den Zettel auseinanderfalte."
+    
+    #show bg zettel
+    #with fade
+    #evtl. halt den Zettel einblenden
+    
+    nvlc "Lieber %(berndName)s,\n"
+    nvlc "du wirst dich sicher wundern, warum dein ganzer Besitz hier vor der Haustür steht, daher will ich es dir erklären."
+    nvlc "Ich habe jetzt schon lange darüber nachgedacht, und dieser Schritt fällt mir nicht leicht, aber es muss wohl sein."
+    nvlc "Von nun an wirst du nicht mehr bei uns wohnen."
+    nvlc "Es tut mir wirklich sehr Leid, dir das antun zu müssen, aber wenn du nicht lernst, auf eigenen Füßen zu stehen, wie soll dann jemals etwas aus dir werden?"
+    nvlc "Es ist wirklich nur zu deinem Besten, also bitte sei mir nicht böse.\n"
+    nvlc "In Liebe"
+    nvlc "  %(maName)s"
+    
+    nvl clear
+    
+    "..."
+    yan "Und? {w}Was steht drin?"
+    b "..."
+    yan "Sag schon!"
+    b "Sie haben mich rausgeworfen."
+    show yasmin stalker_surprised
+    with dissolve
+    yan "Was?! {w}Ernsthaft!?"
+    b "Ja."
+    yan "Aber..."
+    "Ich setze mich auf einen der Kartons und versuche zu begreifen, in welcher Situation ich mich überhaupt befinde."
+    show yasmin stalker_neutral
+    with dissolve
+    yan "%(berndName)s."
+    "Ich bin obdachlos."
+    "Kein Strom, kein Internet."
+    "Und es regnet."
+    yan "%(berndName)s."
+    "Und ich werde draußen schlafen müssen."
+    "Und mir einen Job suchen müssen."
+    "Und eine eigene Wohnung."
+    "Keine Zeit mehr zum Lauern."
+    yan "%(berndName)s?"
+    b "Was denn?"
+    yan "Ich hab da eine Idee..."
+    yan "...wartest du hier auf mich?"
+    b "Wo willt du hin?"
+    yan "Ich hol kurz etwas."
+    "Als ob ich irgendwo hingehen würde."
+    "Wo denn auch?"
+    "Ich kann nirgendwo hin."
+    b "Ist gut."
+    show yasmin stalker_happy
+    with dissolve
+    yan "Ich beeil mich!"
+    hide yasmin stalker_happy
+    with dissolve
+    "Sie rennt davon und ich bin wieder allein."
+    
+    # jetzt redet bernd eine weile mit sich selbst
+    # und malt sich die schlimmsten horrorvorstellungen aus.
+    # dann kommt yasmin mit ihrem auto und holt ihn ab,
+    # damit er bei ihr wohnen kann. er hat keine andere wahl, als anzunehmen
